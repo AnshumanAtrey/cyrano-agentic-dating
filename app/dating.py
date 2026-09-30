@@ -81,6 +81,19 @@ def match(me: dict, them: dict) -> tuple[float, str]:
     return round(score, 1), reason
 
 
+SEEK = {"men": {"man"}, "women": {"woman"}}
+
+
+def open_to(p: dict, q: dict) -> bool:
+    """Does p want to date q? A stated preference wins; people with no stated preference are open."""
+    want = SEEK.get((p.get("profile") or {}).get("seeking") or "everyone")
+    return want is None or (q.get("profile") or {}).get("gender") in want
+
+
+def compatible(p: dict, q: dict) -> bool:
+    return open_to(p, q) and open_to(q, p)
+
+
 def schedule(ids: list[str], per_person: int = 3, focus: str | None = None) -> list[tuple[str, str]]:
     """First dates: best mutual match first, until everyone has `per_person` (or just `focus`, for a live add)."""
     ppl = {p["id"]: p for p in store.people()}
@@ -95,6 +108,8 @@ def schedule(ids: list[str], per_person: int = 3, focus: str | None = None) -> l
     for i, a in enumerate(ids):
         for b in ids[i + 1:]:
             if focus and focus not in (a, b):
+                continue
+            if not compatible(ppl[a], ppl[b]):
                 continue
             cand.append((math.sqrt(match(ppl[a], ppl[b])[0] * match(ppl[b], ppl[a])[0]), a, b))
     cand.sort(reverse=True)
@@ -350,7 +365,7 @@ def rankings() -> dict[str, list]:
     for pid in ppl:
         rows = []
         for qid, q in ppl.items():
-            if qid == pid:
+            if qid == pid or not open_to(ppl[pid], q):
                 continue
             mutual = math.sqrt(m[(pid, qid)][0] * m[(qid, pid)][0])
             row = {"id": qid, "name": q["profile"].get("name"), "match": round(mutual), "reason": m[(pid, qid)][1],

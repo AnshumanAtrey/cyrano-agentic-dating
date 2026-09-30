@@ -26,9 +26,10 @@ function mark(step) {
   });
 }
 function log(m) { const d = document.createElement('div'); d.textContent = '› ' + m; const l = document.getElementById('log'); l.appendChild(d); l.scrollTop = l.scrollHeight; }
-const es = new EventSource(`${B}/api/jobs/${job}/events`);
-es.onmessage = ev => {
-  const e = JSON.parse(ev.data), x = e.data;
+let last = 0, stopped = false;
+const es = {close() { stopped = true; }};
+function handle(e) {
+  const x = e.data;
   if (e.kind === 'step') { mark(x.step); log(x.msg); }
   else if (e.kind === 'log') log(x.msg);
   else if (e.kind === 'profile') { document.getElementById('links').insertAdjacentHTML('beforeend', `<a class="block grad text-white rounded-xl px-4 py-2 text-sm font-semibold text-center" href="${B}/p/${x.pid}/" target="_blank">✨ ${esc(x.name)}'s profile is ready →</a>`); log('Vibe: ' + x.vibe); }
@@ -61,6 +62,15 @@ es.onmessage = ev => {
     document.getElementById('links').insertAdjacentHTML('beforeend', `<a class="block border border-rose-200 rounded-xl px-4 py-2 text-sm font-semibold text-center" href="${B}/rankings/#${x.pid}">🏆 See your rankings →</a>`);
   }
   else if (e.kind === 'error') { const el = document.getElementById('err'); el.textContent = '⚠ ' + x.msg; el.classList.remove('hidden'); document.getElementById('spin').textContent = ''; es.close(); }
-};
+}
+(async function poll() {
+  while (!stopped) {
+    try {
+      const r = await fetch(`${B}/api/jobs/${job}/poll?after=${last}`, {cache: 'no-store'});
+      if (r.ok) for (const e of await r.json()) { last = e.id; handle(e); if (stopped) break; }
+    } catch (err) {}
+    await new Promise(res => setTimeout(res, 800));
+  }
+})();
 </script>
 {% endblock %}

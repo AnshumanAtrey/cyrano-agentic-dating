@@ -104,7 +104,7 @@ def photo(pid: str):
 
 
 # ------------------------------------------------------------------ live: someone pastes their two links
-def add_job(job: str, li: str, ig: str):
+def add_job(job: str, li: str, ig: str, gender: str = "", seeking: str = "everyone"):
     emit = lambda kind, data: store.emit(job, kind, data)
     if not _live_jobs.acquire(blocking=False):
         emit("log", {"msg": "Another agent is being built right now; you're next in line…"})
@@ -122,6 +122,8 @@ def add_job(job: str, li: str, ig: str):
                             source="live", error=None)
         emit("step", {"step": "analyze", "msg": f"The agent is reading {len(raw['instagram']['posts'])} posts and the LinkedIn profile"})
         pr = brain.analyze_person(pid)
+        pr.update(gender=gender or pr.get("gender") or "unknown", seeking=seeking)
+        store.upsert_person(pid, profile=pr)
         emit("profile", {"pid": pid, "name": pr.get("name"), "vibe": pr.get("vibe")})
         emit("step", {"step": "match", "msg": f"Scoring {pr.get('name')} against everyone already here (plain math, instant)"})
         pairs = dating.schedule([p["id"] for p in store.people()], per_person=3, focus=pid)
@@ -149,7 +151,9 @@ async def api_add(request: Request):
     if existing and existing["status"] == "ready" and not body.get("force"):
         return {"redirect": f"/p/{pid}/", "existing": True}
     job = uuid.uuid4().hex[:10]
-    threading.Thread(target=add_job, args=(job, li, ig), daemon=True).start()
+    gender = body.get("gender") if body.get("gender") in ("man", "woman", "nonbinary") else ""
+    seeking = body.get("seeking") if body.get("seeking") in ("men", "women", "everyone") else "everyone"
+    threading.Thread(target=add_job, args=(job, li, ig, gender, seeking), daemon=True).start()
     return {"job": job}
 
 
@@ -170,6 +174,12 @@ async def job_events(job: str, after: int = 0):
             await asyncio.sleep(0.5)
     return StreamingResponse(gen(), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
+
+
+@app.get("/api/jobs/{job}/poll")
+def job_poll(job: str, after: int = 0):
+    """Same events as the SSE stream, as plain JSON: tunnels and proxies can't buffer it."""
+    return store.events(job, after)
 
 
 @app.get("/api/arc/{aid}")
