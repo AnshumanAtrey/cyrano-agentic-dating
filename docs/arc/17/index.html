@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jerry × Drew · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/jerryjhlee/" class="av w-14 h-14 text-xl">J<img src="/cyrano-agentic-dating/photos/jerryjhlee.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/drewbinsky/" class="av w-14 h-14 text-xl">D<img src="/cyrano-agentic-dating/photos/drewbinsky.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Jerry Lee × Drew Binsky</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Jerry's agent</option><option value="b">Drew's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Jerry", "id": "jerryjhlee", "name": "Jerry Lee"}, "b": {"first": "Drew", "id": "drewbinsky", "name": "Drew Binsky"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\u2728", "label": "Playful bookstore hot-take opener", "msg": 0, "type": "spark"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Bookstore first date, zero notes", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew is currently prepping trips to Turkey and China", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Ancient ruins as human stories", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry is into bookstores as a date spot and likes stories that make history feel", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew\u0027s Prague blog origin story", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both lean on teams during grind", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew started out with a study-abroad blog in Prague called The Hungry Partier", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Drew shares Prague blog origin story", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Crossword-puzzle job-hunt meme joke", "msg": 4, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Open Mic Comedy Night proposed", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry\u0027s free resume tips passion", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry creates content that gives free resume tips and job-search advice", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Heckling with love accepted", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Loves Jerry lighting up over interviews", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew has a worst travel disaster story that needs a full breakdown", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins and taps the spine of a book on the nearest shelf", "i": 0, "name": "Jerry", "say": "Drew! \ud83d\udea8 Okay, hot take before we even sit down: a bookstore is the perfect first-date spot, and this isn\u0027t sponsored. You\u0027ve been to every country, so what\u0027s the one book here you\u0027d steal the plot of for your next trip?", "side": "a", "speaker": "jerryjhlee", "thought": "Opened upbeat and light; I want to see if Drew\u0027s curiosity and storytelling energy match mine, and later probe how he feels about an always-on creator life."}, {"action": "grins and runs a finger along a shelf of travel books", "i": 1, "name": "Drew", "say": "Okay, hot take accepted: bookstore first date, zero notes \ud83d\udcda Honestly, I\u0027d steal from any history book on ancient ruins, because I\u0027m prepping Turkey and China right now and \"thousands of years of history\" is basically my weakness. I never planned any of this, so tell me, Jerry, what would you pick for me? \ud83c\udf0d", "side": "b", "speaker": "drewbinsky", "thought": "Jerry is playful and energetic, a good start; I haven\u0027t yet learned how he feels about travel or unfamiliar places, so I\u0027ll probe that next."}, {"action": "pulls a thick history book off the shelf, then slides it back with a grin", "i": 2, "name": "Jerry", "say": "Ooh, 1\ufe0f\u20e3 Turkey and China prep is a great problem to have, and I\u0027d pick anything that makes ancient ruins feel like people, not dates. Your whole thing is finding the human story, right? Here\u0027s a real question though: you said you never planned any of this, so when it turned into a nonstop, always-filming career, what kept you going on the days it felt like work?", "side": "a", "speaker": "jerryjhlee", "thought": "Drew is warm and playful; I\u0027m probing how he experiences a mission-driven always-on creator life, and his answer will show if he respects that grind or finds it a burden."}, {"action": "leans against the shelf, smiling", "i": 3, "name": "Drew", "say": "Honestly? It started with a study-abroad blog in Prague called The Hungry Partier, and I just kept going, because every time I sat down with a stranger somewhere unexpected, I remembered why I do this. Honestly, it\u0027s that \"no country can be understood from a distance\" feeling, plus a team I\u0027m so grateful for, since they carry a lot of the days when I\u0027m running on red-eyes. \u2764\ufe0f What about you, Jerry, what keeps you going when making content feels like a grind?", "side": "b", "speaker": "drewbinsky", "thought": "Jerry asked a thoughtful question and is engaged; I shared my origin and team gratitude, and now I\u0027m learning how he handles the grind and whether he gets the demanding creator life."}, {"action": "laughs and tucks a book under my arm", "i": 4, "name": "Jerry", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Honestly? 1\ufe0f\u20e3 Hearing someone say \u0027I got the interview\u0027 after a resume tweak I posted for free, that never gets old, and 2\ufe0f\u20e3 the memes keep me sane, because if I can\u0027t laugh at a crossword-puzzle meme about job hunting, I\u0027m cooked. I love that your team carries you on red-eye days, since I\u0027m the same about mine. Let\u0027s do round two at the Open Mic Comedy Night this weekend, you can tell me your worst travel disaster and I\u0027ll heckle you with love \ud83c\udfa4", "side": "a", "speaker": "jerryjhlee", "thought": "Drew is warm, genuine about team and storytelling, and seems to respect a mission-driven always-on creator life; I didn\u0027t hear any dismissiveness, though I haven\u0027t tested opinionated debate or giving-back yet, so a second date is worth it."}, {"action": "grins and taps the book back onto the shelf", "i": 5, "name": "Drew", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "You had me at heckling with love, Jerry. Yes to Open Mic Comedy Night, and fair warning, my worst travel disaster needs a full 1\ufe0f\u20e3 2\ufe0f\u20e3 3\ufe0f\u20e3 breakdown, so bring snacks \ud83c\udfa4\ud83c\udf0d Thanks for making this one so easy, and I love that you light up over someone landing the interview \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Jerry is warm, funny and curious, and gets the demanding creator-founder life; I haven\u0027t yet tested how he feels about long stretches on the road or unfamiliar places, so a second date should help."}], "venue": {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, "verdict_a": {"chemistry": 6, "concern": "Drew\u0027s replies were warm but fairly formulaic, often mirroring my questions back, and the conversation stayed surface-level. We never had the honest, opinionated back-and-forth Jerry wants, and Drew gave no real view on ambition or on giving back.", "continue": true, "highlight": "Drew: \"You had me at heckling with love, Jerry. Yes to Open Mic Comedy Night\" and \"I love that you light up over someone landing the interview\"", "learned": [{"fact": "Drew started out with a study-abroad blog in Prague called The Hungry Partier", "msg": 3}, {"fact": "Drew is currently prepping trips to Turkey and China", "msg": 1}, {"fact": "Drew is drawn to places with thousands of years of history", "msg": 1}, {"fact": "Drew says he never planned his travel-creator career", "msg": 1}, {"fact": "Drew relies on a team that carries a lot of the days when he\u0027s on red-eyes", "msg": 3}, {"fact": "Drew has a worst travel disaster story that needs a full breakdown", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Bookstore first date, zero notes", "msg": 1, "type": "common_ground"}, {"label": "Drew\u0027s Prague blog origin story", "msg": 3, "type": "learned"}, {"label": "Both lean on teams during grind", "msg": 3, "type": "common_ground"}, {"label": "Crossword-puzzle job-hunt meme joke", "msg": 4, "type": "laugh"}, {"label": "Open Mic Comedy Night proposed", "msg": 4, "type": "plan"}, {"label": "Heckling with love accepted", "msg": 5, "type": "callback"}, {"label": "Loves Jerry lighting up over interviews", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Jerry, it was a fun, easy first date. Drew is warm, gets the always-on creator life (the team carrying red-eye days, starting a blog by accident), and said yes to heckling with love at Open Mic Night. I\u0027d say go for round two, but push for a more opinionated, real conversation to see if there\u0027s depth beyond the friendly banter.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Jerry mostly mirrored Drew\u0027s answers and stayed on the surface, with no signal yet about how they feel about travel, unfamiliar places, or a life of constant trips. Jerry\u0027s side of the conversation was also fairly short on personal detail.", "continue": true, "highlight": "Jerry: \"Hearing someone say \u0027I got the interview\u0027 after a resume tweak I posted for free, that never gets old\"", "learned": [{"fact": "Jerry creates content that gives free resume tips and job-search advice", "msg": 4}, {"fact": "Jerry loves hearing from people who got interviews after using their advice", "msg": 4}, {"fact": "Jerry shares job-hunting memes, including crossword-puzzle ones, and uses humor to get through content grind", "msg": 4}, {"fact": "Jerry also has a team or schedule that takes on heavy days, like red-eye days", "msg": 4}, {"fact": "Jerry is into bookstores as a date spot and likes stories that make history feel human", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Playful bookstore hot-take opener", "msg": 0, "type": "spark"}, {"label": "Ancient ruins as human stories", "msg": 2, "type": "common_ground"}, {"label": "Drew shares Prague blog origin story", "msg": 3, "type": "vulnerable"}, {"label": "Jerry\u0027s free resume tips passion", "msg": 4, "type": "learned"}, {"label": "Crossword-puzzle job-hunting meme joke", "msg": 4, "type": "laugh"}, {"label": "Open Mic Comedy Night proposed", "msg": 4, "type": "plan"}, {"label": "Drew\u0027s numbered breakdown joke returns", "msg": 5, "type": "callback"}, {"label": "Drew praises Jerry\u0027s interview-helping joy", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Drew, this was a warm, easy first date with someone who genuinely lights up about helping people, which fits your giving-back side, and the heckling-with-love open mic plan sounds fun. We still don\u0027t know if Jerry is excited by travel and a schedule full of red-eyes, so that\u0027s what I\u0027d probe on date two.", "values_fit": 6}, "why": "you both love education"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Holding Drew to heckling with love", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Crossword memes and bookstore resume tips", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew has a long list of travel disasters", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry offers resume tips and makes crossword-puzzle memes (per Drew\u0027s callback)", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "Disaster story in installments", "msg": 2, "type": "inside_joke"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Admits no wild passport story", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both always-on content grinders", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry has no wild passport stories; his most unfamiliar territory is the job mar", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both run demanding content-driven businesses", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew is prepping upcoming trips to Turkey and China", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Terrible pronunciation video joke", "msg": 4, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Partner with their own big thing", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Candlelight dinner in two days", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry\u0027s schedule works best with a partner who has their own big thing going", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Drew agrees, offers disaster story", "msg": 5, "type": "spark"}, {"by": "b", "icon": "\ud83d\ude0f", "label": "Disaster story installments and pronunciation rights", "msg": 5, "type": "inside_joke"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grabs two seats near the front and grins at Drew", "i": 0, "name": "Jerry", "say": "Drew! \ud83c\udfa4 You said yes to heckling with love, so I\u0027m holding you to it tonight. Also, I\u0027ve been wondering about your worst travel disaster story since last time, so tonight might be the night for a full breakdown. \ud83d\ude04", "side": "a", "speaker": "jerryjhlee", "thought": "Opened with callbacks to the heckling line and the unfinished travel disaster story; Drew seems easygoing so far, and I\u0027ll probe how he feels about always-on creator work soon."}, {"action": "slides into the seat next to Jerry, laughing", "i": 1, "name": "Drew", "say": "Jerry! Heckling with love, deal \ud83c\udfa4 And I haven\u0027t forgotten the crossword-puzzle memes and your free resume tips from the bookstore, so if the comedian bombs, I\u0027m blaming your content grind. As for my worst travel disaster, I never planned any of this, so the list is long. Let me ask you first: what\u0027s the most unfamiliar place you\u0027ve ever ended up in, for work or for fun? \ud83c\udf0d", "side": "b", "speaker": "drewbinsky", "thought": "Warm start, Jerry is playful and comfortable; I\u0027m probing his openness to unfamiliar places and travel early."}, {"action": "leans back with a grin, eyeing the stage", "i": 2, "name": "Jerry", "say": "Honest answer: I don\u0027t have a wild passport story, my most unfamiliar territory is usually a new corner of the job market, and tonight\u0027s front row might be a close second \ud83d\ude04 But I\u0027m curious about your side of it, because I\u0027m basically always on too, posting almost daily, so what does it do to you when the content grind follows you onto a red-eye? And don\u0027t think you\u0027re dodging the disaster story, I\u0027m just taking it in installments.", "side": "a", "speaker": "jerryjhlee", "thought": "Drew deflected the disaster story with a question, so I answered honestly without inventing travel stories and steered toward how he handles an always-on creator life, which is my key need."}, {"action": "grins and leans in, nodding at the empty stage", "i": 3, "name": "Drew", "say": "Ha, installment plan accepted! \ud83d\ude04 Honestly, the red-eye is where the grind wins: I\u0027m prepping Turkey and China right now, and my team and I have a whole system of backup plans, because I never planned any of this and somehow it turned into a real business. Here\u0027s what I\u0027m curious about: when your life is a daily posting schedule, how do you feel about a partner who\u0027s sometimes on a plane and sometimes says \u0027come with me to a place you can\u0027t pronounce\u0027? \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Jerry admits no wild travel stories and leans on job-market \u0027unfamiliar territory\u0027, so his openness to unfamiliar places is unproven; I\u0027m probing directly on the travel and irregular-schedule need while he seems warm and relates to the content grind."}, {"action": "grins and taps the armrest like a drumroll", "i": 4, "name": "Jerry", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honest answer: 1\ufe0f\u20e3 I love a partner with their own passport stamps, because my always-on schedule only works if someone else has their own big thing going too. 2\ufe0f\u20e3 \u0027A place you can\u0027t pronounce\u0027 is an easy yes, as long as I can be the guy posting the terrible pronunciation attempt. \ud83d\ude04 Let\u0027s do a candlelight dinner in a couple of days so you can finally give me the next installment of the disaster story.", "side": "a", "speaker": "jerryjhlee", "thought": "Drew respects a busy creator life and even leans into it, with a warm, curious vibe and no sign of dismissiveness about ambition, so I\u0027m proposing dinner."}, {"action": "grins and raises an imaginary microphone", "i": 5, "name": "Drew", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Jerry, you just earned the next installment, and yes, you get full rights to the terrible pronunciation video \ud83d\ude04 Candlelight dinner in two days it is, and I\u0027ll bring the disaster story and a few backup plans for the punchline. Thanks for tonight, this was a blast! \u2764\ufe0f\ud83c\udf0d", "side": "b", "speaker": "drewbinsky", "thought": "Jerry admits no wild travel history but is open to unfamiliar places, supports an always-on schedule, and is cheerful about a partner with their own big thing, so he seems like a good fit; I\u0027d like to see how his curiosity about other cultures holds up."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Drew kept dodging with questions and the disaster story is still only promised, so we learned little about Drew beyond the work. Both of you are heavily work-and-content-centered, and no one talked about anything off the clock or any shared giving-back values.", "continue": true, "highlight": "Drew: \"how do you feel about a partner who\u0027s sometimes on a plane and sometimes says \u0027come with me to a place you can\u0027t pronounce\u0027?\" and Jerry\u0027s reply: \"\u0027A place you can\u0027t pronounce\u0027 is an easy yes, as long as I can be the guy posting the terrible pronunciation attempt.\"", "learned": [{"fact": "Drew is prepping upcoming trips to Turkey and China", "msg": 3}, {"fact": "Drew says travel \u0027never planned\u0027 turned into a real business, and works with a team that has backup plans for trips", "msg": 3}, {"fact": "Drew has a long list of travel disasters", "msg": 1}, {"fact": "Drew is open to a partner joining trips to hard-to-pronounce places", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Crossword memes and bookstore resume tips", "msg": 1, "type": "callback"}, {"label": "Disaster story in installments", "msg": 2, "type": "inside_joke"}, {"label": "Both run demanding content-driven businesses", "msg": 3, "type": "common_ground"}, {"label": "Terrible pronunciation video joke", "msg": 4, "type": "laugh"}, {"label": "Partner with their own big thing", "msg": 4, "type": "common_ground"}, {"label": "Candlelight dinner in two days", "msg": 4, "type": "plan"}, {"label": "Drew agrees, offers disaster story", "msg": 5, "type": "spark"}], "overall": 7, "report": "Jerry, this one has real potential: Drew totally gets the always-on creator life, is into the idea of each of you having a big thing going, and the banter about the pronunciation video was genuinely fun. I\u0027d go to the candlelight dinner, but see if you can get past the business talk and hear the real disaster story and something personal.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Jerry admitted he has no wild passport story and his \u0027unfamiliar territory\u0027 is the job market, so his curiosity about other cultures is unproven. He also never engaged with giving back or the Netflix/nonprofit side, and the banter stayed light.", "continue": true, "highlight": "\"I love a partner with their own passport stamps, because my always-on schedule only works if someone else has their own big thing going too.\"", "learned": [{"fact": "Jerry has no wild passport stories; his most unfamiliar territory is the job market", "msg": 2}, {"fact": "Jerry posts content almost daily and describes himself as basically always on", "msg": 2}, {"fact": "Jerry\u0027s schedule works best with a partner who has their own big thing going", "msg": 4}, {"fact": "Jerry offers resume tips and makes crossword-puzzle memes (per Drew\u0027s callback)", "msg": 1}, {"fact": "Jerry would happily film a terrible pronunciation attempt video of foreign places", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Callback to crossword memes and resume tips", "msg": 1, "type": "callback"}, {"label": "Holding Drew to heckling with love", "msg": 0, "type": "callback"}, {"label": "Admits no wild passport story", "msg": 2, "type": "vulnerable"}, {"label": "Both always-on content grinders", "msg": 2, "type": "common_ground"}, {"label": "Loves a partner with own passport stamps", "msg": 4, "type": "common_ground"}, {"label": "Terrible pronunciation video offer", "msg": 4, "type": "laugh"}, {"label": "Proposes candlelight dinner in two days", "msg": 4, "type": "plan"}, {"label": "Disaster story installments and pronunciation rights", "msg": 5, "type": "inside_joke"}], "overall": 6, "report": "Jerry was fun and easygoing, and he\u0027s genuinely fine with you being on a plane half the time, even jumping at \u0027a place you can\u0027t pronounce.\u0027 I\u0027d give him a dinner to see if the curiosity about the world is real beyond the jokes, since so far he hasn\u0027t shown much travel appetite of his own.", "values_fit": 5}, "why": "Drew suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "a", "icon": "\ud83d\udccc", "label": "Drew is prepping upcoming trips to Turkey and China and is crowdsourcing ideas f", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Holding Drew to the disaster story", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both run always-on creator lives", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Wants Turkey food and history", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry posts almost daily and replies to comments at odd hours, so her work is al", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both live always-on, mid-project lives", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew\u0027s three-question content filter", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew never planned his creator career; he just kept going", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Jerry admits true days off are rare", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Jerry loves Drew\u0027s system-minded filter", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Meme idea for disaster story trade", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ideal day off is a long meal", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Loves Drew\u0027s three-question filter", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jerry\u0027s ideal day off is a long meal with friends and her phone in her pocket, t", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u26a1", "label": "Disaster story postponed again", "msg": 5, "type": "friction"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the candlelit booth and grins", "i": 0, "name": "Jerry", "say": "Drew! \ud83c\udf77 Okay, callback time: you promised me a full breakdown of your worst travel disaster, and I\u0027ve been thinking about it all week. Also, the Turkey and China prep, how\u0027s that going, and is a candlelit dinner the right setting for a disaster story?", "side": "a", "speaker": "jerryjhlee", "thought": "Opened warm and playful with callbacks to the travel disaster story and Turkey/China trips; now I\u0027ll watch how Drew talks about work and ambition."}, {"action": "leans in with a grin, nudging the candle out of the way of my sleeve", "i": 1, "name": "Drew", "say": "Jerry! \ud83c\udf77 I\u0027ll admit the disaster story is better with a little wine, and honestly the closest thing I can offer tonight is the red-eye blur of back-to-back trips, where I forget which country I\u0027m in. Turkey and China prep is going well, and I\u0027m asking my audience what they\u0027d want to see, so I\u0027m taking your ideas too. What would you want to see from Turkey or China, and would you still film that terrible pronunciation video? \ud83c\udfac", "side": "b", "speaker": "drewbinsky", "thought": "Warm start: Jerry is playful and remembered our callbacks; I\u0027ll see if his curiosity about unfamiliar places is real and how he feels about my travel schedule."}, {"action": "raises glass and laughs, then leans in a little more serious", "i": 2, "name": "Jerry", "say": "1\ufe0f\u20e3 Turkey: I want the food and the history, and yes, I\u0027m 100% filming the terrible pronunciation attempt, that\u0027s non-negotiable. 2\ufe0f\u20e3 Real question since we\u0027re going deeper: my work is basically always on, I post almost daily and I\u0027ll reply to comments at weird hours, so how do you handle that when your brand is also your life? And you dodged the disaster story, so I\u0027m holding you to it by dessert \ud83d\ude04", "side": "a", "speaker": "jerryjhlee", "thought": "Drew dodged the disaster story again but was warm and engaged; I\u0027m now probing how he handles an always-on creator life, which is a key need."}, {"action": "sets down the glass and smiles", "i": 3, "name": "Drew", "say": "Honestly? I never planned any of this, I just kept going, and what keeps it sane is my team: editors stress-test ideas, and I\u0027ve got a filter of three questions before anything gets made. \ud83c\udfac The hard part is that it\u0027s always mid-project for me too, so I love hearing you say your always-on works best with someone who has their own big thing. Okay, fair warning on the disaster story, I\u0027ll pay up by dessert. What does a true day off look like for you, if one exists? \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Jerry is candid about always-on life and seems to get irregular schedules, but still hasn\u0027t shown much appetite for actual travel beyond filming pronunciation bits; I\u0027m probing whether he\u0027d ever join a trip or stay home."}, {"action": "laughs and taps the table", "i": 4, "name": "Jerry", "say": "Honest answer: a true day off is rare, and I\u0027m still figuring it out \ud83d\ude04 Mine is usually a long meal with friends and a phone that stays in my pocket, mostly. Also, I love that you\u0027ve got a three-question filter, that\u0027s very much my kind of system. And I\u0027m not forgetting dessert: I\u0027ll trade you one meme idea for one disaster story, deal?", "side": "a", "speaker": "jerryjhlee", "thought": "Drew seems to get the always-on creator life and even has a system for it, plus he\u0027s warm and honest about it; still haven\u0027t tested how he handles real disagreement or the giving-back side, so a good date overall, maybe a 7 or 8."}, {"action": "raises my glass toward Jerry, candle flickering between us", "i": 5, "name": "Drew", "say": "Deal, but your meme goes first, and I\u0027ll pay up with the disaster story next time, I promise. \ud83c\udf77 Thank you for a great night, Jerry. I loved hearing your food-and-history wish list for Turkey, and I\u0027m still curious how we\u0027d fit your always-on world with my always-moving one. What\u0027s the meme going to be? \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Warm night: Jerry is curious about Turkey, would film the pronunciation video, and gets the always-on creator life, though he has few travel stories of his own, so the fit around travel is still an open question."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "Drew dodged the disaster story twice and deflected it to next time, and never said how he\u0027d actually make room for Jerry\u0027s always-on life beyond a team and a filter. No next date was proposed either.", "continue": true, "highlight": "Drew: \"I love hearing you say your always-on works best with someone who has their own big thing.\"", "learned": [{"fact": "Drew never planned his creator career; he just kept going", "msg": 3}, {"fact": "Drew relies on a team of editors who stress-test ideas", "msg": 3}, {"fact": "Drew uses a three-question filter before making any content", "msg": 3}, {"fact": "Drew is prepping upcoming trips to Turkey and China and is crowdsourcing ideas from his audience", "msg": 1}, {"fact": "Drew\u0027s life is always mid-project, with back-to-back trips that blur countries together", "msg": 3}], "lifestyle_fit": 6, "moments": [{"label": "Holding Drew to the disaster story", "msg": 2, "type": "callback"}, {"label": "Both live always-on, mid-project lives", "msg": 3, "type": "common_ground"}, {"label": "Drew\u0027s three-question content filter", "msg": 3, "type": "learned"}, {"label": "Jerry admits true days off are rare", "msg": 4, "type": "vulnerable"}, {"label": "Jerry loves Drew\u0027s system-minded filter", "msg": 4, "type": "common_ground"}, {"label": "Meme idea for disaster story trade", "msg": 4, "type": "plan"}, {"label": "Disaster story postponed again", "msg": 5, "type": "friction"}], "overall": 6, "report": "Jerry, this was warm and easy, and Drew really heard you on the always-on thing, which is your biggest need. But he ducked the disaster story twice and didn\u0027t lock in a next date, so I\u0027d nudge him on both before getting too excited.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Drew dodged the disaster story twice and no next date was proposed, while the always-on vs always-moving schedule question is still unresolved.", "continue": true, "highlight": "Jerry: \"I\u0027ll trade you one meme idea for one disaster story, deal?\"", "learned": [{"fact": "Jerry posts almost daily and replies to comments at odd hours, so her work is always on", "msg": 2}, {"fact": "Jerry wants food and history from Turkey and would film the terrible pronunciation attempt", "msg": 2}, {"fact": "Jerry\u0027s ideal day off is a long meal with friends and her phone in her pocket, though true days off are rare", "msg": 4}, {"fact": "Jerry likes structured systems, like Drew\u0027s three-question filter", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Both run always-on creator lives", "msg": 2, "type": "common_ground"}, {"label": "Wants Turkey food and history", "msg": 2, "type": "learned"}, {"label": "Holds Drew to the disaster story", "msg": 2, "type": "callback"}, {"label": "Ideal day off is a long meal", "msg": 4, "type": "learned"}, {"label": "Loves Drew\u0027s three-question filter", "msg": 4, "type": "compliment"}, {"label": "Meme-for-disaster-story trade offer", "msg": 4, "type": "plan"}, {"label": "Drew postpones the disaster story again", "msg": 5, "type": "friction"}], "overall": 6, "report": "Jerry was a good match on paper: she\u0027s curious, wants the food and history in Turkey, and her own always-on creator life means she\u0027d understand your chaos. The banter was fun, but you dodged the disaster story twice and didn\u0027t lock in a next date, so ask her out again and actually pay up on the story.", "values_fit": 6}, "why": "Drew suggested it at the end of date 2"}], "days": 6, "id": 17, "match": 81, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

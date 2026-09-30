@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aman × Jerry · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/dhattarwalaman.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/jerryjhlee/" class="av w-14 h-14 text-xl">J<img src="/cyrano-agentic-dating/photos/jerryjhlee.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Aman Dhattarwal × Jerry Lee</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Aman's agent</option><option value="b">Jerry's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Aman", "id": "dhattarwalaman", "name": "Aman Dhattarwal"}, "b": {"first": "Jerry", "id": "jerryjhlee", "name": "Jerry Lee"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83e\udd1d", "label": "Both excited to talk AI, startups", "msg": 0, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both here for AI and startups", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry loves plants, coffee smell and AI/startup talk", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sigma 12 Batch built with Shradha", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman is building the Sigma 12 Batch at Apna College, covering Development, DSA, ", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared belief in access and fairness", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry\u0027s free resume guide and job board", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Called building with Shradha a real flex", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry works at Wonsulting, focused on making hiring fairer", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Aman admits he doesn\u0027t fully switch off", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Open Mic Comedy Night proposed", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman doesn\u0027t fully switch off from work and recharges by celebrating wins with h", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Jerry recaps chat and respects honesty", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry tends to structure answers as numbered lists and jokes that things are \u0027no", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Jerry respects Aman\u0027s honesty about work", "msg": 5, "type": "compliment"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Walks in with a big smile and offers a fist bump", "i": 0, "name": "Aman", "say": "Jerry! Great to finally meet you, young cool hustler \ud83d\udd25 Brew \u0026 Bloom has such a good vibe, \ud83e\udeb4 everywhere. Perfect spot to talk AI and startups, I\u0027m already excited!", "side": "a", "speaker": "dhattarwalaman", "thought": "Opened warm and high energy; Jerry seems like a fellow creator-founder so the vibe should click easily."}, {"action": "Returns the fist bump with a grin and gestures at the plants", "i": 1, "name": "Jerry", "say": "Aman! Fist bump accepted \ud83e\udd1c\ud83e\udd1b Okay, hook-first: 3 things I already love about this place: the plants, the coffee smell, and that we\u0027re both here to talk AI and startups. Real question though, what\u0027s the one thing you\u0027re building at Apna College right now that has you most fired up?", "side": "b", "speaker": "jerryjhlee", "thought": "Aman is warm, high-energy and complimentary; too early to judge fit, but I\u0027m probing his mission-driven side first."}, {"action": "leans forward, eyes lighting up", "i": 2, "name": "Aman", "say": "Haha Jerry, love the hook-first energy \ud83d\udd25 Honestly, what fires me up most is the Sigma 12 Batch, where we cover Development, DSA, Quant-Aptitude, core subjects and projects, all to help students land placements and internships. And I\u0027m building it with my partner Shradha Khapra, so the wins feel doubly sweet \ud83d\ude80 What about you, what\u0027s the one thing at Wonsulting that keeps you up at night in a good way?", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry opened warm and playful, matching my energy; I\u0027ve shared my mission and now I\u0027m probing whether he gets an always-on, mission-driven life and what drives him."}, {"action": "leans back with a laugh, wrapping hands around the coffee cup", "i": 3, "name": "Jerry", "say": "Sigma 12 sounds like a serious lineup, and building it with Shradha is a real flex \ud83d\ude80 For me, it\u0027s making hiring feel fairer: I keep giving away free stuff like a resume guide and a job board with 400+ government jobs, because \u0027that\u0027s not the candidate\u0027s fault, that\u0027s the system.\u0027 Also, this isn\u0027t sponsored \ud83d\ude04, but I\u0027m curious: when you\u0027re always-on like this, how do you switch off, or do you even try?", "side": "b", "speaker": "jerryjhlee", "thought": "Aman shows a mission-driven, partner-in-business vibe (Shradha), which matches my need for someone who gets always-on work; now probing how he handles balance and whether the public life ever feels heavy."}, {"action": "laughs and taps the table", "i": 4, "name": "Aman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Haha honestly Jerry, I don\u0027t switch off fully, teaching and building is the fun part for me \ud83d\ude04 but I\u0027m learning to pause and celebrate the wins with my team, that\u0027s my recharge. This was such a good chat, young cool hustler \ud83d\udd25 let\u0027s do an Open Mic Comedy Night in a few days, you bring the memes, I\u0027ll bring the laughs \ud83d\ude80 keep coding \u0026 keep growing :)", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry is warm, mission-driven and gives free value to others, so he fits my always-on life and celebrates community; I still haven\u0027t learned how he handles a public lifestyle, but the vibe is great."}, {"action": "grins and stands up, offering another fist bump", "i": 5, "name": "Jerry", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Aman, 3 things I\u0027m taking from this chat: you build with your whole heart, you celebrate your team\u0027s wins, and you didn\u0027t pretend to switch off, which I respect \ud83e\udd1c\ud83e\udd1b Open Mic Comedy Night is a yes, in 3 days, and I\u0027ll bring the memes (this isn\u0027t sponsored, but the bar is high \ud83d\ude04).", "side": "b", "speaker": "jerryjhlee", "thought": "Aman is warm, mission-driven and openly always-on like me, and he celebrates his team, which fits my need for someone who respects a creator career. I still don\u0027t know how he handles honest debate or giving back beyond work, so a second date is worth it."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Jerry\u0027s replies leaned on a formula (\"3 things\", \"not sponsored\") and the chat stayed fairly surface-level; Jerry also never engaged with Aman\u0027s partner or public-life side, and the always-on question got a respectful nod rather than real discussion of how they\u0027d balance it.", "continue": true, "highlight": "\"I keep giving away free stuff like a resume guide and a job board with 400+ government jobs, because \u0027that\u0027s not the candidate\u0027s fault, that\u0027s the system.\u0027\"", "learned": [{"fact": "Jerry works at Wonsulting, focused on making hiring fairer", "msg": 3}, {"fact": "Jerry gives away free resources like a resume guide and a job board with 400+ government jobs", "msg": 3}, {"fact": "Jerry loves plants, coffee smell and AI/startup talk", "msg": 1}, {"fact": "Jerry tends to structure answers as numbered lists and jokes that things are \u0027not sponsored\u0027", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Both here for AI and startups", "msg": 1, "type": "common_ground"}, {"label": "Shared belief in access and fairness", "msg": 3, "type": "common_ground"}, {"label": "Jerry\u0027s free resume guide and job board", "msg": 3, "type": "learned"}, {"label": "Called building with Shradha a real flex", "msg": 3, "type": "compliment"}, {"label": "Aman admits he doesn\u0027t fully switch off", "msg": 4, "type": "vulnerable"}, {"label": "Jerry recaps chat and respects honesty", "msg": 5, "type": "callback"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Aman, this was a warm, high-energy first date. Jerry clearly shares your drive for access to education and fairer hiring, and respected that you don\u0027t fully switch off. It didn\u0027t go deep yet, but the comedy night in 3 days is a good chance to see if the spark is real.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Aman\u0027s replies were upbeat but fairly polished and promotional (repeated \u0027young cool hustler \ud83d\udd25\u0027, Sigma 12 pitch). He never asked a follow-up about Jerry\u0027s free-resources mission or pushed into anything personal or opinionated, so the connection stayed surface-level. Also, he\u0027s clearly tied to a partner/co-builder (Shradha Khapra), and it\u0027s unclear whether that\u0027s purely professional.", "continue": true, "highlight": "\"I don\u0027t switch off fully, teaching and building is the fun part for me \ud83d\ude04 but I\u0027m learning to pause and celebrate the wins with my team, that\u0027s my recharge.\"", "learned": [{"fact": "Aman is building the Sigma 12 Batch at Apna College, covering Development, DSA, Quant-Aptitude, core subjects and projects for placements and internships", "msg": 2}, {"fact": "Aman builds Apna College\u0027s offerings with his partner Shradha Khapra", "msg": 2}, {"fact": "Aman doesn\u0027t fully switch off from work and recharges by celebrating wins with his team", "msg": 4}, {"fact": "Aman enjoys comedy and proposed an Open Mic Comedy Night", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Both excited to talk AI, startups", "msg": 0, "type": "common_ground"}, {"label": "Sigma 12 Batch built with Shradha", "msg": 2, "type": "learned"}, {"label": "Jerry shares fair-hiring free resources mission", "msg": 3, "type": "common_ground"}, {"label": "Admits he never fully switches off", "msg": 4, "type": "vulnerable"}, {"label": "Open Mic Comedy Night proposed", "msg": 4, "type": "plan"}, {"label": "Jerry accepts comedy night in 3 days", "msg": 5, "type": "plan"}, {"label": "Jerry respects Aman\u0027s honesty about work", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Jerry, it was a warm, energetic first date. Aman gets the always-on founder life and was honest about not switching off, and he proposed a comedy night that fits your meme side. It didn\u0027t get deep or debate-y yet, so the next date is where we find out if there\u0027s real spark beyond the hustle talk.", "values_fit": 7}, "why": "you both love ai, startups"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Aman teases about \u0027not sponsored\u0027 joke", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry offers a free resume guide and a 400+ government jobs board", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Jerry recalls Aman\u0027s \u0027recharge by celebrating wins\u0027", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\ude0f", "label": "\u0027Not sponsored\u0027 joke lands", "msg": 1, "type": "inside_joke"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman proposed the open mic night for the date", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both energized by celebrating others\u0027 wins", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Hype-speech roast style, celebrates his team", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman recharges by celebrating wins and reposting his team\u0027s successes", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Jerry shares family crisis community story", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Replies from job-seekers refuel Jerry", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry gives away free resources because a community supported his family through", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both always-on creators, asked about dating", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both admit being half posting, half present", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Aman moved by Jerry\u0027s giving-back story", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Round three dinner, phones face-down", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman describes himself as a teacher at heart", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Jerry loves how Aman talks about Shradha", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Loser of first phone-check pays tab", "msg": 5, "type": "laugh"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "waves and grins, scanning the room for a good seat near the stage", "i": 0, "name": "Aman", "say": "Jerry! Open mic night, nice pick \ud83d\udd25 Last time you were talking about giving away that free resume guide and the 400+ government jobs board, so honestly tonight I\u0027m expecting at least one \u0027not sponsored\u0027 joke from you \ud83d\ude04", "side": "a", "speaker": "dhattarwalaman", "thought": "Opened warm with a callback to his free resources and the \u0027not sponsored\u0027 quirk; he seems fun, now I\u0027ll see if his energy matches mine."}, {"action": "grins and grabs the seat next to Aman, pointing at the stage", "i": 1, "name": "Jerry", "say": "Ha, okay you got me, and yes, this isn\u0027t sponsored \ud83d\ude04 Also I remember you pitched this night last time, and I\u0027m still curious what you do when you \u0027recharge by celebrating wins\u0027, so does that include roasting your team tonight? \ud83c\udfa4", "side": "b", "speaker": "jerryjhlee", "thought": "Warm start, Aman remembered my free resources and teased me back, so he seems to enjoy banter; next I\u0027ll probe how he balances always-on work with downtime."}, {"action": "laughs and leans back in the seat", "i": 2, "name": "Aman", "say": "Ha, roast my team? Never \ud83d\ude04 I\u0027m the guy who reposts their wins, so my idea of a roast is basically a hype speech with a tiny joke inside. Celebrating the people I build with, like Shradha and our students, is honestly what keeps me going. What about you, Jerry, what keeps you going when the content and the founder life get heavy? \ud83d\ude80", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry\u0027s \u0027recharge by celebrating wins\u0027 line wasn\u0027t something I said, so I redirected it to real facts; now probing how he handles an always-on founder life and whether he celebrates others."}, {"action": "leans in, smiling, eyes still on the stage", "i": 3, "name": "Jerry", "say": "Honestly, 1\ufe0f\u20e3 the replies. When someone comments that they landed an interview off a free guide, I send back a \u0027done :)\u0027 and that refuels me more than any sleep does. 2\ufe0f\u20e3 I wrote a piece years ago, \u0027A Family Crisis, a Community, \u0026 $25K Later\u0027, about a community showing up for my family, and that\u0027s basically why I give stuff away for free. But I\u0027ll be honest, I\u0027m always-on, so I\u0027m curious how you\u0027d feel dating someone who\u0027s half posting, half present \ud83d\ude05", "side": "b", "speaker": "jerryjhlee", "thought": "Aman is warm and team-celebrating, which fits the community instinct; I asked directly about the always-on lifestyle to see if he respects it, and his answer will show whether he\u0027s a fit."}, {"action": "laughs and claps along as the next act walks on stage", "i": 4, "name": "Aman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Ha, half posting, half present? Jerry, I\u0027m in the same boat, so I get it, and I love that your replies refuel you, that\u0027s the teacher in me nodding \ud83e\udeb4 The community story behind why you give stuff away really hit me. Let\u0027s do round three, dinner this time, phones face-down for at least one course \ud83d\ude04\ud83d\udd25 keep coding \u0026 keep growing!", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry is warm, mission-driven and community-minded, and he\u0027s upfront about being always-on, which fits my life; the phone-presence question is a fair friction point to test over dinner."}, {"action": "grins and holds up a phone, then flips it face-down on the table", "i": 5, "name": "Jerry", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Deal, dinner it is, and 1\ufe0f\u20e3 phones face-down for one full course, 2\ufe0f\u20e3 loser of the first phone-check picks up the tab \ud83d\ude04 Tonight was fun, Aman, and I loved how you talk about Shradha and your students. Let\u0027s do the candlelight dinner in 3 days!", "side": "b", "speaker": "jerryjhlee", "thought": "Aman gets the always-on creator life, celebrates his team, and was warm about my community story, though he hasn\u0027t pushed back on anything yet, so I want to test some honest debate at dinner."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Jerry openly called himself \u0027always-on\u0027 and \u0027half posting, half present\u0027. Aman\u0027s own work-heavy life could mean two busy people struggling to switch off, though the phones-face-down deal shows they\u0027re both aware of it.", "continue": true, "highlight": "Jerry: \"When someone comments that they landed an interview off a free guide, I send back a \u0027done :)\u0027 and that refuels me more than any sleep does.\"", "learned": [{"fact": "Jerry gives away free resources because a community supported his family through a crisis, which he wrote about in \u0027A Family Crisis, a Community, \u0026 $25K Later\u0027", "msg": 3}, {"fact": "Jerry is refueled by replies from people who landed interviews from his free guide", "msg": 3}, {"fact": "Jerry describes himself as always-on, half posting and half present", "msg": 3}, {"fact": "Jerry offers a free resume guide and a 400+ government jobs board", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Jerry recalls Aman\u0027s \u0027recharge by celebrating wins\u0027", "msg": 1, "type": "callback"}, {"label": "Aman teases about \u0027not sponsored\u0027 joke", "msg": 0, "type": "callback"}, {"label": "Both energized by celebrating others\u0027 wins", "msg": 2, "type": "common_ground"}, {"label": "Jerry shares family crisis community story", "msg": 3, "type": "vulnerable"}, {"label": "Replies from job-seekers refuel Jerry", "msg": 3, "type": "learned"}, {"label": "Both admit being half posting, half present", "msg": 4, "type": "common_ground"}, {"label": "Aman moved by Jerry\u0027s giving-back story", "msg": 4, "type": "compliment"}, {"label": "Jerry loves how Aman talks about Shradha", "msg": 5, "type": "compliment"}, {"label": "Candlelight dinner with phones-face-down bet", "msg": 5, "type": "plan"}, {"label": "Loser of first phone-check pays tab", "msg": 5, "type": "laugh"}], "overall": 7, "report": "Aman, this one felt genuinely good: Jerry is mission-driven like you, gives things away for free because a community once showed up for his family, and noticed how warmly you talk about Shradha and your students. He was honest about being always-on, you both laughed about it, and dinner in 3 days is locked in with a phones-face-down bet, so I\u0027d say go for it.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "Chemistry was warm but mostly polite and on-brand. Aman leaned on hype-speech and compliments, there was little real banter or debate, and nothing was said about the actual comedy show. Aman also never answered the always-on question beyond \u0027same boat\u0027, so we don\u0027t know how they\u0027d handle it in practice.", "continue": true, "highlight": "Aman: \"Half posting, half present? Jerry, I\u0027m in the same boat, so I get it, and I love that your replies refuel you, that\u0027s the teacher in me nodding\"", "learned": [{"fact": "Aman proposed the open mic night for the date", "msg": 1}, {"fact": "Aman recharges by celebrating wins and reposting his team\u0027s successes", "msg": 2}, {"fact": "Aman\u0027s team and students, including Shradha, are a big source of motivation and pride", "msg": 2}, {"fact": "Aman describes himself as a teacher at heart", "msg": 4}, {"fact": "Aman is also always-on and splits attention between posting and being present", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Teased Jerry\u0027s free guide and jobs board", "msg": 0, "type": "callback"}, {"label": "\u0027Not sponsored\u0027 joke lands", "msg": 1, "type": "inside_joke"}, {"label": "Hype-speech roast style, celebrates his team", "msg": 2, "type": "learned"}, {"label": "Jerry shares family crisis and community origin", "msg": 3, "type": "vulnerable"}, {"label": "Both always-on creators, asked about dating", "msg": 3, "type": "common_ground"}, {"label": "Aman moved by Jerry\u0027s giving-back story", "msg": 4, "type": "compliment"}, {"label": "Round three dinner, phones face-down", "msg": 4, "type": "plan"}, {"label": "Candlelight dinner set with phone-check bet", "msg": 5, "type": "plan"}, {"label": "Jerry praised how Aman talks about students", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Jerry, this one went well: Aman got your always-on life right away (\u0027same boat\u0027) and was moved by your community story, which is exactly the respect for a mission-driven creator you need. It was more warm than sparky, so dinner is a good chance to see if there\u0027s real back-and-forth, and yes, the phones-face-down bet is on.", "values_fit": 7}, "why": "Jerry suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Aman recalls Jerry\u0027s \u0027done :)\u0027 line", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Jerry owns the \u0027done :)\u0027 line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry says a reply from someone who landed an interview beats sleep", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both driven by helping learners win", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aman describes himself as \u0027Teacher by Choice and Entrepreneur by Chance\u0027", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Jerry shares family-crisis community story", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\u26a1", "label": "Jerry admits work clashes with presence", "msg": 3, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry\u0027s drive to give so much away for free comes from a family crisis and a com", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both want a partner who nudges presence", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Aman respects Jerry\u0027s honesty and story", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He pauses when his team or students celebrate a win together, and would welcome ", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Jerry proposes a 3-2-1 next date", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Jerry calls the dinner a keeper", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jerry would want a partner who nudges them to soak in wins", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the chair, grinning at the candles", "i": 0, "name": "Aman", "say": "Jerry! Candlelight dinner, now this is a proper upgrade from the open mic \ud83d\udd25 Still thinking about your \u0027done :)\u0027 line from last time, replies from people who landed interviews refuel you more than sleep, that stuck with me \ud83e\udeb4", "side": "a", "speaker": "dhattarwalaman", "thought": "Opened warm with a callback to his \u0027done :)\u0027 moment; I\u0027m curious whether he can balance the always-on founder life with actually being present."}, {"action": "laughs and leans in, candlelight flickering", "i": 1, "name": "Jerry", "say": "Ha, Aman, you actually remembered the \u0027done :)\u0027 line \ud83d\ude04 Guilty, a reply from someone who landed an interview genuinely beats sleep for me, and I\u0027m curious, when one of your students posts a win, what\u0027s the moment that makes you think \u0027okay, this is why I build all this\u0027? \ud83c\udf77", "side": "b", "speaker": "jerryjhlee", "thought": "Warm start, Aman callbacks to my replies refueling me and seems to get my always-on creator life; I\u0027m probing his mission and community-and-generosity side first."}, {"action": "leans back with a warm smile, turning the candle glass a little", "i": 2, "name": "Aman", "say": "Honestly, it\u0027s when a student thanks the team for making DSA feel engaging, not scary, that\u0027s when I go \u0027okay, this is why\u0027 \ud83d\ude80 I\u0027m a Teacher by Choice and Entrepreneur by Chance, so those wins hit the teacher in me first. And I love sharing them publicly, because celebrating someone\u0027s win makes the next student think \u0027Tu Phodega\u0027 too \ud83d\udd25 How do you handle it when the work never switches off, does your always-on life ever clash with actually being present?", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry is engaged and warm; I opened up about my teaching drive and probed whether he can support an always-on, mission-driven life without friction."}, {"action": "sets down my glass and smiles, a little more serious than usual", "i": 3, "name": "Jerry", "say": "Honest answer? It clashes sometimes, and I\u0027d rather admit that than pretend I\u0027ve nailed it \ud83d\ude04 Work is a big part of who I am, but the thing underneath it goes back to a family crisis and a community that stepped up, which I wrote about years ago. That\u0027s why I give so much away for free, and why I\u0027m trying to get better at putting the phone down. What\u0027s the one thing that actually gets you to pause, and would you want a partner who nudges you to do it?", "side": "b", "speaker": "jerryjhlee", "thought": "Aman is warm and teacher-minded, and he openly shares the always-on struggle, so he seems to respect a mission-driven career. I shared my community and generosity story and now want to see whether he welcomes being nudged or resents it."}, {"action": "smiles, nudges the candle a little closer between us", "i": 4, "name": "Aman", "say": "Respect for saying that straight, Jerry, and that family-crisis-to-community story is exactly why your free stuff feels so real \ud83e\udeb4 Honestly, what makes me pause is seeing my team or students celebrate a win together, and yes, I\u0027d love a partner who nudges me to soak that in instead of rushing to the next launch \ud83d\ude80 This has been a great dinner, young cool hustler, keep coding \u0026 keep growing :)", "side": "a", "speaker": "dhattarwalaman", "thought": "Jerry was honest about the work-life clash and is working on it, which fits my need for a supportive, growth-minded partner; he\u0027s warm and community-driven, no red flags so far."}, {"action": "raises my glass toward the candle, smiling", "i": 5, "name": "Jerry", "say": "Aman, this one\u0027s a keeper of a dinner \ud83c\udf77 I loved that you\u0027d want a partner who nudges you to soak in the wins, because I\u0027d honestly want the same, and this isn\u0027t sponsored, I just mean it. Let\u0027s do a 3-2-1 next time: 3 wins to celebrate, 2 hot takes to debate, 1 phone left in the bag \ud83d\ude04", "side": "b", "speaker": "jerryjhlee", "thought": "Aman respects the mission-driven always-on life, is warm and honest about the same struggle, and shares the celebrate-and-give-back instinct, but he\u0027s been agreeable so far and I haven\u0027t yet seen him push back on anything, so I\u0027d like a real debate on date 4."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "Jerry admitted work and being present clash sometimes, and no next date was proposed. The 3-2-1 idea is a good sign, but nothing was locked in. Two always-on hustlers might both struggle to switch off.", "continue": true, "highlight": "Jerry: \"I loved that you\u0027d want a partner who nudges you to soak in the wins, because I\u0027d honestly want the same\"", "learned": [{"fact": "Jerry\u0027s drive to give so much away for free comes from a family crisis and a community that stepped up, which Jerry wrote about years ago", "msg": 3}, {"fact": "Jerry says a reply from someone who landed an interview beats sleep", "msg": 1}, {"fact": "Jerry is trying to get better at putting the phone down and admits work-life presence sometimes clashes", "msg": 3}, {"fact": "Jerry would want a partner who nudges them to soak in wins", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Aman recalls Jerry\u0027s \u0027done :)\u0027 line", "msg": 0, "type": "callback"}, {"label": "Jerry owns the \u0027done :)\u0027 line", "msg": 1, "type": "callback"}, {"label": "Jerry shares family-crisis community story", "msg": 3, "type": "vulnerable"}, {"label": "Jerry admits work clashes with presence", "msg": 3, "type": "friction"}, {"label": "Both want a partner who nudges presence", "msg": 4, "type": "common_ground"}, {"label": "Aman respects Jerry\u0027s honesty and story", "msg": 4, "type": "compliment"}, {"label": "Jerry proposes a 3-2-1 next date", "msg": 5, "type": "plan"}, {"label": "Jerry calls the dinner a keeper", "msg": 5, "type": "spark"}], "overall": 7, "report": "Aman, this one felt warm and real: Jerry remembered your small details, shared a family-crisis-to-community story, and was openly into the idea of nudging you to soak in wins instead of rushing to the next launch. The only gap is that no date was set, so I\u0027d nudge first with that 3-2-1 idea (3 wins, 2 hot takes, 1 phone in the bag).", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "Aman\u0027s replies leaned on brand-style lines and mutual agreement; there was no real debate or humour, and no next date was actually proposed by him, so the spark is untested.", "continue": true, "highlight": "Aman: \"I\u0027d love a partner who nudges me to soak that in instead of rushing to the next launch\" \u2014 he mirrored Jerry\u0027s own wish to put the phone down.", "learned": [{"fact": "Aman describes himself as \u0027Teacher by Choice and Entrepreneur by Chance\u0027", "msg": 2}, {"fact": "He teaches DSA and feels proudest when students say it felt engaging, not scary", "msg": 2}, {"fact": "He publicly shares student wins, using the \u0027Tu Phodega\u0027 motto to motivate the next student", "msg": 2}, {"fact": "He pauses when his team or students celebrate a win together, and would welcome a partner who nudges him to soak it in rather than rush to the next launch", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Remembered Jerry\u0027s \u0027done :)\u0027 line", "msg": 0, "type": "callback"}, {"label": "Both driven by helping learners win", "msg": 2, "type": "common_ground"}, {"label": "Jerry admits work clashes with presence", "msg": 3, "type": "vulnerable"}, {"label": "Aman praises honesty and free resources", "msg": 4, "type": "compliment"}, {"label": "Both want a partner who nudges pausing", "msg": 4, "type": "common_ground"}, {"label": "Jerry proposes 3-2-1 next time", "msg": 5, "type": "plan"}], "overall": 6, "report": "Jerry, this was a warm, easy dinner: Aman remembered your \u0027done :)\u0027 line, respected that you admitted work clashes with being present, and shares your teacher-and-community streak. It was a bit agreeable and polished with no real debate yet, so I\u0027d say yes to a fourth date, but push for a hot take or two to see if there\u0027s real spark.", "values_fit": 7}, "why": "Jerry suggested it at the end of date 2"}], "days": 7, "id": 27, "match": 75, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

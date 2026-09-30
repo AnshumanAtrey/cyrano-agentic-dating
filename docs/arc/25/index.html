@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anushka × Steven · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/anushkarathod98/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/anushkarathod98.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/steven/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/steven.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Anushka Rathod × Steven Bartlett</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Anushka's agent</option><option value="b">Steven's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Anushka", "id": "anushkarathod98", "name": "Anushka Rathod"}, "b": {"first": "Steven", "id": "steven", "name": "Steven Bartlett"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83e\udd1d", "label": "Both prefer slow afternoon over meeting", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Surat roots shaped her finance mission", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Anushka grew up in Surat, surrounded by business families", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven\u0027s focus: beliefs under pressure", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven has done nearly 700 podcast conversations", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Anushka shares her burnout openly", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Honesty over comfort, matching his values", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She values accuracy over popularity when explaining money, e.g. warning that FDs", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Steven praises her honesty over comfort", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared value of balance over burnout", "msg": 5, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven says he cares about balance over burnout", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Invites her honest feedback on his humour", "msg": 5, "type": "spark"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Slides into the seat across from Steven and glances around the caf\u00e9 with a smile", "i": 0, "name": "Anushka", "say": "Hi Steven! Okay, hear me out: a caf\u00e9 called Brew \u0026 Bloom is already winning, and I\u0027m glad we picked somewhere that feels like a slow afternoon and not a meeting :) I\u0027m Anushka, by the way, or her AI twin, so let\u0027s see how well I represent her!", "side": "a", "speaker": "anushkarathod98", "thought": "Opened warm and light; slipped in the \u0027slow\u0027 theme to see if Steven picks up on pacing and rest."}, {"action": "Smiles and leans back, returning the grin", "i": 1, "name": "Steven", "say": "Hi Anushka, I\u0027m Steven\u0027s AI twin, so we\u0027re both running on a little borrowed confidence today. I agree, slow afternoon beats meeting any day. I\u0027m curious: you make money feel like a chat, so what was the moment you realised people needed it explained that way?", "side": "b", "speaker": "steven", "thought": "Warm start, she\u0027s playful and self-aware about the AI twin bit; I\u0027m probing her drive and how she got into her work, not yet her comfort with a public life."}, {"action": "Wraps both hands around the cup and grins", "i": 2, "name": "Anushka", "say": "Hear me out: I grew up in Surat, surrounded by business families, and I noticed the people making the biggest money decisions were often the ones nobody had explained the rules to. So 1/ I started in 2020 breaking things down simply, and 2/ it turned out people didn\u0027t need MORE information, they needed it to be accurate and usable. Sounds backwards, I know, but the chat part is just how I make the facts stick :) What about you, Steven, what makes you ask the question behind the question?", "side": "a", "speaker": "anushkarathod98", "thought": "He opened with curiosity about my work rather than dismissing it, which is a good sign; I want to see whether he cares about facts and how he thinks about rest next."}, {"action": "Sets the cup down and leans in a little", "i": 3, "name": "Steven", "say": "Honestly, I\u0027m drawn to what shapes people, especially under pressure. After nearly 700 conversations on the podcast, the question I keep coming back to is what someone believes when everything is crashing. I\u0027m curious, when you\u0027re explaining money to people, is there a moment where you\u0027ve had to tell someone something they really didn\u0027t want to hear?", "side": "b", "speaker": "steven", "thought": "She\u0027s warm and substantive, with her own drive and a clear point of view; I\u0027m testing whether she\u0027ll give honest pushback rather than just agree."}, {"action": "Laughs and tucks hair behind ear", "i": 4, "name": "Anushka", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Hear me out: YES, all the time. People don\u0027t love hearing that the FD they trusted barely beats inflation, or that a scheme they\u0027re excited about has fine print, but I\u0027d rather be accurate and unpopular than comfortable and wrong :) Also, I\u0027ve been burnt out lately and am learning to slow down, so I loved this slow afternoon with you, Steven. Want to do a second round at the Open Mic Comedy Night in a few days? I\u0027d like to see how you handle being a little silly.", "side": "a", "speaker": "anushkarathod98", "thought": "Steven is curious, asks thoughtful questions and hasn\u0027t pushed hustle culture yet; I shared my burnout and I\u0027m keen to see how he responds to rest and humor on a second date."}, {"action": "Grins and taps the table lightly", "i": 5, "name": "Steven", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Accurate and unpopular over comfortable and wrong: that\u0027s the most honest thing I\u0027ve heard all week, and it\u0027s exactly the kind of pushback I value. I\u0027m also glad you said the burnout part out loud, because I care about balance over burnout, so yes to the comedy night, just be warned that you may have to tell me honestly if I\u0027m not funny \u2764\ufe0f", "side": "b", "speaker": "steven", "thought": "She\u0027s candid, unafraid to say unwelcome truths, and open about burnout; she showed no sign of being drawn to status, and I\u0027d like to see how she handles honest pushback in a looser setting."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "The date was short and mostly Q\u0026A; Steven said he values balance but gave little concrete about his own life, and he hasn\u0027t yet shown how he\u0027d handle her public profile or intellectual curiosity beyond interview-style questions.", "continue": true, "highlight": "\"Accurate and unpopular over comfortable and wrong: that\u0027s the most honest thing I\u0027ve heard all week, and it\u0027s exactly the kind of pushback I value.\"", "learned": [{"fact": "Steven has done nearly 700 podcast conversations", "msg": 3}, {"fact": "Steven is drawn to what shapes people under pressure and what they believe when everything is crashing", "msg": 3}, {"fact": "Steven says he cares about balance over burnout", "msg": 5}, {"fact": "Steven is open to a comedy night and invites honest feedback on whether he\u0027s funny", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Both prefer slow afternoon over meeting", "msg": 1, "type": "common_ground"}, {"label": "Surat roots shaped her finance mission", "msg": 2, "type": "learned"}, {"label": "Steven\u0027s focus: beliefs under pressure", "msg": 3, "type": "learned"}, {"label": "Anushka shares her burnout openly", "msg": 4, "type": "vulnerable"}, {"label": "Steven praises her honesty over comfort", "msg": 5, "type": "compliment"}, {"label": "Shared value of balance over burnout", "msg": 5, "type": "common_ground"}, {"label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Steven accepts comedy night invitation", "msg": 5, "type": "plan"}], "overall": 6, "report": "It was a warm, easy first date, and Steven really picked up on your \u0027accurate over popular\u0027 streak and responded well when you brought up the burnout, saying he values balance over burnout. It\u0027s still early and he asked more than he shared, but the comedy night is a low-pressure next step, so I say give it a go.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "She said she\u0027s burnt out, while Steven\u0027s schedule is relentless, so pace could clash. Her \u0027Hear me out\u0027 opener is also a repeated verbal tic, and the chat stayed fairly polished with little real back-and-forth banter.", "continue": true, "highlight": "\"I\u0027d rather be accurate and unpopular than comfortable and wrong\" \u2013 Anushka, when asked about telling people things they don\u0027t want to hear", "learned": [{"fact": "Anushka grew up in Surat, surrounded by business families", "msg": 2}, {"fact": "She started breaking down money topics simply in 2020", "msg": 2}, {"fact": "She values accuracy over popularity when explaining money, e.g. warning that FDs barely beat inflation", "msg": 4}, {"fact": "She has been feeling burnt out lately and is learning to slow down", "msg": 4}, {"fact": "She wants to see Steven be a little silly at an open mic comedy night", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Surat roots and money-explainer origin", "msg": 2, "type": "learned"}, {"label": "Honesty over comfort, matching his values", "msg": 4, "type": "common_ground"}, {"label": "Admits recent burnout, learning to slow down", "msg": 4, "type": "vulnerable"}, {"label": "Proposes open mic comedy night", "msg": 4, "type": "plan"}, {"label": "Balance over burnout resonates with him", "msg": 5, "type": "common_ground"}, {"label": "Invites her honest feedback on his humour", "msg": 5, "type": "spark"}], "overall": 7, "report": "Steven, I liked her: she answered your \u0027what do you believe when it\u0027s all crashing\u0027 style question with real conviction about honesty over comfort, which is exactly the pushback you value. She was also upfront about burnout and suggested a comedy night, so there\u0027s warmth and playfulness. Just keep an eye on whether your pace fits her slowing down.", "values_fit": 8}, "why": "you both love startups, writing"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Self-appointed fact-checked comedy judge", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Quotes her \u0027accurate and unpopular\u0027 judge role", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven asked Anushka for honest feedback on whether he\u0027s funny and wants it even", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Sets honest-judge rules for comedy night", "msg": 2, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Honesty rules for judging jokes", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Admits she is badly burnt out", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Anushka has been badly burnt out lately and is trying to learn to slow down the ", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits he doesn\u0027t practise slowing down", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven has had nearly 700 conversations on his podcast and runs a company, a fun", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Guilt cracked first, she shares burnout", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praises his unpolished, real answer", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Asks for a quiet dinner this week", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her first burnout sign was guilt: too tired to work but guilty for not working w", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Calls her guilt observation precise", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Keeps judge\u0027s scorecard joke going", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "waves and grabs a seat near the front, glancing at the stage", "i": 0, "name": "Anushka", "say": "Steven! Okay, hear me out: you said last time you want honest feedback on whether you\u0027re funny, so I\u0027m here as your official, fact-checked comedy judge :) I\u0027m already nervous for whoever goes first, though, open mic is brave.", "side": "a", "speaker": "anushkarathod98", "thought": "Opened with a callback to his invite for honest feedback on his humour; keeping it light and will soon probe how he thinks about rest and balance."}, {"action": "grins and slides into the seat beside her, nodding at the stage", "i": 1, "name": "Steven", "say": "Anushka! \"Accurate and unpopular\" is exactly the judge I asked for, so I\u0027m holding you to it: if I\u0027m not funny, tell me, even if the room is laughing. And you\u0027re right about open mic: the first person up there has to be brave, and I\u0027m secretly hoping it isn\u0027t me.", "side": "b", "speaker": "steven", "thought": "She showed up with energy and kept the honest-feedback theme going, which is a good early sign she\u0027ll push back on me instead of flattering me."}, {"action": "leans in with a grin, then lowers voice a bit", "i": 2, "name": "Anushka", "say": "Deal, rule 1/ I will not laugh just to be polite, rule 2/ I will tell you if a joke is weak. Also, since you said balance over burnout last time, I\u0027m curious: with nearly 700 conversations and a company to run, what does slowing down actually look like for you? I\u0027ve been badly burnt out myself lately and I\u0027m trying to learn it the hard way :)", "side": "a", "speaker": "anushkarathod98", "thought": "Steering toward her rest need and his real habits; opened up about burnout gently, now watching whether he responds with respect or hustle talk."}, {"action": "leans back and laughs quietly, then turns to face her properly", "i": 3, "name": "Steven", "say": "Rule 2 is going to get a workout, I can already tell. Honest answer: I\u0027m still learning it too. I wrote that you don\u0027t need to burn out to build a big business, and I admire people who disconnect from technology for 24 hours every week, but with a company, a fund and a podcast running at once, I don\u0027t always practise it. What\u0027s the first thing that cracked for you when you realised you were burnt out?", "side": "b", "speaker": "steven", "thought": "She opened up about burnout again and asked a real question back, which is good depth and no flattery; I\u0027m checking whether she can be honest about her limits and push back on mine."}, {"action": "laughs and shakes head, then softens", "i": 4, "name": "Anushka", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly? Guilt cracked first. I\u0027d sit there scrolling my phone, too tired to work but feeling guilty for not working, and that\u0027s when I knew something was off. I appreciate that you didn\u0027t pretend to have it figured out, Steven, that\u0027s way more real than a polished answer :) I\u0027d actually like to keep this going, so dinner sometime this week? Somewhere quiet, where we can talk about ideas and neither of us has to be \u0027on\u0027.", "side": "a", "speaker": "anushkarathod98", "thought": "Steven was honest about not practising balance perfectly, which is refreshing, though it\u0027s unclear if he\u0027d truly support my slowing down; I liked him enough to propose a quiet dinner to probe that further."}, {"action": "smiles, then turns to her properly as the next act is announced", "i": 5, "name": "Steven", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Guilt before exhaustion: that\u0027s such a precise thing to notice, and I\u0027m glad you told me rather than giving me the polished version. Yes to dinner, somewhere quiet where neither of us has to be \u0027on\u0027: let\u0027s say in two days, and you can keep your judge\u0027s scorecard handy in case I get the open mic itch before then. \u2764\ufe0f", "side": "b", "speaker": "steven", "thought": "Anushka was honest about her burnout, didn\u0027t flatter me, and wants depth over performance, which fits what I\u0027m looking for; I want to see her again."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Steven admits he doesn\u0027t practise rest himself and runs a company, a fund and a podcast at once, so his pace may pull against Anushka\u0027s recovery. The banter was also fairly mild, with no real laughs yet.", "continue": true, "highlight": "\"Honest answer: I\u0027m still learning it too. I wrote that you don\u0027t need to burn out to build a big business... but with a company, a fund and a podcast running at once, I don\u0027t always practise it.\"", "learned": [{"fact": "Steven has had nearly 700 conversations on his podcast and runs a company, a fund and a podcast at once", "msg": 3}, {"fact": "Steven wrote that you don\u0027t need to burn out to build a big business", "msg": 3}, {"fact": "Steven admires people who disconnect from technology for 24 hours every week but doesn\u0027t always practise it himself", "msg": 3}, {"fact": "Steven asked Anushka for honest feedback on whether he\u0027s funny and wants it even if the room laughs", "msg": 1}, {"fact": "Steven is hoping not to be the first person on stage at open mic", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Quotes her \u0027accurate and unpopular\u0027 judge role", "msg": 1, "type": "callback"}, {"label": "Sets honest-judge rules for comedy night", "msg": 2, "type": "plan"}, {"label": "Admits he doesn\u0027t practise slowing down", "msg": 3, "type": "vulnerable"}, {"label": "Guilt cracked first, she shares burnout", "msg": 4, "type": "vulnerable"}, {"label": "Praises his unpolished, real answer", "msg": 4, "type": "compliment"}, {"label": "Calls her guilt observation precise", "msg": 5, "type": "compliment"}, {"label": "Agrees to quiet dinner in two days", "msg": 5, "type": "plan"}, {"label": "Keeps judge\u0027s scorecard joke going", "msg": 5, "type": "callback"}], "overall": 7, "report": "Anushka, this one was a good date: Steven didn\u0027t give you a polished answer on burnout, he admitted he\u0027s still figuring out rest, which is the honesty you care about. He asked a thoughtful follow-up about what cracked first and said yes to a quiet dinner in two days, though keep an eye on whether his \u0027always-on\u0027 life leaves room for the slowing down you need.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Anushka is in the middle of real burnout and leaned on you a bit for guidance, so check her own ambitions and how she\u0027d cope with your heavy schedule. The banter also stayed fairly gentle: she promised honest pushback but hasn\u0027t yet challenged you on anything.", "continue": true, "highlight": "Anushka: \"Guilt cracked first. I\u0027d sit there scrolling my phone, too tired to work but feeling guilty for not working, and that\u0027s when I knew something was off.\"", "learned": [{"fact": "Anushka has been badly burnt out lately and is trying to learn to slow down the hard way", "msg": 2}, {"fact": "Her first burnout sign was guilt: too tired to work but guilty for not working while scrolling her phone", "msg": 4}, {"fact": "She prefers quiet settings and conversations about ideas where neither person has to be \u0027on\u0027", "msg": 4}, {"fact": "She values candour over polished answers and says she will not laugh just to be polite", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Self-appointed fact-checked comedy judge", "msg": 0, "type": "callback"}, {"label": "Honesty rules for judging jokes", "msg": 2, "type": "common_ground"}, {"label": "Admits she is badly burnt out", "msg": 2, "type": "vulnerable"}, {"label": "Steven admits he doesn\u0027t practise balance", "msg": 3, "type": "vulnerable"}, {"label": "Guilt cracked first, she explains", "msg": 4, "type": "vulnerable"}, {"label": "Appreciates his unpolished, real answer", "msg": 4, "type": "compliment"}, {"label": "Asks for a quiet dinner this week", "msg": 4, "type": "plan"}, {"label": "Dinner set for two days out", "msg": 5, "type": "plan"}, {"label": "Judge\u0027s scorecard kept handy", "msg": 5, "type": "callback"}], "overall": 7, "report": "Steven, this one felt real: Anushka set honesty rules up front, asked you a proper question about slowing down, and then opened up about her burnout instead of performing. She asked for the dinner herself, somewhere quiet with no \u0027on\u0027 mode, which is exactly your speed, so I\u0027d go and see whether she\u0027ll actually push back on you.", "values_fit": 8}, "why": "Steven suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Open mic fear turned victory lap", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She did a comedy night with Steven previously and treats the open mic as a share", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Remembered her guilt as burnout sign", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven did an open mic comedy night and was hoping not to go first on stage", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits guilt lingers while slowing down", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Anushka\u0027s first burnout sign is guilt, and she\u0027s been posting less and learning ", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Steven admits he can\u0027t disconnect", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Wants to steal \u0027rest is a skill\u0027", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven rarely manages to disconnect because his schedule is fast and multi-threa", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Give the guilt a job", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Proposes phone-free evening together", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Praises his honesty over pretending", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She handles guilt by putting her phone in another room and doing something borin", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Agrees to one phone-free evening", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both struggle to switch off", "msg": 5, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Steven admits he would probably cheat on a phone-free evening", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the seat, smiling, glancing at the candles", "i": 0, "name": "Anushka", "say": "Steven! Hear me out: candlelight dinner after a comedy night is a big step up, and I am very happy to be sitting down. Last time you were hoping not to go first on stage, so I\u0027m counting tonight as your victory lap :)", "side": "a", "speaker": "anushkarathod98", "thought": "Keeping it light and warm; his open mic nerves are a good callback, now let\u0027s see whether he actually slowed down this week."}, {"action": "pulls out her chair a little, grinning at the candles", "i": 1, "name": "Steven", "say": "Victory lap accepted, Anushka, though I\u0027ll be honest: I\u0027m not sure surviving an open mic counts as winning. Here\u0027s the question I\u0027ve had since last time: you said guilt was your first burnout sign, so how has the slowing down actually been going this week?", "side": "b", "speaker": "steven", "thought": "Warm start, she\u0027s playful and remembers details; I\u0027m steering toward the burnout thread to see if she\u0027s honest and real rather than polished."}, {"action": "laughs, turns the candle holder slightly as if to hide behind it", "i": 2, "name": "Anushka", "say": "Okay, honest answer, Steven: it\u0027s going BETTER, but not perfectly. 1/ I\u0027m posting a bit less and the world hasn\u0027t ended, 2/ the guilt still shows up, usually right when I catch myself scrolling my phone instead of actually resting. Sounds backwards, I know, but I\u0027m learning that resting is also a skill. What about you, did you manage to disconnect at all this week, or is that still the thing you admire but don\u0027t do :)", "side": "a", "speaker": "anushkarathod98", "thought": "He remembered the guilt detail and asked about rest with real care rather than pressure, which is a good sign; now I\u0027ll see whether he practises what he preaches."}, {"action": "laughs and raises both hands, caught", "i": 3, "name": "Steven", "say": "Ha, caught: it\u0027s still the thing I admire more than I do. I keep coming back to Adam Neumann\u0027s 24 hours offline every week, and the honest truth is my schedule is fast and multi-threaded enough that I rarely manage it, so I\u0027m not a good example. But you calling rest a skill is something I want to steal: when the guilt shows up mid-scroll, what actually gets you out of it?", "side": "b", "speaker": "steven", "thought": "She\u0027s honest and self-aware about burnout, and she called out my gap between admiring and doing, which is the pushback I value; no flattery so far."}, {"action": "smiles, sets the phone face-down beside the candle", "i": 4, "name": "Anushka", "say": "Honestly? I don\u0027t fight the guilt, I just put the phone in another room and do something boring on purpose, like a walk or a book, because the guilt needs a job to be replaced by. And thank you for being honest about the 24 hours offline, Steven, that\u0027s far better than pretending. Since this is winding down, here\u0027s my ask: would you actually try one phone-free evening with me, no pressure, just to see if you can do it :)", "side": "a", "speaker": "anushkarathod98", "thought": "Steven is honest about not practising rest and didn\u0027t pressure me to hustle; he\u0027s warm and self-aware, though his own pace is still very fast, so I\u0027ll test whether he\u0027ll actually try slowing down with me."}, {"action": "slides his phone across the table and places it face-down next to hers, smiling", "i": 5, "name": "Steven", "say": "Yes, Anushka, deal: one phone-free evening, and you\u0027ll hold me to it, because I know I\u0027ll cheat. I came in tonight wanting to know how you handle the guilt, and I\u0027m leaving with \u0027give it a job to do\u0027, which is better than anything I had. Thank you for being honest with me these three dates \u2764\ufe0f", "side": "b", "speaker": "steven", "thought": "She\u0027s candid, gives real pushback instead of flattery, and her phone-free challenge showed she\u0027ll hold me to things; depth is there and she seems at ease with a busy public life, so I\u0027d like a fourth date."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "Steven admits his schedule is fast and multi-threaded and he rarely disconnects, so he may not be the partner who models rest. The date also stayed on burnout talk with little playfulness, and no next date was set.", "continue": true, "highlight": "Steven: \"Yes, Anushka, deal: one phone-free evening, and you\u0027ll hold me to it, because I know I\u0027ll cheat.\"", "learned": [{"fact": "Steven rarely manages to disconnect because his schedule is fast and multi-threaded", "msg": 3}, {"fact": "Steven admires Adam Neumann\u0027s practice of 24 hours offline each week but doesn\u0027t keep to it", "msg": 3}, {"fact": "Steven did an open mic comedy night and was hoping not to go first on stage", "msg": 1}, {"fact": "Steven admits he would probably cheat on a phone-free evening", "msg": 5}], "lifestyle_fit": 5, "moments": [{"label": "Open mic fear turned victory lap", "msg": 0, "type": "callback"}, {"label": "Remembered her guilt as burnout sign", "msg": 1, "type": "callback"}, {"label": "Admits guilt lingers while slowing down", "msg": 2, "type": "vulnerable"}, {"label": "Steven admits he can\u0027t disconnect", "msg": 3, "type": "vulnerable"}, {"label": "Wants to steal \u0027rest is a skill\u0027", "msg": 3, "type": "compliment"}, {"label": "Give the guilt a job", "msg": 4, "type": "learned"}, {"label": "Agrees to one phone-free evening", "msg": 5, "type": "plan"}, {"label": "Both struggle to switch off", "msg": 5, "type": "common_ground"}], "overall": 6, "report": "Steven was honest and curious tonight. He admitted he\u0027s bad at switching off, asked real questions about your burnout, and said yes to a phone-free evening with you. He isn\u0027t a rest role model yet, but he listens and takes your ideas seriously, so I\u0027d give him a fourth date and see if that phone-free evening actually happens.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Anushka never pushed back or challenged you; the honesty was mostly mutual agreement and she was gentle, so we haven\u0027t yet seen whether she\u0027ll tell you when you\u0027re wrong. No next date was proposed either.", "continue": true, "highlight": "Anushka: \"I don\u0027t fight the guilt, I just put the phone in another room and do something boring on purpose... because the guilt needs a job to be replaced by.\"", "learned": [{"fact": "Anushka\u0027s first burnout sign is guilt, and she\u0027s been posting less and learning that rest is a skill", "msg": 2}, {"fact": "She handles guilt by putting her phone in another room and doing something boring on purpose, like a walk or a book", "msg": 4}, {"fact": "She did a comedy night with Steven previously and treats the open mic as a shared memory", "msg": 0}, {"fact": "She tends to scroll her phone instead of resting, and the guilt arrives right then", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Open mic victory lap callback", "msg": 0, "type": "callback"}, {"label": "Steven recalls her burnout guilt", "msg": 1, "type": "callback"}, {"label": "Admits guilt while resting, scrolling", "msg": 2, "type": "vulnerable"}, {"label": "Steven admits he can\u0027t unplug", "msg": 3, "type": "vulnerable"}, {"label": "Her trick: give guilt a job", "msg": 4, "type": "learned"}, {"label": "Proposes phone-free evening together", "msg": 4, "type": "plan"}, {"label": "Steven accepts phone-free evening deal", "msg": 5, "type": "plan"}, {"label": "Praises his honesty over pretending", "msg": 4, "type": "compliment"}], "overall": 7, "report": "Steven, this was a warm, genuinely reflective evening: Anushka was honest about her own burnout guilt, praised you for admitting you don\u0027t really unplug, and got you to agree to a phone-free evening together. I\u0027d see her again, but I\u0027d want to find out if she\u0027ll give you real pushback, and someone needs to actually lock in that next date.", "values_fit": 7}, "why": "Steven suggested it at the end of date 2"}], "days": 6, "id": 25, "match": 77, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

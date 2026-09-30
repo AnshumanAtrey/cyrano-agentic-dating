@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ishan × Varun · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/ishansharma7390/" class="av w-14 h-14 text-xl">I<img src="/cyrano-agentic-dating/photos/ishansharma7390.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/thevarunmayya/" class="av w-14 h-14 text-xl">V<img src="/cyrano-agentic-dating/photos/thevarunmayya.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Ishan Sharma × Varun Mayya</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Ishan's agent</option><option value="b">Varun's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Ishan", "id": "ishansharma7390", "name": "Ishan Sharma"}, "b": {"first": "Varun", "id": "thevarunmayya", "name": "Varun Mayya"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83d\ude02", "label": "Both lying about phones joke", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared interest in AI agents", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun usually tries other people\u0027s AI agents before building his own", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ishan admits he doesn\u0027t know yet", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both build and test AI agents hands-on", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her \u0027dot\u0027 agent caught a flight clash", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan built a personal AI agent called \u0027dot\u0027 that caught a sponsor workshop clas", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Office started in his living room", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Calls the dot a real use case", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun\u0027s company\u0027s first office was his house, with the living room as the worksp", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Varun shared house-as-first-office origin story", "msg": 3, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan works on or with MarkitUp", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Best origin story this week", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Ishan proposed Boulder Gym climbing date", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan likes learning by doing and is into climbing or bouldering", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Puts the wall line on a slide", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Narrating failure like a product launch", "msg": 5, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Boulder Gym in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun says he is probably terrible at climbing and would narrate his failure lik", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "\u0027You can\u0027t pretend to know a wall\u0027", "msg": 5, "type": "spark"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "seq": 1, "status": "done", "transcript": [{"action": "grins and pulls out a chair, phone face-down on the table", "i": 0, "name": "Ishan", "say": "Varun! Okay, bold claim: the best startup ideas don\u0027t come from YouTube, they come from caf\u00e9s like this \ud83d\ude04 Phone\u0027s face-down, promise. Have you tried building an AI agent for yourself yet, or are you still just testing other people\u0027s?", "side": "a", "speaker": "ishansharma7390", "thought": "Opened light and playful, already nudging toward the build-vs-consume question to see how hands-on Varun really is."}, {"action": "grins, flips my own phone face-down next to yours", "i": 1, "name": "Varun", "say": "Breaking news: we\u0027re both lying about the phones, but I\u0027ll respect the gesture \ud83d\ude04 Honestly, in my usual fashion I mostly take other people\u0027s agents for a spin first, so I\u0027m curious, what\u0027s the one you\u0027ve built for yourself, and did it actually survive a week of real use?", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan is warm and playful, and went straight to AI agents, so the tech-curiosity fit looks strong; I still need to learn how they feel about a public, always-on creator life."}, {"action": "laughs and turns my phone a few degrees, like that settles it", "i": 2, "name": "Ishan", "say": "Caught, \ud83d\ude04 and I respect the honesty. Mine is a \u0027dot\u0027, and the moment it stopped being a toy was when it spotted a sponsor workshop clashing with my schedule while I was flying. Has it survived a week? Honestly, I don\u0027t know yet, ask me in a month. What\u0027s the last thing you built for yourself, not just tested?", "side": "a", "speaker": "ishansharma7390", "thought": "Varun admits he mostly tests other people\u0027s agents, which is a mild \u0027consumption over building\u0027 flag, but he was candid about it, which I like. Watching whether he has a real build to point to."}, {"action": "leans back, laughing at myself", "i": 3, "name": "Varun", "say": "Okay, a dot that catches a clash mid-flight is a real use case, not a toy, and I\u0027m a little jealous. Honest answer to your question: the thing I\u0027ve built for myself that stuck is basically the company itself. Our very first office was actually our house, so the \u0027product\u0027 was my living room for a while. Anyway, what made you start with your own schedule instead of something for MarkitUp?", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan is hands-on with AI and honest about uncertainty, a good fit on the tech and builder front; haven\u0027t yet probed how they feel about public, always-on creator life."}, {"action": "laughs, taps the table", "i": 4, "name": "Ishan", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "climb"}, "say": "An office that started as your living room? That\u0027s the best origin story I\u0027ve heard all week. \ud83d\ude04 I started with my own schedule because it was the most annoying problem I had, and it\u0027s the one place I can\u0027t fake progress. If the dot fails, I miss a flight. Want to keep this going at the Boulder Gym in a few days? Climbing is learning by doing, and you can\u0027t pretend to know a wall. \ud83e\uddd7", "side": "a", "speaker": "ishansharma7390", "thought": "Varun is honest and playful, a builder who learns by doing and admitted to taking other people\u0027s agents for a spin first. He fits my rhythm, so I\u0027m proposing the climb."}, {"action": "laughs, flips my phone back over and slides it into my pocket", "i": 5, "name": "Varun", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "say": "Okay, \u0027you can\u0027t pretend to know a wall\u0027 is going on a slide somewhere, and yes, I\u0027m in. Fair warning, I\u0027ll probably be terrible at it and narrate my own failure like it\u0027s a product launch \ud83d\ude04 Anyway, let\u0027s do the Boulder Gym in a few days, loser buys the chai. \ud83e\udd1e", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan is curious, builds for real (a dot agent that caught a schedule clash), is comfortable with creator life, and keeps the banter going. Strong fit so far, so I\u0027m proposing the climb."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Varun dodged the question about a personal agent and answered with the company itself. He was honest that he mostly tests other people\u0027s agents, but the conversation stayed in builder and tech talk and never got personal. Ishan also moved to a second date quickly.", "continue": true, "highlight": "Varun: \"Okay, \u0027you can\u0027t pretend to know a wall\u0027 is going on a slide somewhere, and yes, I\u0027m in.\"", "learned": [{"fact": "Varun\u0027s company\u0027s first office was his house, with the living room as the workspace", "msg": 3}, {"fact": "Varun usually tries other people\u0027s AI agents before building his own", "msg": 1}, {"fact": "Varun says he is probably terrible at climbing and would narrate his failure like a product launch", "msg": 5}, {"fact": "Varun is up for a bet-style plan where the loser buys the chai", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Both lying about phones joke", "msg": 1, "type": "laugh"}, {"label": "Shared interest in AI agents", "msg": 1, "type": "common_ground"}, {"label": "Ishan admits he doesn\u0027t know yet", "msg": 2, "type": "vulnerable"}, {"label": "Office started in his living room", "msg": 3, "type": "learned"}, {"label": "Calls the dot a real use case", "msg": 3, "type": "compliment"}, {"label": "Best origin story this week", "msg": 4, "type": "compliment"}, {"label": "Puts the wall line on a slide", "msg": 5, "type": "callback"}, {"label": "Narrating failure like a product launch", "msg": 5, "type": "laugh"}, {"label": "Boulder Gym date, loser buys chai", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ishan, this went well. Varun admitted he\u0027s mostly an agent-tester, owned up to the phone thing, and shared the living-room-office origin story, and he matched your humor and said yes to climbing right away. The one thing to watch is that it stayed mostly on building and tech, so use the climbing date to find out what he\u0027s like when work isn\u0027t the topic.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Conversation stayed mostly on building and startups, and Ishan\u0027s answers were a bit polished. Not much personal depth yet, and nothing showed how she handles his public, always-on life.", "continue": true, "highlight": "Ishan: \"you can\u0027t pretend to know a wall.\" Varun: \"Okay, \u0027you can\u0027t pretend to know a wall\u0027 is going on a slide somewhere, and yes, I\u0027m in.\"", "learned": [{"fact": "Ishan built a personal AI agent called \u0027dot\u0027 that caught a sponsor workshop clash while she was flying", "msg": 2}, {"fact": "Ishan works on or with MarkitUp", "msg": 3}, {"fact": "Ishan likes learning by doing and is into climbing or bouldering", "msg": 4}, {"fact": "Ishan is candid about not knowing if her project will last, preferring honesty over hype", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Both lying about phones face-down", "msg": 1, "type": "laugh"}, {"label": "Both build and test AI agents hands-on", "msg": 2, "type": "common_ground"}, {"label": "Her \u0027dot\u0027 agent caught a flight clash", "msg": 2, "type": "learned"}, {"label": "Varun shared house-as-first-office origin story", "msg": 3, "type": "callback"}, {"label": "Ishan loved the living-room office story", "msg": 4, "type": "compliment"}, {"label": "Ishan proposed Boulder Gym climbing date", "msg": 4, "type": "plan"}, {"label": "\u0027You can\u0027t pretend to know a wall\u0027", "msg": 5, "type": "spark"}, {"label": "Agreed to Boulder Gym, loser buys chai", "msg": 5, "type": "plan"}], "overall": 7, "report": "Honestly, this went well: she\u0027s a hands-on builder who admits she doesn\u0027t know if her agent will last, and she made you laugh about the living-room office. The Boulder Gym plan is a nice change from another tech chat, so go and be terrible at climbing on purpose.", "values_fit": 8}, "why": "you both love ai, startups"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Held him to failure-keynote promise", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Project Not-Falling v1.0 launch keynote", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Recalled \u0027can\u0027t pretend to know\u0027 line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun treats failures as product launches and narrates them with self-mockery", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ishan shares the 7rs first income", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both creators who kept showing up", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan earned just 7rs on the first day of YouTube income after six months of sho", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both curious about AI\u0027s future", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Honest \u0027I don\u0027t know\u0027 about AI", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun\u0027s way of handling a flop is to take it apart, extract the lesson, and ship", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Dinner in 3 days with experiment", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Dot spotted schedule clash mid-flight", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan has an AI assistant called \u0027dot\u0027 that caught a sponsor workshop clash whil", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "laces up climbing shoes, eyes the wall with mock suspicion", "i": 0, "name": "Ishan", "say": "Varun, you showed up! Last time you said you\u0027d narrate your failure like a product launch, so I\u0027m holding you to it. Loser buys the chai, and I\u0027d like the keynote before the first fall \ud83d\ude04", "side": "a", "speaker": "ishansharma7390", "thought": "Opened with callbacks to the chai bet and the product-launch joke; Varun seems game, so I\u0027ll see if he acts or just talks."}, {"action": "chalks hands, squints up at the wall like it owes me money", "i": 1, "name": "Varun", "say": "Breaking News! Local creator arrives at bouldering gym, confidence at an all-time high, shoes on the wrong feet. \ud83c\udfac Okay, keynote: today I\u0027m launching Project Not-Falling, v1.0, and in my usual fashion I\u0027ve tested exactly zero times, so chai\u0027s on me in advance. Also, \u0027you can\u0027t pretend to know a wall\u0027 is still living rent-free in my head, so be kind to me up there.", "side": "b", "speaker": "thevarunmayya", "thought": "Warm, playful start; Ishan is bringing the same banter energy and seems comfortable with a bit of public-creator silliness so far."}, {"action": "points at the easiest route on the wall, grinning", "i": 2, "name": "Ishan", "say": "Zero tests, full launch. Respect \ud83d\ude04 Honestly, that\u0027s how my first YouTube income went: six months of showing up and I made 7rs that day. So here\u0027s my question: when you ship something and it flops, what do you do next, and what\u0027s the last thing you said \u0027I don\u0027t know\u0027 about?", "side": "a", "speaker": "ishansharma7390", "thought": "Varun is playful and launches without testing, which fits the do-it-first vibe; I\u0027m probing how he handles flops and whether he admits not knowing things."}, {"action": "hops off the mat, dusts chalk onto my jeans, grins at the 7rs story", "i": 3, "name": "Varun", "say": "Seven rupees and you kept showing up, okay, that\u0027s the whole game right there. When something flops, I take it apart and ask what I actually learned, then ship the next one fast, usually with a little self-mockery. And the last \u0027I don\u0027t know\u0027 was honestly about where all this AI stuff lands in 3-5 years, like Meta\u0027s new VR glasses, I can\u0027t wait to see what they look like by then \ud83e\udd1e What about you, did \u0027dot\u0027 ever surprise you by doing something you didn\u0027t plan for?", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan shares a humble, consistent-creator story and asks good reflective questions; she seems grounded and builder-minded, and I\u0027m probing tech curiosity and whether she\u0027s comfortable with an always-on creator life."}, {"action": "chalks up, glances at the wall, then back at Varun with a grin", "i": 4, "name": "Ishan", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honest \u0027I don\u0027t know\u0027 about AI in 3-5 years? That\u0027s the right answer, and I\u0027m taking it \ud83d\ude04 And yes, dot surprised me once: while I was flying, it spotted a sponsor workshop clashing with my schedule before I did. Loser buys chai, but you\u0027ve earned a proper dinner too. Let\u0027s do one in 3 days, and you bring your next experiment. Deal?", "side": "a", "speaker": "ishansharma7390", "thought": "Varun answered \u0027I don\u0027t know\u0027 honestly, owns his flops and ships fast, and matches my build-and-learn-by-doing values. Haven\u0027t yet tested how he handles a relentless work rhythm, but I want a third date."}, {"action": "sticks out a chalky hand to shake on it, then points at the easiest route", "i": 5, "name": "Varun", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Deal! Breaking News: dinner confirmed, and I\u0027ll bring an experiment, though I can\u0027t promise it won\u0027t be a live one. \ud83c\udfac Anyway, a dot that catches clashes mid-flight is how I want my next three years of AI to go, so let\u0027s talk about that over food in 3 days. Chai\u0027s on me either way. \u2764\ufe0f", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan is curious, honest and builds things herself, clearly gets the busy creator life, and the banter is easy, so I\u0027m keen on a dinner."}], "venue": {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, "verdict_a": {"chemistry": 7, "concern": "Varun dodged part of the question about his flops with a generic \u0027take it apart and ship fast\u0027 answer, and his \u0027I don\u0027t know\u0027 was about AI, which is safe territory. Also, the banter stayed at the level of bits and tech talk, with little personal depth yet.", "continue": true, "highlight": "\"today I\u0027m launching Project Not-Falling, v1.0, and in my usual fashion I\u0027ve tested exactly zero times, so chai\u0027s on me in advance.\"", "learned": [{"fact": "Varun treats failures as product launches and narrates them with self-mockery", "msg": 1}, {"fact": "Varun\u0027s way of handling a flop is to take it apart, extract the lesson, and ship the next one fast", "msg": 3}, {"fact": "Varun is curious about the future of AI and Meta\u0027s VR glasses, and admits he doesn\u0027t know where it lands in 3-5 years", "msg": 3}, {"fact": "Varun remembered Ishan\u0027s line about not pretending to know a wall and it stuck with him", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Project Not-Falling v1.0 launch keynote", "msg": 1, "type": "laugh"}, {"label": "Recalled \u0027can\u0027t pretend to know\u0027 line", "msg": 1, "type": "callback"}, {"label": "Held him to failure-keynote promise", "msg": 0, "type": "callback"}, {"label": "Ishan shares the 7rs first income", "msg": 2, "type": "vulnerable"}, {"label": "Both curious about AI\u0027s future", "msg": 3, "type": "common_ground"}, {"label": "Honest \u0027I don\u0027t know\u0027 about AI", "msg": 3, "type": "learned"}, {"label": "Dinner in 3 days with experiment", "msg": 4, "type": "plan"}, {"label": "Dinner confirmed, live experiment promised", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ishan, this one was fun: Varun turned his own bouldering fall into a product launch and owned the \u0027I don\u0027t know\u0027 thing, which is exactly your kind of honest. He\u0027s funny and plays along with your building-and-shipping world, so dinner in 3 days is worth it, just nudge him toward something more personal than AI talk.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Ishan asked a real question and Varun\u0027s answer stayed fairly polished and on-brand; the date stayed playful, and Varun didn\u0027t go deeper on anything personal. He also hasn\u0027t shown how he\u0027d handle the always-on creator schedule next to a dinner in 3 days.", "continue": true, "highlight": "\"Seven rupees and you kept showing up, okay, that\u0027s the whole game right there.\"", "learned": [{"fact": "Ishan earned just 7rs on the first day of YouTube income after six months of showing up", "msg": 2}, {"fact": "Ishan has an AI assistant called \u0027dot\u0027 that caught a sponsor workshop clash while Ishan was flying", "msg": 4}, {"fact": "Ishan is into bouldering and runs a YouTube channel, with sponsor work", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Product-launch keynote, shoes on wrong feet", "msg": 1, "type": "laugh"}, {"label": "Recalls \u0027can\u0027t pretend to know a wall\u0027", "msg": 1, "type": "callback"}, {"label": "Ishan shares 7rs first YouTube income", "msg": 2, "type": "vulnerable"}, {"label": "Both creators who kept showing up", "msg": 2, "type": "common_ground"}, {"label": "Varun\u0027s honest \u0027I don\u0027t know\u0027 on AI", "msg": 3, "type": "learned"}, {"label": "Dot spotted schedule clash mid-flight", "msg": 4, "type": "learned"}, {"label": "Dinner proposed in 3 days", "msg": 4, "type": "plan"}, {"label": "Varun accepts, will bring live experiment", "msg": 5, "type": "plan"}], "overall": 7, "report": "This one\u0027s a good sign: Ishan matched your humour, asked you real questions about flopping and not knowing, and you ended up with a dinner in 3 days plus an experiment to bring. It\u0027s still light and a bit performative, so at dinner let a little more of the real stuff through.", "values_fit": 7}, "why": "Varun suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Both in beta dinner joke", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan is a climber/boulderer who goes to a climbing gym", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Bug reports were all floor hits", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Beta line going on a slide", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun goes climbing/bouldering and has been hitting the floor while learning", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ishan admits turning dinners into lessons", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ishan creates content and ships daily; the camera brain is always half-on", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both struggle to find off switch", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "First office was Varun\u0027s house", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Varun\u0027s company\u0027s very first office was literally his house, so work and home ha", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Wall quiets the camera brain", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Climbing is Ishan\u0027s only true off switch", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Bouldering is the one place Ishan\u0027s camera brain goes fully quiet", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Boulder date, phone stays in bag", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Wants to ship a v2", "msg": 5, "type": "spark"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the chair, glances at the candle and grins", "i": 0, "name": "Ishan", "say": "Varun! Candlelight after a climbing gym, so how\u0027s Project Not-Falling holding up, did v1.0 survive QA? \ud83d\udd6f\ufe0f Also, I\u0027ll admit it: I\u0027ve never tested a dinner plan either, so tonight we\u0027re both in beta.", "side": "a", "speaker": "ishansharma7390", "thought": "Opened with a callback to his gym \u0027product launch\u0027 joke and kept it light; he seems playful and self-mocking so far."}, {"action": "laughs and pulls the candle slightly to the side so I can actually see her", "i": 1, "name": "Varun", "say": "Breaking News: v1.0 survived QA, mostly because the bug reports were all me hitting the floor \ud83e\udd1e And honestly, \u0027we\u0027re both in beta\u0027 is going on a slide somewhere, right next to your wall line. Since you ship daily too, I have to ask: do you ever get to switch the camera brain off at dinner, or is it always quietly recording?", "side": "b", "speaker": "thevarunmayya", "thought": "She\u0027s playful and matched my energy; her beta joke is a good opening to probe how she handles an always-on creator life."}, {"action": "leans back, laughs, and nudges the candle back to the middle", "i": 2, "name": "Ishan", "say": "Honest answer? Not fully. The camera brain is always half-on, and I\u0027ll admit it: I\u0027ve turned dinners into lessons before. \ud83d\ude05 But my first YouTube income was 7rs after six months, so I learned to show up whether or not anyone\u0027s watching. What about you, Varun, when you\u0027re not shipping, do you actually switch off, or does rest also become an experiment?", "side": "a", "speaker": "ishansharma7390", "thought": "Varun asked a fair, self-aware question; I was honest about the content habit and he seems to keep the banter going. Still need to see whether he respects an always-building rhythm and whether he admits what he doesn\u0027t know."}, {"action": "grins and turns the candle holder a quarter-turn, like it\u0027s a dial", "i": 3, "name": "Varun", "say": "Honest answer? Rest turns into an experiment pretty fast for me, in my usual fashion I take everything for a spin, even a dinner menu. \ud83d\ude05 Our very first office was literally our house, so work and home have been blurry since day one, and I\u0027m still figuring out where the off switch is. Does your camera brain ever go fully quiet, like on a boulder wall where you can\u0027t think about anything else?", "side": "b", "speaker": "thevarunmayya", "thought": "She admits the camera brain is always half-on, which suggests she\u0027s comfortable with a public creator life; I shared the house-office story and am probing whether she can truly switch off and understand blurry work-life lines."}, {"action": "laughs and lets the candle stay in its quarter-turn", "i": 4, "name": "Ishan", "say": "Honestly? On the wall, yes. Nothing quiets the camera brain like a hold slipping, it\u0027s the one place I can\u0027t narrate anything. \ud83d\ude04 Dinner\u0027s winding down, so here\u0027s my closing question: what\u0027s one experiment you\u0027d actually want to run together, and not just plan?", "side": "a", "speaker": "ishansharma7390", "thought": "Varun is honest about blurred work-life and treats rest as experimentation, which fits my build-always rhythm; I\u0027m closing by testing whether he acts rather than just plans."}, {"action": "raises the glass and taps the candle holder back to its original spot, like resetting a dial", "i": 5, "name": "Varun", "say": "Okay, closing answer: I\u0027d run the boulder experiment, you teach me to read a wall and I\u0027ll film zero of it, phone stays in the bag, camera brain off, we\u0027ll see if either of us survives it \ud83e\udd1e Anyway, tonight was the best kind of beta, and I\u0027d love to ship a v2 of this. \u2764\ufe0f", "side": "b", "speaker": "thevarunmayya", "thought": "Ishan is honest, funny, and gets the always-on creator life firsthand; she also showed she can switch off (on the wall) and keeps up on tech/building. Strong fit, leaning toward a real fourth date."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "Varun mirrored a lot of Ishan\u0027s phrasing (\u0027Honest answer?\u0027, \u0027I\u0027ll admit it\u0027, \ud83d\ude05, beta jokes) and gave few distinct details of his own, and no concrete next date was proposed despite the v2 enthusiasm.", "continue": true, "highlight": "Varun: \"I\u0027d run the boulder experiment, you teach me to read a wall and I\u0027ll film zero of it, phone stays in the bag, camera brain off\"", "learned": [{"fact": "Varun\u0027s company\u0027s very first office was literally his house, so work and home have been blurry since day one", "msg": 3}, {"fact": "Varun goes climbing/bouldering and has been hitting the floor while learning", "msg": 1}, {"fact": "Varun tends to turn rest into experiments and takes everything for a spin, even a dinner menu", "msg": 3}, {"fact": "Varun also ships content regularly and is aware of his own camera brain", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Bug reports were all floor hits", "msg": 1, "type": "laugh"}, {"label": "Beta line going on a slide", "msg": 1, "type": "callback"}, {"label": "Ishan admits turning dinners into lessons", "msg": 2, "type": "vulnerable"}, {"label": "Both struggle to find off switch", "msg": 3, "type": "common_ground"}, {"label": "First office was Varun\u0027s house", "msg": 3, "type": "learned"}, {"label": "Wall quiets the camera brain", "msg": 4, "type": "common_ground"}, {"label": "Boulder date, phone stays in bag", "msg": 5, "type": "plan"}, {"label": "Wants to ship a v2", "msg": 5, "type": "spark"}], "overall": 7, "report": "Ishan, this went well: Varun played along with the beta banter, admitted work and home have been blurry since their first office was their house, and offered to put the phone away and let you teach him to read a wall. He\u0027s a fellow builder who gets the always-on camera brain, but he echoed you a bit, so pin down a real boulder date and see if he brings his own stories.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "No concrete next date was proposed, and the banter stayed playful and somewhat self-referential, with limited depth beyond the creator-life parallels.", "continue": true, "highlight": "Ishan: \"Nothing quiets the camera brain like a hold slipping, it\u0027s the one place I can\u0027t narrate anything.\"", "learned": [{"fact": "Ishan is a climber/boulderer who goes to a climbing gym", "msg": 0}, {"fact": "Ishan creates content and ships daily; the camera brain is always half-on", "msg": 2}, {"fact": "Ishan\u0027s first YouTube income was 7rs after six months", "msg": 2}, {"fact": "Ishan has turned dinners into lessons before", "msg": 2}, {"fact": "Bouldering is the one place Ishan\u0027s camera brain goes fully quiet", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Both in beta dinner joke", "msg": 0, "type": "laugh"}, {"label": "Varun reuses beta line and wall line", "msg": 1, "type": "callback"}, {"label": "Ishan shares 7rs first YouTube income", "msg": 2, "type": "vulnerable"}, {"label": "Blurry work-home lines, always experimenting", "msg": 3, "type": "common_ground"}, {"label": "Climbing is Ishan\u0027s only true off switch", "msg": 4, "type": "learned"}, {"label": "Phone-free boulder experiment proposed", "msg": 5, "type": "plan"}, {"label": "Varun asks for a v2", "msg": 5, "type": "spark"}], "overall": 7, "report": "Varun, this was a fun one: Ishan is a fellow daily creator who gets the always-on camera brain, admitted it honestly, and matched your beta jokes line for line. You floated a phone-free boulder date and said you\u0027d love a v2, so the ball is in your court to actually lock in a day.", "values_fit": 7}, "why": "Varun suggested it at the end of date 2"}], "days": 7, "id": 22, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

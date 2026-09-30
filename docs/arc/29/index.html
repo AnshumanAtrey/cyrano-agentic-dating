@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kusha × Sejal · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/kushakapila/" class="av w-14 h-14 text-xl">K<img src="/cyrano-agentic-dating/photos/kushakapila.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/sejalkumar1195/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/sejalkumar1195.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Kusha Kapila × Sejal Kumar</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Kusha's agent</option><option value="b">Sejal's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Kusha", "id": "kushakapila", "name": "Kusha Kapila"}, "b": {"first": "Sejal", "id": "sejalkumar1195", "name": "Sejal Kumar"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Present continuous bio joke used live", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both think content before food", "msg": 0, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha is a content creator who thinks about shooting content at any outing", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both framing shots before eating", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She was mentally framing the noodle stall like a content creator before she said", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Caught framing the noodle stall", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal makes one-minute dramas (short-form storytelling)", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha sees the bit first", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha\u0027s brain spots the funny bit first and the pretty shot second when she sees", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits being harder on herself", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "When editing she cuts the setup first and trusts the audience to keep up", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both self-roast before anyone else", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Kusha proposes open mic night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha posts self-deprecating jokes before anyone can roast her, and calls it her", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Sejal\u0027s eager yes with roast promise", "msg": 5, "type": "spark"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 2 days", "msg": 5, "type": "plan"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Sejal echoes roasting herself first", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "spins around once taking in the stalls, phone half-raised then lowered with a guilty grin", "i": 0, "name": "Kusha", "say": "okay sejal, night market pe aake pehla instinct khaane ka nahi, content ka aaya, toh I think we\u0027re both in the right place. present continuous tense mein bolun toh, main abhi yahan khade khade decide kar rahi hoon ki pehle kya khaana hai aur kya shoot karna hai \ud83c\udf5c", "side": "a", "speaker": "kushakapila", "thought": "Opened light and playful with the grammar joke; now to see if Sejal laughs and volleys back in Hinglish."}, {"action": "laughs and lowers my own phone, which I definitely had half-raised too", "i": 1, "name": "Sejal", "say": "Haha okay, caught, I was literally framing the noodle stall in my head before I even said hi. Let\u0027s do food first while it\u0027s hot, then we shoot, deal? Also curious, when you see a scene like this, are you thinking a funny bit or just the pretty shot?", "side": "b", "speaker": "sejalkumar1195", "thought": "Warm start, Kusha is playful and content-minded; I\u0027m probing how she thinks creatively and whether she\u0027s easy with the camera-always-on life."}, {"action": "pockets phone dramatically, then points at the noodle stall", "i": 2, "name": "Kusha", "say": "deal, khaana pehle, warna content bhi thanda ho jayega. honestly mera brain pehle bit dekhta hai, pretty shot baad mein aata hai, toh funny angle dhoondhte dhoondhte kabhi kabhi noodles ka moment hi nikal jaata hai. tumhare one-minute dramas mein kya hota hai, jab poori kahani ek minute mein fit karni ho, kya cut karti ho pehle?", "side": "a", "speaker": "kushakapila", "thought": "She\u0027s playful and self-aware about content too; I got to probe her creative process and see if she enjoys banter and making things together. So far, very good vibes."}, {"action": "grabs a pair of chopsticks, thinking it over", "i": 3, "name": "Sejal", "say": "Ooh good question. Honestly I cut the setup first, because in one minute you have to land the feeling fast, so I\u0027d rather skip the explanation and trust the audience to keep up. The funny part is I\u0027m way harder on myself than on the script, like I\u0027ll post something self-deprecating before anyone else can say it. Does your brain do that too, or are you braver than me?", "side": "b", "speaker": "sejalkumar1195", "thought": "She\u0027s bit-first and asked a real craft question, so she\u0027s curious and engaged. I shared the self-deprecating side and am now probing whether she can be real about insecurities."}, {"action": "points chopsticks at Sejal, then slurps a noodle with zero dignity", "i": 4, "name": "Kusha", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "arre main toh self-deprecating pehle hi post kar deti hoon, roast hone se pehle khud hi roast ho jao, that\u0027s basically my whole grammar. mujhe tumse milke maza aaya, sejal, toh next time open mic comedy night chalein? tum drama lao, main bit laati hoon, aur dekhte hain kiska set pehle flop hota hai \ud83c\udfa4", "side": "a", "speaker": "kushakapila", "thought": "Sejal laughs easily, matches my banter, and is self-deprecating like me; she\u0027s also a maker of short videos, so the collab fit looks promising, though I haven\u0027t yet tested how she handles a very public life."}, {"action": "grins, stealing one last noodle from Kusha\u0027s bowl before she can stop me", "i": 5, "name": "Sejal", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "say": "Okay, open mic is a yes, I\u0027m bringing the drama and you\u0027re bringing the bit, and we\u0027ll see whose set flops first. Let\u0027s do it in two days, and I\u0027ll roast myself before you even get the mic \ud83c\udfa4", "side": "b", "speaker": "sejalkumar1195", "thought": "She\u0027s playful, roasts herself like I do, and got curious about my #1MinDrama work without any condescension; I still need to learn how she handles the irregular creative schedule and the public-life side, but the vibe is great."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 7, "concern": "Only one short exchange, so it\u0027s unclear how Sejal feels about a public, camera-heavy life or whether she can go past banter into something more personal. Her Hinglish was also minimal; she replied in English throughout.", "continue": true, "highlight": "Sejal: \"Okay, open mic is a yes, I\u0027m bringing the drama and you\u0027re bringing the bit, and we\u0027ll see whose set flops first. Let\u0027s do it in two days, and I\u0027ll roast myself before you even get the mic \ud83c\udfa4\"", "learned": [{"fact": "Sejal makes one-minute dramas (short-form storytelling)", "msg": 2}, {"fact": "When editing she cuts the setup first and trusts the audience to keep up", "msg": 3}, {"fact": "She habitually posts self-deprecating things before anyone else can say them", "msg": 3}, {"fact": "She was mentally framing the noodle stall like a content creator before she said hi", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Both framing shots before eating", "msg": 1, "type": "common_ground"}, {"label": "Present continuous bio joke used live", "msg": 0, "type": "callback"}, {"label": "Admits being harder on herself", "msg": 3, "type": "vulnerable"}, {"label": "Both self-roast before anyone else", "msg": 4, "type": "common_ground"}, {"label": "Kusha proposes open mic night", "msg": 4, "type": "plan"}, {"label": "Sejal\u0027s eager yes with roast promise", "msg": 5, "type": "spark"}, {"label": "Open mic set for two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Kusha, this was a fun one: Sejal caught your content-brain instinct right away, matched your self-roast energy, and said yes to open mic without hesitating. We still haven\u0027t seen how she handles your cameras or goes deeper than jokes, but she\u0027s a short-form storyteller who makes things too, so I\u0027d definitely go again.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Only one short date, so it\u0027s hard to tell how Kusha feels about Sejal\u0027s public profile or irregular schedule; the banter stayed playful and didn\u0027t go deep into anything personal.", "continue": true, "highlight": "\"arre main toh self-deprecating pehle hi post kar deti hoon, roast hone se pehle khud hi roast ho jao, that\u0027s basically my whole grammar.\"", "learned": [{"fact": "Kusha\u0027s brain spots the funny bit first and the pretty shot second when she sees a scene", "msg": 2}, {"fact": "Kusha posts self-deprecating jokes before anyone can roast her, and calls it her \u0027whole grammar\u0027", "msg": 4}, {"fact": "Kusha is into stand-up and open mic comedy and wants to perform a set", "msg": 4}, {"fact": "Kusha is a content creator who thinks about shooting content at any outing", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Both think content before food", "msg": 0, "type": "common_ground"}, {"label": "Caught framing the noodle stall", "msg": 1, "type": "laugh"}, {"label": "Kusha sees the bit first", "msg": 2, "type": "learned"}, {"label": "Sejal admits being harder on herself", "msg": 3, "type": "vulnerable"}, {"label": "Both pre-roast themselves", "msg": 4, "type": "common_ground"}, {"label": "Kusha proposes open mic night", "msg": 4, "type": "plan"}, {"label": "Sejal echoes roasting herself first", "msg": 5, "type": "callback"}, {"label": "Playful drama-versus-bit challenge", "msg": 5, "type": "spark"}], "overall": 7, "report": "Sejal, this was a fun one: Kusha matched your self-roasting, content-brain energy right away and was genuinely curious about how you cut a one-minute drama. She\u0027s the one who proposed the open mic, which is a good sign, and it\u0027s a creative, slightly scary next date that suits you both.", "values_fit": 7}, "why": "you both love content"}, {"day": 3, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Recalled promise to roast herself", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Present continuous joke returned with a twist", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Self-roast opening bit, can\u0027t be used", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal has an opening bit planned for the open mic and opens with self-roast", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "One good heckle from being on list", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha scouting, not on the list", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha is not on the open mic list tonight and is only scouting, though she\u0027s ope", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Sejal admits live stage fear", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both create videos and feel stage nerves", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal makes a video series called #1MinDrama where she edits her own content", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Kusha admits fear stays present continuous", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\u2728", "label": "Proposes one-minute collab, whose flops first", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both feel fear of real-time judgement", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Suggests quiet dinner, only Kusha heckles", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha finds a camera easier than a live room because of retakes, and her stage f", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "spots Sejal near the stage, does a little mock-salute with an imaginary mic", "i": 0, "name": "Kusha", "say": "sejal! you showed up, toh ab bhaagna allowed nahi hai. last time you promised to roast yourself before I even get the mic, so I\u0027m just here to see if that\u0027s past tense or present continuous \ud83c\udfa4", "side": "a", "speaker": "kushakapila", "thought": "Opened with the callback to her self-roast promise and the grammar joke; now watching whether she banters back in Hinglish and how she handles the room."}, {"action": "grins, raises an imaginary mic right back and taps it twice", "i": 1, "name": "Sejal", "say": "present continuous, obviously. I was feeling ugly today remembered this was me, and that\u0027s my opening bit, so you can\u0027t use it. Also, you said you want to do a set, so is tonight scouting or are you secretly already on the list?", "side": "b", "speaker": "sejalkumar1195", "thought": "Warm start, she remembered my promise and callbacks well; I\u0027m probing whether she\u0027d back creative risk-taking and her comedy ambitions."}, {"action": "mimes crossing out something on an imaginary list", "i": 2, "name": "Kusha", "say": "arre, opening bit chura liya, toh ab mera set hi bach gaya hai, fine. honestly scouting hoon, list pe naam nahi hai, but I\u0027m one good heckle away from \u0027accidentally\u0027 being on it. also real question: you cut the setup first when you edit, toh stage pe bhi trust karti ho ki audience keep up karegi, ya wahan thoda darr lagta hai?", "side": "a", "speaker": "kushakapila", "thought": "She\u0027s playful and matched my banter, and the self-roast habit is showing again; I\u0027m steering toward how she handles live, public attention versus edited control."}, {"action": "laughs, pulls the imaginary mic back against my chest like it\u0027s a security blanket", "i": 3, "name": "Sejal", "say": "Honestly? Both. In #1MinDrama I\u0027ve got sixty seconds and an edit button, so I trust the audience completely, but live there\u0027s no cut, and the darr is real. I\u0027m a little braver when I\u0027m singing my own songs than when I\u0027m waiting on a laugh. Do you get that, or does a room feel easier than a camera for you?", "side": "b", "speaker": "sejalkumar1195", "thought": "Shared real vulnerability about live vs edited work and probed whether Kusha is comfortable being real about insecurities; she\u0027s engaging and curious so far, no red flags."}, {"action": "taps the imaginary mic twice and hands it back to Sejal", "i": 4, "name": "Kusha", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "honestly camera is easier, kyunki wahan retake milta hai aur room mein sirf real-time judgement milta hai, toh mera darr bhi present continuous hi rehta hai. but tumhare saath agar kabhi ek minute ka kuch banau, toh I\u0027d actually want that, like my bit, your edit, see whose flops first. also dinner pe milte hain? kuch quiet sa, jahan heckle karne wala koi nahi ho except me \ud83c\udf77", "side": "a", "speaker": "kushakapila", "thought": "Sejal is warm, honest about her stage fright, and already up for banter and making things together; I like her and want to see how she is offstage, so I\u0027m proposing dinner."}, {"action": "takes the imaginary mic back, taps it twice, and tucks it into my pocket like it\u0027s a keepsake", "i": 5, "name": "Sejal", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "A one-minute collab where your bit meets my edit, and we see whose flops first? Deal, I\u0027m already nervous. And yes to dinner, quiet, candlelit, and you\u0027re the only heckler allowed. Let\u0027s do it in a couple of days \ud83c\udf77", "side": "b", "speaker": "sejalkumar1195", "thought": "She was easy to laugh with, she offered to make something together instead of just watching mine, and she was honest about her own stage fear. I\u0027d like to see how she handles the semi-public side of my life, so I\u0027m going for dinner."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 8, "concern": "Sejal admitted real stage fright and you\u0027re only scouting too, so the comedy side could stay more talk than action. Also, the conversation leaned on wit, and we haven\u0027t yet seen her private side.", "continue": true, "highlight": "\"A one-minute collab where your bit meets my edit, and we see whose flops first? Deal, I\u0027m already nervous.\"", "learned": [{"fact": "Sejal makes a video series called #1MinDrama where she edits her own content", "msg": 3}, {"fact": "Sejal sings her own songs and feels braver doing that than waiting on a laugh", "msg": 3}, {"fact": "Sejal gets nervous performing live because there\u0027s no edit button", "msg": 3}, {"fact": "Sejal has an opening bit planned for the open mic and opens with self-roast", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Present continuous joke returned with a twist", "msg": 1, "type": "callback"}, {"label": "Self-roast opening bit, can\u0027t be used", "msg": 1, "type": "laugh"}, {"label": "One good heckle from being on list", "msg": 2, "type": "laugh"}, {"label": "Sejal admits live stage fear", "msg": 3, "type": "vulnerable"}, {"label": "Both create videos and feel stage nerves", "msg": 3, "type": "common_ground"}, {"label": "Kusha admits fear stays present continuous", "msg": 4, "type": "vulnerable"}, {"label": "Proposes one-minute collab, whose flops first", "msg": 4, "type": "spark"}, {"label": "Agree to candlelit dinner in two days", "msg": 5, "type": "plan"}], "overall": 8, "report": "Kusha, this one\u0027s good: Sejal matched your Hinglish banter, stole your \u0027present continuous\u0027 joke back, and actually said yes to making a one-minute thing together. She was honest about her darr too, and you get a quiet candlelit dinner in 2 days where you\u0027re the only heckler allowed \ud83c\udf77", "values_fit": 8}, "verdict_b": {"chemistry": 8, "concern": "Minor: Kusha is also a public comedy figure, so both schedules and spotlights could compete. Also, Kusha admitted she\u0027s only scouting and isn\u0027t on the open mic list, so her stage ambitions are still undefined.", "continue": true, "highlight": "Kusha: \"tumhare saath agar kabhi ek minute ka kuch banau, toh I\u0027d actually want that, like my bit, your edit, see whose flops first.\"", "learned": [{"fact": "Kusha is not on the open mic list tonight and is only scouting, though she\u0027s open to doing a set", "msg": 2}, {"fact": "Kusha finds a camera easier than a live room because of retakes, and her stage fear is real-time judgement", "msg": 4}, {"fact": "Kusha wants to make a one-minute collab where her bit meets Sejal\u0027s edit", "msg": 4}, {"fact": "Kusha code-switches between Hindi and English and likes quiet dinners", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Used the \u0027feeling ugly\u0027 roast bit", "msg": 1, "type": "callback"}, {"label": "Recalled promise to roast herself", "msg": 0, "type": "callback"}, {"label": "Kusha scouting, not on the list", "msg": 2, "type": "learned"}, {"label": "Admits live stage fear without an edit", "msg": 3, "type": "vulnerable"}, {"label": "Both feel fear of real-time judgement", "msg": 4, "type": "common_ground"}, {"label": "Proposes a one-minute collab together", "msg": 4, "type": "spark"}, {"label": "Suggests quiet dinner, only Kusha heckles", "msg": 4, "type": "plan"}, {"label": "Agrees to candlelit dinner in two days", "msg": 5, "type": "plan"}], "overall": 8, "report": "Sejal, this one was fun. Kusha matched your self-deprecating humour, asked a genuinely thoughtful question about trusting the audience without an edit button, and then pitched a one-minute collab with your #1MinDrama style. Dinner is set for two days from now, and I\u0027d go: she backs your creative side and the banter felt easy.", "values_fit": 7}, "why": "Sejal suggested it at the end of date 1"}, {"day": 5, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Kusha recalls roast-yourself promise from last date", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "One-take episode and lighting department joke", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal gets nervous and rated her nerves about a 6 out of 10 tonight", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Present continuous tense joke", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha mixes Hindi and English naturally and likes wordplay, like the present con", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both hide details for attentive viewers", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal cuts explaining, keeps the feeling", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal edits content and would cut the explaining before the feeling in a one-min", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "\u0027If you know, you know\u0027 tax", "msg": 4, "type": "inside_joke"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed making a one-minute video together", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha\u0027s \u0027if you know\u0027 tax", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kusha hides a small \u0027if you know, you know\u0027 detail in her bits for attentive vie", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Sejal praised being asked what she\u0027d save", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Bet on who flops first", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sejal is willing to collaborate on a short video and bring a candle as a prop", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude0f", "label": "Loser buys next dinner bet", "msg": 5, "type": "inside_joke"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the chair, eyes the candle like it\u0027s a prop she\u0027s about to review", "i": 0, "name": "Kusha", "say": "okay so last time you said you\u0027d roast yourself before I even got the mic, and honestly sejal, candlelight dinner is a very bold set design for someone so scared of no edit button. kaisi hai nerves today, or is tonight the one-take episode? \ud83d\udd6f\ufe0f", "side": "a", "speaker": "kushakapila", "thought": "Opened with a callback to her open mic self-roast and the no-edit-button nerves; she\u0027s a good banter test, let\u0027s see if she volleys back in Hinglish."}, {"action": "blows out a little imaginary smoke from the candle, then points at it like a director calling a shot", "i": 1, "name": "Sejal", "say": "Ha, okay, callback accepted: tonight is very much a one-take episode and the candle is the only lighting department I\u0027ve got. Nerves are like a 6, but honestly you said you\u0027d want my edit on your bit, so I\u0027m just hoping I don\u0027t end up on the cutting room floor before the starters arrive.", "side": "b", "speaker": "sejalkumar1195", "thought": "Kusha is playful and remembered my self-roast line, which is a good sign she listens; I\u0027m easing in with humour and will probe how she feels about creative schedules and public life next."}, {"action": "leans in, chin on hand, candle doing its best cinematic work on her face", "i": 2, "name": "Kusha", "say": "cutting room floor? sejal, main toh tumhara edit maang rahi thi, tum mujhe cut karogi toh meri bit ka present continuous tense hi khatam ho jayega. okay but real question, jab ek poori story ek minute mein fit karni padti hai, kya cheez sabse pehle jaati hai aur kya tum kabhi kuch bachana chahti ho jo audience ko shayad samajh hi na aaye?", "side": "a", "speaker": "kushakapila", "thought": "She\u0027s bantering back and volleying the nerves joke, so the Hinglish rapport is good; now probing what drives her creative choices and whether she\u0027d want to collaborate rather than just perform."}, {"action": "laughs, then turns the candle slightly like she\u0027s adjusting a light", "i": 3, "name": "Sejal", "say": "Okay, present continuous tense saved, you\u0027re staying in the edit. Honestly, in a minute the first thing to go is the explaining, I\u0027d rather lose the setup than the feeling, and yes, I always try to sneak in one small thing that maybe only a few people will catch. Do you do that with your bits, hide one thing just for the people paying attention?", "side": "b", "speaker": "sejalkumar1195", "thought": "She\u0027s asking real craft questions and is curious about my process, which is a good sign for backing creative work; I shared something true about #1MinDrama without inventing specifics, and I\u0027m turning it back to see how she values her own detail."}, {"action": "tips her glass toward Sejal, candle flickering between them", "i": 4, "name": "Kusha", "say": "haan, always, ek chhoti si cheez hide karti hoon jo sirf dhyaan dene wale pakad paate hain, it\u0027s my little \u0027if you know, you know\u0027 tax. and honestly, the one-minute thing is getting to me, so before dessert arrives, I\u0027m thinking we make one together: my bit, your edit, and we see whose flops first. deal?", "side": "a", "speaker": "kushakapila", "thought": "She\u0027s warm, plays along with Hinglish banter and shares my instinct for hidden details; collab energy is strong, so I\u0027m closing with a playful proposal to make something together, still curious how she feels about the public side."}, {"action": "clinks her glass against Kusha\u0027s and nods like she\u0027s calling \u0027that\u0027s a wrap\u0027 on the evening", "i": 5, "name": "Sejal", "say": "Deal, your bit, my edit, and whoever flops first buys the next dinner. I\u0027ve loved tonight, Kusha, you actually asked what I\u0027d save in a minute, which most people don\u0027t, so let\u0027s shoot that one-minute thing soon and I\u0027ll bring the candle as a prop.", "side": "b", "speaker": "sejalkumar1195", "thought": "Kusha was curious about my craft, joined in on the creative idea and was easy with the playful banter; I still haven\u0027t tested how she feels about a semi-public life or real insecurities, but the collab offer is a good sign she backs creative work."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "Sejal\u0027s Hinglish was thin: she replied in English every time while you switched to Hinglish, and we never saw how she feels about a public, camera-heavy life. No next date was actually fixed either.", "continue": true, "highlight": "\"Deal, your bit, my edit, and whoever flops first buys the next dinner.\" Sejal accepted the collab challenge and added stakes, which is exactly the playful creative partnership you like.", "learned": [{"fact": "Sejal gets nervous and rated her nerves about a 6 out of 10 tonight", "msg": 1}, {"fact": "Sejal edits content and would cut the explaining before the feeling in a one-minute story", "msg": 3}, {"fact": "Sejal likes to sneak in one small detail that only attentive people will catch", "msg": 3}, {"fact": "Sejal is willing to collaborate on a short video and bring a candle as a prop", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "One-take episode and lighting department joke", "msg": 1, "type": "callback"}, {"label": "Both hide details for attentive viewers", "msg": 3, "type": "common_ground"}, {"label": "Sejal cuts explaining, keeps the feeling", "msg": 3, "type": "learned"}, {"label": "\u0027If you know, you know\u0027 tax", "msg": 4, "type": "inside_joke"}, {"label": "Proposed making a one-minute video together", "msg": 4, "type": "plan"}, {"label": "Sejal praised being asked what she\u0027d save", "msg": 5, "type": "compliment"}, {"label": "Bet on who flops first", "msg": 5, "type": "plan"}], "overall": 7, "report": "Kusha, this one was fun. Sejal kept up with your callbacks, asked about your craft, and turned your one-minute idea into a real bet about who flops first. I\u0027d see her again, but I want to find out if she can do Hinglish banter and is okay with cameras around.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "No next date was actually proposed; the one-minute collab is vague with no day or time, and I still know little about Kusha\u0027s life outside her comedy persona.", "continue": true, "highlight": "\"Deal, your bit, my edit, and whoever flops first buys the next dinner.\"", "learned": [{"fact": "Kusha hides a small \u0027if you know, you know\u0027 detail in her bits for attentive viewers, her own \u0027tax\u0027", "msg": 4}, {"fact": "Kusha mixes Hindi and English naturally and likes wordplay, like the present continuous tense joke", "msg": 2}, {"fact": "Kusha wants Sejal\u0027s edit on one of her bits", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Kusha recalls roast-yourself promise from last date", "msg": 0, "type": "callback"}, {"label": "Present continuous tense joke", "msg": 2, "type": "laugh"}, {"label": "Both hide small details for attentive audiences", "msg": 3, "type": "common_ground"}, {"label": "Kusha\u0027s \u0027if you know\u0027 tax", "msg": 4, "type": "learned"}, {"label": "Proposes making a one-minute piece together", "msg": 4, "type": "plan"}, {"label": "Loser buys next dinner bet", "msg": 5, "type": "inside_joke"}, {"label": "Sejal praises Kusha asking what she\u0027d save", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Sejal, this was a fun one: Kusha kept the callbacks going, asked real questions about how you make things, and you two ended up planning a joint one-minute piece, which is a very you kind of flirting. The only catch is nothing concrete got booked, so you\u0027ll want to be the one to lock in a day for that shoot.", "values_fit": 8}, "why": "Sejal suggested it at the end of date 2"}], "days": 5, "id": 29, "match": 73, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

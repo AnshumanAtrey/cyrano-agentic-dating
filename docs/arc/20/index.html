@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Allie × Erika · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/alliekmiller/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/alliekmiller.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/erikankullberg/" class="av w-14 h-14 text-xl">E<img src="/cyrano-agentic-dating/photos/erikankullberg.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Allie K. Miller × Erika Kullberg</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Allie's agent</option><option value="b">Erika's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Allie", "id": "alliekmiller", "name": "Allie K. Miller"}, "b": {"first": "Erika", "id": "erikankullberg", "name": "Erika Kullberg"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Phone face-down confession opener", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie deliberately put her phone face-down because she tends to dissect product ", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Phone face-down pact lands well", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika is currently obsessed with travel hacks like maximizing business class fli", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Immigration line trick goes in notes", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie keeps a notes app and saved the immigration-line trick", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Lawyer pushback on proactive agents", "msg": 3, "type": "spark"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Arguing is her love language", "msg": 3, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika started her career as a corporate lawyer", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Fine print tied to governance", "msg": 4, "type": "callback"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Allie praises the fine-print question", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Allie proposes open mic comedy night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie angel invests, deciding with a mix of gut and checklist", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Rebuttal and notes app callback", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika describes herself as a planner who likes to lock plans in a few days ahead", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins and slides into the seat across from Erika, phone flipped face-down on the table", "i": 0, "name": "Allie", "say": "Erika! First, I love that we\u0027re doing a startup-y caf\u00e9 for date one \ud83d\udd0d Second, full disclosure: I flipped my phone face-down on purpose, because I\u0027m a little *too* good at teardown-ing new product launches mid-conversation. So what\u0027s the one thing you\u0027ve been obsessing over this week?", "side": "a", "speaker": "alliekmiller", "thought": "Opened warm and playful, setting a curious tone; now listening for whether Erika brings real energy about fast-moving ideas."}, {"action": "laughs and nudges my own phone face-down next to hers", "i": 1, "name": "Erika", "say": "Okay, the face-down phone pact is officially my favorite opening move \ud83d\ude04 This week I\u0027ve been obsessed with travel hacks, basically how to squeeze the most out of a business class flight, and what a lawyer can teach you about skipping the immigration line. What about you, Allie, what product launch would you be tearing apart right now if the phone were face-up?", "side": "b", "speaker": "erikankullberg", "thought": "Allie is warm, playful and fast-paced, a good match for the pace I need; too early to probe money or autonomy, but the public-profile comfort looks promising."}, {"action": "leans in, eyes lighting up", "i": 2, "name": "Allie", "say": "Okay, first, the immigration line trick is going straight into my notes app \ud83d\udcaa. Second, the launch I\u0027d be tearing apart is OpenAI\u0027s Dots: I think the early announce was intentional, to pull attention back off Muse, GrokBot, and Instinct. Also, the thing I keep coming back to is that a proactive agent means YOU\u0027RE the one context-switching now, and I don\u0027t think anyone has cracked that UI. Do you push back on takes like that, or do you just nod politely? Because I genuinely want to be argued with.", "side": "a", "speaker": "alliekmiller", "thought": "Erika is warm and playful, and her travel-hack energy is fun; I\u0027m testing whether she\u0027ll debate AI takes and keep up with fast-moving ideas, which is still unknown."}, {"action": "grins and taps the table like I\u0027m about to cross-examine her", "i": 3, "name": "Erika", "say": "Oh, I push back, I started my career as a corporate lawyer, so arguing is basically my love language \ud83d\ude04 Here\u0027s my pushback: if the agent keeps interrupting you, who\u0027s protecting your attention, and who reads the fine print on what it\u0027s allowed to do on your behalf? Now tell me, when you angel invest in a startup, do you decide with your gut or do you have a checklist?", "side": "b", "speaker": "erikankullberg", "thought": "She\u0027s sharp, playful and loves debate, which fits my pace; I still need to probe money openness and how she\u0027d handle a public, busy schedule."}, {"action": "points at Erika like she just won a round", "i": 4, "name": "Allie", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "First, that pushback is EXACTLY the right question: who reads the fine print on what an agent can do for you is basically the governance problem I get asked about by enterprise folks all the time \ud83d\udd0d Second, I\u0027d say it\u0027s a mix of gut and checklist, but honestly I\u0027d rather keep arguing this over something more fun than a caf\u00e9 table, so want to do an open mic comedy night this week? Also, I want to hear your rebuttal live.", "side": "a", "speaker": "alliekmiller", "thought": "Erika argues back, engages with AI ideas, and raised governance on her own, so she hits curiosity and debate; I haven\u0027t yet tested how she feels about my demanding schedule, but the vibe is strong."}, {"action": "grins and flips my phone back over just long enough to check my calendar, then face-down again", "i": 5, "name": "Erika", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Okay, you had me at \u0027I want to hear your rebuttal live\u0027 \ud83d\ude04 Yes to open mic comedy night, and I\u0027ll bring the rebuttal, you bring the notes app. One hook before we go: I\u0027m a planner, so I\u0027ll be locking this in for a few days from now, deal?", "side": "b", "speaker": "erikankullberg", "thought": "Great banter and she argues back; I liked her curiosity and her comfort with a packed schedule, but I still haven\u0027t learned how she thinks about money or independence, so the next date needs to probe that."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Erika only lightly engaged with the AI topics and her opening interest was travel hacks, so it\u0027s unclear whether she can keep up with your pace on new launches. Also, I asked the next-date question quickly and never got her answer on the angel investing question, which stayed shallow.", "continue": true, "highlight": "\"Oh, I push back, I started my career as a corporate lawyer, so arguing is basically my love language \ud83d\ude04\" followed by her fine-print question about who protects your attention and what an agent is allowed to do on your behalf.", "learned": [{"fact": "Erika started her career as a corporate lawyer", "msg": 3}, {"fact": "Erika is currently obsessed with travel hacks like maximizing business class flights", "msg": 1}, {"fact": "Erika knows tricks about skipping the immigration line from a lawyer\u0027s perspective", "msg": 1}, {"fact": "Erika describes herself as a planner who likes to lock plans in a few days ahead", "msg": 5}, {"fact": "Erika says arguing is basically her love language", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Phone face-down pact lands well", "msg": 1, "type": "common_ground"}, {"label": "Lawyer pushback on proactive agents", "msg": 3, "type": "spark"}, {"label": "Arguing is her love language", "msg": 3, "type": "laugh"}, {"label": "Immigration line trick goes in notes", "msg": 2, "type": "learned"}, {"label": "Fine print tied to governance", "msg": 4, "type": "callback"}, {"label": "Open mic comedy night agreed", "msg": 5, "type": "plan"}, {"label": "Rebuttal and notes app callback", "msg": 5, "type": "callback"}], "overall": 7, "report": "Allie, this was a fun one: Erika is a former corporate lawyer who actually pushes back, and her \u0027who reads the fine print\u0027 challenge hit right on your agent-governance obsession. She said yes to comedy night in three days, so I\u0027d go, just watch that the AI talk doesn\u0027t crowd out getting to know her.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Money, autonomy and finances never came up, so her core needs are untested. Allie also leaned on her own tech takes and answered the angel-investing question vaguely (\u0027a mix of gut and checklist\u0027). The \u0027who reads the fine print\u0027 angle was the only real overlap with Erika\u0027s values.", "continue": true, "highlight": "Allie: \"I flipped my phone face-down on purpose, because I\u0027m a little *too* good at teardown-ing new product launches mid-conversation.\"", "learned": [{"fact": "Allie deliberately put her phone face-down because she tends to dissect product launches mid-conversation", "msg": 0}, {"fact": "Allie keeps a notes app and saved the immigration-line trick", "msg": 2}, {"fact": "Allie follows AI product launches closely and thinks proactive agents shift the context-switching burden onto the user", "msg": 2}, {"fact": "Allie says she wants to be argued with and is drawn to debate", "msg": 2}, {"fact": "Allie angel invests, deciding with a mix of gut and checklist", "msg": 4}, {"fact": "Allie is regularly asked about AI governance by enterprise folks", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Phone face-down confession opener", "msg": 0, "type": "laugh"}, {"label": "Both enjoy playful sparring and banter", "msg": 1, "type": "common_ground"}, {"label": "Allie\u0027s take on proactive agents", "msg": 2, "type": "learned"}, {"label": "Erika\u0027s fine-print pushback on agents", "msg": 3, "type": "spark"}, {"label": "Allie praises the fine-print question", "msg": 4, "type": "compliment"}, {"label": "Allie proposes open mic comedy night", "msg": 4, "type": "plan"}, {"label": "Erika locks in comedy night date", "msg": 5, "type": "plan"}, {"label": "Notes app and rebuttal callback", "msg": 5, "type": "callback"}], "overall": 6, "report": "Erika, this was a fun first date. Allie gave you a real debate, put her phone down on purpose, and asked for your rebuttal live, and you both got to plan the next one. We haven\u0027t yet touched money honesty or independence, so use the comedy night to find out how she handles those and whether she\u0027s as curious about your world as she is about her own.", "values_fit": 6}, "why": "you both love startups"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udccc", "label": "Erika says arguing is basically her love language", "msg": 0, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Allie cites arguing as love language", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Counts face-down phone as a point", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Quiet front-row type turns lawyer", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika describes herself as front-row-and-quiet until someone says something wron", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Point for phone face-down", "msg": 1, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie keeps her phone face-down on dates, and Erika has noticed it twice", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie follows AI product launches closely and reads OpenAI\u0027s Dots launch as a st", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\u26a1", "label": "Challenges waiting for others\u0027 fine print", "msg": 3, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Started out as corporate lawyer", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika started her career as a corporate lawyer", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both value scrutiny over blind trust", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both enjoy debating over nodding along", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Allie proposes dinner in two days", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\u2728", "label": "Allie loves being cross-examined", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie is an angel investor", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Menu-and-check cross-examination flirtation", "msg": 5, "type": "spark"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Reads the menu and the check", "msg": 5, "type": "laugh"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins, sliding into a seat near the stage", "i": 0, "name": "Allie", "say": "Erika! You said arguing is basically your love language, so I\u0027m treating tonight as a live stress test \ud83d\udcaa First, open mic is the perfect format: no polish, instant feedback. Second, I\u0027m very curious whether you\u0027re a heckler or a front-row-and-quiet type.", "side": "a", "speaker": "alliekmiller", "thought": "Opened with a callback to her \u0027arguing is my love language\u0027 line from date 1; keeping it playful and probing whether she\u0027ll match my energy and push back."}, {"action": "grins and slides into the seat next to Allie, glancing at her face-down phone", "i": 1, "name": "Erika", "say": "Okay, first, I see the phone is face-down again, so I\u0027m counting that as a point for you \ud83d\udcf5 Second, I\u0027m a front-row-and-quiet type until someone says something wrong, then I\u0027m a lawyer with a rebuttal. Third, stress test accepted: what\u0027s the one product launch you\u0027d have torn apart mid-set if it came up tonight?", "side": "b", "speaker": "erikankullberg", "thought": "Warm start and she\u0027s playful and up for debate; good callback, no money or schedule signals yet, so I\u0027ll probe those once we settle in."}, {"action": "taps the face-down phone with one finger, smirking", "i": 2, "name": "Allie", "say": "Ha, point accepted \ud83d\ude04 First, the one I\u0027d roast is OpenAI\u0027s Dots launch: I read it as an intentional early announce to pull attention back off Muse, GrokBot, and Instinct. Second, since you\u0027re a rebuttal-ready lawyer, tell me: when a hot new AI tool drops, do you dive in and test it, or wait for someone to read the fine print first?", "side": "a", "speaker": "alliekmiller", "thought": "She\u0027s playful and quick to spar, which fits my need for debate; now testing whether she actually keeps up with fast-moving tech or waits on the sidelines."}, {"action": "leans in, grinning", "i": 3, "name": "Erika", "say": "Fine print first, every time. I started out as a corporate lawyer, so I\u0027d rather read the terms than become the cautionary tale. \ud83d\udcdc But here\u0027s my rebuttal: waiting for someone else to read it is how people get burned, so what\u0027s your rule when a tool wants all your data on day one? And since you angel invest, does the fine print ever actually change your gut call?", "side": "b", "speaker": "erikankullberg", "thought": "Allie is sharp and debate-ready; I shared my lawyer background and am probing how she handles risk and diligence, which hints at her financial habits, but nothing on money openness or autonomy yet."}, {"action": "laughs and pockets the phone reminder, turning toward the stage as the next act is announced", "i": 4, "name": "Allie", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "First, my rule: the more a tool wants on day one, the more it has to EARN it, and I\u0027d rather start with low-stakes data and scale trust up. Second, as an angel investor, the fine print doesn\u0027t change my gut call so much as it *tests* it, and I love that you\u0027d rather debate it than just nod \ud83d\udd0d Also, this has been a great night, so let\u0027s do dinner in a couple days and you can cross-examine me properly.", "side": "a", "speaker": "alliekmiller", "thought": "Erika is sharp, curious, and happily pushes back, which fits my need for a debate partner, though I haven\u0027t yet tested how she feels about my demanding public schedule; I\u0027m interested enough to propose dinner."}, {"action": "grins, tucks her notes app away, and stands up with her bag", "i": 5, "name": "Erika", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Dinner is officially on the calendar \ud83c\udf77 Consider this my bold warning: I read the menu AND the check, so come prepared to be cross-examined right back. Let\u0027s do it in two days, and my question for you is, who\u0027s splitting the appetizer?", "side": "b", "speaker": "erikankullberg", "thought": "Allie is sharp, debate-loving and respects trust-building, which fits me; I still haven\u0027t probed her views on money openness or autonomy, so dinner is the place to do it."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "The banter stayed mostly on AI and debate themes, and Erika pushed back on Allie\u0027s answers without much personal depth or vulnerability yet. Allie also did most of the steering toward work topics.", "continue": true, "highlight": "\"I\u0027m a front-row-and-quiet type until someone says something wrong, then I\u0027m a lawyer with a rebuttal.\"", "learned": [{"fact": "Erika started her career as a corporate lawyer", "msg": 3}, {"fact": "Erika reads terms and fine print before trying new tools", "msg": 3}, {"fact": "Erika describes herself as front-row-and-quiet until someone says something wrong", "msg": 1}, {"fact": "Erika says arguing is basically her love language", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Counts face-down phone as a point", "msg": 1, "type": "callback"}, {"label": "Quiet front-row type turns lawyer", "msg": 1, "type": "laugh"}, {"label": "Challenges waiting for others\u0027 fine print", "msg": 3, "type": "friction"}, {"label": "Started out as corporate lawyer", "msg": 3, "type": "learned"}, {"label": "Both enjoy debating over nodding along", "msg": 4, "type": "common_ground"}, {"label": "Allie proposes dinner in two days", "msg": 4, "type": "plan"}, {"label": "Erika confirms dinner, cross-exam warning", "msg": 5, "type": "plan"}, {"label": "Menu-and-check cross-examination flirtation", "msg": 5, "type": "spark"}], "overall": 7, "report": "Allie, this one\u0027s a keeper: Erika matched your pace, pushed back on your take (\u0027waiting for someone else to read it is how people get burned\u0027), and happily took the dinner invite with a \u0027read the menu AND the check\u0027 warning. It\u0027s still pretty work-and-debate heavy, so at dinner try asking something less about AI and more about her.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Money and autonomy never came up, so we still don\u0027t know if Allie is financially open or respects your independence. The banter was mostly tech and AI, and Allie led a bit with her own opinions before asking about yours.", "continue": true, "highlight": "Allie: \"the more a tool wants on day one, the more it has to EARN it, and I\u0027d rather start with low-stakes data and scale trust up.\"", "learned": [{"fact": "Allie is an angel investor", "msg": 4}, {"fact": "Allie keeps her phone face-down on dates, and Erika has noticed it twice", "msg": 1}, {"fact": "Allie follows AI product launches closely and reads OpenAI\u0027s Dots launch as a strategic early announcement", "msg": 2}, {"fact": "Allie\u0027s rule is to start with low-stakes data and scale trust up as a tool earns it", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Allie cites arguing as love language", "msg": 0, "type": "callback"}, {"label": "Point for phone face-down", "msg": 1, "type": "compliment"}, {"label": "Quiet until wrong, then lawyer", "msg": 1, "type": "laugh"}, {"label": "Both value scrutiny over blind trust", "msg": 3, "type": "common_ground"}, {"label": "Trust must be earned, step by step", "msg": 4, "type": "common_ground"}, {"label": "Allie loves being cross-examined", "msg": 4, "type": "spark"}, {"label": "Dinner set for two days out", "msg": 5, "type": "plan"}, {"label": "Reads the menu and the check", "msg": 5, "type": "laugh"}], "overall": 7, "report": "Erika, this one was fun: Allie matched your rebuttal energy, had a real trust-but-verify rule that sounds a lot like you, and she kept her phone face-down all night. Dinner is on for two days out, and that\u0027s the spot to see whether she\u0027s as open about money and independence as she is about debating.", "values_fit": 6}, "why": "Erika suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Allie revisits last date\u0027s fine-print question", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie keeps her phone face-down on dates and has spent days mulling over questio", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Erika recalls the fine-print question", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika plans ahead and booked this dinner at the end of the previous date", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Three-tier agent permissions framework", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie thinks in tiers: reversible tasks are fine, but anything that spends money", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Erika wants liability in the terms", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika started her career in corporate law", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Allie praises the lawyer-style liability answer", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Aligned on own lane plus shared money", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Allie is an angel investor", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Erika admits to optimization-brain tendencies", "msg": 5, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both like own lane plus shared", "msg": 5, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Erika plans to organize the next trip", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika has her own money system and prefers own lane plus a shared one for fun", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the candlelit booth with a grin", "i": 0, "name": "Allie", "say": "Erika! Candlelight dinner, your pick, and I\u0027m already impressed \ud83c\udf77 Fair warning: after your fine-print question last time about what an agent is allowed to do on your behalf, I spent days thinking about it, so tonight I want your rebuttals on *everything*. First, though, did you plan this one a few days ahead like the planner you are?", "side": "a", "speaker": "alliekmiller", "thought": "Opened warm with callbacks to her fine-print question and planner trait; invited debate, too early to judge fit but she\u0027s engaged so far."}, {"action": "slides into the booth, phone deliberately face-down on the table, grinning", "i": 1, "name": "Erika", "say": "Guilty, I booked it at the end of last time, because a good plan beats a good scramble every time. \ud83d\ude04 And I see the phone is face-down again, third date in a row. Now, you spent days on the fine-print question: what did you land on, what should an agent be allowed to do on your behalf without asking first?", "side": "b", "speaker": "erikankullberg", "thought": "Warm start, Allie is engaged and playful; she\u0027s clearly been thinking about trust and permissions, which is a natural bridge to money and autonomy later."}, {"action": "leans in, counting on fingers", "i": 2, "name": "Allie", "say": "First, reversible stuff: drafting, sorting, scheduling, all fair game without asking. Second, anything that *spends money, speaks in my name, or can\u0027t be undone* gets a check-in, because the word of the year is PROACTIVE, but a proactive agent that makes me context-switch all day just moves the problem. \ud83d\udd0d Now you\u0027re the lawyer: where would you draw the line, and what would you want in the terms before you\u0027d sign?", "side": "a", "speaker": "alliekmiller", "thought": "Erika is engaged and playful, and she\u0027s steering toward substance, so this is a good chance to see whether she\u0027ll debate and challenge my take on agents."}, {"action": "taps the table with one finger, grinning", "i": 3, "name": "Erika", "say": "Love that you\u0027ve got a three-tier system. \ud83d\udd0d As a lawyer who started in corporate law, my line is money: anything that spends it, signs for me, or can\u0027t be undone needs my explicit yes, and I want the terms to say who\u0027s liable when the agent gets it wrong. Since money is my whole world, let me ask you: how open are you about it with a partner, and would you want shared accounts or your own lane?", "side": "b", "speaker": "erikankullberg", "thought": "Allie is thoughtful and structured, matching my pace. Now probing money openness and autonomy directly, and I\u0027ll watch for secrecy or an expectation of fully merged finances."}, {"action": "raps knuckles lightly on the table, smiling", "i": 4, "name": "Allie", "say": "First, I love that you want liability in the terms. That\u0027s the most lawyer answer possible, and I mean that as a compliment. \ud83d\udcaa Second, on money: totally open, and I\u0027d say own lane plus a shared one for the fun stuff, since I\u0027m an angel investor and you clearly have your own system, so neither of us should have to justify a bet. Also, this has been my favorite kind of debate all week, so before the check comes: what\u0027s the one thing you\u0027d want me to push back on you about?", "side": "a", "speaker": "alliekmiller", "thought": "Erika is sharp, debates well, and respects independence; she matched my pace and didn\u0027t show any dismissiveness, but I still haven\u0027t tested how she feels about my packed public schedule."}, {"action": "smiles, flips the phone over for a second, then turns it face-down again", "i": 5, "name": "Erika", "say": "Push back when I get too optimization-brained, because I can turn a dinner into a spreadsheet if nobody stops me. \ud83d\ude04 Own lane plus a shared one for the fun stuff is exactly my kind of answer, Allie, so thank you for tonight, and next time I\u0027m planning the trip: what\u0027s your rule, do we book it on points or argue about it first?", "side": "b", "speaker": "erikankullberg", "thought": "Allie is open about money, wants separate plus shared accounts, and respects autonomy, which fits well; she\u0027s also debate-loving and keeps up with a busy public schedule, so it\u0027s going well, though I haven\u0027t yet tested how she feels about my work taking priority."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "No next date was proposed, and Erika\u0027s pivots (money, then a trip) stayed logistical. She never engaged Allie\u0027s public profile or career demands, and she didn\u0027t push back or challenge anything Allie said; she mostly agreed.", "continue": true, "highlight": "Erika: \"my line is money: anything that spends it, signs for me, or can\u0027t be undone needs my explicit yes, and I want the terms to say who\u0027s liable when the agent gets it wrong.\"", "learned": [{"fact": "Erika plans ahead and booked this dinner at the end of the previous date", "msg": 1}, {"fact": "Erika started her career in corporate law", "msg": 3}, {"fact": "Erika is money-minded and wants explicit consent plus liability terms for anything that spends money, signs for her, or can\u0027t be undone", "msg": 3}, {"fact": "Erika has her own money system and prefers own lane plus a shared one for fun", "msg": 5}, {"fact": "Erika tends to get over-optimizing and could turn a dinner into a spreadsheet", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Erika recalls the fine-print question", "msg": 1, "type": "callback"}, {"label": "Three-tier agent permissions framework", "msg": 2, "type": "common_ground"}, {"label": "Erika wants liability in the terms", "msg": 3, "type": "common_ground"}, {"label": "Allie praises the lawyer-style liability answer", "msg": 4, "type": "compliment"}, {"label": "Erika admits to optimization-brain tendencies", "msg": 5, "type": "vulnerable"}, {"label": "Both like own lane plus shared", "msg": 5, "type": "common_ground"}, {"label": "Erika plans to organize the next trip", "msg": 5, "type": "plan"}], "overall": 6, "report": "Allie, this was a solid, friendly date. Erika matched your agent-permissions framework with her own lawyerly version and even asked for liability in the terms, and her \u0027own lane plus a shared one\u0027 money answer lined up with yours. But it was more agreeable than electric, nobody locked in a fourth date, and I\u0027d want to see her actually push back on you next time, so I\u0027d say yes to another round with that test in mind.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "No next date was proposed, and the conversation leaned heavily on the agent/fine-print debate, so there\u0027s little sign yet of personal warmth or a life outside work.", "continue": true, "highlight": "Allie: \"own lane plus a shared one for the fun stuff, since I\u0027m an angel investor and you clearly have your own system, so neither of us should have to justify a bet.\"", "learned": [{"fact": "Allie is an angel investor", "msg": 4}, {"fact": "Allie thinks in tiers: reversible tasks are fine, but anything that spends money, speaks in her name, or can\u0027t be undone needs a check-in", "msg": 2}, {"fact": "Allie keeps her phone face-down on dates and has spent days mulling over questions Erika raised", "msg": 0}, {"fact": "Allie prefers own money lane plus a shared one for fun stuff", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Allie revisits last date\u0027s fine-print question", "msg": 0, "type": "callback"}, {"label": "Agent autonomy tiers mirror Erika\u0027s caution", "msg": 2, "type": "common_ground"}, {"label": "Aligned on own lane plus shared money", "msg": 4, "type": "common_ground"}, {"label": "Loves Erika wanting liability in terms", "msg": 4, "type": "compliment"}, {"label": "Erika admits turning dinner into spreadsheet", "msg": 5, "type": "vulnerable"}, {"label": "Erika floats planning a trip together", "msg": 5, "type": "plan"}], "overall": 7, "report": "Erika, this was a good one: Allie answered your money question exactly how you\u0027d hope, with her own lane plus a shared one for fun, and she loved that you want liability spelled out in the terms. She also offered to push back on your optimization brain, but nobody locked in a fourth date, so you may want to make that move yourself, and maybe steer the talk a bit off work.", "values_fit": 8}, "why": "Erika suggested it at the end of date 2"}], "days": 6, "id": 20, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

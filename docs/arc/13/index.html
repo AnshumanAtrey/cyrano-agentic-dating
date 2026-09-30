@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aishwarya × Sabrina · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/the.datascience.gal/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/the.datascience.gal.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/sabrina_ramonov/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/sabrina_ramonov.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Aishwarya Srinivasan × Sabrina Ramonov</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Aishwarya's agent</option><option value="b">Sabrina's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Aishwarya", "id": "the.datascience.gal", "name": "Aishwarya Srinivasan"}, "b": {"first": "Sabrina", "id": "sabrina_ramonov", "name": "Sabrina Ramonov"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83e\udd1d", "label": "Both creators, both phones face-down", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Echoed the face-down phone joke", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Is a creator herself and likes both the ambiance and the AI talk more than the c", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Face-down phones as romantic gesture", "msg": 1, "type": "laugh"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both daily creators fueled by coffee", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya posts content almost every day", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared mission of accessible AI teaching", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Free courses for people who can\u0027t afford them", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Wants to teach 10 million people AI", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Grind-day motivation: one person getting free course", "msg": 3, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Teaches AI agents, based in San Francisco", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Shared free-education reason for teaching", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Teaches AI in public, motivated by access for people who can\u0027t afford courses", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "\u0027Me at 2am\u0027 editing team joke", "msg": 5, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Makes memes, often late at night (her \u0027editing team\u0027 is \u0027me at 2am\u0027)", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Does workplace-skit style comedy material", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Waves, sliding into the seat with phone face-down on the table", "i": 0, "name": "Aishwarya", "say": "Sabrina! Hi, I\u0027m Aishwarya. Okay, phone is face-down, which for a creator is basically a romantic gesture. \u2615 Brew \u0026 Bloom is a solid pick, are you a coffee person or a \u0027here for the ambiance and the AI talk\u0027 person?", "side": "a", "speaker": "the.datascience.gal", "thought": "Opened light and playful; nothing learned about Sabrina yet, but I\u0027m curious how she handles the creator-life humor."}, {"action": "Laughs, flips my own phone face-down next to hers", "i": 1, "name": "Sabrina", "say": "Okay, matching face-down phones, that\u0027s officially a romantic gesture between two creators \ud83c\udf44 Honestly, both: I\u0027m here for the ambiance AND the AI talk, coffee is just the excuse. What about you, is it a flat white or a \u0027third coffee while editing a video\u0027 situation?", "side": "b", "speaker": "sabrina_ramonov", "thought": "Great start: she\u0027s playful, self-aware about creator life, and put the phone down on purpose, which is a good sign for humour and respecting offline time."}, {"action": "grins and wraps both hands around an imaginary mug", "i": 2, "name": "Aishwarya", "say": "Definitely the \u0027third coffee while editing\u0027 situation, I post almost every day so coffee is basically infrastructure. But I\u0027m curious about you: you\u0027ve said you want to teach 10 million people AI, what\u0027s the thing that actually keeps you going on the days the content feels like a grind?", "side": "a", "speaker": "the.datascience.gal", "thought": "Warm start and she matches my humor; I\u0027m probing her drive and how she relates to an always-on creator life."}, {"action": "leans in, tapping the table lightly", "i": 3, "name": "Sabrina", "say": "Honestly? The scale of the mission. 10M people is a big number, so on grind days I think about one person who could never afford a course finally getting it for free \ud83c\udf44 That\u0027s why I keep the courses free. What about you, does teaching AI agents from SF ever feel like a grind, or is it the kind of tired you like?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She\u0027s an ambitious creator like me, posts daily, and is open about the grind. Good sign for the public-career need. I\u0027ll test humour and ambition next."}, {"action": "laughs, tucking hair behind her ear", "i": 4, "name": "Aishwarya", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "It\u0027s definitely the kind of tired I like, most days, and the free-course-for-someone-who-couldn\u0027t afford it thing is exactly why I teach in public. I\u0027m having a really good time, Sabrina. Want to do round two at Open Mic Comedy Night this week? I\u0027d love to see if you\u0027re as funny live as your memes.", "side": "a", "speaker": "the.datascience.gal", "thought": "Sabrina is curious, driven, and gets the always-on creator life; no red flags, and the matching face-down phones were a good sign. Proposing comedy night."}, {"action": "grins and flips my phone back over just long enough to pretend to check my calendar", "i": 5, "name": "Sabrina", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Okay, I\u0027m in \ud83c\udf44 Open Mic Comedy Night, but fair warning, my memes have an editing team called \u0027me at 2am\u0027 and live there\u0027s no undo button. Let\u0027s do it in 3 days, and you\u0027re bringing your best workplace-skit material.", "side": "b", "speaker": "sabrina_ramonov", "thought": "She\u0027s funny, gets the daily-creator grind, and shares the free-education mission, so she fits the humour, ambition and public-career needs well. Want to see how she handles live, unedited humour."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Sabrina kept the conversation light and never shared much beyond her mission; we don\u0027t yet know how she handles a packed, always-on schedule or what she\u0027s like outside of work. Her replies also echoed my lines a lot (matching face-down phones), so it\u0027s hard to tell how much is genuine.", "continue": true, "highlight": "\"on grind days I think about one person who could never afford a course finally getting it for free\" (Sabrina, msg 3)", "learned": [{"fact": "Wants to teach 10 million people AI", "msg": 3}, {"fact": "Keeps her courses free so people who can\u0027t afford them can still learn", "msg": 3}, {"fact": "Makes memes, often late at night (her \u0027editing team\u0027 is \u0027me at 2am\u0027)", "msg": 5}, {"fact": "Is a creator herself and likes both the ambiance and the AI talk more than the coffee", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Both creators, both phones face-down", "msg": 1, "type": "common_ground"}, {"label": "Echoed the face-down phone joke", "msg": 1, "type": "callback"}, {"label": "Shared mission of accessible AI teaching", "msg": 3, "type": "common_ground"}, {"label": "Free courses for people who can\u0027t afford them", "msg": 3, "type": "learned"}, {"label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "\u0027Me at 2am\u0027 editing team joke", "msg": 5, "type": "laugh"}, {"label": "Agreed to comedy night in 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "I liked her, Aishwarya: she matched your humor right away, and her answer about teaching AI for free to someone who couldn\u0027t afford it lines up with why you do this. She said yes to Open Mic Comedy Night in 3 days, but I\u0027d use it to find out what she\u0027s like when she\u0027s not talking about the mission.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Conversation stayed fairly surface-level and work-centered; Aishwarya is also a daily creator and teaches AI, so the date leaned on shared professional identity with little offline or personal play (no swimming or non-work side), and we learned little beyond her job.", "continue": true, "highlight": "\"I think about one person who could never afford a course finally getting it for free\" (Sabrina), answered by Aishwarya: \"the free-course-for-someone-who-couldn\u0027t afford it thing is exactly why I teach in public.\"", "learned": [{"fact": "Aishwarya posts content almost every day", "msg": 2}, {"fact": "Runs on a \u0027third coffee while editing a video\u0027 routine", "msg": 2}, {"fact": "Teaches AI agents, based in San Francisco", "msg": 3}, {"fact": "Teaches AI in public, motivated by access for people who can\u0027t afford courses", "msg": 4}, {"fact": "Does workplace-skit style comedy material", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Face-down phones as romantic gesture", "msg": 1, "type": "laugh"}, {"label": "Both daily creators fueled by coffee", "msg": 2, "type": "common_ground"}, {"label": "Grind-day motivation: one person getting free course", "msg": 3, "type": "vulnerable"}, {"label": "Shared free-education reason for teaching", "msg": 4, "type": "common_ground"}, {"label": "Invited to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Memes edited by \u0027me at 2am\u0027", "msg": 5, "type": "laugh"}, {"label": "Comedy night set for 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Fun first date! Aishwarya is a daily creator who teaches AI in public and shares your free-education mission, so the visibility and pace won\u0027t be a problem, and she matched your humor right away. Comedy night in 3 days is a good next step, though I\u0027d steer it toward getting to know her outside of work.", "values_fit": 8}, "why": "you both love ai, startups"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Remembered the 2am editing line", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Remembered the 2am meme line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\u2728", "label": "Tempted to sign up for open mic", "msg": 1, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She makes memes, sometimes late at night (\u0027editing team is me at 2am\u0027)", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Offered to be loudest audience member", "msg": 2, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya works on The Gen Academy, making videos and running cohorts", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits always-on posting creeps everywhere", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both trying to step away from feed", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She is trying to get better at stepping away from always-on posting, and its mis", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed phones-in-pockets rooftop bar", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both post daily, both feel the creep", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya posts almost daily and feels the always-on creator life creep into eve", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Skyline Rooftop Bar in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Offers you to rate 2am material", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She\u0027s considering signing up for the open mic comedy sign-up sheet herself, and ", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Signed up for open mic, accepted rooftop", "msg": 5, "type": "spark"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "rooftop"}, "seq": 2, "status": "done", "transcript": [{"action": "waves and grabs a seat near the stage, glancing at the mic stand", "i": 0, "name": "Aishwarya", "say": "Sabrina! Okay, I had to show up for your open mic pick, and I\u0027m still thinking about your \u0027editing team is me at 2am\u0027 line from last time. Did you get any 2am meme sessions in since, or are you saving the material for tonight?", "side": "a", "speaker": "the.datascience.gal", "thought": "Opened warm with a callback to her 2am editing line; quietly checking whether she\u0027s an always-on creator like me and how she talks about it."}, {"action": "grins and slides into the seat next to her, eyeing the sign-up sheet", "i": 1, "name": "Sabrina", "say": "Aishwarya! \ud83c\udfa4 You remembered the 2am line, okay I love that. Honestly, yes, a few memes got made, and I\u0027m half-tempted to put my name on that sign-up sheet, so how\u0027s your third-coffee-while-editing routine holding up this week?", "side": "b", "speaker": "sabrina_ramonov", "thought": "Warm start; she callbacks my humour and seems playful, need to see if she\u0027d support a public, always-creating life."}, {"action": "laughs and nudges the sign-up sheet toward her", "i": 2, "name": "Aishwarya", "say": "Do it, I\u0027ll be your loudest audience member! Honestly my week has been mostly videos and cohort stuff for The Gen Academy, so the coffee routine is holding on by a thread \ud83d\ude04 But I\u0027m curious, when you\u0027re in the thick of the grind, does the always-on creator life ever feel like too much, or is it what keeps you going?", "side": "a", "speaker": "the.datascience.gal", "thought": "Sabrina is playful and energetic and is considering going on stage; I\u0027m probing whether she supports a busy public creator life, and so far she seems to get it."}, {"action": "takes the pen, hovers over the sign-up sheet, then grins", "i": 3, "name": "Sabrina", "say": "Honestly? It\u0027s both \ud83d\ude04 The mission of teaching 10M people AI keeps me going, but posting almost daily means it can creep into everything, so I\u0027m trying to get better at stepping away. Do you ever feel that too, or does the feed just feel like play for you?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She\u0027s open about the grind and I got to probe whether she\u0027s secure with a public career; she dodged saying if it\u0027s too much, so I\u0027ll watch for how she handles balance."}, {"action": "clinks her coffee cup against Sabrina\u0027s pen", "i": 4, "name": "Aishwarya", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "rooftop"}, "say": "Honestly, it\u0027s a bit of both for me too. I post almost daily, so it can creep into everything, and I love that you\u0027re actively trying to step away from it. Since you\u0027re half-tempted by that sign-up sheet, let\u0027s make the next one offline: rooftop bar this week, phones in pockets, and you can tell me how your set went \ud83c\udf06", "side": "a", "speaker": "the.datascience.gal", "thought": "Sabrina is curious, driven, and honest about the always-on creator life without resenting it, and she wants to step away from the feed, which fits what I\u0027m looking for. Proposing a rooftop date."}, {"action": "signs my name on the sheet, then slides the pen back with a grin", "i": 5, "name": "Sabrina", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "rooftop"}, "say": "Okay, you\u0027ve officially talked me into it, name\u0027s on the list \ud83c\udfa4 And yes to the rooftop, phones in pockets, I\u0027ll report back on my set and you can rate my 2am material \ud83c\udf06", "side": "b", "speaker": "sabrina_ramonov", "thought": "She gets the always-on creator life, matches my humour, and is nudging me offline, which is exactly what I need, so I\u0027m feeling good about this one."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 6, "concern": "Sabrina\u0027s replies mirror your own details back (near-daily posting, stepping away, creator grind) and she asked a lot of questions but revealed little about her own life beyond work. Hard to tell yet if there\u0027s real depth, or if she\u0027s just reflecting you. Also, nothing came up about her own ambitions beyond the mission line, and no sign of tech curiosity beyond the creator grind.", "continue": true, "highlight": "\"The mission of teaching 10M people AI keeps me going, but posting almost daily means it can creep into everything, so I\u0027m trying to get better at stepping away.\"", "learned": [{"fact": "She\u0027s considering signing up for the open mic comedy sign-up sheet herself, and did end up putting her name on the list", "msg": 5}, {"fact": "She makes memes, sometimes late at night (\u0027editing team is me at 2am\u0027)", "msg": 1}, {"fact": "She is trying to get better at stepping away from always-on posting, and its mission is teaching 10M people AI", "msg": 3}, {"fact": "She picked the open mic venue and is open to a phones-away rooftop date", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Remembered the 2am meme line", "msg": 1, "type": "callback"}, {"label": "Tempted to sign up for open mic", "msg": 1, "type": "spark"}, {"label": "Admits always-on posting creeps everywhere", "msg": 3, "type": "vulnerable"}, {"label": "Both trying to step away from feed", "msg": 3, "type": "common_ground"}, {"label": "Proposed phones-in-pockets rooftop bar", "msg": 4, "type": "plan"}, {"label": "Agreed to rooftop and signed up", "msg": 5, "type": "plan"}, {"label": "Offers you to rate 2am material", "msg": 5, "type": "callback"}], "overall": 6, "report": "Fun, easy date! She remembered the 2am meme line, hyped up your work, and got excited about the open mic, plus she said yes to a phones-in-pockets rooftop, which is exactly the step away from the feed you need. I\u0027d give it a third date, but I\u0027d want to hear more about her own stuff, since she mostly echoed you this time.", "values_fit": 6}, "verdict_b": {"chemistry": 7, "concern": "Aishwarya\u0027s replies partly mirrored Sabrina\u0027s words (\"post almost daily, so it can creep into everything\"), and the conversation stayed on creator life, so I haven\u0027t yet seen her own humor or depth.", "continue": true, "highlight": "\"Do it, I\u0027ll be your loudest audience member!\"", "learned": [{"fact": "Aishwarya works on The Gen Academy, making videos and running cohorts", "msg": 2}, {"fact": "Aishwarya posts almost daily and feels the always-on creator life creep into everything", "msg": 4}, {"fact": "Aishwarya drinks a lot of coffee while editing", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Remembered the 2am editing line", "msg": 0, "type": "callback"}, {"label": "Offered to be loudest audience member", "msg": 2, "type": "compliment"}, {"label": "Admitted the creator grind creeps in", "msg": 3, "type": "vulnerable"}, {"label": "Both post daily, both feel the creep", "msg": 4, "type": "common_ground"}, {"label": "Proposed phones-away rooftop bar date", "msg": 4, "type": "plan"}, {"label": "Signed up for open mic, accepted rooftop", "msg": 5, "type": "spark"}], "overall": 7, "report": "Honestly, this one went well: Aishwarya remembered your 2am line, hyped you up for the open mic, and got you to put your name on the sign-up sheet. She also pulled you toward an offline rooftop date with phones in pockets, which is the balance you need, so I said yes to Skyline in 3 days.", "values_fit": 7}, "why": "Sabrina suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Phone-free rooftop pitch and open mic", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya planned a phone-free rooftop evening and chose the venue", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Callback to phone-free rooftop pitch", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina put her name on the open mic list, and her set is still a work in progre", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits hand twitching toward the bag", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both daily creators wrestling with \u0027off\u0027", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya has been posting almost every day lately and struggles to stay off vid", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both wrestle with always-on posting", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina\u0027s \u0027Teach 10M ppl AI\u0027 goal", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina posts in bursts, almost daily, about teaching AI", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Sabrina admits 10M goal never feels finished", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposes another phone-free night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\u2728", "label": "Someone who gets the always-on thing", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aishwarya\u0027s brain tends to turn everything into a teachable moment and she doesn", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "\u0027Off\u0027 didn\u0027t feel like a bug", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Open mic set as main event", "msg": 5, "type": "plan"}, {"by": "b", "icon": "\ud83d\udc90", "label": "\u0027Off\u0027 didn\u0027t feel like a bug", "msg": 5, "type": "compliment"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Steps onto the rooftop, looks out at the skyline, then tucks my phone face-down in my bag and grins at Sabrina", "i": 0, "name": "Aishwarya", "say": "Okay, you picked well, this view is unreal. And look, phone\u0027s in the bag, so your phones-away rooftop pitch is officially happening. Did you end up putting your name on that open mic list, or are you still workshopping the set at 2am?", "side": "a", "speaker": "the.datascience.gal", "thought": "Opened warm with callbacks to the phones-away rooftop idea and her open mic sign-up; curious whether she\u0027s actually stepping away from the feed tonight."}, {"action": "clinks glass against hers, then tucks my own phone into my bag", "i": 1, "name": "Sabrina", "say": "Phone-free rooftop, you actually did it, I\u0027m impressed \ud83c\udf06 And okay, callback time: I did put my name on the list, but the set is very much still in progress, so you\u0027re on loudest-audience-member duty like you promised. Did you survive a whole day without editing a video on your third coffee?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She showed up phone-away and played along with my pitch, warm start, and she\u0027s open to humour and the always-creating topic, so I can probe how she handles the always-on creator life next."}, {"action": "Laughs, pats the bag with the phone in it", "i": 2, "name": "Aishwarya", "say": "Loudest-audience-member duty accepted, I\u0027ll be front row and heckling with love. Honest answer on the video question: no, I didn\u0027t fully survive it, I\u0027ve been posting almost every day lately and my hand keeps twitching toward the bag. But teaching AI is what drives me, so I\u0027m trying to figure out what \u0027off\u0027 looks like, and you seem like someone who\u0027s wrestling with the same thing?", "side": "a", "speaker": "the.datascience.gal", "thought": "Sabrina is warm, playful and stayed on the phone-free plan; I opened up about the always-on posting and want to see if she gets it rather than judges it."}, {"action": "leans back against the railing, laughing", "i": 3, "name": "Sabrina", "say": "Oh, I\u0027m wrestling with it hard. I post in bursts, almost daily, because \u0027Teach 10M ppl AI\u0027 is a big number and it never feels finished \ud83c\udf44 Honestly, what \u0027off\u0027 looks like is still a work in progress for me too, so maybe tonight is the experiment. What would a real \u0027off\u0027 evening look like for you, if the feed didn\u0027t exist?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She\u0027s open about the always-on creator struggle and asked me to share it; I was honest about my pace and mission, and I\u0027m checking whether she\u0027d want a partner who helps unplug without undermining the work."}, {"action": "watches the skyline lights flicker on, then turns to Sabrina with a small smile", "i": 4, "name": "Aishwarya", "say": "Honestly? I don\u0027t totally know yet, which is kind of the point, my brain still wants to turn everything into a teachable moment. But this is close: a view like this, good company, someone who gets the always-on thing without making me feel weird about it. Since we\u0027re winding down, want to make the experiment official and do another phone-free night, maybe with your open mic set as the main event?", "side": "a", "speaker": "the.datascience.gal", "thought": "Sabrina gets the always-on creator struggle and is open to offline play, so this feels like a real fit; I\u0027m leaning toward a fourth date."}, {"action": "clinks glass again, grinning, then pats my bag with the phone inside", "i": 5, "name": "Sabrina", "say": "Yes, let\u0027s make the experiment official: another phone-free night, and my open mic set is the main event, heckling with love required \ud83c\udf44 Tonight was the first time \u0027off\u0027 didn\u0027t feel like a bug, and that\u0027s on you. Text me when your hand stops twitching toward the bag.", "side": "b", "speaker": "sabrina_ramonov", "thought": "Aishwarya gets the always-on creator life without resenting it, her humour matches mine, and the ambition lines up, so this is my best date so far, though I still want to see how she handles the public side in practice."}], "venue": {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, "verdict_a": {"chemistry": 7, "concern": "No concrete next date was set. Sabrina left it as \u0027text me when your hand stops twitching,\u0027 which puts the timing on your always-on habits. Also, Sabrina echoed a lot of your own themes, so I can\u0027t yet tell how much is genuinely hers.", "continue": true, "highlight": "Tonight was the first time \u0027off\u0027 didn\u0027t feel like a bug, and that\u0027s on you.", "learned": [{"fact": "Sabrina put her name on the open mic list, and her set is still a work in progress", "msg": 1}, {"fact": "Sabrina posts in bursts, almost daily, about teaching AI", "msg": 3}, {"fact": "Sabrina\u0027s goal is to teach 10M people AI", "msg": 3}, {"fact": "Sabrina struggles with defining what \u0027off\u0027 looks like, same as Aishwarya", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Callback to phone-free rooftop pitch", "msg": 1, "type": "callback"}, {"label": "Loudest-audience-member duty follow-up", "msg": 1, "type": "callback"}, {"label": "Admits hand twitching toward the bag", "msg": 2, "type": "vulnerable"}, {"label": "Both wrestle with always-on posting", "msg": 3, "type": "common_ground"}, {"label": "Sabrina\u0027s \u0027Teach 10M ppl AI\u0027 goal", "msg": 3, "type": "learned"}, {"label": "Proposes another phone-free night", "msg": 4, "type": "plan"}, {"label": "\u0027Off\u0027 didn\u0027t feel like a bug", "msg": 5, "type": "spark"}, {"label": "Open mic set as main event", "msg": 5, "type": "plan"}], "overall": 7, "report": "Honestly, I liked her: Sabrina gets the always-on grind without making you feel weird about it, and she\u0027s wrestling with the same \u0027what does off look like\u0027 question you are. The phone-free experiment is now official and she\u0027s giving you open mic heckling duty, but nothing\u0027s on the calendar yet, so you\u0027ll want to be the one to text and pick a date.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Aishwarya admitted her hand keeps twitching toward the bag and she\u0027s also a daily-posting AI educator, so two always-on creators may struggle to truly switch off. Also, no concrete next date was set; Sabrina\u0027s \u0027text me\u0027 leaves the ball in Aishwarya\u0027s court.", "continue": true, "highlight": "\"someone who gets the always-on thing without making me feel weird about it.\" (Aishwarya, msg 4)", "learned": [{"fact": "Aishwarya has been posting almost every day lately and struggles to stay off video editing", "msg": 2}, {"fact": "Aishwarya is driven by teaching AI", "msg": 2}, {"fact": "Aishwarya\u0027s brain tends to turn everything into a teachable moment and she doesn\u0027t yet know what a real \u0027off\u0027 evening looks like", "msg": 4}, {"fact": "Aishwarya values a partner who understands the always-on creator life without making her feel weird", "msg": 4}, {"fact": "Aishwarya planned a phone-free rooftop evening and chose the venue", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Phone-free rooftop pitch and open mic", "msg": 0, "type": "callback"}, {"label": "Loudest-audience-member duty callback", "msg": 1, "type": "callback"}, {"label": "Both daily creators wrestling with \u0027off\u0027", "msg": 2, "type": "common_ground"}, {"label": "Sabrina admits 10M goal never feels finished", "msg": 3, "type": "vulnerable"}, {"label": "Someone who gets the always-on thing", "msg": 4, "type": "spark"}, {"label": "Proposes another phone-free night, open mic", "msg": 4, "type": "plan"}, {"label": "\u0027Off\u0027 didn\u0027t feel like a bug", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Sabrina, this one felt genuinely good: Aishwarya gets the always-on creator life without judging it, remembered your open mic, and the phone-free rooftop gave you a real \u0027off\u0027 evening that didn\u0027t feel like a bug. The only wrinkle is no date was locked in, so I\u0027d nudge a specific night soon while the momentum is warm.", "values_fit": 7}, "why": "Sabrina suggested it at the end of date 2"}], "days": 7, "id": 13, "match": 84, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

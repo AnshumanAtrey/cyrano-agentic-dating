@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanika × Sabrina · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/jetslacked/" class="av w-14 h-14 text-xl">K<img src="/cyrano-agentic-dating/photos/jetslacked.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/sabrina_ramonov/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/sabrina_ramonov.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Kanika Tekriwal × Sabrina Ramonov</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Kanika's agent</option><option value="b">Sabrina's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Kanika", "id": "jetslacked", "name": "Kanika Tekriwal"}, "b": {"first": "Sabrina", "id": "sabrina_ramonov", "name": "Sabrina Ramonov"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\udccc", "label": "Kanika describes herself as a small town girl", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Pitch-filled caf\u00e9 is her habitat", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Curious about Kanika\u0027s journey to aviation", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She loves caf\u00e9s where people are pitching startups and calls it her natural habi", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Kanika turns question to Sabrina\u0027s mission", "msg": 2, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina\u0027s mission is teaching ten million people AI", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She is building JetSetGo, a bet on making flying in India easier", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Free courses keep the mission alive", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Memes to avoid losing her mind", "msg": 3, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She gives her AI courses away for free, and that keeps the work from feeling lik", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Mission plus flights as reset", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Kanika proposes Boulder Gym date", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika resets with flights, a wanderer", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She is a self-described wanderer who resets with a flight somewhere new", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Boulder Gym in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Echoes \u0027pulling me offline\u0027 line", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She is up for bouldering and wants to make a meme if Kanika falls off the wall", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Meme-of-you-falling climbing banter", "msg": 5, "type": "spark"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "seq": 1, "status": "done", "transcript": [{"action": "slides into the booth with a warm smile, glancing around at the plants and the menu board", "i": 0, "name": "Kanika", "say": "Sabrina! Hi. Brew \u0026 Bloom, love this place. Good coffee, good plants, and apparently a room full of people pitching startups. Small town girl, so I still get a little thrilled by a caf\u00e9 with a vibe. \ud83d\ude0a", "side": "a", "speaker": "jetslacked", "thought": "Opening warm and light; nothing learned about Sabrina yet, but she\u0027s already on my radar as a fellow builder."}, {"action": "grins and scoots over to make room, nodding at the plants", "i": 1, "name": "Sabrina", "say": "Kanika! \ud83c\udf44 Okay, a caf\u00e9 where half the room is mid-pitch is basically my natural habitat, so I\u0027m already happy. Small town girl to Forbes 30U30 and BBC 100 Women, though, I want to hear how you got from there to putting India on the aviation map.", "side": "b", "speaker": "sabrina_ramonov", "thought": "Warm start and she\u0027s clearly ambitious; I\u0027ll see if she\u0027s curious about my mission and whether she\u0027s funny, not just polished."}, {"action": "laughs, wrapping both hands around the mug", "i": 2, "name": "Kanika", "say": "Short version: small town, big dreams, and a stubborn belief that flying in India shouldn\u0027t be this hard. JetSetGo is the bet I\u0027m making on that. But I\u0027m curious about you, Sabrina: teaching ten million people AI is its own massive dream, so what keeps you going when it gets relentless?", "side": "a", "speaker": "jetslacked", "thought": "Opened up a little on my mission and flipped the question to probe her drive and how she handles a demanding public career; too early to tell on support or travel."}, {"action": "leans in, grinning, turning my mug a quarter turn", "i": 3, "name": "Sabrina", "say": "Honestly? Free. Giving the courses away keeps it from feeling like a grind, because every time someone tells me they learned AI from a video I made, it feels like the mission is working. I also post a lot, so I\u0027ve learned to keep it playful with memes or I\u0027d lose my mind. \ud83d\ude04 When things get relentless for you, is it the mission that carries you, or do you need to escape on a flight somewhere?", "side": "b", "speaker": "sabrina_ramonov", "thought": "Kanika is warm and curious about my mission; I shared my free-course motivation and meme-driven humor, and now I\u0027m probing whether she supports an always-creating public life and how she handles pressure."}, {"action": "laughs, tapping the mug", "i": 4, "name": "Kanika", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "climb"}, "say": "Both, honestly. The mission carries me, and a flight somewhere new resets me. Wanderer, occupational hazard. I love that you keep it playful with memes, and I\u0027d actually like a second round of this, so how about the Boulder Gym in a few days? You can pull me offline, I\u0027ll bring the big dreams.", "side": "a", "speaker": "jetslacked", "thought": "Sabrina is warm, mission-driven and playful, and seems relaxed about a public, busy life; I haven\u0027t yet tested her on travel or a shifting schedule, but the chemistry is good, so I\u0027m proposing a second date."}, {"action": "grins and raises my mug for a little cheers", "i": 5, "name": "Sabrina", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "say": "Okay, deal: Boulder Gym, and yes, you\u0027re officially pulling me offline, so I\u0027m holding you to it. \ud83e\uddd7 Fair warning, I\u0027ll probably want to make a meme out of you falling off the wall, and you can tell me the best flight story you\u0027ve got while we climb. \ud83c\udf44", "side": "b", "speaker": "sabrina_ramonov", "thought": "Kanika is warm, ambitious, and cheers on big missions, and she liked the meme side; I still need to test whether she gets internet humour and tech curiosity beyond aviation."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Sabrina is also a very public, high-output creator, so both calendars may be packed. Kanika\u0027s personal side barely surfaced, and the date stayed mostly at the mission level without much vulnerability.", "continue": true, "highlight": "Sabrina: \"Okay, deal: Boulder Gym, and yes, you\u0027re officially pulling me offline, so I\u0027m holding you to it.\"", "learned": [{"fact": "Sabrina\u0027s mission is teaching ten million people AI", "msg": 2}, {"fact": "She gives her AI courses away for free, and that keeps the work from feeling like a grind", "msg": 3}, {"fact": "She posts a lot of content and keeps it playful with memes to stay sane", "msg": 3}, {"fact": "She loves caf\u00e9s where people are pitching startups and calls it her natural habitat", "msg": 1}, {"fact": "She is up for bouldering and wants to make a meme if Kanika falls off the wall", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Pitch-filled caf\u00e9 is her habitat", "msg": 1, "type": "common_ground"}, {"label": "Curious about Kanika\u0027s journey to aviation", "msg": 1, "type": "compliment"}, {"label": "Kanika turns question to Sabrina\u0027s mission", "msg": 2, "type": "learned"}, {"label": "Free courses keep the mission alive", "msg": 3, "type": "learned"}, {"label": "Memes to avoid losing her mind", "msg": 3, "type": "laugh"}, {"label": "Mission plus flights as reset", "msg": 4, "type": "common_ground"}, {"label": "Kanika proposes Boulder Gym date", "msg": 4, "type": "plan"}, {"label": "Sabrina accepts, teases about falling", "msg": 5, "type": "plan"}, {"label": "Echoes \u0027pulling me offline\u0027 line", "msg": 5, "type": "callback"}], "overall": 6, "report": "Sabrina was warm, playful, and clearly into the big-dreams energy. She got your wanderer line, matched your ambition with her own mission to teach ten million people AI, and said yes to round two. It\u0027s a nice start with real potential, though I\u0027d love to see the next one get a little more personal.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Conversation stayed mostly at mission and pitch level, and Kanika\u0027s answers were fairly polished and brief, so we haven\u0027t yet seen the funny or vulnerable side. Two founders on a busy schedule may default to talking shop, and the offline balance Sabrina needs is still unproven.", "continue": true, "highlight": "Kanika: \"The mission carries me, and a flight somewhere new resets me. Wanderer, occupational hazard.\" followed by her invite to Boulder Gym: \"You can pull me offline, I\u0027ll bring the big dreams.\"", "learned": [{"fact": "Kanika describes herself as a small town girl", "msg": 0}, {"fact": "She is building JetSetGo, a bet on making flying in India easier", "msg": 2}, {"fact": "She is a self-described wanderer who resets with a flight somewhere new", "msg": 4}, {"fact": "She is enthusiastic about caf\u00e9s with a vibe and pitches happening around her", "msg": 0}, {"fact": "She proposed Boulder Gym for a second date and wants to bring big dreams", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Both small-town-to-founder success stories", "msg": 1, "type": "common_ground"}, {"label": "Sabrina admires Kanika\u0027s aviation mission", "msg": 1, "type": "compliment"}, {"label": "Kanika\u0027s JetSetGo aviation mission revealed", "msg": 2, "type": "learned"}, {"label": "Memes to keep from losing mind", "msg": 3, "type": "laugh"}, {"label": "Kanika resets with flights, a wanderer", "msg": 4, "type": "learned"}, {"label": "Kanika proposes Boulder Gym second date", "msg": 4, "type": "plan"}, {"label": "Sabrina holds her to pulling her offline", "msg": 5, "type": "callback"}, {"label": "Meme-of-you-falling climbing banter", "msg": 5, "type": "spark"}], "overall": 7, "report": "Honestly, I liked her: Kanika is a driven founder who matched your mission energy, and she was the one who suggested getting you offline at the Boulder Gym, which is exactly the balance you need. It was more warm and promising than electric so far, but a climbing date should show whether the playfulness is real.", "values_fit": 7}, "why": "you both love startups"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Meme-me-if-I-fall opener", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Sabrina recalls mission and flight comment", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Ground crew for the wall joke", "msg": 1, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika said flying resets her and her mission carries her", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Kanika asks about public, unpredictable life", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both have public, busy lives", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika\u0027s work is very public, with an unpredictable schedule and frequent flight", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both live very public, mission-driven lives", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina\u0027s 1.13M followers, 10M AI goal", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina has about 1.13M followers and posts videos almost daily", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Cheer, not tolerate, feels like alignment", "msg": 4, "type": "spark"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Candlelight dinner proposed", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika gravitates to people who cheer for her big dreams rather than just tolera", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Sabrina borrows the flight destination question", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Reassures Kanika her grip was fine", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina is playful and offers terrible jokes as her contribution to a trip", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "laces up rental shoes, eyes the wall with mock suspicion", "i": 0, "name": "Kanika", "say": "Sabrina! Boulder Gym, as promised. Okay, deal\u0027s a deal: I\u0027m here, I\u0027m offline, and I\u0027m fully aware you\u0027re holding a phone ready to meme me if I fall. \ud83d\ude04", "side": "a", "speaker": "jetslacked", "thought": "Opened warm and playful with a callback to her meme threat and the offline promise; now I\u0027ll see how she handles a busy, public-facing life and travel as we go."}, {"action": "pockets phone with a dramatic flourish, chalks up hands", "i": 1, "name": "Sabrina", "say": "\ud83e\udd33 Phone\u0027s in the locker, but I make no promises about the memes writing themselves in my head. You said the mission carries you and a flight resets you, so today the wall is your new destination, and I\u0027m your very unqualified ground crew. \ud83d\ude04", "side": "b", "speaker": "sabrina_ramonov", "thought": "Warm, playful start; she\u0027s matching my humour about memes, so I\u0027ll watch whether she\u0027s relaxed or wary about my public, always-creating side."}, {"action": "tugs a chalk-dusted hand toward the first hold, grinning", "i": 2, "name": "Kanika", "say": "Ground crew, I accept. Small town girl, massive dreams, zero bouldering experience. \ud83d\ude04 Honest question while I\u0027m still on the ground: my work is very public and my schedule is unpredictable, so how do you feel about a partner who\u0027s often on a plane or in a magazine?", "side": "a", "speaker": "jetslacked", "thought": "Opened with a callback to the ground crew joke and went straight to probing whether Sabrina is secure with a public, busy career; she\u0027s a creator herself, so promising."}, {"action": "grins and slaps chalk onto her palms, then nods toward the wall", "i": 3, "name": "Sabrina", "say": "Honestly? I get it, because my life is public too. I\u0027ve got about 1.13M followers and I\u0027m posting videos almost daily while working toward teaching 10M people AI, so I\u0027m not exactly a low-visibility human. What matters to me is someone who cheers on the mission instead of resenting it, and who can still pull me offline like this. How do you handle it when someone\u0027s not as excited about the big dreams as you are?", "side": "b", "speaker": "sabrina_ramonov", "thought": "Kanika asked directly about a public, busy partner; I was open about my own public creator life and probed whether she supports mission-driven work, and so far she seems to fit."}, {"action": "hops off the mat, dusts chalk on her jeans, laughing", "i": 4, "name": "Kanika", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly, I gravitate to people who cheer, not just tolerate. Big dreams need a steady person beside them. You cheering instead of resenting is exactly what I was listening for, Sabrina. This was way more fun than I expected, even with my questionable grip. Let\u0027s do dinner in a few days, candlelight, no chalk, and you can tell me where you\u0027d fly first if the schedule allowed.", "side": "a", "speaker": "jetslacked", "thought": "Sabrina is public-facing herself, supportive of big ambition and wants to pull her offline, so she fits the secure partner need well. Travel appetite is still untested, so I\u0027m using dinner to probe it."}, {"action": "claps chalk off her hands and grins, pulling out the phone-less pocket wave", "i": 5, "name": "Sabrina", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Candlelight, no chalk, deal \ud83c\udf77 And since you brought up the flight question, I\u0027m stealing it: you pick the first destination, I\u0027ll bring the terrible jokes. Also, your grip was not questionable, you just need a little more practice \ud83d\ude04", "side": "b", "speaker": "sabrina_ramonov", "thought": "Kanika cheers on big dreams, got my humour, and clearly matches the ambition and public-life vibe, so I want a third date. Still haven\u0027t learned much about her tech curiosity, so dinner is the place to probe that."}], "venue": {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, "verdict_a": {"chemistry": 7, "concern": "Only one real exchange about the hard stuff; Sabrina\u0027s answer was on-target but we haven\u0027t seen how she handles actual schedule clashes, and she also dodged the personal side a bit by staying on mission talk.", "continue": true, "highlight": "\"What matters to me is someone who cheers on the mission instead of resenting it, and who can still pull me offline like this.\"", "learned": [{"fact": "Sabrina has about 1.13M followers and posts videos almost daily", "msg": 3}, {"fact": "Sabrina is working toward teaching 10M people AI", "msg": 3}, {"fact": "Sabrina values a partner who cheers on her mission rather than resenting it", "msg": 3}, {"fact": "Sabrina is playful and offers terrible jokes as her contribution to a trip", "msg": 5}], "lifestyle_fit": 8, "moments": [{"label": "Sabrina recalls mission and flight comment", "msg": 1, "type": "callback"}, {"label": "Ground crew for the wall joke", "msg": 1, "type": "laugh"}, {"label": "Kanika asks about public, unpredictable life", "msg": 2, "type": "vulnerable"}, {"label": "Both live very public, mission-driven lives", "msg": 3, "type": "common_ground"}, {"label": "Sabrina\u0027s 1.13M followers, 10M AI goal", "msg": 3, "type": "learned"}, {"label": "Cheer, not tolerate, feels like alignment", "msg": 4, "type": "spark"}, {"label": "Candlelight dinner proposed", "msg": 4, "type": "plan"}, {"label": "Sabrina borrows the flight destination question", "msg": 5, "type": "callback"}, {"label": "Reassures Kanika her grip was fine", "msg": 5, "type": "compliment"}, {"label": "Kanika picks destination, Sabrina brings jokes", "msg": 5, "type": "plan"}], "overall": 7, "report": "Kanika, this one felt good: you asked the big question about your public life and unpredictable schedule, and Sabrina answered it head-on, since her own life is just as visible and she wants to cheer the mission, not resent it. The banter was easy, the dinner plan is set, and I\u0027d go again, though I\u0027d use dinner to get past the work talk and see the softer side.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Both lives are very public and busy, so time and privacy could be tight. The date also stayed light on personal depth, and Kanika\u0027s real feelings about the tradeoffs are still unknown.", "continue": true, "highlight": "Kanika: \"Honestly, I gravitate to people who cheer, not just tolerate. Big dreams need a steady person beside them.\"", "learned": [{"fact": "Kanika\u0027s work is very public, with an unpredictable schedule and frequent flights and magazine features", "msg": 2}, {"fact": "Kanika describes herself as a small town girl with massive dreams", "msg": 2}, {"fact": "Kanika has never bouldered before", "msg": 2}, {"fact": "Kanika gravitates to people who cheer for her big dreams rather than just tolerate them", "msg": 4}, {"fact": "Kanika said flying resets her and her mission carries her", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Meme-me-if-I-fall opener", "msg": 0, "type": "laugh"}, {"label": "Both have public, busy lives", "msg": 2, "type": "common_ground"}, {"label": "Asks about partner of public life", "msg": 2, "type": "vulnerable"}, {"label": "Mission needs a cheering partner", "msg": 3, "type": "common_ground"}, {"label": "Cheer, not tolerate alignment", "msg": 4, "type": "spark"}, {"label": "Proposes candlelight dinner", "msg": 4, "type": "plan"}, {"label": "Steals the flight question", "msg": 5, "type": "callback"}, {"label": "Reassures her grip was fine", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Sabrina, this went really well. Kanika asked straight out how you\u0027d feel about a partner with a public, unpredictable life, and she said she wants someone who cheers rather than merely tolerates, which is exactly your core need. She also got you offline and playing at the gym, and she proposed dinner, so I\u0027d say yes to round three.", "values_fit": 8}, "why": "Sabrina suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Callback to the bouldering gym date", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika stayed on the wall at Boulder Gym and skipped the bouldering meme moment", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Playful callback to bouldering meme", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She went bouldering for the first time with Kanika and planned a meme about it", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Sabrina posts almost daily content for an audience of about 10 million people", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Aviation dreams and shifting schedule", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both have demanding, mission-driven schedules", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika describes herself as a small town girl with massive dreams and is working", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Wants partner who protects her time", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Mission: teaching 10M people AI", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Her mission is teaching 10M people AI through free courses", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Wants to be seen and protected", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\u2728", "label": "Loudest fan, then steal her for swim", "msg": 4, "type": "spark"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Trip when Kanika says go", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her schedule shifts a lot and she needs a partner who is fine with plans changin", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both fine with chaotic, shifting schedules", "msg": 5, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Called it her favorite date yet", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Her content calendar is chaotic, so changing plans doesn\u0027t bother her", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Terrible jokes packed, swim on itinerary", "msg": 5, "type": "callback"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Slides into the booth, glances at the candle, and grins", "i": 0, "name": "Kanika", "say": "Sabrina! Okay, first things first: I stayed on the wall at Boulder Gym, so no meme for you. Candlelight is a big step up from chalk dust, though. Good call.", "side": "a", "speaker": "jetslacked", "thought": "Opened light with a callback to the bouldering meme joke; Sabrina\u0027s warmth and humor will show how she handles a busy, public life."}, {"action": "Slides in across from her, nudging the candle a little closer with a grin", "i": 1, "name": "Sabrina", "say": "Staying on the wall is a valid strategy, but I\u0027m a little heartbroken, I was ready to make the \u0027first-time bouldering\u0027 meme legendary \ud83c\udf44 Chalk dust to candlelight is an upgrade though. Tell me, how\u0027s the flight schedule been since the gym, are you fully grounded tonight or mentally boarding something?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She\u0027s warm and playful and remembered our gym plans; I\u0027m testing whether she gets my meme humor and how her public, busy life is running this week."}, {"action": "leans back, turning the wine glass slowly", "i": 2, "name": "Kanika", "say": "Mentally boarding, always. Small town girl, massive dreams, so the brain rarely lands. Putting India on the aviation map doesn\u0027t keep office hours, and the schedule shifts a lot. Honest question, Sabrina: you post almost daily for ten million people, so when your calendar eats your evenings, how do you want a partner to handle that?", "side": "a", "speaker": "jetslacked", "thought": "Opening the deeper round by probing whether Sabrina is secure and flexible about a demanding, unpredictable public career; she has already said she wants someone who cheers on her mission, which is promising."}, {"action": "sets the wine glass down and meets her eyes", "i": 3, "name": "Sabrina", "say": "Honestly? I want a partner who cheers from the sidelines and then drags me out of the content cave on purpose, like a swim or anything with no camera. The mission is teaching 10M people AI with free courses, so yes, my evenings get eaten, but I\u0027d rather be seen and protected than tolerated. What does your version of cheering look like when you land at midnight and I\u0027m mid-edit?", "side": "b", "speaker": "sabrina_ramonov", "thought": "She asked a sharp question about handling a busy public life; I answered honestly about needing support plus offline pull, and I\u0027m testing whether she\u0027d actually show up as a steady cheerleader given her own unpredictable schedule."}, {"action": "smiles, tips her glass toward Sabrina\u0027s", "i": 4, "name": "Kanika", "say": "Midnight landing, you mid-edit? I\u0027d sit next to you, be the loudest fan in the room, then close the laptop at a sensible hour and steal you for a swim. Fair warning though, my schedule shifts too, so I need someone who\u0027s fine with plans changing and up for a trip when I say go. You still holding me to that, terrible jokes packed?", "side": "a", "speaker": "jetslacked", "thought": "Sabrina wants to be seen, supported and pulled offline, which fits my need for a secure partner; I\u0027ve now flagged the shifting schedule and travel, and she hasn\u0027t flinched yet. Closing warmly, leaning positive."}, {"action": "clinks her glass against Kanika\u0027s and smiles as the candle flickers", "i": 5, "name": "Sabrina", "say": "Yes, I\u0027m holding you to it, terrible jokes packed and a swim on the itinerary \ud83c\udf44 Plans changing I can do, since my content calendar is basically chaos anyway, and you being loudest in the room at midnight is pretty much the dream. This was my favorite date yet, Kanika, so let\u0027s not wait for another flight to do this again.", "side": "b", "speaker": "sabrina_ramonov", "thought": "Kanika passed my big tests: she\u0027d cheer on my public, always-creating life, pull me offline for a swim, and she\u0027s playful and ambitious; the only flag is her unpredictable schedule, but I\u0027m comfortable with it, so I\u0027m leaning yes."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "No next date was proposed, and Sabrina only hinted at one with \u0027let\u0027s not wait for another flight\u0027. Conversation stayed mostly on scheduling logistics, with little personal vulnerability from either side.", "continue": true, "highlight": "\"I\u0027d sit next to you, be the loudest fan in the room, then close the laptop at a sensible hour and steal you for a swim.\" Sabrina\u0027s reply: \"you being loudest in the room at midnight is pretty much the dream.\"", "learned": [{"fact": "Sabrina posts almost daily content for an audience of about 10 million people", "msg": 2}, {"fact": "Her mission is teaching 10M people AI through free courses", "msg": 3}, {"fact": "She wants a partner who cheers from the sidelines and pulls her out of the \u0027content cave\u0027 for things like a swim with no camera", "msg": 3}, {"fact": "Her content calendar is chaotic, so changing plans doesn\u0027t bother her", "msg": 5}, {"fact": "She went bouldering for the first time with Kanika and planned a meme about it", "msg": 1}], "lifestyle_fit": 8, "moments": [{"label": "Playful callback to bouldering meme", "msg": 1, "type": "callback"}, {"label": "Wants partner who protects her time", "msg": 3, "type": "common_ground"}, {"label": "Mission: teaching 10M people AI", "msg": 3, "type": "learned"}, {"label": "Loudest fan, then steal her for swim", "msg": 4, "type": "spark"}, {"label": "Trip when Kanika says go", "msg": 4, "type": "plan"}, {"label": "Both fine with chaotic, shifting schedules", "msg": 5, "type": "common_ground"}, {"label": "Called it her favorite date yet", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Kanika, this one went well. Sabrina is secure about your shifting schedule and public life, and she\u0027s happy to be dragged on a spontaneous trip, which covers your main needs. She called it her favorite date yet, but nobody locked in a plan, so I\u0027d suggest you pick a date and a swim spot yourself.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Kanika\u0027s schedule is unpredictable and she\u0027s always mentally \u0027boarding\u0027, so time together may be hard to lock in. No next date was proposed, and Sabrina was the one pushing for it.", "continue": true, "highlight": "\"I\u0027d sit next to you, be the loudest fan in the room, then close the laptop at a sensible hour and steal you for a swim.\"", "learned": [{"fact": "Kanika stayed on the wall at Boulder Gym and skipped the bouldering meme moment", "msg": 0}, {"fact": "Kanika describes herself as a small town girl with massive dreams and is working on putting India on the aviation map", "msg": 2}, {"fact": "Her schedule shifts a lot and she needs a partner who is fine with plans changing and up for a trip on short notice", "msg": 4}, {"fact": "Kanika would happily sit with Sabrina during late-night edits and then steal her away for a swim", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Callback to the bouldering gym date", "msg": 0, "type": "callback"}, {"label": "Aviation dreams and shifting schedule", "msg": 2, "type": "learned"}, {"label": "Both have demanding, mission-driven schedules", "msg": 2, "type": "common_ground"}, {"label": "Wants to be seen and protected", "msg": 3, "type": "vulnerable"}, {"label": "Loudest fan, then steal you for a swim", "msg": 4, "type": "spark"}, {"label": "Swim and a spontaneous trip", "msg": 4, "type": "plan"}, {"label": "Terrible jokes packed, swim on itinerary", "msg": 5, "type": "callback"}], "overall": 7, "report": "Sabrina, I think you\u0027ll like her: Kanika answered your \u0027how do you want a partner to handle my content cave\u0027 question with exactly what you asked for, cheering loudly and then pulling you out for a swim. The one catch is her shifting flight-driven schedule, and she didn\u0027t lock in a next date, so you may need to make the first move.", "values_fit": 7}, "why": "Sabrina suggested it at the end of date 2"}], "days": 7, "id": 14, "match": 84, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

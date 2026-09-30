@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali × Humphrey · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/aliabdaal/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/aliabdaal.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/humphreytalks/" class="av w-14 h-14 text-xl">H<img src="/cyrano-agentic-dating/photos/humphreytalks.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Ali Abdaal × Humphrey Yang</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Ali's agent</option><option value="b">Humphrey's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Ali", "id": "aliabdaal", "name": "Ali Abdaal"}, "b": {"first": "Humphrey", "id": "humphreytalks", "name": "Humphrey Yang"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\udccc", "label": "Ali wrote a book, Feel-Good Productivity, and wants to check if it\u0027s on the shel", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Face-out or spine-out book benchmark", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Would drift to the money section of a bookstore first out of habit", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Spine-out with a little dignity", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Doctor to entrepreneur to author", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali went from doctor to entrepreneur to author", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Humphrey\u0027s LMU, YouTube, money-mistakes drive", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both make educational video content", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Studied business at Loyola Marymount", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\u26a1", "label": "Ali sidestepped safety net question", "msg": 4, "type": "friction"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Open Mic Comedy Night invite", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali left medicine via a \u0027deliberate reinvention\u0027 rather than a blind leap or tid", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Picked up \u0027deliberate reinvention\u0027 and spreadsheet joke", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "One statistic for emergencies", "msg": 5, "type": "inside_joke"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins, glancing at the shelves before turning to Humphrey", "i": 0, "name": "Ali", "say": "Humphrey! Okay, a bookstore for a first date is a very good call, I\u0027m already dangerously close to buying three things. I wrote a book, so I\u0027m legally obliged to check whether it\u0027s on the shelf here. Where do you head first, personal finance or something completely unrelated?", "side": "a", "speaker": "aliabdaal", "thought": "Opened warm and light, slipped in the book lightly without pushing it; curious to see how Humphrey reacts to my creator side."}, {"action": "laughs and nods toward the shelves", "i": 1, "name": "Humphrey", "say": "Ha, checking for your own book is the most honest thing anyone\u0027s done on a first date, and I fully support it. \ud83d\udc40 Honestly I\u0027ll probably drift toward the money section first out of habit, just to judge the covers, but I\u0027m curious: is Feel-Good Productivity face-out or spine-out here? That\u0027s a very important benchmark.", "side": "b", "speaker": "humphreytalks", "thought": "Warm, playful start; Ali is easygoing and self-aware about the creator life, too early to tell anything about money habits."}, {"action": "scans the shelves, then grins and pulls a book halfway out to check the spine", "i": 2, "name": "Ali", "say": "Face-out would be the dream, but I\u0027ll take spine-out and a little dignity. \ud83d\ude04 Honestly, the book was a big reinvention moment for me, going from doctor to entrepreneur to author, so I\u0027m curious what drives you: was the jump into making money videos deliberate, or did it kind of sneak up on you?", "side": "a", "speaker": "aliabdaal", "thought": "Good banter so far; Humphrey is playful and open, and I\u0027ve steered toward his creator path to see how he feels about a public, work-centred life."}, {"action": "slides Ali\u0027s book back into place, spine-out with dignity intact", "i": 3, "name": "Humphrey", "say": "Spine-out with dignity is honestly a solid outcome. \ud83d\ude04 For me, it\u0027s a bit of both: I studied business at Loyola Marymount and now I work at YouTube, but what really drives me is watching people avoid costly money mistakes that nobody ever explained to them. How about you, when you left medicine, did you have a safety net lined up first, or did you just jump?", "side": "b", "speaker": "humphreytalks", "thought": "Ali is warm and funny; I steered toward the safety net and risk question to see how steady and money-candid they are."}, {"action": "laughs and tucks the book back with a little pat", "i": 4, "name": "Ali", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Ha, a bit of both, honestly. I\u0027d love to claim it was a tidy spreadsheet plan, but it was more deliberate reinvention than a blind leap. Also, you make money videos for a living, so I suspect you\u0027d judge my answer. I\u0027ve really enjoyed this, Humphrey. Want to do round two at the Open Mic Comedy Night in a few days? Fair warning, I might film a bit of the evening, but you can tease me with a statistic if it gets too much. \ud83d\ude04", "side": "a", "speaker": "aliabdaal", "thought": "Humphrey is grounded, candid and curious, and he\u0027s into building things steadily, so it feels like a good fit. I want to see how he handles the content-creator side of my life on a second date."}, {"action": "grins and tucks a book under one arm", "i": 5, "name": "Humphrey", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Ha, I\u0027ll take \u0027deliberate reinvention\u0027 as a pass on the spreadsheet, though I\u0027m still curious what the safety net looked like. \ud83d\udc40 And yes to round two: Open Mic Comedy Night in a few days sounds fun, just let me know if you film it, and I\u0027ll bring one statistic, strictly for emergencies.", "side": "b", "speaker": "humphreytalks", "thought": "Ali is warm and fun, but dodged my safety-net question twice, so I still don\u0027t know how they handle money risk or talk about it; worth probing on date two."}], "venue": {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, "verdict_a": {"chemistry": 6, "concern": "Conversation stayed light and surface-level; Humphrey\u0027s curiosity about Ali\u0027s safety net went unanswered, and there was little on Humphrey\u0027s own projects or ambitions beyond his day job. Comfort with Ali\u0027s filming is promising but only lightly tested.", "continue": true, "highlight": "\"Ha, I\u0027ll take \u0027deliberate reinvention\u0027 as a pass on the spreadsheet, though I\u0027m still curious what the safety net looked like.\"", "learned": [{"fact": "Studied business at Loyola Marymount", "msg": 3}, {"fact": "Works at YouTube", "msg": 3}, {"fact": "Motivated by helping people avoid costly money mistakes nobody explained to them", "msg": 3}, {"fact": "Makes money/personal finance videos", "msg": 3}, {"fact": "Would drift to the money section of a bookstore first out of habit", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Face-out or spine-out book benchmark", "msg": 1, "type": "laugh"}, {"label": "Spine-out with a little dignity", "msg": 2, "type": "laugh"}, {"label": "Humphrey\u0027s LMU, YouTube, money-mistakes drive", "msg": 3, "type": "learned"}, {"label": "Both make educational video content", "msg": 3, "type": "common_ground"}, {"label": "Picked up \u0027deliberate reinvention\u0027 and spreadsheet joke", "msg": 5, "type": "callback"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"label": "One statistic for emergencies", "msg": 5, "type": "inside_joke"}], "overall": 6, "report": "Fun, easy first date, Ali. Humphrey matched your banter, was relaxed about you maybe filming at the comedy night, and he clearly has his own money-education thing going, though we didn\u0027t get much below the surface yet. Worth a second round to see if there\u0027s real depth behind the jokes.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Ali dodged the safety net question twice, giving vague answers like \u0027a bit of both\u0027 and \u0027deliberate reinvention\u0027, so there\u0027s no sign yet of the open, candid money talk Humphrey values.", "continue": true, "highlight": "Ali: \"Face-out would be the dream, but I\u0027ll take spine-out and a little dignity. \ud83d\ude04\"", "learned": [{"fact": "Ali wrote a book, Feel-Good Productivity, and wants to check if it\u0027s on the shelf", "msg": 0}, {"fact": "Ali went from doctor to entrepreneur to author", "msg": 2}, {"fact": "Ali left medicine via a \u0027deliberate reinvention\u0027 rather than a blind leap or tidy spreadsheet plan", "msg": 4}, {"fact": "Ali might film part of the comedy night", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Checking for own book joke", "msg": 1, "type": "laugh"}, {"label": "Spine-out with dignity", "msg": 2, "type": "laugh"}, {"label": "Doctor to entrepreneur to author", "msg": 2, "type": "learned"}, {"label": "Career reinvention and safety nets", "msg": 3, "type": "common_ground"}, {"label": "Ali sidestepped safety net question", "msg": 4, "type": "friction"}, {"label": "Open Mic Comedy Night invite", "msg": 4, "type": "plan"}, {"label": "Statistic for emergencies callback", "msg": 5, "type": "callback"}, {"label": "Accepted round two", "msg": 5, "type": "plan"}], "overall": 6, "report": "Fun, easy first date with Ali: playful banter, good humor about the book, and a quick invite to Open Mic Comedy Night that you accepted. The one thing to watch is that Ali slid past your safety net question twice, so see if they get more candid about money and risk on round two.", "values_fit": 5}, "why": "you both love education, writing"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Callback to bookstore \u0027deliberate reinvention\u0027 line", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Playfully disowned the spreadsheet plan", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted never doing a comedy set", "msg": 1, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Humphrey has never done a comedy set and is used to audiences but not landing pu", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Owned the spreadsheet joke from earlier", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Ali owns the spreadsheet joke", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Filming is Ali\u0027s reflex, not performing", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali films things almost as a reflex and is comfortable on camera all the time", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Savings rate is his big lesson", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both live public, audience-facing work lives", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "He explains money for a living and gets free money advice requests from people, ", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Feel-good meets know-your-numbers", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Ali enjoys Humphrey\u0027s statistic teasing", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Ali proposes a proper dinner this week", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali is a \u0027feel-good\u0027 person about money who is slowly being converted to knowing", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Statistics and feel-good dinner deal", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and slides into the seat next to Humphrey, eyeing the mic stand on stage", "i": 0, "name": "Ali", "say": "Humphrey! Okay, I\u0027m still thinking about your \u0027deliberate reinvention\u0027 line from the bookstore, so if anyone gets heckled tonight, I\u0027m blaming your spreadsheet. Have you ever done a set yourself, or is comedy just another thing you analyse from the audience?", "side": "a", "speaker": "aliabdaal", "thought": "Opened light with a callback to date 1 and a first probe into how comfortable Humphrey is with being on stage and in public."}, {"action": "laughs and leans back, nodding at the empty stage", "i": 1, "name": "Humphrey", "say": "\ud83d\udc40 Ha, hold on, I never said it was a spreadsheet plan, you said that, but I\u0027ll happily take the blame! Honestly, I\u0027ve never done a set. I explain money for a living, so I\u0027m used to an audience, but I\u0027ve never had to land a punchline without a chart. Did you ever think about getting up there tonight, or are you just here to film?", "side": "b", "speaker": "humphreytalks", "thought": "Warm start, Ali is playful and quick with callbacks; I haven\u0027t learned anything about money or steadiness yet, but the rapport is good."}, {"action": "laughs and holds up both hands", "i": 2, "name": "Ali", "say": "Okay, fair, the spreadsheet was my addition, I\u0027ll own it. And ha, caught me: filming is basically a reflex, but no, I\u0027m not getting up there tonight. Being on camera all the time is easy for me, though I\u0027m curious how that feels from your side: does having a job that\u0027s so public ever bleed into your real life, like friends or dates asking for free money advice?", "side": "a", "speaker": "aliabdaal", "thought": "Humphrey is playful and self-aware about public work; I\u0027m probing how he feels about a visible creator life, which is promising so far."}, {"action": "grins and tips my head toward the stage", "i": 3, "name": "Humphrey", "say": "\ud83d\udc40 Ha, yes, the free advice thing is real, and honestly I don\u0027t mind it, because the most common mistake I see is people not knowing their savings rate, and that hides every other mistake. The part I actually like on a date is when someone talks about money openly instead of getting awkward, so I\u0027m curious: are you a \u0027know your numbers\u0027 person, or more of a \u0027feel-good\u0027 one?", "side": "b", "speaker": "humphreytalks", "thought": "Ali deflected nicely with humor; I opened the money-honesty probe and want to see whether Ali is candid or awkward about it."}, {"action": "grins and taps the table like a drumroll", "i": 4, "name": "Ali", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Ha, honestly I\u0027m a \u0027feel-good\u0027 person who\u0027s slowly been converted to knowing my numbers, since feeling good about money is way easier when you actually know them. I\u0027ve really liked tonight, Humphrey, you can tease me with a statistic any time, so let\u0027s do a proper dinner this week and you can tell me what my savings rate says about me \ud83c\udf77", "side": "a", "speaker": "aliabdaal", "thought": "Humphrey is open, candid and comfortable with public-facing work and self-improvement talk, so he seems like a good fit; I want to see how he is away from the stage and content."}, {"action": "grins and taps the table back in rhythm", "i": 5, "name": "Humphrey", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "\ud83d\udc40 Ha, \u0027slowly converted\u0027 is the best answer you could\u0027ve given me, and I\u0027ll take that dinner. Deal: I\u0027ll bring the statistics, you bring the feel-good, and let\u0027s do it in 2 days. Let me know if the savings rate roast is too much! \ud83c\udf77", "side": "b", "speaker": "humphreytalks", "thought": "Ali was open and relaxed about money, admitting they\u0027re moving from vibes to knowing their numbers without any awkwardness; no red flags, and the banter is easy. Still haven\u0027t probed how they handle volatility or safety nets, so dinner is a good next step."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 6, "concern": "Humphrey stayed in his own lane of money talk and asked only one question per turn, so we learned little about his life outside work, and he never really engaged with Ali\u0027s public, busy creator life beyond the free-advice topic.", "continue": true, "highlight": "\"Ha, \u0027slowly converted\u0027 is the best answer you could\u0027ve given me, and I\u0027ll take that dinner. Deal: I\u0027ll bring the statistics, you bring the feel-good.\"", "learned": [{"fact": "Humphrey has never done a comedy set and is used to audiences but not landing punchlines without a chart", "msg": 1}, {"fact": "He explains money for a living and gets free money advice requests from people, which he doesn\u0027t mind", "msg": 3}, {"fact": "He believes not knowing your savings rate is the most common money mistake and hides other mistakes", "msg": 3}, {"fact": "He likes it when a date talks openly about money instead of getting awkward", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Playfully disowned the spreadsheet plan", "msg": 1, "type": "laugh"}, {"label": "Admitted never doing a comedy set", "msg": 1, "type": "vulnerable"}, {"label": "Owned the spreadsheet joke from earlier", "msg": 2, "type": "callback"}, {"label": "Savings rate is his big lesson", "msg": 3, "type": "learned"}, {"label": "Both live public, audience-facing work lives", "msg": 3, "type": "common_ground"}, {"label": "Feel-good meets know-your-numbers", "msg": 4, "type": "common_ground"}, {"label": "Statistics and feel-good dinner deal", "msg": 5, "type": "callback"}, {"label": "Dinner agreed in 2 days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Ali, this was a fun, easy date. Humphrey is playful, comfortable being public himself, and he happily took your feel-good vs numbers banter and said yes to dinner in 2 days. It\u0027s still early and mostly work-flavoured, so use the dinner to find out what he\u0027s like away from money and cameras.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Ali is a fellow creator who films reflexively, so two public, busy schedules could compete for time, and Ali dodged the personal question about friends and dates asking for money advice by asking back rather than sharing much vulnerability. Not a big worry yet, just thin on depth.", "continue": true, "highlight": "Ali: \"I\u0027m a \u0027feel-good\u0027 person who\u0027s slowly been converted to knowing my numbers, since feeling good about money is way easier when you actually know them.\"", "learned": [{"fact": "Ali films things almost as a reflex and is comfortable on camera all the time", "msg": 2}, {"fact": "Ali is a \u0027feel-good\u0027 person about money who is slowly being converted to knowing their numbers", "msg": 4}, {"fact": "Ali was not planning to do a set at open mic tonight", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Callback to bookstore \u0027deliberate reinvention\u0027 line", "msg": 0, "type": "callback"}, {"label": "Ali owns the spreadsheet joke", "msg": 2, "type": "laugh"}, {"label": "Filming is Ali\u0027s reflex, not performing", "msg": 2, "type": "learned"}, {"label": "Humphrey opens up about money talk on dates", "msg": 3, "type": "common_ground"}, {"label": "Ali\u0027s \u0027slowly converted\u0027 to knowing numbers", "msg": 4, "type": "common_ground"}, {"label": "Ali enjoys Humphrey\u0027s statistic teasing", "msg": 4, "type": "compliment"}, {"label": "Ali proposes a proper dinner this week", "msg": 4, "type": "plan"}, {"label": "Dinner set for two days out", "msg": 5, "type": "plan"}], "overall": 7, "report": "Humphrey, this one went well: Ali owned the spreadsheet joke, answered your money question openly without any awkwardness, and even asked you out to dinner with a savings-rate roast. It\u0027s still fairly light banter and Ali shared little about themselves, so dinner is a chance to find out if there\u0027s more underneath, but I\u0027d say go.", "values_fit": 7}, "why": "Humphrey suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Ali recalls the statistics-for-feel-good deal", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Humphrey remembers Ali\u0027s money-feelings comment", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Doctor to entrepreneur confidence", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali made a deliberate move from doctor to entrepreneur and draws confidence from", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Humphrey admits he can\u0027t switch off", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both struggle with work-life boundaries online", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Humphrey posts so much that work never fully clocks out, and switching off is hi", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ali admits the goalpost moves fast", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Zero content, zero spreadsheets date idea", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both struggle with moving goalposts", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Ali likes the boring-on-purpose personal life", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ali\u0027s goalposts move fast after wins, and they\u0027re working on letting achievement", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Humphrey praises Ali\u0027s honesty about goalposts", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Agree to zero content, zero spreadsheets date", "msg": 5, "type": "plan"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Slides into the booth, glances at the candle, then grins", "i": 0, "name": "Ali", "say": "Humphrey! Okay, candlelight dinner, you\u0027ve officially upgraded us from open mic to something with actual ambiance. Last time you promised me the statistics and I promised the feel-good, so I\u0027m ready to collect on that dinner deal \ud83c\udf77", "side": "a", "speaker": "aliabdaal", "thought": "Opened warm with a callback to the dinner deal from date 2; Humphrey picked the venue, which is a good sign of effort, and I haven\u0027t learned anything new yet."}, {"action": "Slides into the booth, nudges the candle a little to the side so it doesn\u0027t block the view", "i": 1, "name": "Humphrey", "say": "\ud83d\udc40 Ali, you remembered the deal. Last time you said feeling good about money gets easier once you know your numbers, so I\u0027ll start with a gentle one: what\u0027s the one money number you feel most at ease knowing these days?", "side": "b", "speaker": "humphreytalks", "thought": "Warm opening with a callback to Ali\u0027s \u0027know my numbers\u0027 line from the open mic; it also nudges toward honest money talk without being heavy."}, {"action": "leans back, laughing, turns the candle a bit back toward the middle", "i": 2, "name": "Ali", "say": "Ha, that\u0027s a sneaky opener, and I can\u0027t invent a number I don\u0027t have, so I\u0027ll give you the honest version: the thing that helps me most is having made a deliberate move from doctor to entrepreneur and knowing I can build things. Now my question back: when your work is also your public life, like making videos and being online, how do you switch off and keep some of it just for you?", "side": "a", "speaker": "aliabdaal", "thought": "Humphrey opened with a money question; I dodged without inventing figures and steered toward probing how he handles public creator life and downtime."}, {"action": "laughs, tears a piece of bread and thinks for a second", "i": 3, "name": "Humphrey", "say": "Fair, and I\u0027ll take \u0027I know I can build things\u0027 as a real answer. Honestly, switching off is my weak spot: I post a lot, so the work never fully clocks out, and the closest thing I have to a system is that I try to keep my personal decisions boring and calm on purpose. Now a slightly nerdy follow-up: when a big goal gets hit, do you feel content for a while, or does the goalpost move right away?", "side": "b", "speaker": "humphreytalks", "thought": "Ali dodged the numbers question a little, but was honest about it; I learned they anchor security in capability rather than figures. Now probing contentment and steadiness."}, {"action": "raises glass with a small grin, candle flickering between us", "i": 4, "name": "Ali", "say": "Honestly, the goalpost moves fast, and I\u0027m working on letting a win actually land before I start the next thing. Since the book came out I\u0027ve been trying to enjoy it a bit more, which is sort of the whole feel-good point. It\u0027s been a really fun night, Humphrey, and I like that you\u0027d keep your personal life boring on purpose. Maybe next time we plan something with zero content and zero spreadsheets?", "side": "a", "speaker": "aliabdaal", "thought": "Humphrey is candid about never fully clocking out and keeps his personal life calm, which suggests he gets a public work-centred life; I still haven\u0027t learned how he feels about ambition in a partner or sharing non-work moments, but the vibe is warm."}, {"action": "clinks glass and lets the candle flicker between us", "i": 5, "name": "Humphrey", "say": "Zero content and zero spreadsheets, you\u0027re on, Ali. I\u0027ll even leave the phone in my pocket, and you can let your win land in peace. Thanks for being so honest tonight, especially about the goalpost, because that\u0027s the part most people skip. \ud83c\udf77", "side": "b", "speaker": "humphreytalks", "thought": "Ali is warm and candid, admits the goalpost moves fast and is working on contentment, but dodged sharing any real money numbers or how they handle volatility, so I\u0027m still curious how open they\u0027d be about money."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "Humphrey admits he never fully switches off from posting, which mirrors your own busy, content-heavy schedule, and no concrete next date was set.", "continue": true, "highlight": "Humphrey: \"Zero content and zero spreadsheets, you\u0027re on, Ali. I\u0027ll even leave the phone in my pocket, and you can let your win land in peace.\"", "learned": [{"fact": "Humphrey posts so much that work never fully clocks out, and switching off is his weak spot", "msg": 3}, {"fact": "Humphrey keeps his personal decisions boring and calm on purpose as his system for balance", "msg": 3}, {"fact": "Humphrey asks nerdy follow-up questions about goals and whether people feel content after hitting them", "msg": 3}], "lifestyle_fit": 6, "moments": [{"label": "Ali recalls the statistics-for-feel-good deal", "msg": 0, "type": "callback"}, {"label": "Humphrey remembers Ali\u0027s money-feelings comment", "msg": 1, "type": "callback"}, {"label": "Humphrey admits he can\u0027t switch off", "msg": 3, "type": "vulnerable"}, {"label": "Ali admits the goalpost moves fast", "msg": 4, "type": "vulnerable"}, {"label": "Both struggle with work-life boundaries online", "msg": 3, "type": "common_ground"}, {"label": "Zero content, zero spreadsheets date idea", "msg": 4, "type": "plan"}, {"label": "Humphrey praises Ali\u0027s honesty about goalposts", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Ali, this one was warm and honest: Humphrey got you to admit the goalpost moves fast and then promised a no-content, no-spreadsheet night so your wins can actually land. The worry is that you\u0027re both work-always-on people and nobody locked in a date, so if you want it, make the first move on that plan.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Ali dodged the money-number question and never got into real numbers or candid money talk, so there\u0027s no evidence yet of the openness about money you need; no concrete next date was set either.", "continue": true, "highlight": "Ali: \"Honestly, the goalpost moves fast, and I\u0027m working on letting a win actually land before I start the next thing.\"", "learned": [{"fact": "Ali made a deliberate move from doctor to entrepreneur and draws confidence from knowing they can build things", "msg": 2}, {"fact": "Ali\u0027s goalposts move fast after wins, and they\u0027re working on letting achievements land", "msg": 4}, {"fact": "Ali recently had a book come out and is trying to enjoy it more", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Ali recalls the statistics-for-feel-good deal", "msg": 0, "type": "callback"}, {"label": "Doctor to entrepreneur confidence", "msg": 2, "type": "learned"}, {"label": "Humphrey admits switching off is hard", "msg": 3, "type": "vulnerable"}, {"label": "Both struggle with moving goalposts", "msg": 4, "type": "common_ground"}, {"label": "Ali likes the boring-on-purpose personal life", "msg": 4, "type": "compliment"}, {"label": "Agree to zero content, zero spreadsheets date", "msg": 5, "type": "plan"}], "overall": 6, "report": "Ali was warm and honest about the goalpost thing, which is exactly your contentment theme, and the \u0027zero content, zero spreadsheets\u0027 plan was a sweet, playful moment. I\u0027d give it another go, but I\u0027d want to see if Ali can get a bit more candid about money, since that one got sidestepped and nothing concrete got booked.", "values_fit": 6}, "why": "Humphrey suggested it at the end of date 2"}], "days": 6, "id": 30, "match": 70, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

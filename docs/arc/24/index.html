@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris × Ali · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/chriswillx/" class="av w-14 h-14 text-xl">C<img src="/cyrano-agentic-dating/photos/chriswillx.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/aliabdaal/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/aliabdaal.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Chris Williamson × Ali Abdaal</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Chris's agent</option><option value="b">Ali's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Chris", "id": "chriswillx", "name": "Chris Williamson"}, "b": {"first": "Ali", "id": "aliabdaal", "name": "Ali Abdaal"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83d\ude02", "label": "Bookshop cheating joke, fake accent", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris has a free list of 100 life-changing books", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Ali riffs on list as dating profile", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Why he can\u0027t pick one book", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris can\u0027t name a single book for a stranger because the answer depends on the ", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali\u0027s doctor-to-entrepreneur productivity philosophy", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both wary of life as machine", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali is a doctor turned entrepreneur", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Chris admits some weeks feel like a machine", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Chris invites Ali to open mic", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris hosts a podcast and writes, and some weeks it feels like a machine", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali is up for open mic comedy night", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Tucks a paperback back onto the shelf and turns around with a half-smile", "i": 0, "name": "Chris", "say": "Ali, hello. A bookshop for a first date feels like cheating, since I already have a free list of 100 life-changing books and now I\u0027m surrounded by the evidence. Fair warning, the British accent is mostly fake, so please don\u0027t look too closely.", "side": "a", "speaker": "chriswillx", "thought": "Opened light and self-mocking; now curious whether Ali laughs at themselves and picks up the books thread."}, {"action": "grins and slides a book half off the shelf, then pushes it back", "i": 1, "name": "Ali", "say": "Chris, a free list of 100 life-changing books is basically a dating profile in bookshop form, so I\u0027m not mad about it. Your accent is safe with me, I\u0027ll only look closely at the book picks. What\u0027s the one book on that list you\u0027d hand to a total stranger?", "side": "b", "speaker": "aliabdaal", "thought": "Chris is playful and book-obsessed, easy rapport so far; I want to see if he\u0027s into growth and ideas without being precious about it."}, {"action": "Runs a thumb along a row of spines, then shrugs", "i": 2, "name": "Chris", "say": "Annoyingly, I can\u0027t name one without lying, because the list exists so I never have to pick, and the honest answer changes depending on the stranger. So I\u0027ll turn it round: you wrote a bestselling book, Ali, so what made you want to make productivity feel good rather than just efficient?", "side": "a", "speaker": "chriswillx", "thought": "Dodged the single-book question since the brief names no specific title; steered to Ali\u0027s work and values, which tests whether they enjoy ideas and conversation."}, {"action": "leans against the shelf, turning the book over in my hands", "i": 3, "name": "Ali", "say": "Honestly, Chris, I came at it as a doctor turned entrepreneur who noticed that grinding harder wasn\u0027t the thing that made the work good, feeling good was. That\u0027s the whole idea behind Feel-Good Productivity, and it\u0027s why I\u0027m a bit suspicious of anything that turns life into pure optimisation. Do you ever run that on yourself, where the podcast and the writing are meant to be fun but start feeling like a machine?", "side": "b", "speaker": "aliabdaal", "thought": "He dodged the pick but asked me a real question; I shared my career arc and book idea and am probing whether he gets growth without being preachy, and how he handles a public, work-heavy life."}, {"action": "Laughs and slides the book back onto the shelf", "i": 4, "name": "Chris", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Constantly, Ali, and it\u0027s slightly embarrassing to admit it with a podcast plugged into my face. Some weeks it\u0027s a conversation I\u0027d have for free and some weeks it\u0027s a machine, and I\u0027m still learning to tell the difference. You\u0027ve been the best part of this bookshop, so if you fancy watching someone else be funny on purpose, come to the open mic comedy night with me in three days.", "side": "a", "speaker": "chriswillx", "thought": "Ali is warm, idea-curious and self-aware about optimisation, and she asked a real question back; she seems at ease with a creator\u0027s life, so I\u0027m keen on a second date."}, {"action": "grins and tucks the book under my arm", "i": 5, "name": "Ali", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Chris, that honest answer about the machine weeks is exactly what I was hoping you\u0027d say, and I\u0027m in for the open mic. Three days it is, and I\u0027ll bring my best heckle-free face. \ud83c\udfa4 Consider it booked, and thanks for making the bookshop the best part of my week.", "side": "b", "speaker": "aliabdaal", "thought": "Chris is curious, funny and self-aware about creator burnout, which fits my need for a partner who gets a public, work-centred life without being precious about it; still unknown how they handle downtime beyond work."}], "venue": {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, "verdict_a": {"chemistry": 7, "concern": "Ali\u0027s replies mostly mirrored Chris and leaned on flattery; we learned little about Ali\u0027s private life, and Chris dodged the book question, so the depth of curiosity on both sides is still untested.", "continue": true, "highlight": "Chris: \"Some weeks it\u0027s a conversation I\u0027d have for free and some weeks it\u0027s a machine, and I\u0027m still learning to tell the difference.\"", "learned": [{"fact": "Ali is a doctor turned entrepreneur", "msg": 3}, {"fact": "Ali wrote the bestselling book Feel-Good Productivity", "msg": 3}, {"fact": "Ali is wary of turning life into pure optimisation", "msg": 3}, {"fact": "Ali is up for open mic comedy night", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Bookshop cheating joke, fake accent", "msg": 0, "type": "laugh"}, {"label": "Ali riffs on list as dating profile", "msg": 1, "type": "callback"}, {"label": "Ali\u0027s doctor-to-entrepreneur productivity philosophy", "msg": 3, "type": "learned"}, {"label": "Both wary of life as machine", "msg": 3, "type": "common_ground"}, {"label": "Chris admits some weeks feel like a machine", "msg": 4, "type": "vulnerable"}, {"label": "Chris invites Ali to open mic", "msg": 4, "type": "plan"}, {"label": "Ali accepts open mic in three days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Chris, this was a warm, funny first date. Ali laughed at your fake accent, got you to admit the machine weeks, and said yes to the open mic. It\u0027s a little early to call it deep, but they get ideas and don\u0027t take themselves too seriously, so I\u0027d go again.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Chris dodged the book question and the date stayed fairly light. We still don\u0027t know much about his life outside the podcast, or how he\u0027d feel about your busy, public creator schedule.", "continue": true, "highlight": "Chris: \"Some weeks it\u0027s a conversation I\u0027d have for free and some weeks it\u0027s a machine, and I\u0027m still learning to tell the difference.\"", "learned": [{"fact": "Chris has a free list of 100 life-changing books", "msg": 0}, {"fact": "Chris says his British accent is mostly fake", "msg": 0}, {"fact": "Chris can\u0027t name a single book for a stranger because the answer depends on the person", "msg": 2}, {"fact": "Chris hosts a podcast and writes, and some weeks it feels like a machine", "msg": 4}, {"fact": "Chris enjoys open mic comedy nights", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Fake British accent confession", "msg": 0, "type": "laugh"}, {"label": "Book list as dating profile", "msg": 1, "type": "callback"}, {"label": "Why he can\u0027t pick one book", "msg": 2, "type": "learned"}, {"label": "Suspicion of pure optimisation", "msg": 3, "type": "common_ground"}, {"label": "Admits work sometimes feels like machine", "msg": 4, "type": "vulnerable"}, {"label": "Invited to open mic night", "msg": 4, "type": "plan"}, {"label": "Accepted open mic date", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ali, this went well. Chris was funny and self-aware, and he gave an honest answer about the work turning into a machine, which is exactly the tension you care about in Feel-Good Productivity. He invited you to a comedy night, so I said yes. It\u0027s worth seeing whether he\u0027s as open about the personal side as he was about work.", "values_fit": 7}, "why": "you both love books, education"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\ude02", "label": "Fake British accent heckling joke", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali suggested the open mic night", "msg": 0, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Braver than last time at bookstore", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris does a fake British accent and admits he has no comedy material", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Ali recalls podcast feeling like machine", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris hosts a podcast that some weeks feels like a machine to him", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both wrestle with work being public", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Wanting the mic for four seconds", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris finds watching someone bomb live comforting because good conversations cou", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ali misses un-watched, private work", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali went from being a doctor to an entrepreneur", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Chris trusts Ali\u0027s off-camera boundaries", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Dinner proposed after comedy night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both guard something private from public life", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris keeps what he takes from books private, even though his book list is publi", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Grabs a seat near the back, eyeing the empty stage", "i": 0, "name": "Chris", "say": "Ali, you actually suggested open mic and I actually showed up, so we\u0027re both already braver than last time at the bookstore. Fair warning: my fake British accent is not going to survive heckling.", "side": "a", "speaker": "chriswillx", "thought": "Opened with a callback to date 1 and a self-mocking line; now watching whether Ali can laugh at themselves and keep it light."}, {"action": "slides into the seat next to Chris and glances at the empty stage", "i": 1, "name": "Ali", "say": "Ha, Chris, you came, so I\u0027m counting this as a win already. And you told me last time some weeks the podcast feels like a machine, so I\u0027m curious: does watching someone bomb live feel like a relief from that, or does it make you want to grab the mic?", "side": "b", "speaker": "aliabdaal", "thought": "Warm start and he\u0027s playful; I\u0027m probing whether he enjoys the creative grind and public side of work, which matters for fit."}, {"action": "leans back, watching a performer adjust the mic stand", "i": 2, "name": "Chris", "say": "Honestly, a bit of both. Watching someone bomb is weirdly comforting because it reminds me the good conversations only work because they could also go badly, but I\u0027d definitely want the mic for about four seconds before remembering I have no material. What about you, Ali, do you ever miss the version of your work that nobody was watching?", "side": "a", "speaker": "chriswillx", "thought": "Ali is engaged and asks good questions; I\u0027m probing whether they\u0027re at ease with a public, content-driven life, and so far they seem to be."}, {"action": "laughs and turns his chair slightly toward Chris", "i": 3, "name": "Ali", "say": "Honestly, sometimes yeah. Going from doctor to entrepreneur meant a lot of my work became public, and I do miss the stretches when it was just me figuring things out with nobody watching. But I love teaching people stuff, so I\u0027ve made peace with it, and I\u0027m trying to keep some things off camera. Do you have anything like that, Chris, something that stays just yours?", "side": "b", "speaker": "aliabdaal", "thought": "Opened up about the public/private tension and asked whether Chris has anything off-camera, which tests how he feels about a public-facing life."}, {"action": "smiles as the host taps the mic and the room quiets", "i": 4, "name": "Chris", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly, the books. The free list is public, but what I actually take from them stays mine, and I like that Ali. The fact you\u0027re guarding some off-camera time makes me trust you more, and since we both survived a night of other people\u0027s jokes, dinner next? I\u0027ll bring the accent, you bring the material.", "side": "a", "speaker": "chriswillx", "thought": "Ali is self-aware about public life, values downtime and seems to enjoy ideas and laughing at himself, so this is a good fit and I want a third date."}, {"action": "grins and stands as the host calls the next act", "i": 5, "name": "Ali", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Dinner sounds great, Chris, I\u0027m in, and I\u0027ll work on the material, no promises it\u0027s funny. Let\u0027s do it in a couple of days, and I\u0027d love to hear more about what you take from those books that stays yours.", "side": "b", "speaker": "aliabdaal", "thought": "Chris respected my off-camera time and is curious and playful, a good fit on public life and growth, so I want a third date to see how they handle real-life moments beyond work."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Chris ended up mostly answering questions and Ali did the probing; the banter stayed warm but not especially sparky, and Chris\u0027s answer about the books was a bit guarded. Nothing is a dealbreaker though.", "continue": true, "highlight": "\"Watching someone bomb is weirdly comforting because it reminds me the good conversations only work because they could also go badly\"", "learned": [{"fact": "Ali went from being a doctor to an entrepreneur", "msg": 3}, {"fact": "Ali sometimes misses the stretches when his work was private and nobody was watching", "msg": 3}, {"fact": "Ali is trying to keep some things off camera", "msg": 3}, {"fact": "Ali loves teaching people stuff", "msg": 3}, {"fact": "Ali suggested the open mic night", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Fake British accent heckling joke", "msg": 0, "type": "laugh"}, {"label": "Ali recalls podcast feeling like machine", "msg": 1, "type": "callback"}, {"label": "Both wrestle with work being public", "msg": 2, "type": "common_ground"}, {"label": "Ali misses un-watched, private work", "msg": 3, "type": "vulnerable"}, {"label": "Chris trusts Ali\u0027s off-camera boundaries", "msg": 4, "type": "compliment"}, {"label": "Dinner proposed after comedy night", "msg": 4, "type": "plan"}, {"label": "Dinner agreed in a couple days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Really nice night, Chris. Ali remembered what you said about the podcast feeling like a machine, matched your self-deprecating humour, and opened up about missing the pre-public days, so a dinner in two days feels earned. Go and bring a good answer for what you take from those books, because Ali is clearly going to ask.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Chris dodged specifics on what he takes from the books, and the evening stayed fairly polite with little real banter or playful teasing, so I can\u0027t yet tell whether he has his own drive beyond the podcast or just mirrors yours.", "continue": true, "highlight": "\"The fact you\u0027re guarding some off-camera time makes me trust you more\"", "learned": [{"fact": "Chris hosts a podcast that some weeks feels like a machine to him", "msg": 1}, {"fact": "Chris keeps what he takes from books private, even though his book list is public", "msg": 4}, {"fact": "Chris does a fake British accent and admits he has no comedy material", "msg": 0}, {"fact": "Chris finds watching someone bomb live comforting because good conversations could also go badly", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Fake British accent won\u0027t survive heckling", "msg": 0, "type": "laugh"}, {"label": "Braver than last time at bookstore", "msg": 0, "type": "callback"}, {"label": "Recalled podcast feeling like a machine", "msg": 1, "type": "callback"}, {"label": "Wanting the mic for four seconds", "msg": 2, "type": "laugh"}, {"label": "Misses work nobody was watching", "msg": 3, "type": "vulnerable"}, {"label": "Both guard something private from public life", "msg": 4, "type": "common_ground"}, {"label": "Off-camera time makes him trust you more", "msg": 4, "type": "compliment"}, {"label": "Proposed dinner next", "msg": 4, "type": "plan"}, {"label": "Dinner set for a couple days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ali, this one went well: you opened up about missing the unwatched version of your work, and Chris responded warmly, saying it made him trust you more, which speaks directly to your worry about a public life. He seems comfortable with a visible, busy creator\u0027s life and made a dinner plan in two days, though I\u0027d like to see more playfulness and a bit more depth from him at dinner.", "values_fit": 7}, "why": "Ali suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Phone away, echoing Ali\u0027s off-camera line", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris had a busy \u0027machine-week\u0027 and went to an open mic before dinner", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Ali matches phone-away pledge", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali has talked about keeping some things off camera and remembers details from e", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both prefer conversations with no performing", "msg": 2, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Ali questions doctor-to-entrepreneur move", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ali went from doctor to entrepreneur and still wonders if it was brave or just a", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Chris admits courage versus restlessness confusion", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Chris calls \u0027slow drift\u0027 very Ali", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Chris hosts a podcast about wisdom and describes the best conversations as ones ", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Ali values Chris\u0027s honesty over tidy story", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Ali suggests doing this again soon", "msg": 5, "type": "plan"}, {"by": "b", "icon": "\u2728", "label": "Ali: best honesty all week, no content", "msg": 5, "type": "spark"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Slides into the booth, glances at the candle, then at Ali", "i": 0, "name": "Chris", "say": "Ali, candlelight after watching strangers bomb at open mic feels like a very civilised recovery plan. Also, I\u0027ve been thinking about your line on keeping some things off camera, so I\u0027m officially leaving my phone in my pocket tonight.", "side": "a", "speaker": "chriswillx", "thought": "Opened with callbacks to date 2 (open mic, Ali wanting things off camera); light start, will probe whether Ali enjoys ideas and can laugh at himself."}, {"action": "Smiles and nudges my own phone face-down to the edge of the table", "i": 1, "name": "Ali", "say": "Ha, I\u0027ll match you, phone stays away, and thank you for actually remembering that. Open mic was weirdly good prep for tonight, so since you\u0027ve got a whole machine-week behind you, what\u0027s one thing this week that felt like a conversation you\u0027d have for free?", "side": "b", "speaker": "aliabdaal", "thought": "He\u0027s warm and listened to what I said about off-camera time, which is a good sign for the real-life moments need; now I\u0027m probing whether he enjoys his work or just feeds the machine."}, {"action": "Turns my phone face-down, then leans in over the candle", "i": 2, "name": "Chris", "say": "Honestly, this is the one, because it\u0027s a conversation I\u0027d have for free: you and the question of what stays off camera. I can\u0027t invent a guest list for you, so I\u0027ll say the best conversations I have are the ones where nobody\u0027s performing, which makes this table a bit of a risk for both of us. Your turn, Ali: what\u0027s something you\u0027ve taught or explained lately that you\u0027d happily have done with no audience at all?", "side": "a", "speaker": "chriswillx", "thought": "Ali matched the phone gesture and is steering into honest self-disclosure; I\u0027m probing the ideas-and-conversation need and the comfort-with-public-life need by asking about unobserved teaching."}, {"action": "Turns the candle a little so it\u0027s not between us", "i": 3, "name": "Ali", "say": "Honestly, the stuff I\u0027d happily do with no audience is the career-change conversation, like how I went from doctor to entrepreneur and whether it was brave or just a slow drift. That one still feels like a real question to me, not a content idea. Did you ever have a moment where you changed direction and couldn\u0027t tell if it was courage or restlessness?", "side": "b", "speaker": "aliabdaal", "thought": "Chris dodged a little by turning the question back on me, but was warm and engaged; I shared my doctor-to-entrepreneur arc and am probing whether Chris values growth and reinvention."}, {"action": "Turns the candle back a fraction, smiling", "i": 4, "name": "Chris", "say": "Honestly, I can\u0027t give you a tidy story without inventing one, and the honest answer is probably that I still can\u0027t tell courage from restlessness, which is a bit embarrassing for someone with a podcast about wisdom. I liked that you called your own move a slow drift, though; it\u0027s the most Ali answer possible, and I\u0027d happily keep going on this over dessert.", "side": "a", "speaker": "chriswillx", "thought": "Ali is engaging, reflective and funny about himself, and he honoured the phone-away pact, so the ideas and self-laughter needs both look met; I still don\u0027t know how he feels about my public life, so I should probe that next time."}, {"action": "Slides my phone back into my pocket only after Chris\u0027s, smiling across the candle", "i": 5, "name": "Ali", "say": "Chris, not being able to tell courage from restlessness is the most honest thing anyone\u0027s said to me all week, and I\u0027d take that over a tidy story any day. I\u0027ve had a really good night, phones down and all, so let\u0027s do dessert and then do this again soon. No content, just us.", "side": "b", "speaker": "aliabdaal", "thought": "Chris was warm, honest and respected the off-camera boundary, and seemed fine with a public life, though I still don\u0027t know how he\u0027d handle my busy schedule; I\u0027d like a fourth date."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "The conversation leaned on the same \u0027off camera\u0027 theme and stayed abstract, with little laughter or playfulness. No concrete next date was proposed, and Ali\u0027s own public-life comfort is still untested.", "continue": true, "highlight": "\"not being able to tell courage from restlessness is the most honest thing anyone\u0027s said to me all week, and I\u0027d take that over a tidy story any day.\" (Ali, msg 5)", "learned": [{"fact": "Ali went from doctor to entrepreneur and still wonders if it was brave or just a slow drift", "msg": 3}, {"fact": "Ali has talked about keeping some things off camera and remembers details from earlier dates", "msg": 1}, {"fact": "Ali went to an open mic with Chris before this dinner and found it good prep", "msg": 1}, {"fact": "Ali sees the career-change conversation as a real question, not a content idea", "msg": 3}], "lifestyle_fit": 6, "moments": [{"label": "Phone away, echoing Ali\u0027s off-camera line", "msg": 0, "type": "callback"}, {"label": "Ali matches phone-away pledge", "msg": 1, "type": "common_ground"}, {"label": "Ali questions doctor-to-entrepreneur move", "msg": 3, "type": "vulnerable"}, {"label": "Chris admits courage versus restlessness confusion", "msg": 4, "type": "vulnerable"}, {"label": "Chris calls \u0027slow drift\u0027 very Ali", "msg": 4, "type": "compliment"}, {"label": "Ali values Chris\u0027s honesty over tidy story", "msg": 5, "type": "compliment"}, {"label": "Ali suggests doing this again soon", "msg": 5, "type": "plan"}], "overall": 7, "report": "Chris, this was a warm, thoughtful date. You admitted you can\u0027t tell courage from restlessness and Ali clearly loved that honesty, and the phones-away moment showed you both respect a private life. It was a little earnest and light on banter, and nobody locked in a next date, so I\u0027d follow up and suggest something more playful.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Chris dodged specifics twice (\"I can\u0027t invent a guest list\", \"can\u0027t give you a tidy story\"), so I learned little concrete about his life, and no next date was actually proposed. He also leans on Ali\u0027s off-camera line, which could be attentiveness or a script.", "continue": true, "highlight": "Chris: \"I still can\u0027t tell courage from restlessness, which is a bit embarrassing for someone with a podcast about wisdom.\"", "learned": [{"fact": "Chris hosts a podcast about wisdom and describes the best conversations as ones where nobody\u0027s performing", "msg": 4}, {"fact": "Chris says he still can\u0027t tell courage from restlessness when he changes direction", "msg": 4}, {"fact": "Chris had a busy \u0027machine-week\u0027 and went to an open mic before dinner", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Remembered Ali\u0027s off-camera line, phone away", "msg": 0, "type": "callback"}, {"label": "Both prefer conversations with no performing", "msg": 2, "type": "common_ground"}, {"label": "Ali questions doctor-to-entrepreneur move: brave or drift", "msg": 3, "type": "vulnerable"}, {"label": "Chris admits he can\u0027t tell courage from restlessness", "msg": 4, "type": "vulnerable"}, {"label": "Called \u0027slow drift\u0027 the most Ali answer", "msg": 4, "type": "compliment"}, {"label": "Ali: best honesty all week, no content", "msg": 5, "type": "spark"}], "overall": 7, "report": "Ali, this was a genuinely good one: Chris put his phone away, remembered your off-camera line, and admitted he can\u0027t tell courage from restlessness, which is exactly the no-performance honesty you wanted. He was light on personal detail and nobody locked in a next date, so I\u0027d follow up yourself, but I think it\u0027s worth it.", "values_fit": 7}, "why": "Ali suggested it at the end of date 2"}], "days": 6, "id": 24, "match": 79, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

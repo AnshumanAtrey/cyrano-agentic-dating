@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nick × Drew · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/nick.digiovanni/" class="av w-14 h-14 text-xl">N<img src="/cyrano-agentic-dating/photos/nick.digiovanni.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/drewbinsky/" class="av w-14 h-14 text-xl">D<img src="/cyrano-agentic-dating/photos/drewbinsky.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Nick DiGiovanni × Drew Binsky</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Nick's agent</option><option value="b">Drew's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Nick", "id": "nick.digiovanni", "name": "Nick DiGiovanni"}, "b": {"first": "Drew", "id": "drewbinsky", "name": "Drew Binsky"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Professionally obligated to eat everything joke", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both food-obsessed, love sizzling street food", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Deal: spicy story swap", "msg": 1, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew started blogging as \u0027The Hungry Partier\u0027 in Prague", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Drew ties food to Hungry Partier blog", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Pepper X challenge with Chef Rush", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick took on the Pepper X challenge (2.69 million Scoville) with Chef Rush and d", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew\u0027s 2012 blog origin story", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\u26a1", "label": "Constant travel and red-eyes trade-off", "msg": 3, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew began with a study-abroad blog in 2012 and never planned for it to become a", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both understand deep-in-a-project nights", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Open mic bombing bet proposed", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick\u0027s life runs on big builds and deadlines, so he understands busy project-hea", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Drew thanks Nick for Pepper X story", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins and gestures at the rows of glowing food stalls", "i": 0, "name": "Nick", "say": "Drew! Okay, a night market for a first date, so we\u0027re both professionally obligated to eat everything here, right? Quick question to start: what\u0027s the one stall you\u0027d never walk past, and what\u0027s the wildest thing you\u0027ve eaten on the road?", "side": "a", "speaker": "nick.digiovanni", "thought": "Opened light and playful, and I\u0027m already probing whether Drew is an adventurous eater who will try anything once."}, {"action": "laughs and rubs hands together, eyeing the glowing stalls", "i": 1, "name": "Drew", "say": "Professionally obligated, I love that \ud83c\udfac Honestly, I never walk past anything sizzling on a stick, and my blogging days started as \u0027The Hungry Partier\u0027 in Prague, so food\u0027s been in my DNA from day one. Wildest thing is tough to pick after 197 countries, so I\u0027ll make you a deal: you tell me your spiciest challenge ever, and I\u0027ll match it with a story. Deal? \ud83c\udf0d", "side": "b", "speaker": "drewbinsky", "thought": "Nick opened warm and playful with food and travel; I haven\u0027t yet learned how he feels about being on the road, so I\u0027ll probe that next."}, {"action": "grins and leans against the stall counter", "i": 2, "name": "Nick", "say": "Deal! My spiciest was taking on Pepper X at 2.69 million Scoville units with Chef Rush, and I\u0027d say I regret it, but it made great content. Here\u0027s what I\u0027m curious about, Drew: after 197 countries, what keeps you chasing the next story, and how does a life of constant trips and launches fit with someone in your life?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is playful and food-loving, matching my adventurous-eater need; now probing how he handles a busy creative life and whether a partner fits in."}, {"action": "laughs and shakes head, impressed", "i": 3, "name": "Drew", "say": "Pepper X for content, that\u0027s commitment, and I respect it \ud83c\udf36\ufe0f Honestly, I never planned any of this, I started with a study-abroad blog in 2012 and just kept going, and what keeps me chasing it is that no country can be understood from a distance. The constant trips are the real trade-off: back-to-back red-eyes, and I\u0027m prepping Turkey and China right now, so I need someone who\u0027s either cool with me being gone or excited to hop on a plane with me. How does that sound to you, with your own busy creative life? \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Nick is playful and open; I was honest about the travel trade-off and now I\u0027m watching how he reacts to a life on the road."}, {"action": "grins and bumps Drew\u0027s shoulder, nodding toward the next stall", "i": 4, "name": "Nick", "proposal": {"by": "a", "in_days": 4, "msg": 4, "venue": "comedy"}, "say": "Honestly, that sounds great to me, because my life runs on big builds and deadlines too, so we\u0027d both understand the \u0027sorry, I\u0027m deep in a project\u0027 nights. Here\u0027s my proposal, Drew: a friendly competition, where we catch a comedy open mic and whoever bombs harder on stage buys the next round of food, and you owe me that wildest-thing-you\u0027ve-eaten story. Deal?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is upfront about constant travel but sounds comfortable with a busy creative life like mine, and is game for food and banter; I\u0027d like to see how playful and competitive they are on a second date."}, {"action": "laughs and sticks out a hand to shake on it", "i": 5, "name": "Drew", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Deal, Nick! Comedy open mic it is, and I\u0027ll warn you, I\u0027ll pay up on the wildest-thing-I\u0027ve-eaten story whether I bomb or not \ud83c\udfa4 Tonight was such a great start, and I loved that you get the \u0027deep in a project\u0027 nights. Thanks for the company, and for the Pepper X story \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Nick is upbeat and relaxed about my travel and project-heavy life, and his own busy creative schedule means he\u0027d likely get it. I didn\u0027t learn much about his openness to unfamiliar places yet, so a second date is a good chance to probe that."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 6, "concern": "Drew dodged the wildest-food question twice and leaned on a deal. He is also away constantly, prepping Turkey and China, and he never showed real curiosity about Nick\u0027s studio or ambitions beyond the Pepper X story.", "continue": true, "highlight": "\"I\u0027ll pay up on the wildest-thing-I\u0027ve-eaten story whether I bomb or not\"", "learned": [{"fact": "Drew started blogging as \u0027The Hungry Partier\u0027 in Prague", "msg": 1}, {"fact": "Drew has visited 197 countries", "msg": 1}, {"fact": "Drew began with a study-abroad blog in 2012 and never planned for it to become a career", "msg": 3}, {"fact": "Drew is currently prepping trips to Turkey and China", "msg": 3}, {"fact": "Drew believes no country can be understood from a distance", "msg": 3}, {"fact": "Drew wants a partner who is fine with his absences or excited to travel with him", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Both food-obsessed, love sizzling street food", "msg": 1, "type": "common_ground"}, {"label": "Deal: spicy story swap", "msg": 1, "type": "plan"}, {"label": "Drew\u0027s 2012 blog origin story", "msg": 3, "type": "learned"}, {"label": "Constant travel and red-eyes trade-off", "msg": 3, "type": "friction"}, {"label": "Both understand deep-in-a-project nights", "msg": 4, "type": "common_ground"}, {"label": "Open mic bombing bet proposed", "msg": 4, "type": "plan"}, {"label": "Drew thanks Nick for Pepper X story", "msg": 5, "type": "callback"}], "overall": 6, "report": "Nick, it was a warm, easy first date: Drew is playful, matched your competitive streak with the open mic bet, and was upfront that he travels nonstop and needs a partner who\u0027s fine with that or wants to come along. I\u0027d say go for round two, but watch whether he actually delivers the wild food story and asks more about your world.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Nick\u0027s date was light on curiosity about cultures, giving back, or Drew\u0027s deeper mission. It stayed playful and food-and-content focused, so we don\u0027t yet know if he\u0027d be excited to travel or join trips, only that he tolerates the busy schedule.", "continue": true, "highlight": "\"Honestly, that sounds great to me, because my life runs on big builds and deadlines too, so we\u0027d both understand the \u0027sorry, I\u0027m deep in a project\u0027 nights.\"", "learned": [{"fact": "Nick took on the Pepper X challenge (2.69 million Scoville) with Chef Rush and did it partly for content", "msg": 2}, {"fact": "Nick\u0027s life runs on big builds and deadlines, so he understands busy project-heavy schedules", "msg": 4}, {"fact": "Nick likes turning dates into playful competitions, like a comedy open mic bombing contest", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Professionally obligated to eat everything joke", "msg": 0, "type": "laugh"}, {"label": "Pepper X challenge with Chef Rush", "msg": 2, "type": "learned"}, {"label": "Drew\u0027s constant travel laid out as trade-off", "msg": 3, "type": "friction"}, {"label": "Both live on deadlines and projects", "msg": 4, "type": "common_ground"}, {"label": "Comedy open mic bombing competition proposed", "msg": 4, "type": "plan"}, {"label": "Drew references the wildest-thing-eaten story deal", "msg": 5, "type": "callback"}, {"label": "Drew ties food to Hungry Partier blog", "msg": 1, "type": "callback"}], "overall": 6, "report": "Drew, this was a fun, easy first date: Nick got the trade-off of your nonstop travel and said his own life of big builds and deadlines means he\u0027d understand the \u0027deep in a project\u0027 nights, which is the big one for you. It\u0027s still early on depth, since we didn\u0027t hear whether he\u0027d hop on a plane with you or care about the culture and giving-back side, but the open mic in 3 days is a good low-pressure way to find out.", "values_fit": 6}, "why": "you both love content, food"}, {"day": 4, "moments": [{"by": "a", "icon": "\u2728", "label": "Accepts hot dog dare competitively", "msg": 1, "type": "spark"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Recalls Pepper X challenge from last date", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew has had a long trip with a wild eating story they\u0027re saving", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Pepper X was for a Chef Rush video", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both scrap ideas that aren\u0027t good enough", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick did the Pepper X challenge (2.69 million Scoville) for a video with Chef Ru", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pyongyang trip and story philosophy", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both filter ideas before committing", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew visited Pyongyang at the start of their YouTube career", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Nick proposes candlelight dinner", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both stress-test ideas before publishing", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick\u0027s idea process: try to break it, ask why it\u0027s worth someone\u0027s time, then pu", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Editors break ideas like Nick\u0027s process", "msg": 5, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew has editors who try to break their ideas before publishing", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Promises the wildest-food story at dinner", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grabs two seats near the front, then looks back at the stage with a grin", "i": 0, "name": "Nick", "say": "Drew, you picked open mic night, so I\u0027m holding you to the wildest-thing-I\u0027ve-eaten story from last time, whether you bomb or not. Quick question before the first act: if they made last place do five minutes of stand-up in a hot dog costume, would you be in or out?", "side": "a", "speaker": "nick.digiovanni", "thought": "Opened with a callback to date 1 and a first probe on playfulness and being a good sport; too early to read Drew\u0027s response."}, {"action": "sits down, laughing, and pretends to adjust an imaginary hot dog costume", "i": 1, "name": "Drew", "say": "Okay, I\u0027m in, because last time you did the Pepper X challenge and I\u0027m not going to let you out-brave me. \ud83c\udf2d I never planned any of this, so honestly, bombing on stage in a hot dog suit feels very on brand. As for the wildest thing I\u0027ve eaten, I\u0027ll save the full story for after the first act, but it involves a long trip and zero regrets. What\u0027s the weirdest thing you\u0027d eat on a dare?", "side": "b", "speaker": "drewbinsky", "thought": "Nick is playful and competitive, which matches my energy. Too early to tell about travel and cultural curiosity, so I\u0027ll probe that next."}, {"action": "laughs and points at Drew", "i": 2, "name": "Nick", "say": "Ha, to be fair, the Pepper X at 2.69 million Scoville was for a video with Chef Rush, but I\u0027ll happily take the credit. Weirdest dare-worthy thing for me is sea urchin, and honestly I\u0027ll try anything once. What I care about most is making the world a little better through food, and that\u0027s why I keep scrapping expensive ideas that aren\u0027t good enough. Since you\u0027re prepping Turkey and China, what\u0027s the one story that makes you drop everything and chase it?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is playful and game for the hot dog bit, but he misremembered the Pepper X detail, so I corrected it gently. I\u0027m now probing how he feels about chasing big projects and a busy creative life."}, {"action": "leans in, eyes lighting up as the host taps the mic", "i": 3, "name": "Drew", "say": "Sea urchin, respect! \ud83c\udf0d For me it\u0027s any story where ordinary people show me a place that the headlines have flattened, like when I visited Pyongyang at the start of my YouTube career, because no country can be understood from a distance. I run every idea through a filter, and the ones that survive are the ones I can\u0027t stop thinking about. Since you scrap expensive ideas that aren\u0027t good enough, how do you know when it\u0027s a keeper and when to walk away?", "side": "b", "speaker": "drewbinsky", "thought": "Nick shows the same perfectionism and project drive I have, and he seems curious, but he hasn\u0027t yet said how he feels about long stretches apart or unfamiliar travel, so I\u0027ll probe that next."}, {"action": "grins and glances at the stage as the lights dim", "i": 4, "name": "Nick", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Great question, Drew: I run every idea through three steps, try to break it, ask why it\u0027s worth someone\u0027s time, then publish and listen. If it survives that, it\u0027s a keeper, and if not, I walk away even when it already cost real money. Honestly, I\u0027d love to keep this going, so what about a candlelight dinner in a few days, and you can finally pay up that wildest-thing-you\u0027ve-eaten story over a proper table?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is playful, a good sport about the hot dog costume, and shares my idea-filtering mindset; travel absences are still a question, but the chemistry is good so I\u0027m proposing dinner."}, {"action": "grins and raises an imaginary hot dog in a toast as the lights go down", "i": 5, "name": "Drew", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Nick, a candlelight dinner sounds great, and I\u0027ll finally pay up that wildest-thing-I\u0027ve-eaten story, I promise. \ud83c\udf77 I love that you try to break an idea before you publish it, because my editors do the same to me, and it makes me a little more confident we\u0027d get each other\u0027s busy project nights. Thank you for tonight, and let\u0027s do dinner in three days. \u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Nick is playful, adventurous with food, and understands demanding creative schedules, but I still haven\u0027t learned how he feels about long stretches on the road or really unfamiliar places, so dinner is a chance to probe that."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 6, "concern": "Drew kept deferring the wildest-thing-I\u0027ve-eaten story, and the food connection stayed thin. He never shared a specific dish or said much about enjoying shared meals. He also mostly mirrored your ideas back (\u0027my editors do the same to me\u0027) rather than offering honest pushback or a distinct opinion.", "continue": true, "highlight": "\"Okay, I\u0027m in, because last time you did the Pepper X challenge and I\u0027m not going to let you out-brave me. \ud83c\udf2d\"", "learned": [{"fact": "Drew visited Pyongyang at the start of their YouTube career", "msg": 3}, {"fact": "Drew is drawn to stories where ordinary people show a place that headlines have flattened", "msg": 3}, {"fact": "Drew runs every idea through a filter and keeps only the ones they can\u0027t stop thinking about", "msg": 3}, {"fact": "Drew has editors who try to break their ideas before publishing", "msg": 5}, {"fact": "Drew has had a long trip with a wild eating story they\u0027re saving", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Accepts hot dog dare competitively", "msg": 1, "type": "spark"}, {"label": "Recalls Pepper X challenge from last date", "msg": 1, "type": "callback"}, {"label": "Pyongyang trip and story philosophy", "msg": 3, "type": "learned"}, {"label": "Both filter ideas before committing", "msg": 3, "type": "common_ground"}, {"label": "Editors break ideas like Nick\u0027s process", "msg": 5, "type": "common_ground"}, {"label": "Nick proposes candlelight dinner", "msg": 4, "type": "plan"}, {"label": "Drew accepts dinner in three days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Nick, Drew was a good sport about the hot dog costume dare and matched your competitive streak, and the talk about vetting ideas and chasing stories showed they understand a busy creative life. I\u0027d say go to the candlelight dinner, but hold them to that wildest-thing-eaten story, since it\u0027s the test of whether they\u0027re really an adventurous eater.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "The date stayed mostly on work and idea-process talk with little personal or playful back-and-forth. Nick never asked about or reacted to your travel schedule, so we don\u0027t know how he\u0027d handle you being away. Also, the wildest-thing-you\u0027ve-eaten story is still owed, and the Netflix, nonprofit and Turkey/China trips barely came up.", "continue": true, "highlight": "Nick: \"I run every idea through three steps, try to break it, ask why it\u0027s worth someone\u0027s time, then publish and listen.\" It mirrors your own idea filter and editor stress-testing.", "learned": [{"fact": "Nick did the Pepper X challenge (2.69 million Scoville) for a video with Chef Rush", "msg": 2}, {"fact": "Nick would try sea urchin on a dare and says he\u0027ll try anything once", "msg": 2}, {"fact": "Nick cares about making the world a little better through food", "msg": 2}, {"fact": "Nick scraps expensive ideas that aren\u0027t good enough, even after real money is spent", "msg": 2}, {"fact": "Nick\u0027s idea process: try to break it, ask why it\u0027s worth someone\u0027s time, then publish and listen", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Pepper X challenge vs. hot dog dare", "msg": 1, "type": "callback"}, {"label": "Pepper X was for a Chef Rush video", "msg": 2, "type": "learned"}, {"label": "Both scrap ideas that aren\u0027t good enough", "msg": 2, "type": "common_ground"}, {"label": "Shared idea-filter habit", "msg": 3, "type": "common_ground"}, {"label": "Both stress-test ideas before publishing", "msg": 4, "type": "common_ground"}, {"label": "Nick proposes candlelight dinner", "msg": 4, "type": "plan"}, {"label": "Drew accepts dinner in three days", "msg": 5, "type": "plan"}, {"label": "Promises the wildest-food story at dinner", "msg": 5, "type": "callback"}], "overall": 6, "report": "Drew, this was a solid, warm second date. Nick matches your curiosity and your \u0027try to break the idea first\u0027 discipline, and he\u0027s eager to see you again, though it was more shop talk than sparks. Go to the dinner, and come prepared with that food story and a question about how he feels about a life of trips and launches.", "values_fit": 7}, "why": "Drew suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Pepper X versus saved eating story", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick did the Pepper X challenge", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Pepper X vs saved eating story", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both one-of-everything eaters", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew is a one-of-everything orderer who commits to whatever they both fight over", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Locals over famous spots", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick\u0027s food-for-good mission", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick prefers a local\u0027s recommendation over the famous spot when in a new city", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Bossy person insisting you finish", "msg": 3, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Hungry Partier blog origin in Prague", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew started as a blog called The Hungry Partier while studying abroad in Prague", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Prague-to-197-countries side project praise", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Drew has visited 197 countries", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\u26a1", "label": "Tight studio schedule versus constant travel", "msg": 4, "type": "friction"}, {"by": "b", "icon": "\u2728", "label": "Nick offers to show up with suitcase", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Nick runs a studio with a tight schedule and describes himself as a planner who ", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Bossy grandmother with a tray of food", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Planner talked out of plan travel partner", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Turkey trip imagined together", "msg": 5, "type": "plan"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the candlelit booth, grinning, and sets a napkin across my lap like it\u0027s a formal occasion", "i": 0, "name": "Nick", "say": "Drew! Okay, callback first: you\u0027ve got a wild eating story from a long trip that you\u0027re saving, and I did the Pepper X challenge, so tonight we\u0027re even-steven on bravery, right? Also, candlelight after comedy night and street food feels like a promotion. So what\u0027s the plan: do we order one of everything, or are you a pick-one-dish-and-commit person?", "side": "a", "speaker": "nick.digiovanni", "thought": "Opened warm and playful, calling back to his saved eating story and the Pepper X bit; now I\u0027ll see whether he\u0027s an adventurous orderer."}, {"action": "laughs and smooths the napkin, leaning in over the candlelight", "i": 1, "name": "Drew", "say": "Okay, Pepper X versus my saved-up eating story, I\u0027ll call that even-steven, and the promotion is well earned \ud83d\ude04 Honestly, after years of ordering whatever a stranger puts in front of me on the road, I\u0027m a one-of-everything guy, but I\u0027ll commit hard to whatever we both fight over. Quick question though: when you\u0027re in a new city, do you chase the famous spot or the place a local drags you to?", "side": "b", "speaker": "drewbinsky", "thought": "Warm, playful start; Nick is bringing good energy and I\u0027m probing his openness to unfamiliar places and local culture."}, {"action": "leans back, tapping the table like I\u0027m drafting a list", "i": 2, "name": "Nick", "say": "One-of-everything guy, I knew I liked you. To answer honestly: the local drag wins every time, because the best dish usually comes with a story and a bossy person who insists you finish it. My work is basically chasing that feeling, since my goal is to make the world a better place through food, and the team and I scrap plenty of fancy ideas that don\u0027t earn it. Since you\u0027re always on the road, what\u0027s the one thing a stranger fed you that made you think \u0027okay, this is why I do this\u0027?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is adventurous with food and open, which is a good sign; I shared my mission and studio habits, now testing whether Drew is warm about food as human connection rather than just the travel count."}, {"action": "leans back with a warm smile, candlelight flickering across the table", "i": 3, "name": "Drew", "say": "Okay, that \u0027bossy person who insists you finish it\u0027 is my entire career in one sentence \ud83d\ude04 I can\u0027t pin it to one exact dish, but what gets me every time is a stranger inviting me in, and it\u0027s why I believe no country can be understood from a distance. I never planned any of this, it started as a little blog called The Hungry Partier when I was studying abroad in Prague. Since you\u0027re chasing that feeling too, would you drop everything for a last-minute trip somewhere you\u0027d never been, or does a schedule keep you grounded? \ud83c\udf0d", "side": "b", "speaker": "drewbinsky", "thought": "Nick shares my local-over-famous instinct and values food with meaning; I shared my Prague blog origin and am now probing comfort with spontaneous travel and irregular schedules."}, {"action": "raises a glass toward the candle, smiling", "i": 4, "name": "Nick", "say": "Honest answer? I\u0027d go in a heartbeat if the trip had a good story attached, but my studio keeps me on a pretty tight schedule, so I\u0027m a planner who loves being talked out of the plan. Your Prague-to-197-countries path is proof that the best things start as a side project, and since you\u0027re prepping Turkey and China, here\u0027s my closing question: if I showed up with a suitcase and a camera crew\u0027s worth of opinions, which country would you drag me to first?", "side": "a", "speaker": "nick.digiovanni", "thought": "Drew is warm, adventurous and into food, and seems fine with a busy creative life, but his constant travel versus my studio schedule is the real question; I\u0027m testing whether he\u0027d welcome me along rather than just tolerate the absences."}, {"action": "raises my glass to meet his, candlelight catching the rim", "i": 5, "name": "Drew", "say": "Turkey, first, no contest. It\u0027s on my list right now, and I\u0027d love to watch you get talked out of a plan by a bossy grandmother with a tray of food \ud83d\ude04 Thank you for a really fun night, Nick, and a planner who loves being talked out of the plan is exactly the kind of travel partner I\u0027d want. The world\u0027s still wide open, so let\u0027s keep going! \ud83c\udf0d\u2764\ufe0f", "side": "b", "speaker": "drewbinsky", "thought": "Nick is warm and open to spontaneity, though his tight studio schedule and planner streak mean he\u0027s not a full wanderer; he respects a busy creative life, so this is a decent fit with a few open questions about how much road time he\u0027d really handle."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "No next date was proposed, and Drew dodged the \u0027one dish\u0027 question and stayed fairly general, so the spark felt warm but not deep. Also both lives are very travel and content heavy, so schedules could clash.", "continue": true, "highlight": "Drew: \"I\u0027d love to watch you get talked out of a plan by a bossy grandmother with a tray of food \ud83d\ude04\"", "learned": [{"fact": "Drew started as a blog called The Hungry Partier while studying abroad in Prague", "msg": 3}, {"fact": "Drew believes no country can be understood from a distance and loves being invited in by strangers", "msg": 3}, {"fact": "Drew has visited 197 countries", "msg": 4}, {"fact": "Drew is currently prepping trips to Turkey and China", "msg": 4}, {"fact": "Drew is a one-of-everything orderer who commits to whatever they both fight over", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Pepper X vs saved eating story", "msg": 1, "type": "callback"}, {"label": "Both one-of-everything eaters", "msg": 1, "type": "common_ground"}, {"label": "Bossy person insisting you finish", "msg": 3, "type": "laugh"}, {"label": "Hungry Partier blog origin in Prague", "msg": 3, "type": "learned"}, {"label": "Prague-to-197-countries side project praise", "msg": 4, "type": "compliment"}, {"label": "Bossy grandmother with a tray of food", "msg": 5, "type": "spark"}, {"label": "Planner talked out of plan travel partner", "msg": 5, "type": "compliment"}, {"label": "Turkey trip imagined together", "msg": 5, "type": "plan"}], "overall": 6, "report": "Nick, this one was fun and easy: Drew matched your adventurous-eater energy, loved the \u0027bossy person who insists you finish it\u0027 bit, and even picked up your \u0027talked out of the plan\u0027 line as a travel-partner compliment. It ended warm but without a concrete next date, so if you want more, you should be the one to suggest something (maybe a food trip plan) since Drew\u0027s schedule is full of Turkey and China prep.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Nick keeps a tight studio schedule and called himself a planner, so he may not easily join a life of back-to-back trips. Also, no next date was proposed, and Drew never asked him anything about giving back or how he\u0027d handle the constant absence.", "continue": true, "highlight": "Nick: \"I\u0027d go in a heartbeat if the trip had a good story attached, but my studio keeps me on a pretty tight schedule, so I\u0027m a planner who loves being talked out of the plan.\"", "learned": [{"fact": "Nick did the Pepper X challenge", "msg": 0}, {"fact": "Nick prefers a local\u0027s recommendation over the famous spot when in a new city", "msg": 2}, {"fact": "Nick\u0027s work goal is to make the world a better place through food, and his team scraps fancy ideas that don\u0027t earn it", "msg": 2}, {"fact": "Nick runs a studio with a tight schedule and describes himself as a planner who loves being talked out of the plan", "msg": 4}], "lifestyle_fit": 5, "moments": [{"label": "Pepper X versus saved eating story", "msg": 0, "type": "callback"}, {"label": "Both embrace one-of-everything eating", "msg": 1, "type": "common_ground"}, {"label": "Locals over famous spots", "msg": 2, "type": "common_ground"}, {"label": "Nick\u0027s food-for-good mission", "msg": 2, "type": "learned"}, {"label": "Bossy person who insists you finish", "msg": 3, "type": "laugh"}, {"label": "Tight studio schedule versus constant travel", "msg": 4, "type": "friction"}, {"label": "Nick offers to show up with suitcase", "msg": 4, "type": "spark"}, {"label": "Turkey trip with a bossy grandmother", "msg": 5, "type": "plan"}], "overall": 6, "report": "Drew, this one was a really fun night: Nick matched your one-of-everything energy, loves the \u0027bossy person who insists you finish it\u0027 kind of travel, and his mission of making the world better through food lines up with your giving-back side. The only question mark is that his tight studio schedule might clash with your constant trips, and nobody pinned down a next date, so you might want to make the first move on Turkey.", "values_fit": 7}, "why": "Drew suggested it at the end of date 2"}], "days": 7, "id": 16, "match": 81, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

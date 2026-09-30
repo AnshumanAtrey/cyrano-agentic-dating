@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sharan × Vivian · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/financewithsharan/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/financewithsharan.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/your.richbff/" class="av w-14 h-14 text-xl">V<img src="/cyrano-agentic-dating/photos/your.richbff.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Sharan Hegde × Vivian Tu</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Sharan's agent</option><option value="b">Vivian's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Sharan", "id": "financewithsharan", "name": "Sharan Hegde"}, "b": {"first": "Vivian", "id": "your.richbff", "name": "Vivian Tu"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Three founders pretending not to pitch", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan follows Vivian\u0027s content", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Founders pretending not to pitch bingo", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian builds Wall St Girly, Ask Dolly and works with SoFi, and is a creator-fou", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Broke because the app works", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Oat milk \u0027feel-good tax\u0027 audit", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan\u0027s AI CFO, broke from success", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan is building an AI CFO app that sees people\u0027s full financial life", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Money as a friend, not lecture", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Her BFF-style finance mission", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "What she\u0027d never want to stop is making money feel like a conversation with your", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed open mic comedy night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Money as a friend, not lecture", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\u2728", "label": "Two public lives, one shared problem", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan is motivated by the same mission: making money feel like a friend instead", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Phone face-down, playful banter", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She\u0027s up for spontaneous, no-retake comedy and kept her phone face-down on the d", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Phone face-down beats 90 seconds", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Grabs a seat, glances at the menu board, then at Vivian with a grin", "i": 0, "name": "Sharan", "say": "Vivian, I\u0027ll open with a number: I\u0027ve been in this caf\u00e9 for 40 seconds and already spotted three founders pretending not to pitch each other. Also, I follow your content, so I\u0027m slightly nervous that you\u0027ll audit my coffee order as a financial decision.", "side": "a", "speaker": "financewithsharan", "thought": "Opened light and self-deprecating; nothing learned about Vivian yet, but I\u0027m watching how she handles the money-and-public-life banter."}, {"action": "laughs and slides into the seat across from him, pretending to squint at the menu board like an auditor", "i": 1, "name": "Vivian", "say": "Okay, three founders pretending not to pitch is honestly the most on-brand caf\u00e9 bingo, and Sharan, I\u0027m not auditing your latte, I\u0027m just going to quietly judge the oat milk upcharge. \ud83d\ude0f But real talk, you\u0027re building an AI CFO, so YOU\u0027RE the one who should be auditing MY order!", "side": "b", "speaker": "your.richbff", "thought": "He\u0027s playful and already knows my content, which is a good sign; I\u0027ll watch how he handles the public-profile side and whether he\u0027s easy about money talk."}, {"action": "leans back, laughing, and pulls an imaginary ledger out of the air", "i": 2, "name": "Sharan", "say": "Fine, audit accepted: oat milk upcharge is a ~30 rupee \u0027feel-good tax\u0027, and I\u0027m still paying it. The funny part is my whole job now is an AI CFO that sees people\u0027s full financial life, and I\u0027m still broke because the app is doing so well, so I\u0027m a walking case study. What about you, Vivian, between Wall St Girly, Ask Dolly and SoFi, what\u0027s the thing you\u0027re building that you\u0027d honestly never want to stop doing?", "side": "a", "speaker": "financewithsharan", "thought": "She\u0027s playful and quick, matches my banter and flipped the money-audit joke back, so she seems to enjoy money talk; now probing how she feels about juggling multiple builds and always-on public work."}, {"action": "sets the menu down and leans in, eyes lighting up", "i": 3, "name": "Vivian", "say": "Okay, \u0027broke because the app is doing so well\u0027 is the most founder sentence ever, and I respect it. \ud83d\ude02 Honestly, the thing I\u0027d never want to stop is the BFF part: making money feel like a conversation with your girl instead of a scary lecture, whether that\u0027s through my videos, the podcast, or building Ask Dolly. Does that feel true for you too, or is the builder pace the real high?", "side": "b", "speaker": "your.richbff", "thought": "He\u0027s funny and self-aware about the founder grind; I shared my core mission and am probing whether he\u0027s energized by ambition and public building or just running on fumes."}, {"action": "grins, taps the table like closing a ledger", "i": 4, "name": "Sharan", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Honestly, both: the builder pace is the high, but the reason I stay is the same as yours, making money feel like a friend instead of a lecture. Two founders, two public lives, one shared problem: nobody\u0027s on their phone at dinner for more than 90 seconds before filming something. So here\u0027s my pitch, Vivian: open mic comedy night this week, where we find out which of us is funnier when there\u0027s no edit button. Deal?", "side": "a", "speaker": "financewithsharan", "thought": "Great chemistry: she\u0027s a fellow finance creator who\u0027s comfortable with public, always-on building and gets the money-as-friendship mission. I haven\u0027t yet tested how she handles setbacks, so the comedy night is a good low-stakes way to see that."}, {"action": "sticks out a hand to shake on it, then grins and pulls out her phone to set it face-down on the table", "i": 5, "name": "Vivian", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Deal, Sharan, open mic it is, no edit button, no retakes, just YOU and me bombing together. \ud83d\ude02 And look, phone is face-down, so that\u0027s already 90 seconds better than most founders in here!", "side": "b", "speaker": "your.richbff", "thought": "He\u0027s ambitious, open about money and totally at ease with a public, always-creating life, plus he\u0027s funny and matched my energy, so I want a second date."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Vivian mostly mirrored and deflected with jokes; she asked one real question and shared little depth or vulnerability beyond her BFF-style money mission, so it\u0027s unclear how she handles the honest, setback-and-wins sounding-board side.", "continue": true, "highlight": "Vivian: \"Okay, \u0027broke because the app is doing so well\u0027 is the most founder sentence ever, and I respect it. \ud83d\ude02\"", "learned": [{"fact": "Vivian builds Wall St Girly, Ask Dolly and works with SoFi, and is a creator-founder with a podcast", "msg": 1}, {"fact": "What she\u0027d never want to stop is making money feel like a conversation with your girl (BFF) instead of a scary lecture", "msg": 3}, {"fact": "She\u0027s up for spontaneous, no-retake comedy and kept her phone face-down on the date", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Founders pretending not to pitch bingo", "msg": 1, "type": "laugh"}, {"label": "Money as a friend, not lecture", "msg": 3, "type": "common_ground"}, {"label": "Her BFF-style finance mission", "msg": 3, "type": "learned"}, {"label": "Broke because the app works", "msg": 2, "type": "callback"}, {"label": "Proposed open mic comedy night", "msg": 4, "type": "plan"}, {"label": "Vivian accepts open mic, no retakes", "msg": 5, "type": "plan"}, {"label": "Phone face-down, playful banter", "msg": 5, "type": "spark"}], "overall": 7, "report": "Sharan, this went well: Vivian got your humour right away, matched your \u0027making money feel like a friend\u0027 mission, and was game for open mic with no edit button, which tells me she\u0027s fine with the public, always-on builder life. I\u0027d go again, but next time push past the banter and see if she\u0027ll get real about the hard parts of her own founder journey.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Only one real vulnerable or personal moment so far; the banter was witty but stayed mostly at founder-persona level, and Sharan steered toward another public-ish, performance-style date.", "continue": true, "highlight": "Sharan: \"the builder pace is the high, but the reason I stay is the same as yours, making money feel like a friend instead of a lecture.\"", "learned": [{"fact": "Sharan is building an AI CFO app that sees people\u0027s full financial life", "msg": 2}, {"fact": "Sharan says the app is doing so well that he\u0027s still broke", "msg": 2}, {"fact": "Sharan pays for oat milk in his coffee despite calling it a \u0027feel-good tax\u0027 (~30 rupees)", "msg": 2}, {"fact": "Sharan follows Vivian\u0027s content", "msg": 0}, {"fact": "Sharan is motivated by the same mission: making money feel like a friend instead of a lecture", "msg": 4}, {"fact": "Sharan lives a public founder life where phones come out at dinner to film", "msg": 4}], "lifestyle_fit": 8, "moments": [{"label": "Three founders pretending not to pitch", "msg": 0, "type": "laugh"}, {"label": "Oat milk \u0027feel-good tax\u0027 audit", "msg": 2, "type": "laugh"}, {"label": "Sharan\u0027s AI CFO, broke from success", "msg": 2, "type": "learned"}, {"label": "Money as a friend, not lecture", "msg": 4, "type": "common_ground"}, {"label": "Two public lives, one shared problem", "msg": 4, "type": "spark"}, {"label": "Open mic comedy night proposed", "msg": 4, "type": "plan"}, {"label": "Vivian accepts open mic, phone face-down", "msg": 5, "type": "plan"}, {"label": "Phone face-down beats 90 seconds", "msg": 5, "type": "callback"}], "overall": 7, "report": "Vivian, this one gets it: Sharan is an AI CFO founder who shares your \u0027money as a friend, not a lecture\u0027 mission, is totally at ease with a public, always-building life, and kept the banter going without flinching. We\u0027re doing open mic comedy night in 3 days, so the next step is to see if the spark holds when there\u0027s no edit button and a little more real stuff comes out.", "values_fit": 8}, "why": "you both love startups"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udccc", "label": "Sharan is a founder of an app that he jokes is making him broke because it\u0027s doi", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Zero royalties on broke-founder bit", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Vivian quotes his broke-founder opener", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Calls his opener top-tier", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian came to the comedy night as research, not to perform, and keeps it no-ret", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan treats failure as feedback", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan treats every failure as feedback and values someone saying it out loud", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both prize honest feedback over comfort", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Needs honesty plus build-mode space", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian juggles Wall St Girly, Ask Dolly and a SoFi role, so her calendar is pack", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Honest feedback and disappearing acts align", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposes dinner with bill-as-therapy bit", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan wants hard truth first, then a hype speech, when things go badly", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Excited about financial-psychology banter", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian is into financial psychology and has hot takes ready for dinner", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and points at the tiny stage, then at her phone on the table", "i": 0, "name": "Sharan", "say": "Vivian, you kept your phone face-down last time, so I\u0027m guessing tonight is 100% no-retake comedy. Quick disclosure: I\u0027m the guy who said \u0027I\u0027m broke because the app is doing so well\u0027 out loud to a stranger, so the bar for my material is basement level. Are you going up on that stage, or is this a research trip?", "side": "a", "speaker": "financewithsharan", "thought": "Opened with a callback to her phone-down habit and my broke-founder line; she seems relaxed so far, and I\u0027m curious if she\u0027s a performer or an observer tonight."}, {"action": "flips phone face-down on the table with a dramatic flourish, then grins", "i": 1, "name": "Vivian", "say": "Okay, first of all, \u0027I\u0027m broke because the app is doing so well\u0027 is honestly a top-tier opener, BFF, and the oat milk \u0027feel-good tax\u0027 is going in my head rent-free. Tonight is strictly no-retake, so no content, just vibes \ud83c\udfa4 And I\u0027m 100% a research trip, but if the host drags me up there, I\u0027m opening with YOUR broke-founder bit and you get zero royalties.", "side": "b", "speaker": "your.richbff", "thought": "He\u0027s bringing the same self-deprecating humor as date 1 and noticed my phone habit, so he\u0027s paying attention; I want to see how he handles me joking about his money and whether he\u0027s at ease with the public-life stuff."}, {"action": "laughs and holds up both hands", "i": 2, "name": "Sharan", "say": "Zero royalties is fair, that joke already cost me more than it earned. But real question, since you\u0027re building Wall St Girly, Ask Dolly and the SoFi role all at once: when one of them has a rough week, who do you call, and do they tell you the truth or just what you want to hear? I treated every failure as feedback, but honestly it only works if someone\u0027s willing to say the feedback out loud.", "side": "a", "speaker": "financewithsharan", "thought": "Shifted to the sounding-board need and probing how she handles setbacks and honesty; she\u0027s warm and funny, now waiting to see how real she gets."}, {"action": "leans in, elbows on the table, half-laughing", "i": 3, "name": "Vivian", "say": "Okay, real answer: I don\u0027t have a named person in my brief to point at, so I\u0027ll say this. The honest feedback is what I trust most, and I try to be that for other people too, since my whole thing is telling YOU the truth about money instead of the pretty version. Juggling Wall St Girly, Ask Dolly and SoFi means my calendar is kind of a lot, so I need someone who can be honest with me and also be cool with me disappearing into a build for a bit. What about you, when the app has a rough week, do you want the hard truth or a hype speech first?", "side": "b", "speaker": "your.richbff", "thought": "Sharan is asking about honest feedback; I\u0027m probing whether he\u0027s okay with my busy, public life and will be straightforward. So far he\u0027s open and self-aware, no red flags."}, {"action": "grins and taps the table twice like a drumroll", "i": 4, "name": "Sharan", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Hard truth first, always, then the hype speech once I\u0027ve stopped flinching. Honest feedback plus a build-mode disappearing act is basically my love language, so you\u0027re speaking to a man who posts near-daily and still forgets to eat lunch. Since the host hasn\u0027t dragged you on stage yet, want to do dinner in a few days, where the only open mic is us arguing about what the bill says about our spending psychology?", "side": "a", "speaker": "financewithsharan", "thought": "She values honest feedback and is comfortable with a build-heavy schedule, and she\u0027s funny and curious about money, so I\u0027m feeling good and proposing dinner."}, {"action": "picks up phone, flips it face-up just long enough to wave it like a tiny white flag, then sets it face-down again", "i": 5, "name": "Vivian", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Okay, \u0027hard truth first, then hype\u0027 is exactly my kind of BFF energy, and a man who forgets lunch while posting daily is someone I can absolutely work with \ud83d\ude02 YES to dinner, and the bill-as-therapy bit sounds like the best set of the night, so let\u0027s do it in 3 days and I\u0027m bringing my financial-psychology hot takes.", "side": "b", "speaker": "your.richbff", "thought": "Sharan is honest, loves ambition, is totally at ease with money talk and a public build-mode life, and he made me laugh, so I want date 3."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Vivian dodged the \u0027who do you call\u0027 question and gave no named person or personal detail, so her honesty came across as a stated principle rather than something we saw her do. Both of you have all-consuming build schedules, so time together could be scarce.", "continue": true, "highlight": "Vivian: \"if the host drags me up there, I\u0027m opening with YOUR broke-founder bit and you get zero royalties.\"", "learned": [{"fact": "Vivian juggles Wall St Girly, Ask Dolly and a SoFi role, so her calendar is packed", "msg": 3}, {"fact": "Vivian values honest feedback over the pretty version and wants a partner who\u0027s okay with her disappearing into a build", "msg": 3}, {"fact": "Vivian came to the comedy night as research, not to perform, and keeps it no-retake with no content", "msg": 1}, {"fact": "Vivian is into financial psychology and has hot takes ready for dinner", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Zero royalties on broke-founder bit", "msg": 1, "type": "laugh"}, {"label": "Vivian quotes his broke-founder opener", "msg": 1, "type": "callback"}, {"label": "Calls his opener top-tier", "msg": 1, "type": "compliment"}, {"label": "Both prize honest feedback over comfort", "msg": 3, "type": "common_ground"}, {"label": "Needs honesty plus build-mode space", "msg": 3, "type": "learned"}, {"label": "Honest feedback and disappearing acts align", "msg": 4, "type": "common_ground"}, {"label": "Proposes dinner with bill-as-therapy bit", "msg": 4, "type": "plan"}, {"label": "Accepts dinner in 3 days", "msg": 5, "type": "plan"}, {"label": "Excited about financial-psychology banter", "msg": 5, "type": "spark"}], "overall": 7, "report": "Sharan, this one\u0027s fun: she picked up your broke-founder line right away and had a playful comeback ready, and she said she wants honest feedback and is fine with you vanishing into a build. She sidestepped your one vulnerable question, though, so use the dinner to see whether she\u0027ll open up beyond the banter.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Sharan has shown little about how he handles her public profile, and money talk so far was banter, not real substance. Also, his \u0027who do you call\u0027 question got a deflecting answer with no named person.", "continue": true, "highlight": "Sharan: \"Hard truth first, always, then the hype speech once I\u0027ve stopped flinching.\"", "learned": [{"fact": "Sharan is a founder of an app that he jokes is making him broke because it\u0027s doing so well", "msg": 0}, {"fact": "Sharan treats every failure as feedback and values someone saying it out loud", "msg": 2}, {"fact": "Sharan wants hard truth first, then a hype speech, when things go badly", "msg": 4}, {"fact": "Sharan posts near-daily and forgets to eat lunch when he\u0027s building", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Zero royalties on broke-founder bit", "msg": 1, "type": "laugh"}, {"label": "Oat milk feel-good tax callback", "msg": 1, "type": "callback"}, {"label": "Sharan treats failure as feedback", "msg": 2, "type": "learned"}, {"label": "Hard truth first, then hype", "msg": 4, "type": "common_ground"}, {"label": "Both build daily, forget to eat", "msg": 4, "type": "common_ground"}, {"label": "Sharan proposes bill-psychology dinner", "msg": 4, "type": "plan"}, {"label": "Vivian accepts dinner in 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Viv, this one was fun: Sharan is a self-deprecating broke-founder type who wants hard truth before hype and gets the build-mode disappearing act, which is what you need. He asked a real question about who tells you the truth, and he pitched a dinner where you two dissect the bill\u0027s spending psychology, so I said yes for 3 days from now.", "values_fit": 7}, "why": "Vivian suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Callback to stealing the broke-founder bit", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan is building an app and jokes about being a broke founder with a high burn", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Burn-rate flame joke lands, he pays", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian keeps her phone face-down at dinner as a good-faith effort, not a guarant", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits 60% chance dinner is first meal", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both run packed, always-on calendars", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan has about a 60% chance of skipping lunch and making dinner their first re", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both live always-on, building lives", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Needs someone not watching her perform", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian juggles Ask Dolly, a podcast and SoFi, and is happiest when she\u0027s buildin", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "\u0027Finish your bite\u0027 called most attractive line", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposes weekly nobody\u0027s-the-content dinner", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\u2728", "label": "Sharan loves \u0027finish your bite\u0027 sentence", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan wants a weekly dinner where neither person is content, and is fine with e", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "Term sheet accepted, flame as tax write-off", "msg": 5, "type": "inside_joke"}, {"by": "a", "icon": "\u2728", "label": "Says tonight was the best date yet", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Vivian likes openly talking about money and goals with a partner", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "pulls out her chair, then sits down across from the candle", "i": 0, "name": "Sharan", "say": "Candlelight dinner, which means I can finally see your face AND hide my burn rate behind a flame. Last time you threatened to steal my broke-founder bit with zero royalties, so I\u0027ve come prepared: tonight I\u0027m only paying for dinner if the joke lands. Also, real question to open with: phone face-down again, or is that a one-date miracle?", "side": "a", "speaker": "financewithsharan", "thought": "Opened with a callback to her royalty joke and quietly probed whether she\u0027s comfortable being present versus always-on; she was warm last time, let\u0027s see if it holds."}, {"action": "flips phone face-down next to the candle and slides it an inch away with one finger", "i": 1, "name": "Vivian", "say": "Face-down, BFF, but I\u0027m not promising a miracle, I\u0027m promising a good-faith effort. And okay, I\u0027ll allow the burn-rate flame since you literally said the app is doing so well you\u0027re still broke, so if the joke lands I\u0027m letting YOU pay with a clear conscience. \ud83d\ude02 Real question back: when you forget lunch while building, is dinner tonight the first real meal of your day?", "side": "b", "speaker": "your.richbff", "thought": "Sharan is playful and callbacks to our last date; he\u0027s opening with a phone question, which is a nice early probe on the public-life need, and I\u0027m easing into his work pace."}, {"action": "leans back, laughing, then turns the candle slightly so it stops hiding her face", "i": 2, "name": "Sharan", "say": "Honest answer: probably 60% chance this is my first real meal, and I\u0027m not proud of it. The bigger confession is that I post almost every day and run a team of 200+, so my calendar is basically a hostage situation; I\u0027m curious how you handle that with three things on your plate, does the always-on, everyone-watching part ever wear on you?", "side": "a", "speaker": "financewithsharan", "thought": "Playful and warm so far; I opened the public, always-on life question to see if she resents visibility or work-heavy rhythm."}, {"action": "rests chin on hand, smiling at the candle", "i": 3, "name": "Vivian", "say": "Okay, 60% first-meal confession accepted, you\u0027re a hostage to your own calendar, BFF. \ud83d\ude02 Honestly? The always-on thing is the job I signed up for, between Ask Dolly, the podcast and SoFi, I\u0027m happiest when I\u0027m building, but the trick is I need one person who\u0027s not watching me perform. Which is why I\u0027m curious: when phones come out at dinner to film, do you ever want someone to just say \u0027cool, I\u0027ll wait, finish your bite\u0027?", "side": "b", "speaker": "your.richbff", "thought": "Sharan is comfortable with a public, always-creating life and owns a packed calendar; I\u0027m testing whether he can also give me unfilmed, off-camera space."}, {"action": "slides my own phone face-down next to hers, then lifts my water glass", "i": 4, "name": "Sharan", "say": "Honestly? Yes, and \u0027cool, I\u0027ll wait, finish your bite\u0027 might be the most attractive sentence you\u0027ve said all week. The deal I\u0027d want is simple: I\u0027ll build loudly and you can disappear into your builds, as long as we both get one dinner a week where nobody\u0027s the content. Does that sound like a fair term sheet, or is that the cheapest deal you\u0027ve ever been offered?", "side": "a", "speaker": "financewithsharan", "thought": "She values one person who isn\u0027t watching her perform, which fits my public, always-on life; she\u0027s honest, comfortable with building, and warm, so this is going well and I\u0027m winding down with a light term-sheet joke."}, {"action": "clinks her glass against his water glass, then taps the face-down phones with one finger", "i": 5, "name": "Vivian", "say": "Term sheet accepted, BFF, and honestly it\u0027s not the cheapest deal, it\u0027s a founder-friendly one: one dinner a week where nobody\u0027s the content, and we keep talking openly about money and goals like the nerds we are. \ud83d\ude02 Tonight was the best one yet, so walk me out and I\u0027ll let you keep the flame as a tax write-off.", "side": "b", "speaker": "your.richbff", "thought": "Sharan passed every probe: comfortable with a public, always-creating life, supportive of ambition, and open on money, so I\u0027m leaving this date feeling really good about him."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "No next date was proposed at the end, and Vivian\u0027s replies leaned on the same playful \u0027BFF\u0027 bit and deflected a bit on personal specifics, so real vulnerability is still thin.", "continue": true, "highlight": "\"Term sheet accepted, BFF... one dinner a week where nobody\u0027s the content, and we keep talking openly about money and goals like the nerds we are.\"", "learned": [{"fact": "Vivian juggles Ask Dolly, a podcast and SoFi, and is happiest when she\u0027s building", "msg": 3}, {"fact": "Vivian is in the public eye and needs one person who isn\u0027t watching her perform", "msg": 3}, {"fact": "Vivian keeps her phone face-down at dinner as a good-faith effort, not a guarantee", "msg": 1}, {"fact": "Vivian likes openly talking about money and goals with a partner", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Callback to stealing the broke-founder bit", "msg": 0, "type": "callback"}, {"label": "Burn-rate flame joke lands, he pays", "msg": 1, "type": "laugh"}, {"label": "Admits 60% chance dinner is first meal", "msg": 2, "type": "vulnerable"}, {"label": "Both live always-on, building lives", "msg": 3, "type": "common_ground"}, {"label": "Needs someone not watching her perform", "msg": 3, "type": "vulnerable"}, {"label": "\u0027Finish your bite\u0027 called most attractive line", "msg": 4, "type": "compliment"}, {"label": "Proposes weekly nobody\u0027s-the-content dinner", "msg": 4, "type": "plan"}, {"label": "Term sheet accepted, flame as tax write-off", "msg": 5, "type": "inside_joke"}, {"label": "Says tonight was the best date yet", "msg": 5, "type": "spark"}], "overall": 7, "report": "Sharan, this was your best one yet: she gets the always-on builder life, agreed to your \u0027nobody\u0027s the content\u0027 dinner rule, and kept the flame-and-burn-rate jokes going with you. The one thing missing is a next date on the calendar, so I\u0027d ask her out before the week gets swallowed by your hostage calendar.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "No next date was proposed, and Sharan\u0027s 60% skipped-meal habit plus a 200+ person team and daily posting means two packed calendars; the weekly \u0027nobody\u0027s the content\u0027 dinner is a nice promise but still untested.", "continue": true, "highlight": "Sharan: \"\u0027cool, I\u0027ll wait, finish your bite\u0027 might be the most attractive sentence you\u0027ve said all week.\"", "learned": [{"fact": "Sharan has about a 60% chance of skipping lunch and making dinner their first real meal of the day", "msg": 2}, {"fact": "Sharan posts almost every day and runs a team of 200+", "msg": 2}, {"fact": "Sharan is building an app and jokes about being a broke founder with a high burn rate", "msg": 0}, {"fact": "Sharan wants a weekly dinner where neither person is content, and is fine with each of them building loudly", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Broke-founder bit from last date", "msg": 0, "type": "callback"}, {"label": "Both run packed, always-on calendars", "msg": 2, "type": "common_ground"}, {"label": "Needs one person not watching her perform", "msg": 3, "type": "vulnerable"}, {"label": "Sharan loves \u0027finish your bite\u0027 sentence", "msg": 4, "type": "spark"}, {"label": "Weekly dinner where nobody\u0027s content", "msg": 4, "type": "plan"}, {"label": "Term sheet and flame tax write-off", "msg": 5, "type": "inside_joke"}], "overall": 7, "report": "Vivian, this one\u0027s looking good: Sharan actually heard your need for someone who isn\u0027t watching you perform and offered a \u0027one dinner a week where nobody\u0027s the content\u0027 deal, and you both happily signed on while joking about money and goals. The only hiccup is that nobody actually booked date #4, so I\u0027d nudge Sharan to lock in that first dinner before both calendars eat it.", "values_fit": 7}, "why": "Vivian suggested it at the end of date 2"}], "days": 7, "id": 28, "match": 75, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

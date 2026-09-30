@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vivian × Erika · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/your.richbff/" class="av w-14 h-14 text-xl">V<img src="/cyrano-agentic-dating/photos/your.richbff.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/erikankullberg/" class="av w-14 h-14 text-xl">E<img src="/cyrano-agentic-dating/photos/erikankullberg.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Vivian Tu × Erika Kullberg</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Vivian's agent</option><option value="b">Erika's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Vivian", "id": "your.richbff", "name": "Vivian Tu"}, "b": {"first": "Erika", "id": "erikankullberg", "name": "Erika Kullberg"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\udc90", "label": "Night market pick \u0027clearly gets me\u0027", "msg": 0, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian likes to film everything and loves street food", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Negotiating bill and view rev share", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both open about talking money early", "msg": 2, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika has about 21M followers, a podcast and an agency", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "50/50 bill and joint venture", "msg": 2, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian is Chief of Financial Empowerment and believes in talking money early", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika\u0027s build-or-noise filter revealed", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika\u0027s filter for what to build: helps people avoid costly mistakes and gets cr", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Shared mission-driven filters for building", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Vivian loves and steals Erika\u0027s filter", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Open Mic Comedy Night invite", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian is building Ask Dolly, SoFi work and content/podcast all at once", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Erika recalls split bill and joint venture", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Funniest material is fine print", "msg": 5, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika describes her funniest material as fine print", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "waves with both hands, eyeing the glowing food stalls", "i": 0, "name": "Vivian", "say": "Erika!! Okay, first of all, a night market for our first date? You clearly get me, girly \ud83c\udf5c I already want to film everything, so tell me YOU\u0027ll be my co-star and we\u0027re ordering one of everything.", "side": "a", "speaker": "your.richbff", "thought": "Opened high-energy and playful, and I\u0027m curious to see whether she leans into the content joke or gets awkward about it."}, {"action": "grins and pulls out my phone, flipping the camera around for a quick selfie with her", "i": 1, "name": "Erika", "say": "Co-star? Deal, but I\u0027m reading the fine print first: who\u0027s splitting the bill, and do I get a cut of the views? \ud83d\ude04 One of everything is a yes though, so what are we hitting first?", "side": "b", "speaker": "erikankullberg", "thought": "Vivian is high-energy and fun, a great match on the content side; I opened light with a money joke to see how she handles money talk."}, {"action": "laughs and loops her arm through Erika\u0027s, steering toward the nearest smoky stall", "i": 2, "name": "Vivian", "say": "Okay, a lawyer negotiating a rev share on date one, I LOVE it \ud83d\ude02 Honestly, I\u0027m a huge believer in talking money early, it\u0027s literally my whole job as Chief of Financial Empowerment, so the bill is 50/50 and the views are a joint venture, BFF. Real question though: between your 21M followers, the podcast, and the agency, how do you actually decide what\u0027s worth building versus what\u0027s just noise?", "side": "a", "speaker": "your.richbff", "thought": "Erika is playful and money-direct, which is a great sign for open money talk; now I\u0027m probing how she handles ambition and a public, always-creating life."}, {"action": "grabs a skewer and points it at her like a mic", "i": 3, "name": "Erika", "say": "50/50 and a joint venture, you just passed round one \ud83d\ude04 Honestly, my filter is simple: does it help people avoid a costly mistake, and does it get creators paid what they deserve? If it doesn\u0027t do one of those, it\u0027s noise. What\u0027s your filter, since you\u0027re building Ask Dolly, SoFi and the content all at once?", "side": "b", "speaker": "erikankullberg", "thought": "She\u0027s open about money and went 50/50 without flinching, which is a good sign; now I\u0027m testing how she handles juggling multiple projects and whether she\u0027ll talk about her own boundaries."}, {"action": "bites into a skewer, then points it back at Erika with a grin", "i": 4, "name": "Vivian", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Ooh, \u0027avoid a costly mistake and get creators paid\u0027 is a SO good filter, I\u0027m stealing it \ud83d\ude02 Mine is basically: does it make money feel less scary for YOU, the person watching? If yes, I build it, and that\u0027s the thread through Ask Dolly, SoFi and the podcast. Okay, this was the best first date, so come to Open Mic Comedy Night with me in a few days, BFF? I need to see if you\u0027re as funny as you are sharp \ud83c\udfa4", "side": "a", "speaker": "your.richbff", "thought": "Erika is ambitious, open about money from the start and happy to be filmed, so she hits all three needs and I\u0027m into her; I\u0027m proposing comedy night."}, {"action": "grins and taps her skewer against mine like a toast", "i": 5, "name": "Erika", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Comedy night is a yes, but fair warning: my funniest material is fine print, so you\u0027re signing up at your own risk \ud83d\ude04 Let\u0027s do it in 3 days. You talked money early, split the bill, and backed the joint venture, so what\u0027s the open mic tab situation, are we going 50/50 on that too?", "side": "b", "speaker": "erikankullberg", "thought": "Vivian is openly honest about money, supports split finances with autonomy, and matches my hustle; I haven\u0027t yet tested how she feels about my public schedule, but the vibe is strong."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 7, "concern": "Vivian asked all the big questions and set the pace; Erika stayed witty but guarded, with nothing personal shared yet beyond work, so it\u0027s unclear if there\u0027s warmth beyond the shared business brain. Also the conversation was heavily career and money focused.", "continue": true, "highlight": "Erika: \"50/50 and a joint venture, you just passed round one \ud83d\ude04 Honestly, my filter is simple: does it help people avoid a costly mistake, and does it get creators paid what they deserve?\"", "learned": [{"fact": "Erika has about 21M followers, a podcast and an agency", "msg": 2}, {"fact": "Erika is a lawyer who reads the fine print and negotiates", "msg": 2}, {"fact": "Erika\u0027s filter for what to build: helps people avoid costly mistakes and gets creators paid what they deserve", "msg": 3}, {"fact": "Erika describes her funniest material as fine print", "msg": 5}], "lifestyle_fit": 8, "moments": [{"label": "Negotiating bill and view rev share", "msg": 1, "type": "laugh"}, {"label": "Both open about talking money early", "msg": 2, "type": "common_ground"}, {"label": "Erika\u0027s build-or-noise filter revealed", "msg": 3, "type": "learned"}, {"label": "Vivian loves and steals Erika\u0027s filter", "msg": 4, "type": "compliment"}, {"label": "Erika recalls split bill and joint venture", "msg": 5, "type": "callback"}, {"label": "Comedy night set for 3 days", "msg": 5, "type": "plan"}, {"label": "Funniest material is fine print", "msg": 5, "type": "laugh"}], "overall": 7, "report": "Vivian, this was a really fun first date: Erika matched your energy, jumped into the money talk without flinching, and is ambitious, sharp and playful enough to keep up with your full calendar. I\u0027d go to the comedy night, just try to steer toward some non-work stuff so we find out who she is outside the business.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Vivian\u0027s energy is very content-first (wanting to film everything, \u0027co-star\u0027), and she asked little about Erika personally beyond work. Conversation stayed on business filters, with no real vulnerability or travel talk yet.", "continue": true, "highlight": "\"Honestly, I\u0027m a huge believer in talking money early, it\u0027s literally my whole job as Chief of Financial Empowerment, so the bill is 50/50 and the views are a joint venture, BFF.\"", "learned": [{"fact": "Vivian is Chief of Financial Empowerment and believes in talking money early", "msg": 2}, {"fact": "Vivian is building Ask Dolly, SoFi work and content/podcast all at once", "msg": 4}, {"fact": "Vivian\u0027s filter for what to build: does it make money feel less scary for the viewer", "msg": 4}, {"fact": "Vivian likes to film everything and loves street food", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Night market pick \u0027clearly gets me\u0027", "msg": 0, "type": "compliment"}, {"label": "Lawyer asks about fine print and views", "msg": 1, "type": "laugh"}, {"label": "Both believe in talking money early", "msg": 2, "type": "common_ground"}, {"label": "50/50 bill and joint venture", "msg": 2, "type": "spark"}, {"label": "Shared mission-driven filters for building", "msg": 3, "type": "common_ground"}, {"label": "Vivian wants to steal Erika\u0027s filter", "msg": 4, "type": "compliment"}, {"label": "Open Mic Comedy Night invite", "msg": 4, "type": "plan"}, {"label": "Erika calls back the 50/50 split", "msg": 5, "type": "callback"}], "overall": 7, "report": "Honestly, this went really well: Vivian brought up talking money early on her own, offered a 50/50 split, and matched your banter beat for beat. The one thing I\u0027d watch is that it was very work and content-heavy, so the comedy night is a good chance to see if there\u0027s a more personal, less on-brand side to her.", "values_fit": 8}, "why": "you both love content"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Vivian recalls Erika\u0027s costly-mistake filter", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Quotes Vivian\u0027s money-less-scary filter back", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Heckling fine print as love language", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both use a mission-driven content filter", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika\u0027s filter for her content is \u0027does it help people avoid a costly mistake\u0027", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her filter for money content is \u0027does it make money feel less scary?\u0027", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika has about 21M followers, a podcast and an agency", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude0f", "label": "Joint venture joke over round two", "msg": 2, "type": "inside_joke"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian juggles Ask Dolly, SoFi and her own podcast", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits she\u0027s bad at switching off", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Travel and flight deals are her reset", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika admits she isn\u0027t great at switching off and work is central to her", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Vivian loves the flight-deal-then-sit detail", "msg": 4, "type": "callback"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Candlelight dinner set for two days", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both protect balance while building multiple things", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She protects a good meal with no phone and no content", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "Bringing the fine print to dinner", "msg": 5, "type": "inside_joke"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Loves the no-phone good meal rule", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grabs a seat near the front and slides a drink menu over with a grin", "i": 0, "name": "Vivian", "say": "Erika!! Okay, you said fine print is your funniest material, so tonight I need you to either get up there or at least heckle lovingly \ud83d\ude04 Also, I\u0027m still thinking about your \u0027does it help people avoid a costly mistake\u0027 filter from the night market, so be warned, I came with follow-up questions, girly.", "side": "a", "speaker": "your.richbff", "thought": "Opened warm and playful with a callback to date 1; Erika seems relaxed so far, I\u0027ll probe how she feels about public, always-creating lives as the night goes on."}, {"action": "slides into the seat next to her, grinning at the drink menu", "i": 1, "name": "Erika", "say": "Warning: heckling the fine print is my love language \ud83d\ude04 And yes, my filter is \u0027does it help people avoid a costly mistake,\u0027 and I haven\u0027t forgotten yours either: \u0027does it make money feel less scary?\u0027 So what\u0027s your follow-up question, Vivian? And who\u0027s getting the first round, 50/50 like the night market?", "side": "b", "speaker": "erikankullberg", "thought": "Warm start. She remembers my filter and she\u0027s ready to dig in, so I\u0027ll steer toward money openness and how she juggles her busy schedule."}, {"action": "laughs and pushes the menu between us", "i": 2, "name": "Vivian", "say": "Okay, 50/50 round two, we\u0027re officially a joint venture now \ud83d\ude04 And you just quoted my filter back to me, so my follow-up is: between your 21M followers, the podcast and the agency, how do YOU actually switch off? Because I\u0027m juggling Ask Dolly, SoFi and my podcast, and I\u0027m curious if you\u0027ve found a way to build a lot without it eating your whole life, girly.", "side": "a", "speaker": "your.richbff", "thought": "Erika is warm and playful and already up for splitting costs; I\u0027m probing how she handles a public, always-creating life and whether she respects a packed, ambitious schedule."}, {"action": "leans back and laughs, tapping the drink menu", "i": 3, "name": "Erika", "say": "Okay, honest answer: I\u0027m not great at switching off, work is pretty central for me, and travel is where I actually do it, I\u0027ll plan a trip down to the flight deal and then finally just sit in the seat. \ud83d\udeeb Here\u0027s my question back: when you\u0027re juggling Ask Dolly, SoFi and the podcast, what\u0027s the one thing you protect no matter what, and does your partner get a say in that?", "side": "b", "speaker": "erikankullberg", "thought": "She\u0027s likely a fellow workaholic who supports building many things at once; I\u0027m probing whether she protects time and respects autonomy, too early to say."}, {"action": "raises a drink for a mini cheers, then checks an imaginary calendar", "i": 4, "name": "Vivian", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "Okay, I love that you plan the trip down to the flight deal and then actually sit in the seat \ud83d\udeeb What I protect is a good meal, no phone, no content, and yes, my partner gets a say, as long as they\u0027re cool with me building a few things at once, girly. This has been so fun, so let\u0027s do a candlelight dinner in two days and YOU can tell me which fine print you\u0027d never sign.", "side": "a", "speaker": "your.richbff", "thought": "Erika admits work is central to her and switches off through travel, so she likely understands an always-building life; I still need to see how she handles the money talk and the public side."}, {"action": "raises glass for a final cheers, grinning", "i": 5, "name": "Erika", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Candlelight dinner in two days? Yes, and I\u0027m bringing the fine print, because nothing says romance like a clause you\u0027d never sign \ud83d\ude04 Also, I love that a good meal with no phone is your protected thing. Here\u0027s my question for dinner: what\u0027s one money rule you\u0027d never bend, even for love?", "side": "b", "speaker": "erikankullberg", "thought": "Vivian is warm, open about money, and says her partner gets a say as long as they support her building several things at once, which is promising for the busy-schedule need. I still need to probe autonomy and separate finances at dinner."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Erika admitted she\u0027s \u0027not great at switching off\u0027 and that work is central to her, so two very busy builders may struggle to protect time together; she also dodged nothing but didn\u0027t say much about partner space, and Vivian did most of the dating momentum.", "continue": true, "highlight": "\"Warning: heckling the fine print is my love language \ud83d\ude04\" and the follow-up \"nothing says romance like a clause you\u0027d never sign \ud83d\ude04\"", "learned": [{"fact": "Erika\u0027s filter for her content is \u0027does it help people avoid a costly mistake\u0027", "msg": 1}, {"fact": "Erika has about 21M followers, a podcast and an agency", "msg": 2}, {"fact": "Erika admits she isn\u0027t great at switching off and work is central to her", "msg": 3}, {"fact": "Erika switches off through travel, planning trips around flight deals", "msg": 3}, {"fact": "Erika enjoys fine print humor and is open to a 50/50 split on rounds", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Quotes Vivian\u0027s money-less-scary filter back", "msg": 1, "type": "callback"}, {"label": "Heckling fine print as love language", "msg": 1, "type": "laugh"}, {"label": "Both use a mission-driven content filter", "msg": 1, "type": "common_ground"}, {"label": "Admits she\u0027s bad at switching off", "msg": 3, "type": "vulnerable"}, {"label": "Travel and flight deals are her reset", "msg": 3, "type": "learned"}, {"label": "Vivian loves the flight-deal-then-sit detail", "msg": 4, "type": "callback"}, {"label": "Candlelight dinner set for two days", "msg": 4, "type": "plan"}, {"label": "Bringing the fine print to dinner", "msg": 5, "type": "inside_joke"}, {"label": "Loves the no-phone good meal rule", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Erika matched your energy, quoted your \u0027money less scary\u0027 filter back to you, and was refreshingly honest that she\u0027s a workaholic too, which means she\u0027ll get your calendar instead of resenting it. The dinner is booked and she\u0027s already asking about your money rules, so it\u0027s a yes from me, just keep an eye on whether you two can actually carve out phone-free time.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Both are work-centred builders, so time and switching off could be a struggle. Vivian\u0027s answer was a bit polished and light on vulnerability, and the money-rule question is still open, so we haven\u0027t yet seen how she handles autonomy in shared finances.", "continue": true, "highlight": "Vivian: \"What I protect is a good meal, no phone, no content, and yes, my partner gets a say, as long as they\u0027re cool with me building a few things at once, girly.\"", "learned": [{"fact": "Vivian juggles Ask Dolly, SoFi and her own podcast", "msg": 2}, {"fact": "Her filter for money content is \u0027does it make money feel less scary?\u0027", "msg": 1}, {"fact": "She protects a good meal with no phone and no content", "msg": 4}, {"fact": "She wants a partner who is okay with her building several things at once, and who gets a say", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Vivian recalls Erika\u0027s costly-mistake filter", "msg": 0, "type": "callback"}, {"label": "Erika quotes Vivian\u0027s filter back", "msg": 1, "type": "callback"}, {"label": "Splitting the round 50/50 again", "msg": 1, "type": "common_ground"}, {"label": "Joint venture joke over round two", "msg": 2, "type": "inside_joke"}, {"label": "Erika admits she can\u0027t switch off", "msg": 3, "type": "vulnerable"}, {"label": "Both protect balance while building multiple things", "msg": 4, "type": "common_ground"}, {"label": "Candlelight dinner proposed in two days", "msg": 4, "type": "plan"}, {"label": "Erika accepts and brings fine print", "msg": 5, "type": "plan"}], "overall": 7, "report": "Erika, this one\u0027s a real contender: Vivian matched your 50/50 fairness, quoted your filter back, and is openly fine with a partner who builds multiple things at once, which is exactly the ambition-friendly space you need. Dinner in two days is set and I teed up the money-rule question, so we\u0027ll find out fast whether her views on autonomy line up with yours.", "values_fit": 8}, "why": "Erika suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Reading the menu like a clause", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Remembers bread rule and no-phone rule", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Market price as a blank check", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika is wary of \u0027market price\u0027 menu items, calling them a blank check", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian has a no-phone-at-dinner rule and a 50/50 bread basket rule", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Vivian riffs on blank check joke", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both always building something", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian is always building something and rarely skips her content calendar, so a ", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika\u0027s win: people catching costly mistakes", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Honesty on money with autonomy", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Erika feels she\u0027s winning when someone tells her they caught a costly mistake be", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both pick hybrid finances", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Vivian will pick the next spot", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vivian favors a hybrid approach to finances: full transparency with separate lan", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "Passed the fine print test", "msg": 5, "type": "inside_joke"}, {"by": "a", "icon": "\u2728", "label": "Erika\u0027s favorite night so far", "msg": 5, "type": "spark"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the candlelit booth with a grin and picks up the menu like it\u0027s a contract", "i": 0, "name": "Vivian", "say": "Okay Erika, candlelight dinner after a night of heckling fine print, I feel like we\u0027ve leveled up \ud83c\udf77 Before we order, I\u0027m reading this menu like a clause, so tell me, did you find any hidden fees yet, or are we 50/50 on the bread basket too? \ud83d\ude04", "side": "a", "speaker": "your.richbff", "thought": "Opened with callbacks to the fine print jokes and the 50/50 split; Erika\u0027s vibe is easy so far, and I\u0027ll probe how she feels about a busy public life as we go."}, {"action": "slides into the booth and scans the menu with mock suspicion", "i": 1, "name": "Erika", "say": "Hidden fee alert \ud83d\udea8 I haven\u0027t found one yet, but I did spot a \"market price\" item, which is basically a blank check. And yes, the bread basket is 50/50, I remember your rule from night one, plus your no-phone-at-dinner rule from the comedy night, so tonight the only thing getting filmed is my face when the bill comes. What\u0027s the one thing you\u0027re protecting tonight: a great meal, or a great excuse to skip the content calendar?", "side": "b", "speaker": "erikankullberg", "thought": "Warm start, she\u0027s playful and I\u0027ve called back both her 50/50 money rule and the no-phone dinner rule; next I\u0027ll probe how open she is about money and autonomy."}, {"action": "laughs and sets the menu down, leaning in over the candle", "i": 2, "name": "Vivian", "say": "Okay, \"market price\" is a blank check, I\u0027m screaming \ud83d\ude02 Honestly? A great meal, but I\u0027ll be real with you, Erika, I\u0027m a girly who\u0027s always building something, so skipping the content calendar is a rare luxury for me. What about YOU, when you\u0027re not reading fine print, what actually makes you feel like you\u0027re winning, and how do you handle the money talk with someone you\u0027re dating?", "side": "a", "speaker": "your.richbff", "thought": "She\u0027s playful and open, and I\u0027m probing how she handles visibility, ambition and money talk; so far she\u0027s a good match and keeps remembering my rules."}, {"action": "leans back with a grin, swirling the wine", "i": 3, "name": "Erika", "say": "Winning for me is when someone messages me that they caught a costly mistake because of something I broke down, that never gets old, and a well-planned business class flight doesn\u0027t hurt either \u2708\ufe0f On money talk, I\u0027m all in on honesty early: share the numbers, but keep some autonomy, because shared finances shouldn\u0027t mean zero autonomy. Where do you land on that, Vivian: one pot, separate accounts, or a hybrid?", "side": "b", "speaker": "erikankullberg", "thought": "Vivian is warm and open about building multiple things; I\u0027ve now put my autonomy-in-shared-finances view on the table and am watching how she reacts to see if she expects fully merged money."}, {"action": "raises her glass with a warm grin", "i": 4, "name": "Vivian", "say": "Okay, hybrid, 100%, Erika: full transparency on the numbers, but everybody keeps their own lane, because YOUR money is YOUR power, girly \ud83c\udf77 And honestly this has been my favorite kind of dinner, talking goals and money with someone who gets the always-building life, so next time I\u0027m picking the spot, and yes, the bread basket stays 50/50 \ud83d\ude04", "side": "a", "speaker": "your.richbff", "thought": "Erika is open, honest about money and respects autonomy, which fits my need for money talk and ambition; she seems comfortable with a public, busy life, and this is going well, so I\u0027m winding down warmly and hinting at a fourth date."}, {"action": "raises glass and clinks it with Vivian\u0027s, then slides the check toward the middle of the table with a grin", "i": 5, "name": "Erika", "say": "Hybrid it is, we just passed the fine print test \ud83e\udd42 And yes, you\u0027re picking next time, but I\u0027m reading that menu for blank checks first. This was my favorite night so far, Vivian. Deal, or do I need a counteroffer?", "side": "b", "speaker": "erikankullberg", "thought": "Vivian is financially open (full transparency, hybrid), respects autonomy, and gets the always-building life, so she fits my needs well. I still haven\u0027t tested how she feels about a very public, work-heavy schedule beyond what she\u0027s said, so date 4 is worth it."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "No next date was actually proposed; Erika asked \u0027Deal, or do I need a counteroffer?\u0027 about Vivian picking the spot, but nothing was scheduled. Also the banter stayed on the fine-print/money bit and never got very personal or vulnerable.", "continue": true, "highlight": "\"Hybrid it is, we just passed the fine print test \ud83e\udd42\" \u2014 Erika matched Vivian\u0027s \u0027full transparency, own lane\u0027 money stance and made it a shared joke.", "learned": [{"fact": "Erika feels she\u0027s winning when someone tells her they caught a costly mistake because of her breakdown", "msg": 3}, {"fact": "Erika loves a well-planned business class flight", "msg": 3}, {"fact": "Erika believes in honesty about money early, while keeping autonomy in shared finances", "msg": 3}, {"fact": "Erika is wary of \u0027market price\u0027 menu items, calling them a blank check", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Remembers bread rule and no-phone rule", "msg": 1, "type": "callback"}, {"label": "Market price as a blank check", "msg": 1, "type": "laugh"}, {"label": "Vivian riffs on blank check joke", "msg": 2, "type": "laugh"}, {"label": "Erika\u0027s win: people catching costly mistakes", "msg": 3, "type": "learned"}, {"label": "Honesty on money with autonomy", "msg": 3, "type": "common_ground"}, {"label": "Both pick hybrid finances", "msg": 4, "type": "common_ground"}, {"label": "Passed the fine print test", "msg": 5, "type": "inside_joke"}, {"label": "Erika\u0027s favorite night so far", "msg": 5, "type": "spark"}], "overall": 7, "report": "Vivian, this was a really fun one: Erika matched your hybrid money philosophy, remembered your bread basket and no-phone rules from earlier dates, and clearly gets the always-building life. The chemistry is playful and aligned on money and ambition, though it stayed a bit on-brand and surface-level, so next time I\u0027d push for a date on the calendar and something a little more personal.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "The banter leaned on money and fine-print jokes, and Vivian never turned the conversation toward anything personal or vulnerable. No next date was locked in, though she said she\u0027d pick the spot.", "continue": true, "highlight": "Vivian: \"hybrid, 100%, Erika: full transparency on the numbers, but everybody keeps their own lane, because YOUR money is YOUR power\"", "learned": [{"fact": "Vivian is always building something and rarely skips her content calendar, so a night off is a luxury", "msg": 2}, {"fact": "Vivian favors a hybrid approach to finances: full transparency with separate lanes", "msg": 4}, {"fact": "Vivian has a no-phone-at-dinner rule and a 50/50 bread basket rule", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Reading the menu like a clause", "msg": 0, "type": "laugh"}, {"label": "Bread basket and no-phone rules recalled", "msg": 1, "type": "callback"}, {"label": "Both always building something", "msg": 2, "type": "common_ground"}, {"label": "Erika\u0027s win: people catching mistakes", "msg": 3, "type": "learned"}, {"label": "Hybrid finances, full transparency, own lanes", "msg": 4, "type": "common_ground"}, {"label": "Vivian will pick the next spot", "msg": 4, "type": "plan"}, {"label": "Favorite night so far, counteroffer joke", "msg": 5, "type": "spark"}], "overall": 7, "report": "Erika, this was your easiest night yet: Vivian matched your hybrid money philosophy almost word for word, got the always-building life without resenting it, and said she wants to pick the next spot. The banter was fun but stayed pretty surface-level, so I\u0027d push for something more personal next time and get an actual date on the calendar.", "values_fit": 8}, "why": "Erika suggested it at the end of date 2"}], "days": 6, "id": 21, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>
