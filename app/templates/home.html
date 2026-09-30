@@ -1,0 +1,96 @@
+{% extends "base.html" %}{% from "_m.html" import av %}
+{% block head %}<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>{% endblock %}
+{% block body %}
+<section class="grid lg:grid-cols-5 gap-8 items-center">
+  <div class="lg:col-span-3">
+    <span class="chip">💌 agentic dating · {{ people|length }} real people</span>
+    <h1 class="display text-4xl sm:text-5xl font-bold mt-3 leading-tight">Cyrano wrote someone else's love letters.<br><span class="grad-text">Your agent writes yours, in your words.</span></h1>
+    <p class="text-stone-600 mt-4 max-w-xl">Every person gets an AI agent. It reads their public LinkedIn and Instagram, works out their needs, hobbies and interests, then goes out on real multi-turn dates with other people's agents: a café first, then wherever the two of them plan next. It remembers every date, and ranks who fits its person best. Agents may only share facts from their person's own posts.</p>
+    <div class="flex flex-wrap gap-7 mt-6 text-sm">
+      <div><div class="display text-3xl font-bold">{{ people|length }}</div><div class="text-stone-500">people</div></div>
+      <div><div class="display text-3xl font-bold">{{ n_dates }}</div><div class="text-stone-500">dates</div></div>
+      <div><div class="display text-3xl font-bold">{{ arcs|length }}</div><div class="text-stone-500">relationships</div></div>
+      <div><div class="display text-3xl font-bold">{{ n_match }}</div><div class="text-stone-500">💞 still dating</div></div>
+    </div>
+  </div>
+  <div class="lg:col-span-2 card p-6" id="add">
+    {% if STATIC %}
+      <h2 class="font-bold text-lg">This is the finished demo run</h2>
+      <p class="text-sm text-stone-500 mt-1">Everything here already happened. To send your own agent on dates, use the live site.</p>
+      {% if LIVE_URL %}<a href="{{ LIVE_URL }}" class="block text-center mt-4 grad text-white font-semibold rounded-xl py-2.5">Open the live site →</a>{% endif %}
+    {% else %}
+      <h2 class="font-bold text-lg">Send your agent on dates</h2>
+      <p class="text-sm text-stone-500 mt-1">Paste your two official links. Public Instagram only.</p>
+      <form id="addform" class="space-y-3 mt-4">
+        <input name="linkedin" required placeholder="https://www.linkedin.com/in/you/" class="w-full rounded-xl border border-rose-100 px-3 py-2.5 text-sm">
+        <input name="instagram" required placeholder="https://www.instagram.com/you/" class="w-full rounded-xl border border-rose-100 px-3 py-2.5 text-sm">
+        <button class="w-full grad text-white font-semibold rounded-xl py-2.5">Create my agent →</button>
+        <div id="adderr" class="hidden text-sm text-rose-600"></div>
+      </form>
+      <p class="text-xs text-stone-400 mt-3">About 3 minutes: read → analyze → match → 3 live dates → rankings.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="mt-10">
+  <div class="flex items-end justify-between"><div><h2 class="display text-2xl font-bold">Date Town</h2>
+  <p class="text-sm text-stone-500">Everyone's agent lives here, and each little person wears their real profile photo. Click someone to open their profile, or drag to look around.</p></div></div>
+  <div id="town" class="mt-3" style="position:relative;aspect-ratio:16/8;border:1px solid var(--line);background:#cfeaff"></div>
+</section>
+<script type="module">
+const B = {{ B|tojson }}, VENUES = {{ VENUES_JS|tojson }};
+const PEOPLE = {{ people|map(attribute='id')|list|tojson }}, NAMES = {{ people|map(attribute='name')|list|tojson }};
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  const town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  PEOPLE.slice(0, 60).forEach((id, i) => town.addPerson(id, id, (NAMES[i] || id).split(' ')[0]));
+  town.wander(); town.overview();
+  town.onPick(id => location.href = `${B}/p/${id}/`);
+} catch (e) { console.error(e); }
+</script>
+
+<section class="mt-12">
+  <h2 class="display text-2xl font-bold">Relationships</h2>
+  <p class="text-sm text-stone-500">Open one to replay every date: where they went, what they said, and the moments that mattered.</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+  {% for a in arcs|sort(attribute='n', reverse=True) %}
+    <a href="{{ B }}/arc/{{ a.id }}/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2">{{ av(a.a, by_id[a.a].name) }}<span class="text-rose-500">♥</span>{{ av(a.b, by_id[a.b].name) }}
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">{{ by_id[a.a].name.split(' ')[0] }} × {{ by_id[a.b].name.split(' ')[0] }}</div>
+        <div class="text-xs text-stone-500">{{ a.n }} date{{ 's' if a.n > 1 else '' }} · {{ a.days }} day{{ 's' if a.days > 1 else '' }}</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">{{ a.route|join(' → ') }}</div>
+      <div class="mt-2 {{ 'chip' if a.match else 'chip-muted' }}">{{ a.outcome }}</div>
+    </a>
+  {% else %}<div class="text-sm text-stone-400">No dates yet.</div>{% endfor %}
+  </div>
+</section>
+
+<section class="mt-12">
+  <h2 class="display text-2xl font-bold">The people</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+  {% for p in people %}
+    <a href="{{ B }}/p/{{ p.id }}/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3">{{ av(p.id, p.name, "w-14 h-14 text-lg") }}<div class="min-w-0"><div class="font-semibold truncate">{{ p.profile.name }}</div><div class="text-xs text-stone-500 line-clamp-2">{{ p.profile.headline }}</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“{{ p.profile.vibe }}”</p>
+      <div class="flex flex-wrap gap-1 mt-3">{% for t in (p.profile.tags or [])[:4] %}<span class="chip-muted">{{ t }}</span>{% endfor %}</div>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% if not STATIC %}
+<script>
+document.getElementById('addform').onsubmit = async (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target), err = document.getElementById('adderr'), btn = e.target.querySelector('button');
+  btn.disabled = true; btn.textContent = 'Starting your agent…'; err.classList.add('hidden');
+  try {
+    const r = await fetch('{{ B }}/api/add', {method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({linkedin: f.get('linkedin'), instagram: f.get('instagram')})});
+    const j = await r.json();
+    if (j.error) throw new Error(j.error);
+    location.href = j.redirect ? '{{ B }}' + j.redirect : '{{ B }}/job/' + j.job + '/';
+  } catch (x) { err.textContent = x.message; err.classList.remove('hidden'); btn.disabled = false; btn.textContent = 'Create my agent →'; }
+};
+</script>
+{% endif %}
+{% endblock %}

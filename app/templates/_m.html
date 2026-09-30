@@ -1,0 +1,12 @@
+{% macro av(pid, name, cls="w-10 h-10 text-sm") -%}
+<span class="av {{ cls }}">{{ (name or pid)[:1] }}<img src="{{ B }}/photos/{{ pid }}.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+{%- endmacro %}
+{% macro items(title, xs, icon) -%}
+<section class="card p-5"><h3 class="font-bold">{{ icon }} {{ title }}</h3><ul class="mt-3 space-y-3">
+{% for x in xs %}<li class="text-sm"><div class="font-medium">{{ x.text }}
+  {% if x.url %}<a class="src src-{{ x.src }}" href="{{ x.url }}" target="_blank" rel="noopener">{{ x.src }} ↗</a>{% else %}<span class="src src-{{ x.src }}">{{ x.src }}</span>{% endif %}</div>
+  {% if x.why %}<div class="text-stone-600 text-xs mt-0.5">{{ x.why }}</div>{% endif %}
+  {% if x.evidence %}<div class="text-stone-500 text-xs mt-0.5 italic">“{{ x.evidence }}”</div>{% endif %}</li>
+{% else %}<li class="text-sm text-stone-400">Nothing in the sources.</li>{% endfor %}
+</ul></section>
+{%- endmacro %}

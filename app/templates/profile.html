@@ -1,0 +1,101 @@
+{% extends "base.html" %}{% from "_m.html" import av, items %}
+{% block title %}{{ pr.name }} · {{ APP }}{% endblock %}
+{% block body %}
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  {{ av(p.id, pr.name, "w-28 h-28 text-3xl") }}
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">{{ pr.name }}</h1>
+    <div class="text-stone-600">{{ pr.headline }}</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 {{ pr.location }}{% if pr.pronouns %} · {{ pr.pronouns }}{% endif %}{% if pr.age_hint %} · {{ pr.age_hint }}{% endif %}</div>
+    <p class="display italic text-xl mt-3 grad-text">“{{ pr.vibe }}”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">{{ pr.summary }}</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="{{ p.li_url }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="{{ p.ig_url }}" target="_blank" rel="noopener">Instagram ↗</a>
+      {% for t in pr.tags or [] %}<span class="chip-muted">{{ t }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    {% for label, val in [('posts read', sig.posts_read), ('words / caption', sig.words_per_caption), ('emoji / post', sig.emoji_per_post),
+       ('Hinglish posts', (((sig.hinglish_share * 100)|round|int) ~ '%') if sig.hinglish_share is not none else None), ('posts / month', sig.posts_per_month),
+       ('video share', ((sig.video_share or 0) * 100)|round|int ~ '%'), ('people tagged', sig.circle_size), ('avg likes', sig.avg_likes)] %}
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">{{ val if val is not none else "—" }}</div><div class="text-[11px] text-stone-500">{{ label }}</div></div>
+    {% endfor %}
+  </div>
+  {% if sig.places or sig.top_hashtags %}<div class="text-xs text-stone-500 mt-3">{% if sig.places %}📍 {{ sig.places|join(' · ') }}{% endif %}{% if sig.top_hashtags %} &nbsp; # {{ sig.top_hashtags|join(' #') }}{% endif %}</div>{% endif %}
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  {{ items("Needs", pr.needs, "💗") }}
+  {{ items("Hobbies", pr.hobbies, "🎯") }}
+  {{ items("Interests", pr.interests, "✨") }}
+  {{ items("Values", pr["values"], "🧭") }}
+  {{ items("Other qualities", pr.qualities, "🌟") }}
+  {{ items("Things only a friend would know", pr.personal_facts, "📌") }}
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    {% set per = pr.personality or {} %}
+    {% for k, label in [('openness','Openness'),('conscientiousness','Conscientiousness'),('extraversion','Extraversion'),('agreeableness','Agreeableness'),('emotional_stability','Emotional stability')] %}
+    {% set v = (per[k] or 50)|int %}
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>{{ label }}</span><span class="text-stone-500">{{ v }}</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: {{ v }}%"></div></div></div>
+    {% endfor %}
+    <p class="text-xs text-stone-500 mt-3">{{ per.notes }}</p>
+    <p class="text-xs mt-2"><b>Energy:</b> {{ pr.energy }} · <b>Love language:</b> {{ (pr.love_language or {}).guess }} <span class="text-stone-500">({{ (pr.love_language or {}).why }})</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">{{ (pr.voice or {}).style }}</p>
+    <div class="flex flex-wrap gap-1 mt-2">{% for q in (pr.voice or {}).quirks or [] %}<span class="chip-muted">{{ q }}</span>{% endfor %}</div>
+    <div class="mt-3 space-y-2">{% for s in (pr.voice or {}).samples or [] %}<div class="text-sm italic border-l-2 border-rose-300 pl-3">“{{ s }}”</div>{% endfor %}</div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5">{% for k, v in (pr.lifestyle or {}).items() %}<div><dt class="text-xs font-semibold text-stone-500 uppercase">{{ k }}</dt><dd>{{ v }}</dd></div>{% endfor %}</dl>
+    {% if pr.ambitions %}<div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4">{% for a in pr.ambitions %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1">{% for x in pr.green_flags or [] %}<li>{{ x }}</li>{% endfor %}</ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1">{% for x in pr.friction or [] %}<li>{{ x }}</li>{% endfor %}</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1">{% for x in pr.dealbreakers or [] %}<li>{{ x }}</li>{% endfor %}</ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">{{ pr.looking_for }}</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> {{ pr.confidence }}</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 {{ pr.name.split(' ')[0] }}'s dates</h3>
+    <div class="mt-3 space-y-2">
+    {% for a in arcs %}{% set other = a.b if a.a == p.id else a.a %}
+      <a href="{{ B }}/arc/{{ a.id }}/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        {{ av(other, by_id[other].name if other in by_id else other) }}
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">{{ by_id[other].name if other in by_id else other }}</div><div class="text-xs text-stone-500">{{ a.route|join(' → ') }} · {{ a.outcome }}</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    {% else %}<div class="text-sm text-stone-400">No dates yet.</div>{% endfor %}
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits {{ pr.name.split(' ')[0] }} best</h3><a href="{{ B }}/rankings/#{{ p.id }}" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    {% for r in ranking[:10] %}
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">{{ loop.index }}</span>{{ av(r.id, r.name, "w-9 h-9 text-sm") }}
+        <div class="flex-1 min-w-0"><a href="{{ B }}/p/{{ r.id }}/" class="text-sm font-semibold hover:text-rose-600">{{ r.name }}</a>
+          <div class="text-xs text-stone-500 truncate">{% if r.dates %}{{ r.route|join(' → ') }} · {{ r.outcome }}{% else %}not dated yet · pre-date match {{ r.match }}{% endif %}</div></div>
+        {% if r.arc_id %}<a href="{{ B }}/arc/{{ r.arc_id }}/" class="chip">▶</a>{% endif %}
+        <span class="display text-xl font-bold w-10 text-right">{{ r.score }}</span></li>
+    {% endfor %}
+    </ol>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Building your agent… · {{ APP }}{% endblock %}
+{% block body %}
+<h1 class="display text-3xl font-bold">Building your agent <span id="spin" class="grad-text">…</span></h1>
+<div class="grid lg:grid-cols-3 gap-6 mt-6">
+  <div class="card p-5 space-y-3 h-fit" id="steps">
+    {% for k, label in [('scrape','Read LinkedIn + Instagram'),('analyze','Analyze the person'),('match','Match against everyone'),('dates','Go on dates'),('rank','Rank best fits')] %}
+    <div class="flex items-center gap-3" data-step="{{ k }}"><span class="w-7 h-7 rounded-full grid place-items-center bg-stone-100 text-stone-400 text-sm">{{ loop.index }}</span><span class="font-medium text-stone-400">{{ label }}</span></div>
+    {% endfor %}
+    <div id="links" class="pt-2 space-y-2"></div>
+    <div id="err" class="hidden text-sm text-rose-700 bg-rose-50 rounded-xl p-3"></div>
+    <div class="pt-3 border-t border-rose-50"><div class="text-xs font-bold text-stone-500 mb-1">Live log</div><div id="log" class="text-xs text-stone-500 space-y-1 max-h-72 overflow-auto font-mono"></div></div>
+  </div>
+  <div class="lg:col-span-2 space-y-5" id="arcs"><div class="card p-6 text-stone-500 text-sm" id="waiting">The dates stream in here, message by message, while the agents talk.</div></div>
+</div>
+<script>
+const job = {{ job|tojson }}, B = {{ B|tojson }};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const order = ['scrape', 'analyze', 'match', 'dates', 'rank'], panels = {};
+function mark(step) {
+  const idx = order.indexOf(step);
+  document.querySelectorAll('[data-step]').forEach(el => {
+    const i = order.indexOf(el.dataset.step), dot = el.children[0], lbl = el.children[1];
+    if (i < idx || step === 'end') { dot.className = 'w-7 h-7 rounded-full grid place-items-center bg-emerald-500 text-white text-sm'; dot.textContent = '✓'; lbl.className = 'font-medium'; }
+    else if (i === idx) { dot.className = 'w-7 h-7 rounded-full grid place-items-center grad text-white text-sm animate-pulse'; lbl.className = 'font-semibold'; }
+  });
+}
+function log(m) { const d = document.createElement('div'); d.textContent = '› ' + m; const l = document.getElementById('log'); l.appendChild(d); l.scrollTop = l.scrollHeight; }
+const es = new EventSource(`${B}/api/jobs/${job}/events`);
+es.onmessage = ev => {
+  const e = JSON.parse(ev.data), x = e.data;
+  if (e.kind === 'step') { mark(x.step); log(x.msg); }
+  else if (e.kind === 'log') log(x.msg);
+  else if (e.kind === 'profile') { document.getElementById('links').insertAdjacentHTML('beforeend', `<a class="block grad text-white rounded-xl px-4 py-2 text-sm font-semibold text-center" href="${B}/p/${x.pid}/" target="_blank">✨ ${esc(x.name)}'s profile is ready →</a>`); log('Vibe: ' + x.vibe); }
+  else if (e.kind === 'arc_start') {
+    document.getElementById('waiting')?.remove();
+    const el = document.createElement('div'); el.className = 'card p-5 fade-in';
+    el.innerHTML = `<div class="flex items-center justify-between"><div class="font-bold">${esc(x.a_name)} × ${esc(x.b_name)}</div><a class="text-xs chip" href="${B}/arc/${x.arc_id}/" target="_blank">▶ open replay</a></div><div data-body class="space-y-3 mt-3"></div><div data-out class="mt-3"></div>`;
+    document.getElementById('arcs').appendChild(el); panels[x.arc_id] = el;
+  }
+  else if (e.kind === 'date_start') {
+    const p = panels[x.arc_id]; if (!p) return;
+    p.querySelector('[data-body]').insertAdjacentHTML('beforeend', `<div class="rounded-xl grad text-white px-3 py-2 text-sm fade-in"><b>Date ${x.seq} · Day ${x.day}</b> · ${x.emoji} ${esc(x.venue_name)} <span class="opacity-80">(${esc(x.why)})</span></div>`);
+  }
+  else if (e.kind === 'date_message') {
+    const p = panels[x.arc_id]; if (!p) return; const right = x.side === 'b';
+    p.querySelector('[data-body]').insertAdjacentHTML('beforeend', `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[85%] ${right ? 'text-right' : ''}">
+      <div class="text-[11px] text-stone-500">${esc(x.name)}'s agent</div>
+      <div class="inline-block text-left rounded-2xl px-3 py-2 text-sm ${right ? 'bg-rose-100' : 'bg-white border border-rose-100'}">${x.action ? `<i class="text-xs text-stone-500">*${esc(x.action)}*</i><br>` : ''}${esc(x.say)}</div>
+      ${x.proposal ? `<div><span class="chip mt-1">📅 proposes another date in ${x.proposal.in_days} day(s)</span></div>` : ''}
+      ${x.thought ? `<div class="text-[11px] text-violet-700 mt-1">🔒 ${esc(x.thought)}</div>` : ''}</div></div>`);
+  }
+  else if (e.kind === 'date_done') {
+    const p = panels[x.arc_id]; if (!p) return; const a = x.verdict_a || {}, b = x.verdict_b || {};
+    p.querySelector('[data-body]').insertAdjacentHTML('beforeend', `<div class="grid grid-cols-2 gap-2 text-sm fade-in"><div class="bg-rose-50 rounded-xl p-2"><b>${a.overall}/10</b> ${a.continue ? '✅' : '✋'} <span class="text-xs text-stone-600">${esc(a.report)}</span></div><div class="bg-rose-50 rounded-xl p-2"><b>${b.overall}/10</b> ${b.continue ? '✅' : '✋'} <span class="text-xs text-stone-600">${esc(b.report)}</span></div></div>
+      <div class="text-sm">${(x.moments || []).map(m => `<span title="${esc(m.label)}">${m.icon}</span>`).join(' ')}</div>`);
+  }
+  else if (e.kind === 'arc_done') { const p = panels[x.arc_id]; if (p) p.querySelector('[data-out]').innerHTML = `<span class="chip">${esc(x.label)}</span> <a class="text-sm text-rose-600 font-semibold ml-2" href="${B}/arc/${x.arc_id}/">▶ Replay the whole story</a>`; }
+  else if (e.kind === 'done') {
+    mark('end'); document.getElementById('spin').textContent = '✓ done'; es.close();
+    document.getElementById('links').insertAdjacentHTML('beforeend', `<a class="block border border-rose-200 rounded-xl px-4 py-2 text-sm font-semibold text-center" href="${B}/rankings/#${x.pid}">🏆 See your rankings →</a>`);
+  }
+  else if (e.kind === 'error') { const el = document.getElementById('err'); el.textContent = '⚠ ' + x.msg; el.classList.remove('hidden'); document.getElementById('spin').textContent = ''; es.close(); }
+};
+</script>
+{% endblock %}

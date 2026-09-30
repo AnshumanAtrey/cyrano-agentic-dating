@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Rankings · {{ APP }}{% endblock %}
+{% block body %}
+<h1 class="display text-3xl font-bold">Rankings</h1>
+<p class="text-stone-600 mt-1 max-w-3xl text-sm">For every person, who fits them best. Dates count most: how far the pair got and how <b>both</b> agents rated every date.
+For pairs who haven't dated yet, the pre-date match score (shared interests and values, social energy, city, partner traits) fills in, with a discount because it hasn't been tested.</p>
+<div class="flex flex-wrap gap-2 mt-5" id="who"></div>
+<section class="card p-5 mt-5"><div id="head"></div><ol id="list" class="divide-y divide-rose-50 mt-2"></ol></section>
+<script>
+const R = {{ ranks|tojson }}, P = {{ people|tojson }}, B = {{ B|tojson }};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const av = (id, name, cls) => `<span class="av ${cls}">${esc((name || id)[0])}<img src="${B}/photos/${id}.jpg" onerror="this.remove()"></span>`;
+const ids = Object.keys(R);
+document.getElementById('who').innerHTML = ids.map(id => `<button data-id="${id}" title="${esc(P[id].name)}" class="rounded-full p-0.5 border-2 border-transparent">${av(id, P[id].name, 'w-10 h-10 text-sm')}</button>`).join('');
+function show(id) {
+  if (!R[id]) id = ids[0]; if (!id) return;
+  document.querySelectorAll('#who button').forEach(b => b.style.borderColor = b.dataset.id === id ? '#e11d48' : 'transparent');
+  document.getElementById('head').innerHTML = `<div class="flex items-center gap-3">${av(id, P[id].name, 'w-12 h-12 text-lg')}<div><div class="text-xs text-stone-500">Best fits for</div>
+    <a href="${B}/p/${id}/" class="display text-xl font-bold hover:text-rose-600">${esc(P[id].name)}</a></div></div>`;
+  document.getElementById('list').innerHTML = R[id].map((r, i) => `<li class="py-3 flex items-center gap-3">
+    <span class="w-6 text-stone-400 font-bold">${i + 1}</span>${av(r.id, r.name, 'w-10 h-10 text-sm')}
+    <div class="flex-1 min-w-0"><a href="${B}/p/${r.id}/" class="font-semibold hover:text-rose-600">${esc(r.name)}</a>
+      <div class="text-xs text-stone-500 truncate">${r.dates ? `${r.route.join(' → ')} · ${r.dates} date${r.dates > 1 ? 's' : ''} · ${esc(r.outcome)} · ratings ${r.my.join('/')} vs ${r.their.join('/')}` : `not dated yet · pre-date match ${r.match}`}</div>
+      <div class="text-xs text-stone-600 italic truncate">${esc(r.reason)}</div></div>
+    ${r.arc_id ? `<a href="${B}/arc/${r.arc_id}/" class="chip">▶ replay</a>` : ''}
+    <span class="display text-2xl font-bold w-12 text-right">${r.score}</span></li>`).join('');
+  history.replaceState(null, '', '#' + id);
+}
+document.getElementById('who').onclick = e => { const b = e.target.closest('button'); if (b) show(b.dataset.id); };
+show(decodeURIComponent(location.hash.slice(1)));
+</script>
+{% endblock %}
