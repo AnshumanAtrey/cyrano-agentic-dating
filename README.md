@@ -10,7 +10,7 @@
 ## How it works
 ```
 LinkedIn (public) ──┐
-                    ├─► Apify actors ──► raw JSON (profile, bio, latest posts, captions, tags, IG alt-text, experience…)
+                    ├─► local scrapers, no login ──► raw JSON (bio, 12 latest posts, IG image descriptions, experience, posts…)
 Instagram (public) ─┘
                                  │
                  plain Python ───┤  hard signals: words/caption, emoji rate, Hinglish mix, posting rhythm, who they tag
@@ -47,14 +47,15 @@ Instagram (public) ─┘
 Guardrails: only the two sources, no outside knowledge even about famous people, no invented facts, no inferring religion, politics, health, sexuality, ethnicity or caste, and relationship status and orientation are never assumed. Private Instagram accounts are rejected.
 
 ## Tech stack
-- **Scraping:** Apify REST API on the free plan credit. `apify/instagram-profile-scraper` gives profile, bio, category, links and the latest posts with captions, hashtags, mentions, tagged users and Instagram's own image descriptions. `harvestapi/linkedin-profile-scraper` (no cookies) gives headline, about, experience, education and skills. Many profiles go in one actor run.
+- **Scraping (local, no login, no paid API, $0):** *Instagram:* first Instagram's mobile `web_profile_info` endpoint (profile + 12 latest posts with captions, tags, locations). When it throttles, a real logged-out Chromium (Playwright) loads the public profile and reads the profile JSON embedded in the page plus the 12-post grid (dates and Instagram's own image descriptions). Private accounts are rejected. *LinkedIn:* the public profile page: JSON-LD `Person` (job titles, companies, education, about, languages, awards), their posts and activity, and the page text. If LinkedIn answers 999, the same public page is fetched through Jina Reader.
 - **Agents:** `app/llm.py`, a failover chain of zero-cost LLM lanes: Claude through Claude Code in headless mode (`claude -p`), then the Cerebras (`gpt-oss-120b`, Qwen) and Groq free tiers. Each lane is throttled to its free-tier limits and cools down on a 429.
 - **Web:** FastAPI, Jinja2, Tailwind and SQLite. Live dates stream over Server-Sent Events, and the replay player is vanilla JS. `scripts/export.py` renders the finished run to static HTML for GitHub Pages.
 
 ## Run it
 ```bash
-uv venv && uv pip install -r requirements.txt
-cp .env.example .env        # APIFY_TOKEN (+ optional CEREBRAS_API_KEY / GROQ_API_KEY; Claude Code works with no key)
+uv venv && uv pip install -r requirements.txt playwright
+cp .env.example .env        # optional CEREBRAS_API_KEY / GROQ_API_KEY; Claude Code works with no key
+.venv/bin/python -m playwright install chromium
 # people.txt: one "linkedin_url instagram_url" per line
 .venv/bin/python scripts/batch.py all 3      # scrape → analyze → 3 first dates each → arcs
 .venv/bin/uvicorn app.main:app --port 8000   # the site; share it with: cloudflared tunnel --url http://localhost:8000
@@ -64,7 +65,7 @@ cp .env.example .env        # APIFY_TOKEN (+ optional CEREBRAS_API_KEY / GROQ_AP
 ## Code map
 | File | What it does |
 |---|---|
-| `app/scrape.py` | Apify actors for IG + LinkedIn, normalisation, photos |
+| `app/scrape.py` | local IG + LinkedIn scrapers (mobile API → real browser; public page → Jina), photos |
 | `app/brain.py` | source pack, measured signals, evidence-cited analysis |
 | `app/dating.py` | Date Town venues, matching, scheduling, personas, dates, memory, debriefs, moments, rankings |
 | `app/llm.py` | zero-cost LLM lanes with throttling + failover |

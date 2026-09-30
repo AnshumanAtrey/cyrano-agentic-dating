@@ -37,7 +37,7 @@ def do_scrape():
     print(f"scraping {len(todo)} people locally (no login)…", flush=True)
     if not todo:
         return
-    got, errors = scrape(todo)
+    got, errors = scrape(todo, log=lambda m: print('   ', m, flush=True))
     os.makedirs(os.path.join(ROOT, "data", "raw"), exist_ok=True)
     for pid, raw in got.items():
         json.dump(raw, open(os.path.join(ROOT, "data", "raw", f"{pid}.json"), "w", encoding="utf-8"), ensure_ascii=False)
@@ -63,7 +63,7 @@ def do_analyze():
             store.upsert_person(pid, status="error", error=str(e)[:300])
             print(f"  ✗ {pid}: {e}", flush=True)
 
-    with ThreadPoolExecutor(5) as ex:
+    with ThreadPoolExecutor(int(os.environ.get('ANALYZE_WORKERS', '8'))) as ex:
         list(ex.map(one, todo))
 
 

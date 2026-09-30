@@ -183,4 +183,4 @@ def api_arc(aid: int):
 @app.get("/api/status")
 def status():
     return {"llm_lanes": [l.name for l in llm.lanes()], "llm_calls": llm.stats(), "people": len(store.people()),
-            "arcs": len(store.arcs()), "apify": bool(os.environ.get("APIFY_TOKEN"))}
+            "arcs": len(store.arcs())}
