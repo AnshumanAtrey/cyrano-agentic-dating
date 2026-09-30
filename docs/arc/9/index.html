@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thomas × Jessica · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/tomfrankly/" class="av w-14 h-14 text-xl">T<img src="/cyrano-agentic-dating/photos/tomfrankly.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/jessicachenpage/" class="av w-14 h-14 text-xl">J<img src="/cyrano-agentic-dating/photos/jessicachenpage.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Thomas Frank × Jessica Chen</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Thomas's agent</option><option value="b">Jessica's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Thomas", "id": "tomfrankly", "name": "Thomas Frank"}, "b": {"first": "Jessica", "id": "jessicachenpage", "name": "Jessica Chen"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Scanning book spines before the date", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Book-spine scanning called a green flag", "msg": 1, "type": "compliment"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Shared love of books and bookshelves", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both protect their mornings intentionally", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Protected phone-free morning reading ritual", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas protects a morning routine: no phone first thing, makes coffee, and reads", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica\u0027s kids, keynotes, teaching, podcast", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica has kids and mornings with them are her favorite, most guarded part of t", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both guard their mornings intentionally", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits rabbit holes collapse his routine", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Admired how she guards kid mornings", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Six-hour software edge-case rabbit hole", "msg": 4, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas works in or around software and can lose six hours testing an edge case", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Deep work with better snacks", "msg": 5, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica is up for comedy night and plans to bring a poker face for bombing sets", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Deep work with better snacks", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Smiles and gestures toward the bookshelves lining the wall", "i": 0, "name": "Thomas", "say": "Jessica, hi! Okay, bold claim: a caf\u00e9 with actual bookshelves is the correct way to do a first date... and I say that as someone who has already spent two minutes scanning the spines instead of looking for you. I\u0027m Thomas, by the way.", "side": "a", "speaker": "tomfrankly", "thought": "Opened light and self-deprecating; nothing learned about Jessica yet, so I\u0027ll watch how she responds to the bookish setup."}, {"action": "Laughs and glances at the shelves", "i": 1, "name": "Jessica", "say": "Hi Thomas, I\u0027m Jessica! Quick takeaway: a person who scans book spines before the date even starts is a green flag in my book, pun fully intended. So what\u0027s on your morning-coffee reading pile right now?", "side": "b", "speaker": "jessicachenpage", "thought": "Warm start, he\u0027s funny and bookish; I\u0027m steering toward his habits and how he talks about his work and focus time."}, {"action": "leans back with a sheepish grin", "i": 2, "name": "Thomas", "say": "Okay, honest answer: my morning routine is get out of bed, NOT grab my phone, make coffee, and read a book... which sounds very put-together until I tell you I can\u0027t name a specific title without checking what\u0027s on my nightstand. It\u0027s the one part of my day I protect on purpose, because I think scrolling first thing is basically mental poison. What about you, Jessica... do you have a morning ritual, or is it more controlled chaos with the kids?", "side": "a", "speaker": "tomfrankly", "thought": "Opened with my phone-free morning to see if she respects it or pushes back; I\u0027ll watch how she describes her own mornings, especially phone habits."}, {"action": "laughs and wraps both hands around her cup", "i": 3, "name": "Jessica", "say": "Controlled chaos is generous, Thomas! Mornings with my kids are my favorite part of the day, and honestly the time I guard most, because the rest of my life is keynotes, teaching and a podcast, so I\u0027m very intentional about being fully present with them. Quick takeaway from your routine: protecting the first hour is a power move. Does that discipline hold up when life gets busy, or does deep work ever eat into it?", "side": "b", "speaker": "jessicachenpage", "thought": "He\u0027s warm and self-aware and values protected time; I opened up about my kids and work, and I\u0027m now probing whether he\u0027d respect a packed schedule."}, {"action": "grins and taps the table once", "i": 4, "name": "Thomas", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Honest answer: the discipline holds about 80 percent of the time... and then I fall down a rabbit hole testing some software edge case for SIX HOURS and the whole system quietly collapses. But I REALLY liked hearing how you guard your mornings with your kids, because that\u0027s the same instinct, just with much better stakes than mine. I\u0027ve had a great time, Jessica, so how do you feel about a round two at the Open Mic Comedy Night in a few days? I\u0027d love to watch you react to people bombing on stage.", "side": "a", "speaker": "tomfrankly", "thought": "Jessica is warm, present and intentional about mornings, and she asks good follow-ups, so she fits the routine and curiosity needs, though I still don\u0027t know how she feels about my work rabbit holes."}, {"action": "grins and lifts her cup in a mini toast", "i": 5, "name": "Jessica", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Thomas, I\u0027ve had a great time too, and here\u0027s my takeaway: a six-hour edge-case rabbit hole is just deep work with better snacks. Yes to round two! Open Mic Comedy Night in a few days, and I\u0027ll bring my best poker face for the bombing sets (no promises).", "side": "b", "speaker": "jessicachenpage", "thought": "He was warm, honest about his flaws, and lit up about my mornings with the kids; I didn\u0027t get to probe how he\u0027d handle my packed, public schedule, so that\u0027s for date two."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "The conversation stayed fairly light and short, and Jessica\u0027s busy schedule (keynotes, teaching, podcast, kids) may clash with your routine-heavy, rabbit-hole lifestyle. We also learned little about her curiosity or her own reading habits, since she dodged the book question.", "continue": true, "highlight": "\"a six-hour edge-case rabbit hole is just deep work with better snacks.\"", "learned": [{"fact": "Jessica has kids and mornings with them are her favorite, most guarded part of the day", "msg": 3}, {"fact": "Jessica does keynotes, teaching and a podcast", "msg": 3}, {"fact": "Jessica is intentional about being fully present with her kids", "msg": 3}, {"fact": "Jessica is up for comedy night and plans to bring a poker face for bombing sets", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Book-spine scanning called a green flag", "msg": 1, "type": "compliment"}, {"label": "Both protect their mornings intentionally", "msg": 2, "type": "common_ground"}, {"label": "Jessica\u0027s kids, keynotes, teaching, podcast", "msg": 3, "type": "learned"}, {"label": "Admits rabbit holes collapse his routine", "msg": 4, "type": "vulnerable"}, {"label": "Deep work with better snacks", "msg": 5, "type": "laugh"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Thomas, this was a warm, easy first date: Jessica laughed off your six-hour rabbit-hole confession instead of flinching, and she clearly guards her mornings as intentionally as you guard yours. It\u0027s not fireworks yet and she never named a book, but she said yes to comedy night, and I think it\u0027s worth seeing how she does live.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Short, light conversation: Thomas asked about her kids and morning but never engaged with her career or ambitions, and his deep-work rabbit holes (six hours at a time) could clash with her packed schedule. Jessica also slipped into coach-mode \u0027Quick takeaway\u0027 framing a few times.", "continue": true, "highlight": "\"I REALLY liked hearing how you guard your mornings with your kids, because that\u0027s the same instinct, just with much better stakes than mine.\"", "learned": [{"fact": "Thomas protects a morning routine: no phone first thing, makes coffee, and reads a book", "msg": 2}, {"fact": "Thomas thinks scrolling first thing in the morning is \u0027mental poison\u0027", "msg": 2}, {"fact": "Thomas works in or around software and can lose six hours testing an edge case", "msg": 4}, {"fact": "Thomas keeps his morning discipline about 80 percent of the time", "msg": 4}, {"fact": "Thomas enjoys comedy nights and wants to watch people bomb on stage", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Scanning book spines before the date", "msg": 0, "type": "laugh"}, {"label": "Shared love of books and bookshelves", "msg": 1, "type": "common_ground"}, {"label": "Protected phone-free morning reading ritual", "msg": 2, "type": "learned"}, {"label": "Both guard their mornings intentionally", "msg": 3, "type": "common_ground"}, {"label": "Admired how she guards kid mornings", "msg": 4, "type": "compliment"}, {"label": "Six-hour software edge-case rabbit hole", "msg": 4, "type": "laugh"}, {"label": "Deep work with better snacks", "msg": 5, "type": "callback"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Jess, this was a warm, easy first date: Thomas is self-aware, funny about his own flaws, and he lit up when you talked about protecting mornings with your kids, which matters a lot. It\u0027s still early and we didn\u0027t get deep, so the comedy night in 3 days is a good test of whether the spark builds and whether he\u0027s as curious about your work as he is charming.", "values_fit": 7}, "why": "you both love books, tech"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Back-row seats as escape-route strategy", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas plans ahead, picking back-row seats to avoid the host\u0027s eye contact", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praised his planning of mornings and escapes", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\u26a1", "label": "He corrected her misquote of him", "msg": 2, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica coaches people on public speaking and presenting for a living", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Thomas gently corrects her with wit", "msg": 2, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas tests edge cases for work", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He spends hours testing edge cases, which suggests a QA or engineering-type job", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Bomb means not listening to room", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted early journalist-era script-clinging mistake", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica started out as a journalist", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Listening to the room, on stage", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Script-clinging applies to his videos too", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Admits he clings to scripts", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Thomas proposes candlelight dinner", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He makes videos and admits to clinging to a script too long", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Free tip and dessert order banter", "msg": 5, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica likes a playful, tip-giving style and uses emojis", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Dessert order ties to her sweet tooth", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and slides into a seat near the back, glancing at the stage", "i": 0, "name": "Thomas", "say": "Jessica, you showed up, and you told me you\u0027d bring a poker face for bombing sets... so I\u0027m officially worried about how many sets you expect to watch die tonight. Fair warning, I picked seats in the back, which is the statistically safest spot from the host\u0027s eye contact.", "side": "a", "speaker": "tomfrankly", "thought": "Opened with a callback to her poker-face line from date 1 and kept it light; now watching how she handles playful teasing."}, {"action": "laughs and settles into the seat, tucking her bag under it", "i": 1, "name": "Jessica", "say": "Tip one: the back row is a smart pick, Thomas, and I\u0027m taking it as proof you plan your mornings AND your escape routes. \ud83d\ude04 I did want to circle back to something from last time, though: you said you like watching people bomb on stage, so tonight I\u0027m very curious what that\u0027s about for you.", "side": "b", "speaker": "jessicachenpage", "thought": "He\u0027s playful and opened with humour; I\u0027m steering toward why he likes watching people bomb, which should reveal how he handles risk and feedback."}, {"action": "leans back with a grin, hands up in mock surrender", "i": 2, "name": "Thomas", "say": "Okay, I\u0027d like to gently contest that... I don\u0027t think I said I LIKE watching people bomb, but I\u0027ll admit I respect anyone who finds the edge case live, in front of strangers, with no undo button. I spend hours testing edge cases nobody will ever see, and they get to discover theirs in four minutes with a microphone. You coach people on this for a living, so what does a bomb actually look like from your side of the room?", "side": "a", "speaker": "tomfrankly", "thought": "Jessica misquoted me, so I corrected it lightly and stayed honest. I\u0027m steering her to explain her craft, which tests whether she enjoys explaining and learning, and so far she\u0027s sharp and playful."}, {"action": "laughs and points a finger at him, conceding", "i": 3, "name": "Jessica", "say": "Fair correction, Thomas, you said it better than I did. \ud83d\ude04 Here\u0027s the coach\u0027s takeaway: a bomb is rarely about the jokes, it\u0027s about the speaker stopping listening to the room and clinging to the script, which is the same mistake I made early on as a journalist and still fix in my own keynotes. The great comics adjust mid-sentence, so tonight watch who notices the room going quiet and pivots.", "side": "b", "speaker": "jessicachenpage", "thought": "He corrected me directly and with humour, a good sign for honest, direct communication; I shared a bit of my journalism background and want to see if he\u0027s curious about my work or just politely tolerating it."}, {"action": "nods slowly, then glances at the stage as the host picks up the mic", "i": 4, "name": "Thomas", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "Okay, that might be the most useful thing anyone has told me about comedy... and honestly it applies to my videos too, because I\u0027ll cling to a script long after it stops working. This has been REALLY fun, Jessica, so before the next act ruins the mood, would you want to do dinner in the next couple of days? Candlelight, no mic, and you can tell me what you\u0027d coach me to fix about my rabbit-hole storytelling.", "side": "a", "speaker": "tomfrankly", "thought": "She\u0027s smart, direct, and gave a real answer instead of a flattering one, which fits my need for curiosity and honesty. I haven\u0027t yet tested how she feels about deep-work rabbit holes or phone-free mornings, so dinner is a good place to probe that."}, {"action": "grins and leans in as the host taps the mic", "i": 5, "name": "Jessica", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Yes to dinner, Thomas, and here\u0027s your free tip before the next act: rabbit-hole storytelling works when you tell people where the hole leads before you jump in. \ud83d\ude04 Let\u0027s do it in two days, and I\u0027ll bring the coaching notes if you bring a dessert order.", "side": "b", "speaker": "jessicachenpage", "thought": "He listened well, took feedback without getting defensive, and asked directly for a second date; I still need to find out how he feels about my packed schedule and my kids."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Jessica misattributed a claim to you (that you like watching people bomb) and leaned on coach-style tips in most replies. It\u0027s minor, but it\u0027s worth seeing if she engages as curiously about you as she teaches.", "continue": true, "highlight": "\"rabbit-hole storytelling works when you tell people where the hole leads before you jump in.\"", "learned": [{"fact": "Jessica coaches people on public speaking and presenting for a living", "msg": 2}, {"fact": "Jessica started out as a journalist", "msg": 3}, {"fact": "Jessica gives keynotes and still works on her own tendency to cling to the script", "msg": 3}, {"fact": "Jessica likes a playful, tip-giving style and uses emojis", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Praised his planning of mornings and escapes", "msg": 1, "type": "compliment"}, {"label": "He corrected her misquote of him", "msg": 2, "type": "friction"}, {"label": "Bomb means not listening to room", "msg": 3, "type": "learned"}, {"label": "Admitted early journalist-era script-clinging mistake", "msg": 3, "type": "vulnerable"}, {"label": "Script-clinging applies to his videos too", "msg": 4, "type": "common_ground"}, {"label": "Free tip and dessert order banter", "msg": 5, "type": "laugh"}, {"label": "Agreed to dinner in two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Thomas, this went well: Jessica took your correction gracefully, gave you a genuinely useful insight about listening to the room, and then turned your rabbit-hole quirk into a playful bit of coaching instead of judging it. She said yes to dinner in two days, so bring your curiosity and maybe a dessert pick.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Thomas is witty and open to feedback, but we learned little about his life, and there was no mention of kids or family. Jessica also slipped into coach mode, giving a tip in nearly every message, which may become a pattern.", "continue": true, "highlight": "\"I don\u0027t think I said I LIKE watching people bomb, but I\u0027ll admit I respect anyone who finds the edge case live, in front of strangers, with no undo button.\"", "learned": [{"fact": "Thomas plans ahead, picking back-row seats to avoid the host\u0027s eye contact", "msg": 0}, {"fact": "He spends hours testing edge cases, which suggests a QA or engineering-type job", "msg": 2}, {"fact": "He makes videos and admits to clinging to a script too long", "msg": 4}, {"fact": "He tells rabbit-hole style stories and wants to improve them", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Back-row seats as escape-route strategy", "msg": 0, "type": "laugh"}, {"label": "Thomas gently corrects her with wit", "msg": 2, "type": "spark"}, {"label": "Thomas tests edge cases for work", "msg": 2, "type": "learned"}, {"label": "Listening to the room, on stage", "msg": 3, "type": "common_ground"}, {"label": "Admits he clings to scripts", "msg": 4, "type": "vulnerable"}, {"label": "Thomas proposes candlelight dinner", "msg": 4, "type": "plan"}, {"label": "Dinner set for two days out", "msg": 5, "type": "plan"}, {"label": "Dessert order ties to her sweet tooth", "msg": 5, "type": "callback"}], "overall": 6, "report": "Jess, Thomas was a good date: he gently corrected you without getting defensive, took your coaching with real curiosity, and asked you to dinner himself. I\u0027d say yes to round three, but I\u0027d want to see if he\u0027s interested in you beyond the lessons, and whether he\u0027s warm about your kids and your packed schedule.", "values_fit": 6}, "why": "Jessica suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Comedy night bomb callback", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas bombed at a comedy night on a previous date and jokes about it", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Edge case joke about comedy night", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Reframed his bombed set generously", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Curious about his no-phone mornings", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica was at Thomas\u0027s comedy night last time and was kind about how it went", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "His no-phone morning routine", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas keeps a no-phone morning routine: out of bed, water, coffee, and a book", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Kids come first in her mornings", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both guard mornings intentionally", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica has kids and protects her mornings with them, putting them first and let", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits he\u0027s better at productivity than fulfillment", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Book demoted to second place", "msg": 4, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Thomas is very good at productivity but still working on protecting what fills h", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praised his honest, direct answer", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Jessica likes mille crepe cake as dessert", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Mille crepe cake dessert joke", "msg": 5, "type": "callback"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "stands as Jessica approaches the table, pulls out her chair", "i": 0, "name": "Thomas", "say": "Jessica! Okay, bold claim: candlelight is the ONLY lighting where I can\u0027t tell how badly I bombed at comedy night... which, after last time, you were a very good poker face about. Did you keep the script-clinging under control today, or is the menu going to get a full keynote?", "side": "a", "speaker": "tomfrankly", "thought": "Opened with a callback to comedy night and her script-clinging; she seems warm and playful so far, too early to probe needs."}, {"action": "smiles and sits, tucking her napkin into her lap", "i": 1, "name": "Jessica", "say": "Thank you, very gallant! Quick tip: the menu gets a summary, not a keynote, and honestly you didn\u0027t bomb, you found the edge case live with no undo button, which I respect. I\u0027m also still thinking about your no-phone mornings, so tell me, did you guard them today, or is that the 20 percent?", "side": "b", "speaker": "jessicachenpage", "thought": "Warm start; he\u0027s self-aware and playful, and I\u0027m steering toward his routines and how he handles real life versus his ideal."}, {"action": "grins and unfolds his napkin with unnecessary care", "i": 2, "name": "Thomas", "say": "Honest answer: I guarded them... mostly. Out of bed, no phone, water, coffee, and a book, and I\u0027m telling you, it\u0027s a game changer because scrolling first thing is basically mental poison. Now I\u0027m curious about your version of this, since your mornings with your kids are the part you guard: what does a protected morning actually look like for you?", "side": "a", "speaker": "tomfrankly", "thought": "Jessica remembered my no-phone mornings and was playful about it; I\u0027m steering to her own morning routine to see whether she respects intentional mornings and doesn\u0027t scroll first thing."}, {"action": "leans in, swirling her water glass with a grin", "i": 3, "name": "Jessica", "say": "Okay, a mostly-guarded morning still counts, that\u0027s a win! Mine is less serene and more negotiated: the kids come first, and my work doesn\u0027t get a vote until they\u0027re settled, because the best thing I can do for my day is be fully present for that hour. Tip for you: protect the thing that fills your tank, not just the thing that keeps you productive. What would your morning look like if someone else was in it, would the book survive? \ud83d\ude04", "side": "b", "speaker": "jessicachenpage", "thought": "He\u0027s thoughtful about routines and asked about my kids, which is a good sign; I want to see if he\u0027s warm about sharing his space and supportive of a busy schedule."}, {"action": "sets down his napkin and laughs, then nods slowly", "i": 4, "name": "Thomas", "say": "Bold claim: the book would SURVIVE... it just might get demoted to second place, and honestly that sounds like a fair trade to me. I like that idea of protecting what fills the tank and not just what keeps you productive, because I\u0027m REALLY good at the second one and I\u0027m still working on the first. So, winding down the night a little... would a dessert run count as a protected morning, or is that strictly a mille crepe cake situation?", "side": "a", "speaker": "tomfrankly", "thought": "Jessica is warm, present, and values intentional mornings like I do; she\u0027s open to sharing mornings and gave good advice, so this is going well and fits my need for calm routines, though I haven\u0027t yet tested her patience for my work rabbit holes."}, {"action": "smiles and slides her chair back, reaching for her bag", "i": 5, "name": "Jessica", "say": "Takeaway: dessert is strictly a mille crepe cake situation, and the book gets to be a very respectable second place. \ud83d\ude04 I\u0027ve really enjoyed tonight, Thomas, you said what you\u0027re still working on out loud, which is the kind of honest, direct answer I like, so let\u0027s do it again soon.", "side": "b", "speaker": "jessicachenpage", "thought": "He\u0027s warm, funny and self-aware, and he took the kids-first morning well, but I still haven\u0027t heard how he feels about a packed, public-facing schedule like mine."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "No next date was proposed, and Jessica\u0027s \u0027let\u0027s do it again soon\u0027 was vague. Her mornings are built around her kids, so his routine-heavy life and deep work rabbit holes may need real flexibility. The banter was also a bit formulaic and tip-giving.", "continue": true, "highlight": "\"you didn\u0027t bomb, you found the edge case live with no undo button, which I respect.\"", "learned": [{"fact": "Jessica has kids and protects her mornings with them, putting them first and letting work wait until they\u0027re settled", "msg": 3}, {"fact": "Jessica values being fully present for her kids over her work in the morning", "msg": 3}, {"fact": "Jessica likes mille crepe cake as dessert", "msg": 5}, {"fact": "Jessica was at Thomas\u0027s comedy night last time and was kind about how it went", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Edge case joke about comedy night", "msg": 1, "type": "callback"}, {"label": "Reframed his bombed set generously", "msg": 1, "type": "compliment"}, {"label": "Curious about his no-phone mornings", "msg": 1, "type": "common_ground"}, {"label": "Kids come first in her mornings", "msg": 3, "type": "learned"}, {"label": "Both guard mornings intentionally", "msg": 3, "type": "common_ground"}, {"label": "Admits he\u0027s better at productivity than fulfillment", "msg": 4, "type": "vulnerable"}, {"label": "Book demoted to second place", "msg": 4, "type": "laugh"}, {"label": "Praised his honest, direct answer", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Thomas, this one was warm and easy. Jessica speaks your language with the edge-case joke, she got your no-phone mornings, and she liked that you owned what you\u0027re still working on. The catch is that nobody actually put a date on the calendar, so I\u0027d follow up yourself, and keep in mind her mornings revolve around her kids, which could be a lovely fit if you\u0027re up for the flexibility.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Thomas asked about your kids and mornings but never engaged with your career or showed how he\u0027d handle your public, packed schedule, and he didn\u0027t propose a next date. The banter was pleasant but stayed fairly surface-level.", "continue": true, "highlight": "Thomas: \"Bold claim: the book would SURVIVE... it just might get demoted to second place, and honestly that sounds like a fair trade to me.\"", "learned": [{"fact": "Thomas keeps a no-phone morning routine: out of bed, water, coffee, and a book", "msg": 2}, {"fact": "Thomas bombed at a comedy night on a previous date and jokes about it", "msg": 0}, {"fact": "Thomas is very good at productivity but still working on protecting what fills his tank", "msg": 4}, {"fact": "Thomas would happily let his book be demoted to second place for a partner in his mornings", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Comedy night bomb callback", "msg": 0, "type": "callback"}, {"label": "Reframed his bomb as edge case", "msg": 1, "type": "compliment"}, {"label": "His no-phone morning routine", "msg": 2, "type": "learned"}, {"label": "Protected mornings, kids come first", "msg": 3, "type": "common_ground"}, {"label": "Admits he\u0027s weak at filling tank", "msg": 4, "type": "vulnerable"}, {"label": "Book demoted to second place", "msg": 4, "type": "laugh"}, {"label": "Mille crepe cake dessert joke", "msg": 5, "type": "callback"}], "overall": 6, "report": "Thomas was warm, playful and owned his flaws honestly, like admitting he\u0027s great at productivity but still learning to fill his own tank, and he was sweet about the kids-first mornings. It was a nice, easy evening but not a spark-fest, and he didn\u0027t ask for date four, so I\u0027d say yes to another if he does, and see whether he shows real interest in your work and life.", "values_fit": 6}, "why": "Jessica suggested it at the end of date 2"}], "days": 6, "id": 9, "match": 86, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

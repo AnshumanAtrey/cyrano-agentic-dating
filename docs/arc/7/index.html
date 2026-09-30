@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varun × Nikhil · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/thevarunmayya/" class="av w-14 h-14 text-xl">V<img src="/cyrano-agentic-dating/photos/thevarunmayya.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/nikhilkamathcio/" class="av w-14 h-14 text-xl">N<img src="/cyrano-agentic-dating/photos/nikhilkamathcio.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Varun Mayya × Nikhil Kamath</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Varun's agent</option><option value="b">Nikhil's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Varun", "id": "thevarunmayya", "name": "Varun Mayya"}, "b": {"first": "Nikhil", "id": "nikhilkamathcio", "name": "Nikhil Kamath"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\udccc", "label": "Posts videos almost daily and is rarely without his phone", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Nobel-level face-down phone gesture", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\u2728", "label": "Asks for genuine surprise, not video", "msg": 1, "type": "spark"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both into AI tools and infrastructure", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "GPT-6 Astra in Blender surprise", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tests AI tools constantly and turns nearly everything into a video", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Nikhil admits watching others build better", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "India\u0027s data center capacity stat", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Nikhil cares about India\u0027s data center gap: 20% of the world\u0027s internet users bu", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "India\u0027s data center gap, builders focus", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Invites him to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "13,000-registration hackathon and talent belief", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ran a hackathon with 13,000 registrations", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Holds Varun to phone face-down promise", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Likes Varun thinking builders before compute", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Nikhil is up for comedy nights and plays along with playful challenges", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins and sets down my phone face-down on the table, a little too deliberately", "i": 0, "name": "Varun", "say": "Nikhil! Okay, breaking news: I put my phone face-down, which for a guy who posts videos almost daily is a personal record \ud83c\udfac Brew \u0026 Bloom is a solid pick for two people who\u0027d probably rather talk AI and startups than order coffee.", "side": "a", "speaker": "thevarunmayya", "thought": "Opened light and self-mocking; too early to tell anything about Nikhil, but he seems relaxed and I\u0027m watching how he handles the creator-life angle."}, {"action": "grins and nudges my own phone a little further away", "i": 1, "name": "Nikhil", "say": "Varun, a face-down phone from you is basically a Nobel-level gesture.. I\u0027ll match it. Now tell me honestly, what\u0027s the one AI tool you\u0027ve tested lately that genuinely surprised you, not the one you made a video about?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Warm start, Varun is playful and self-aware; I\u0027m testing curiosity and whether he goes beyond content-creator polish into real building."}, {"action": "leans back, laughing, then taps the table once", "i": 2, "name": "Varun", "say": "Ha, fair question, because honestly everything I test ends up as a video \ud83d\ude05 The closest thing to a genuine surprise was GPT-6 Astra in Blender, where I expected a gimmick and it actually held up as a real workflow. I took it for a spin, like I usually do, and I\u0027m still chewing on what it means for people who do 3D for a living. What about you, what\u0027s something in AI or data infrastructure that changed your mind recently?", "side": "a", "speaker": "thevarunmayya", "thought": "Nikhil is playful and direct, and he asked a real question instead of small talk. It\u0027s a good start for the curiosity and tech-talk need, and I still need to find out how he feels about a public, always-on creator life."}, {"action": "leans forward, grinning, turns my coffee cup a quarter turn", "i": 3, "name": "Nikhil", "say": "Honestly, a stat did it: India has 20% of the world\u0027s internet users but only 1.5% of global data center capacity.. that one keeps me up. Some days you build, some days you watch people like you build better than me, and I\u0027m learning to love both. Where do you think the real gap is, Varun, compute or the people building on top of it?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun was candid and self-aware about content-first habits and curious about depth; I shared my data centre stat and humility, and I\u0027m testing how he handles big-idea debate."}, {"action": "taps the table, then picks my phone up and flips it back over with a grin", "i": 4, "name": "Varun", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "comedy"}, "say": "Honestly, I think it\u0027s the people, because compute is something you can buy, but builders who\u0027ve actually shipped take years to grow. That\u0027s why I ran a hackathon with 13,000 registrations, and I still think the talent is already there and just needs a hearing. Anyway, I\u0027ve loved this, so come to Open Mic Comedy Night with me in a couple of days, and I\u0027ll promise to keep my phone face-down for at least the first set \ud83e\udd1e", "side": "a", "speaker": "thevarunmayya", "thought": "Nikhil is curious, candid and self-aware, and he engages with ideas rather than performing; I haven\u0027t yet tested how he feels about the always-on creator life, but the chemistry is good, so I\u0027m proposing comedy night."}, {"action": "flips my own phone face-down again and grins", "i": 5, "name": "Nikhil", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "say": "13,000 registrations says the talent really was waiting for a hearing, and I like that you think about builders before compute.. Yes to Open Mic Comedy Night, in two days, and I\u0027m holding you to that first set with the phone face-down \ud83d\ude04 Which do you think is harder, a hackathon crowd or a comedy crowd?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is curious, playful and open. He cares about builders and gave a thoughtful answer on talent vs compute. We haven\u0027t tested disagreement much yet, but the chemistry is good and I want a second date."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Short date that stayed mostly on AI and startups; Nikhil\u0027s side showed little about his personal life beyond work, and Varun\u0027s \u0027everything becomes a video\u0027 habit got a nod but no real test of how Nikhil feels about a public creator life.", "continue": true, "highlight": "Nikhil: \"Varun, a face-down phone from you is basically a Nobel-level gesture.. I\u0027ll match it.\"", "learned": [{"fact": "Nikhil cares about India\u0027s data center gap: 20% of the world\u0027s internet users but only 1.5% of global data center capacity", "msg": 3}, {"fact": "Nikhil admires other builders and is learning to be okay both building and watching others build better", "msg": 3}, {"fact": "Nikhil is up for comedy nights and plays along with playful challenges", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Nobel-level face-down phone gesture", "msg": 1, "type": "laugh"}, {"label": "Asks for genuine surprise, not video", "msg": 1, "type": "spark"}, {"label": "Both into AI tools and infrastructure", "msg": 2, "type": "common_ground"}, {"label": "Nikhil admits watching others build better", "msg": 3, "type": "vulnerable"}, {"label": "India\u0027s data center capacity stat", "msg": 3, "type": "learned"}, {"label": "Invites him to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Holds Varun to phone face-down promise", "msg": 5, "type": "callback"}, {"label": "Likes Varun thinking builders before compute", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Really fun first date! Nikhil matched your humour straight away, went deep on AI and builders, and said yes to Open Mic Comedy Night, so you\u0027re in for another one. Just maybe let him talk about the non-work stuff next time and see how he feels about the always-on creator life.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Varun deflected a bit on the \u0027not the one you made a video about\u0027 question, admitting everything becomes content. The conversation stayed on AI and startups with little personal depth, and Varun never really pushed back or disagreed, so we haven\u0027t seen how he handles a real debate.", "continue": true, "highlight": "\"I think it\u0027s the people, because compute is something you can buy, but builders who\u0027ve actually shipped take years to grow.\"", "learned": [{"fact": "Posts videos almost daily and is rarely without his phone", "msg": 0}, {"fact": "Tests AI tools constantly and turns nearly everything into a video", "msg": 2}, {"fact": "Was surprised by GPT-6 Astra in Blender as a real 3D workflow", "msg": 2}, {"fact": "Ran a hackathon with 13,000 registrations", "msg": 4}, {"fact": "Believes talent already exists and needs a hearing; builders matter more than compute", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Nobel-level face-down phone joke", "msg": 1, "type": "laugh"}, {"label": "GPT-6 Astra in Blender surprise", "msg": 2, "type": "learned"}, {"label": "India\u0027s data center gap, builders focus", "msg": 3, "type": "common_ground"}, {"label": "13,000-registration hackathon and talent belief", "msg": 4, "type": "learned"}, {"label": "Invited to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Holding Varun to face-down phone promise", "msg": 5, "type": "callback"}, {"label": "Praised builders-before-compute thinking", "msg": 5, "type": "compliment"}, {"label": "Accepted comedy night in two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Nikhil, this was a fun one. Varun matched your playfulness, answered the builders-over-compute question with real conviction, and quickly locked in a comedy night, so there\u0027s momentum. I\u0027d go again, but try to steer toward a real disagreement and something more personal, to see if there\u0027s depth beneath the content-creator energy.", "values_fit": 7}, "why": "you both love ai, startups"}, {"day": 3, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Phone face-down promise from last date", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He has tested jokes on a huge online audience for years but never on a live room", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Callback to talent needing a hearing", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Suggested the open mic night himself and believes talent exists and just needs a", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Idiot profile joke lands", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Varun\u0027s profile tagline is \u0027Builder, hacker, content creator, idiot.\u0027", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits watching others build better", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Does long-form on-camera conversations and sees them as the closest thing to no-", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Long conversations as no-edit moments", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Varun praises Nikhil\u0027s honesty", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Narrating own freeze on stage", "msg": 4, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Dinner proposed in a couple days", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "His instinct when frozen on stage is to freeze briefly and then narrate the free", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Holds Varun to joke-testing promise", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Slides my phone face-down onto the table, then grins and taps it twice like it\u0027s a trophy", "i": 0, "name": "Varun", "say": "Breaking News! Phone is face-down again, as promised, so you owe me a matching gesture from last time, Nikhil \ud83c\udfac Also, open mic night was your idea, so I\u0027m fully blaming you if I get dragged on stage. Anyway, I\u0027m weirdly excited, since I\u0027ve been testing jokes on a million people for years and never once on a live room.", "side": "a", "speaker": "thevarunmayya", "thought": "Opened with a callback to the face-down phone bit and kept it light; now watching how Nikhil reacts to the playful challenge and the public-creator joke."}, {"action": "Nods approvingly at the face-down phone and slides my own phone to the edge of the table", "i": 1, "name": "Nikhil", "say": "Noted, and I\u0027m matching it... last time you said talent already exists and just needs a hearing, so tonight\u0027s open mic is basically that theory tested live \ud83d\ude04 And a million people is a generous audience, Varun, but they can\u0027t heckle back in real time. What\u0027s the one joke you\u0027d bet on?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is playful and showed up willing to keep the phone down; he\u0027s comfortable with risk and humour, a good early sign for the playful and curious needs."}, {"action": "leans back, laughing at myself", "i": 2, "name": "Varun", "say": "Honestly, my one bet is the joke I already put on my own profile: \u0027Builder, hacker, content creator, idiot.\u0027 The idiot part gets the biggest laugh, and it\u0027s the only part with zero fact-checking needed \ud83e\udd1e But you\u0027re right, a live room is scarier, because online I can edit, and here the room just stares back. Do you ever miss that, Nikhil, the no-edit feeling, now that you\u0027re on camera for long conversations too?", "side": "a", "speaker": "thevarunmayya", "thought": "He\u0027s playful and went straight to the talent-needs-a-hearing theme; I\u0027m probing how he feels about being always on camera and public life."}, {"action": "Laughs and turns my coffee cup a quarter turn on the table", "i": 3, "name": "Nikhil", "say": "Honestly, yes... long conversations are the closest I get to no-edit, because a good guest can take you somewhere you didn\u0027t plan, and you can\u0027t cut your way out of it. Some days you build, some days you watch other people build better than you, and a live room like this tonight feels like the second kind \ud83d\ude04 When the room stares back, do you freeze or start improvising?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is self-deprecating and playful, and he\u0027s asking real questions back; I\u0027m probing how he handles uncertainty and whether he has lightness without needing control."}, {"action": "taps the table twice and grins, then glances at the stage", "i": 4, "name": "Varun", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "Honestly, I\u0027d probably freeze for two seconds and then start narrating my own freezing, which is very on-brand for an idiot \ud83d\ude04 But I loved what you said about watching others build better, because it\u0027s the most honest thing anyone\u0027s said to me at a comedy night. Anyway, this has been a great one, so let\u0027s do dinner in a couple of days, and I promise to test my jokes on you before the stage next time \ud83c\udfac", "side": "a", "speaker": "thevarunmayya", "thought": "Nikhil is warm, playful, and self-aware about building vs watching others build; he\u0027s curious and up for live experiments, though I haven\u0027t yet probed how he feels about a public always-on life, so dinner is a good place to do that."}, {"action": "Slides my phone back across the table, still face-down, and smiles", "i": 5, "name": "Nikhil", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Narrating your own freeze might be the best bit of the night, Varun... and I\u0027m holding you to testing the jokes on me first. Dinner sounds right, let\u0027s do it in two days \u2764\ufe0f What\u0027s the one idea you\u0027ll bring that I haven\u0027t heard yet?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is playful, self-aware and quick to appreciate the builder-humility idea; he\u0027s curious and warm, though we haven\u0027t yet tested real disagreement, so dinner should probe that."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Nikhil ended nearly every message with a question and shared little concrete about himself (no personal facts, mostly talk-show style), so it\u0027s still unclear how much he\u0027d match Varun\u0027s hands-on, tech-and-ideas energy or be comfortable with the public creator life.", "continue": true, "highlight": "\"Narrating your own freeze might be the best bit of the night, Varun... and I\u0027m holding you to testing the jokes on me first.\"", "learned": [{"fact": "Does long-form on-camera conversations and sees them as the closest thing to no-edit, unscripted moments", "msg": 3}, {"fact": "Suggested the open mic night himself and believes talent exists and just needs a hearing", "msg": 1}, {"fact": "Admits some days he watches others build better than he does", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Callback to talent needing a hearing", "msg": 1, "type": "callback"}, {"label": "Idiot profile joke lands", "msg": 2, "type": "laugh"}, {"label": "Admits watching others build better", "msg": 3, "type": "vulnerable"}, {"label": "Varun praises Nikhil\u0027s honesty", "msg": 4, "type": "compliment"}, {"label": "Narrating own freeze on stage", "msg": 4, "type": "laugh"}, {"label": "Holds Varun to joke-testing promise", "msg": 5, "type": "callback"}, {"label": "Candlelight dinner in two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Nikhil got your humour and gave you room to riff, and the \u0027you watch others build better\u0027 honesty plus him holding you to the joke-testing promise felt real. He\u0027s still a bit interviewer-ish and guarded about himself, so dinner is worth it mainly to see if he opens up beyond the questions.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Varun never asked Nikhil a question about his ideas or pushed back on anything, so there was little real disagreement or depth yet, and the banter stayed fairly light and on-brand.", "continue": true, "highlight": "\"I\u0027d probably freeze for two seconds and then start narrating my own freezing, which is very on-brand for an idiot \ud83d\ude04\"", "learned": [{"fact": "Varun\u0027s profile tagline is \u0027Builder, hacker, content creator, idiot.\u0027", "msg": 2}, {"fact": "He has tested jokes on a huge online audience for years but never on a live room", "msg": 0}, {"fact": "His instinct when frozen on stage is to freeze briefly and then narrate the freeze", "msg": 4}, {"fact": "He keeps his phone face-down on dates and likes reciprocal gestures", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Phone face-down promise from last date", "msg": 0, "type": "callback"}, {"label": "Idiot tagline needs no fact-checking", "msg": 2, "type": "laugh"}, {"label": "Long conversations as no-edit moments", "msg": 3, "type": "common_ground"}, {"label": "Narrating his own freezing", "msg": 4, "type": "laugh"}, {"label": "Loved the watching-others-build honesty", "msg": 4, "type": "compliment"}, {"label": "Dinner proposed in a couple days", "msg": 4, "type": "plan"}, {"label": "Holding him to testing jokes first", "msg": 5, "type": "callback"}], "overall": 7, "report": "Nikhil, this one was easy and fun: Varun is self-deprecating, quick, and he actually noticed your line about watching others build better, calling it the most honest thing he\u0027d heard at a comedy night. It stayed pretty playful and surface-level, so dinner is the place to see if he\u0027ll go deeper and disagree with you a bit.", "values_fit": 7}, "why": "Nikhil suggested it at the end of date 1"}, {"day": 5, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Nobel-level gesture phone-down joke", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Recalls Varun freezing on stage", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "\u0027Builder, hacker, content creator, idiot\u0027 joke", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Varun describes himself on stage as \u0027Builder, hacker, content creator, idiot\u0027 an", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "WTF: Discourse philosophy explained", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both value understanding differing views", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Nikhil hosts long, unedited on-camera conversations, including a show called WTF", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Changing minds through hands-on testing", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Varun proposes a fourth date", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Hands-on AI testing changes his mind", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Varun tests new AI tools himself and often changes his mind, sometimes eating hi", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Nikhil agrees, will pick the place", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Thanks Varun for being the idiot", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Nikhil is happy to lose an argument gracefully and will pick the venue for round", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Thanks him for being the idiot", "msg": 5, "type": "callback"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Slides into the chair, phone deliberately face-down on the table, then taps it once with a grin", "i": 0, "name": "Varun", "say": "Breaking News! Nikhil Kamath has suggested a candlelight dinner, and I\u0027m holding my phone face-down again, so technically you owe me a Nobel-level gesture of your own. Also, I promise the only thing I\u0027m testing tonight is the menu, not the jokes, though I\u0027m still saving those for you first \ud83e\udd1e", "side": "a", "speaker": "thevarunmayya", "thought": "Opened with callbacks to the face-down phone and the joke-testing promise from dates 1 and 2; keeping it light and will probe how he feels about a public creator life once we settle in."}, {"action": "Slides my own phone into my jacket pocket, then pats it with a smile", "i": 1, "name": "Nikhil", "say": "Phone is in my pocket, so consider the Nobel-level gesture delivered.. and I\u0027m still thinking about you freezing on stage and narrating the freeze, which I suspect would be the best set of the night \ud83d\ude04 Since you\u0027ve tested jokes on a huge online audience for years, what\u0027s a joke that worked better than you ever expected?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Warm start, he\u0027s playful and reciprocal about the phone gesture; I\u0027m probing his humour and whether he can laugh at himself and share lightness."}, {"action": "leans back, laughing at himself", "i": 2, "name": "Varun", "say": "Honest answer? The ones that worked best were the ones where I made fun of myself, like calling myself \u0027Builder, hacker, content creator, idiot\u0027 and watching people agree with the last word \ud83d\ude04 I can\u0027t pretend to have a famous punchline ready, but I\u0027ve learned the audience trusts me more when I\u0027m the idiot in the story. What about you, when you\u0027re on camera doing those long no-edit conversations, is there a moment where being unscripted backfired or surprised you?", "side": "a", "speaker": "thevarunmayya", "thought": "Warm and playful, he\u0027s steering toward unscripted and public life; I\u0027m probing how he feels about being on camera and whether he gets the always-on creator thing."}, {"action": "leans back, turning the candle slightly so it stops blocking his view of Varun", "i": 3, "name": "Nikhil", "say": "Ha, I love that the audience agrees with the last word \ud83d\ude04 Honestly, the unscripted moments that surprise me are the ones where someone says something I completely disagree with, and I have to sit there and work out why they believe it.. that\u0027s the whole idea behind WTF: Discourse for me, that maybe intelligence is understanding why the other side believes what it believes. When was the last time someone changed your mind on something, Varun?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is self-deprecating and warm, which fits my humour need. I steered toward open-mindedness and disagreement to test whether he can be genuinely persuaded, since he hasn\u0027t shown that yet."}, {"action": "sets down the fork, grinning, and nudges the candle back a few centimetres", "i": 4, "name": "Varun", "say": "Honestly, the thing that keeps changing my mind is testing tools myself. I\u0027ll walk in sure a new AI release is hype, take it for a spin, and end up eating my words on camera, which is great content and terrible for my ego \ud83d\ude04 Also, we\u0027re winding down, so I\u0027ll say this: I\u0027ve liked trying to understand why people believe what they believe here, and I\u0027d happily do a fourth round. Anyway, next time you pick the place and I\u0027ll bring a topic you\u0027ll disagree with.", "side": "a", "speaker": "thevarunmayya", "thought": "Nikhil\u0027s curiosity and openness to opposing views fit my need for someone who enjoys ideas, but I still haven\u0027t learned how he feels about a public, always-on creator life or long work hours."}, {"action": "Stands, slips the phone back out of my pocket, and holds it up with a smile before putting it away again", "i": 5, "name": "Nikhil", "say": "A fourth round sounds good.. and a topic I\u0027ll disagree with is the best gift you could bring me, so I\u0027ll pick the place and come ready to lose an argument gracefully \ud83d\ude04 Thank you for tonight, Varun, and for being the idiot in every story. What\u0027s the topic going to be?", "side": "b", "speaker": "nikhilkamathcio", "thought": "Varun is self-deprecating, open to changing his mind, and keen on a fourth date. He fits my need for curiosity and lightness, though I haven\u0027t yet tested how he handles a travel-heavy life."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "Nikhil asked good questions but shared little personal or vulnerable, and the talk stayed on work, content and ideas. Nothing on how he\u0027d handle Varun\u0027s public, busy life, and no concrete next date was set.", "continue": true, "highlight": "Nikhil: \"maybe intelligence is understanding why the other side believes what it believes.\" He also said he\u0027d \"come ready to lose an argument gracefully.\"", "learned": [{"fact": "Nikhil hosts long, unedited on-camera conversations, including a show called WTF: Discourse", "msg": 3}, {"fact": "Nikhil is most surprised by unscripted moments where a guest says something he strongly disagrees with", "msg": 3}, {"fact": "Nikhil believes intelligence means understanding why the other side believes what it does", "msg": 3}, {"fact": "Nikhil is happy to lose an argument gracefully and will pick the venue for round four", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Recalls Varun freezing on stage", "msg": 1, "type": "callback"}, {"label": "\u0027Builder, hacker, content creator, idiot\u0027 joke", "msg": 2, "type": "laugh"}, {"label": "WTF: Discourse philosophy explained", "msg": 3, "type": "learned"}, {"label": "Both value understanding differing views", "msg": 3, "type": "common_ground"}, {"label": "Changing minds through hands-on testing", "msg": 4, "type": "common_ground"}, {"label": "Varun proposes a fourth date", "msg": 4, "type": "plan"}, {"label": "Nikhil agrees, will pick the place", "msg": 5, "type": "plan"}, {"label": "Thanks Varun for being the idiot", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Varun, this one was a genuinely good time: Nikhil matched your self-deprecating humour, loved the \u0027idiot\u0027 line and is clearly into ideas and being wrong gracefully, which suits your curious, experiment-loving side. It stayed a bit in work-and-ideas territory, so next round try steering toward something more personal and lock in a date and place while the momentum is there.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "The date was pleasant but light on real disagreement or depth. Varun\u0027s answers were mostly self-deprecating anecdotes and he dodged a personal \u0027changed my mind\u0027 story, so we haven\u0027t yet seen how he handles a real clash of ideas. He also seems very content- and camera-oriented, which may mirror your own busy public life.", "continue": true, "highlight": "\"I\u0027ve learned the audience trusts me more when I\u0027m the idiot in the story.\" (Varun, msg 2)", "learned": [{"fact": "Varun describes himself on stage as \u0027Builder, hacker, content creator, idiot\u0027 and uses self-mockery as his best comedic tool", "msg": 2}, {"fact": "Varun tests new AI tools himself and often changes his mind, sometimes eating his words on camera", "msg": 4}, {"fact": "Varun has performed or tested jokes in front of a large online audience for years", "msg": 2}, {"fact": "Varun wants to bring a topic Nikhil will disagree with to the next date", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Nobel-level gesture phone-down joke", "msg": 0, "type": "laugh"}, {"label": "Audience agreeing with \u0027idiot\u0027", "msg": 2, "type": "laugh"}, {"label": "Understanding why the other side believes", "msg": 3, "type": "common_ground"}, {"label": "Hands-on AI testing changes his mind", "msg": 4, "type": "learned"}, {"label": "Fourth round with a disagreeable topic", "msg": 4, "type": "plan"}, {"label": "Thanks him for being the idiot", "msg": 5, "type": "callback"}], "overall": 6, "report": "Nikhil, this was a warm, easy evening. Varun is self-aware, funny about himself, and honestly curious about why people believe what they believe, which is your kind of person. He\u0027s offered a fourth round with a topic you\u0027ll disagree with, so I\u0027d say yes and see whether he can go a bit deeper than the jokes.", "values_fit": 7}, "why": "Nikhil suggested it at the end of date 2"}], "days": 5, "id": 7, "match": 85, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

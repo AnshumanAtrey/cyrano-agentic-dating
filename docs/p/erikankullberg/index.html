@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erika Kullberg · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">E<img src="/photos/erikankullberg.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Erika Kullberg</h1>
+    <div class="text-stone-600">Lawyer and money expert, podcast host and Creators Agency co-founder who turns fine print into practical advice for 21M+ followers</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 New York, New York, United States</div>
+    <p class="display italic text-xl mt-3 grad-text">“Lawyer who reads the fine print so you can book the trip”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Erika is a Georgetown Law-trained lawyer who turned consumer advocacy into a huge creator brand, a #1 podcast and a talent agency. She is driven by helping people avoid costly mistakes and take control of their money, with travel hacks as a big recurring theme. Expect someone sharp, practical, mission-led and upbeat, who likely enjoys turning everyday decisions into smart, slightly competitive optimisation games (inference).</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/erikankullberg/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">marketing</span><span class="chip-muted">content</span><span class="chip-muted">travel</span><span class="chip-muted">podcasts</span><span class="chip-muted">education</span><span class="chip-muted">startups</span><span class="chip-muted">public-speaking</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">75%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who is financially open and communicates honestly about money
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">She publicly frames money talk, autonomy and planning as essential, including within marriage (inference that she values this in a partner).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Shared finances shouldn&#39;t mean zero autonomy&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Respect for independence and personal autonomy
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">She advocates separate accounts and self-reliance, suggesting she values a partner who supports her own agency.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Love doesn&#39;t guarantee long term financial security&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who can keep up with a busy, public, work-centred schedule
+  <a class="src src-IG" href="https://www.instagram.com/erikankullberg/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">She runs a podcast, an agency and a large social presence, posting often in bursts.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Host of podcast, co-founder of Creators Agency, 21M+ followers”</div></li>
+<li class="text-sm"><div class="font-medium">A travel companion who enjoys smart, well-planned trips
+  <a class="src src-IG" href="https://www.instagram.com/p/DbIxqI7uNNF/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Much of her recent content is about flights, business class and immigration hacks.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Here&#39;s what it&#39;s like to fly Emirates Business Cl...&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone comfortable with a public profile and brand partnerships
+  <a class="src src-IG" href="https://www.instagram.com/p/DZ8LDSOm09V/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Her life and work are visible to millions and involve press and brand deals (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Forbes Top 50 Creator; PR contact in bio; posts by Forbes”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Travel and flight-deal hunting
+  <a class="src src-IG" href="https://www.instagram.com/erikankullberg/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Free travel guide offer; flight ticket and Emirates Business Class videos”</div></li>
+<li class="text-sm"><div class="font-medium">Creating short-form video content
+  <a class="src src-IG" href="https://www.instagram.com/p/DbLY2vyMQXx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“75% of recent posts are videos”</div></li>
+<li class="text-sm"><div class="font-medium">Hosting podcast interviews
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Host of Erika Taught Me, interviewing Barbara Corcoran, Gary Vaynerchuk, Dave Ramsey, Ramit Sethi”</div></li>
+<li class="text-sm"><div class="font-medium">Testing premium travel experiences
+  <a class="src src-IG" href="https://www.instagram.com/p/DbIxqI7uNNF/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Emirates Business Class video”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Personal finance and investing
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Investing and Savings Challenges; compound interest posts”</div></li>
+<li class="text-sm"><div class="font-medium">Consumer law and fine print
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;reads the fine print so I don&#39;t have to&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Travel hacks and immigration tips
+  <a class="src src-IG" href="https://www.instagram.com/p/DbLY2vyMQXx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I&#39;m a lawyer- here&#39;s how to skip the immigrati...&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Creator economy and brand deals
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Creators Agency has done thousands of brand deals”</div></li>
+<li class="text-sm"><div class="font-medium">Entrepreneurship and business
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Hosts a business podcast; co-founded an agency”</div></li>
+<li class="text-sm"><div class="font-medium">Money hacks from around the world
+  <a class="src src-IG" href="https://www.instagram.com/p/DbdUvmTivc0/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“TokyoMoneyHacks image”</div></li>
+<li class="text-sm"><div class="font-medium">Education and financial literacy
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Free guides, challenges and a paid community of 8,000+”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Financial empowerment
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;empowering individuals to take control of their financial futures&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Fairness for creators
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Agency started &#34;to help creators get paid what they deserve&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Consumer protection
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;help people navigate the fine print, avoid costly mistakes&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Authentic partnerships
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;partnerships that feel authentic and mutually beneficial&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Highly driven and accomplished
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Forbes Top 50 Creator; #1 podcast claim; Georgetown Law and Notre Dame”</div></li>
+<li class="text-sm"><div class="font-medium">Clear, structured communicator
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Numbered lists and scenario-based explanations”</div></li>
+<li class="text-sm"><div class="font-medium">Generous with free resources
+  <a class="src src-IG" href="https://www.instagram.com/erikankullberg/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Free travel guide, challenges and fine print guide”</div></li>
+<li class="text-sm"><div class="font-medium">Playful with relatable humour
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Girl Math&#34; post”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Studied at Georgetown University Law Center and the University of Notre Dame
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;A graduate of Georgetown Law and the University of Notre Dame&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Based in New York
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“New York, New York, United States”</div></li>
+<li class="text-sm"><div class="font-medium">Began career as a corporate lawyer
+  <a class="src src-in" href="https://www.linkedin.com/in/erika2/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;began her career as a corporate lawyer&#34;”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">90</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 90%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">68</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 68%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">78</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">High conscientiousness from structured, detail-oriented content and multiple business ventures. Extraversion from a public, high-volume presenting career. Openness from wide-ranging interviews and travel. Scores are inferences from professional personas, which are curated.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> acts <span class="text-stone-500">(Inference: she expresses care through practical help, free guides and saving people from mistakes.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Punchy, educational and upbeat; emoji-led lists and direct questions; plain English with hooks and CTAs</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Opens with a bold warning or hook</span><span class="chip-muted">Uses numbered emoji lists</span><span class="chip-muted">Ends with a question to drive comments</span><span class="chip-muted">Frames advice with comparison scenarios</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“She&#39;s a lawyer and reads the fine print so I don&#39;t have to”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Don&#39;t make this investing mistake”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“It&#39;s not about how much you make—it&#39;s about how much you keep”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and productive, with bursts of posting (about 0.3 posts/month measured, but several in July 2026)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Publicly social through podcast guests and a community of 8,000+; private social life not shown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Frequent, deal-savvy traveller, including premium cabins and international trips</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Creator, lawyer, podcast host and agency co-founder; work is central</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow her financial education brand and podcast</li><li>Expand Creators Agency (currently hiring in Austin)</li><li>Help more people invest and save confidently</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Transparent and pragmatic about money</li><li>Generous with knowledge</li><li>Ambitious and self-made</li><li>Enjoys travel and planning</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work and content may take priority and time</li><li>Optimisation mindset might turn romance into a spreadsheet</li><li>Public profile means limited privacy</li><li>Blunt views on protecting finances in marriage may need conversation</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Financial secrecy or recklessness (inferred)</li><li>Resentment of her public career (inferred)</li><li>Expecting fully merged finances with no autonomy (inferred)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">An ambitious, financially honest partner who respects her independence and loves a well-planned adventure. Someone secure and funny who can enjoy the spotlight without needing it.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate. LinkedIn gives solid career detail, but Instagram captions are absent (only image descriptions and dates), so hobbies, social life, fitness, relationships and personal tastes are largely unseen. Personality and needs are inferences from a professional public persona.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Erika's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/20/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Allie K. Miller</div><div class="text-xs text-stone-500">☕ → 🎤 · Dating…</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Erika best</h3><a href="/cyrano-agentic-dating/rankings/#erikankullberg" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">V<img src="/photos/your.richbff.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/your.richbff/" class="text-sm font-semibold hover:text-rose-600">Vivian Tu</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/alliekmiller/" class="text-sm font-semibold hover:text-rose-600">Allie K. Miller</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/masoomminawala/" class="text-sm font-semibold hover:text-rose-600">Masoom Minawala Mehta</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/financewithsharan/" class="text-sm font-semibold hover:text-rose-600">Sharan Hegde</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/herfirst100k/" class="text-sm font-semibold hover:text-rose-600">Tori Dunlap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jerryjhlee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jerryjhlee/" class="text-sm font-semibold hover:text-rose-600">Jerry Lee</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/pranjalkamra/" class="text-sm font-semibold hover:text-rose-600">Pranjal Kamra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 73</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">62</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/ishansharma7390/" class="text-sm font-semibold hover:text-rose-600">Ishan Sharma</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/thevarunmayya/" class="text-sm font-semibold hover:text-rose-600">Varun Mayya</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

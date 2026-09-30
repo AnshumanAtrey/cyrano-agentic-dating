@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varun Mayya · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Varun Mayya</h1>
+    <div class="text-stone-600">Founder of Aeos Group and Yaas Media; tech/AI content creator and builder</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 Bengaluru, Karnataka, India · In his 30s (LI: &#34;I&#39;m in my 30s right now&#34;)</div>
+    <p class="display italic text-xl mt-3 grad-text">“Builder, hacker, content creator, idiot: chasing the next tech wave and bringing you along”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Varun is a Bengaluru-based founder and creator who runs Aeos Group and Yaas Media and spends his days explaining the latest in tech and AI to a large audience. He is driven by building things, testing new tools himself, and pulling his audience into what he does, as with a 13,000-registration hackathon. He comes across as curious, self-deprecating and high-energy, someone who would turn a dinner conversation into a live experiment.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/thevarunmayya/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">content</span><span class="chip-muted">marketing</span><span class="chip-muted">gaming</span><span class="chip-muted">education</span><span class="chip-muted">social-impact</span><span class="chip-muted">writing</span><span class="chip-muted">film</span><span class="chip-muted">podcasts</span><span class="chip-muted">public-speaking</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.4</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">100%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who is comfortable with a public, always-on creator life
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4YFpdziV4/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He posts near-daily video content to over a million followers and runs several ventures, so his life is visible and busy (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Video posts almost daily in Sept 2026; 1.27M Instagram followers”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who enjoys ideas and can talk tech and the future
+  <a class="src src-IG" href="https://www.instagram.com/thevarunmayya/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Most of his posts are about new tech and he tests products himself; a partner who shares the curiosity would fit (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Stay up to date with the absolute latest in tech/AI&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Independence and understanding of long work hours
+  <a class="src src-IG" href="https://www.instagram.com/thevarunmayya/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He runs several companies and a team doing fast-turnaround content, so his time is stretched (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder @yaas.media @aeosgroup @aeos.labs @aeosgamesofficial”</div></li>
+<li class="text-sm"><div class="font-medium">A partner with a sense of humour who doesn&#39;t take things too seriously
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He describes himself with self-deprecating humour and posts meme-style videos (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Builder, hacker, content creator, idiot&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Patience for long-horizon bets
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">A friend recalls his advice of &#34;2 years, Trust The Process&#34;; he seems to value playing the long game (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Rahul Mathur&#39;s post quoting Varun: &#34;2 years, Trust The Process.&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Making video content
+  <a class="src src-IG" href="https://www.instagram.com/p/DdWgNK3o-pu/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“All 12 Instagram posts are videos; LinkedIn BTS post on shooting videos at home”</div></li>
+<li class="text-sm"><div class="font-medium">Testing new AI tools hands-on
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;in my usual fashion, I took it for a spin&#34; with Sherpa; tested GPT-6 Astra in Blender”</div></li>
+<li class="text-sm"><div class="font-medium">Storytelling and fiction ideas
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Wrote a story prompt: &#34;Bengaluru has run out of water. Water trades like equity...&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Hacking and building
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Builder, hacker, content creator, idiot&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Hackathons and community events
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Hosted &#34;Build What Moves India&#34; with OpenAI; 10 presented live in Bengaluru”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">AI and agents
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Shared news on OpenAI launching always-on agents; tested GPT-6 Astra”</div></li>
+<li class="text-sm"><div class="font-medium">Wearables and VR
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Meta just launched new VR glasses... I can&#39;t wait to see what it looks like in the next 3-5 years&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Future of media and interactive video
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Wrote about Flam making videos interactive and past content shifts”</div></li>
+<li class="text-sm"><div class="font-medium">Startups and founder ecosystems
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder of multiple ventures; reposted a hiring call for Editing as a Service”</div></li>
+<li class="text-sm"><div class="font-medium">Gaming
+  <a class="src src-IG" href="https://www.instagram.com/thevarunmayya/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder of @aeosgamesofficial; &#34;Pls apply at binary.so/aeos-games&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Education and curriculum lag
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Post on India changing college curriculums once in 3 years vs ~2 model generations a year”</div></li>
+<li class="text-sm"><div class="font-medium">Public digital services in India
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Hackathon asked builders to rethink India&#39;s public service websites”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Sharing opportunity with the audience
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;involve their audience in everything they do, and find a way to share opportunities with everyone&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Hands-on testing before opining
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;after testing it myself&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Gratitude and crediting collaborators
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Thanked mentors, OpenAI and Team VM by name after the hackathon”</div></li>
+<li class="text-sm"><div class="font-medium">Ownership and building from the ground up
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reposted hiring call: &#34;High ownership and responsibility... Building something from the ground up&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Self-deprecating humour
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Builder, hacker, content creator, idiot&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Large-scale organiser
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“13,000 registered, 250 mentored, 10 presented, 3 winners”</div></li>
+<li class="text-sm"><div class="font-medium">Forward-looking and optimistic about tech
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I&#39;m genuinely excited about what the future of content could look like&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Consistent creator
+  <a class="src src-IG" href="https://www.instagram.com/p/DdycIcYzSZW/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Seven videos posted in Sept 2026 alone”</div></li>
+<li class="text-sm"><div class="font-medium">Generous mentor to peers
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Rahul Mathur credits Varun&#39;s advice as helping him through a two-year journey”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Based in Bengaluru, Karnataka, India
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bengaluru, Karnataka, India”</div></li>
+<li class="text-sm"><div class="font-medium">Alma mater: Manipal Institute of Technology
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Manipal Institute of Technology listed on profile”</div></li>
+<li class="text-sm"><div class="font-medium">His first office was his house
+  <a class="src src-in" href="https://www.linkedin.com/in/varunmayya/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Our very first office was actually our house&#34;”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">92</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 92%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">78</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">80</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 80%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">72</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 72%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Openness is high: he chases new tech, tests tools himself and writes about shifts in media (LI). Conscientiousness shows in near-daily posting and running a large hackathon (P4-P12, LI). Extraversion comes from a 1.27M audience and public-facing work (BIO). Agreeableness is supported by thank-yous and mentoring (LI). Emotional stability is an inference from his light, self-mocking tone.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> time <span class="text-stone-500">(Inference: he offers hands-on time and attention by testing things himself, mentoring peers and thanking people by name, which points to quality time and shared experiences.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Conversational, explanatory and upbeat; plain-spoken tech storytelling with occasional self-mockery. Emoji used sparingly (🎬, 🤞, ❤️) and English only in the sources.</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Opens with a hook like &#34;Breaking News!&#34; or a personal framing</span><span class="chip-muted">Explains new tech through a historical or everyday analogy</span><span class="chip-muted">Ends with &#34;Anyway,&#34; followed by a forward-looking take</span><span class="chip-muted">Discloses collabs and ads with #ad / #collab</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“in my usual fashion, I took it for a spin”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Builder, hacker, content creator, idiot”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Love you all and expect more soon”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast: near-daily video output and several concurrent ventures</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Highly public, with a large audience and a wide network of founders and creators</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Not shown in the sources apart from being based in Bengaluru</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Founder and operator across media, AI and games; also creates content and hosts events</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow Aeos Group and Yaas Media across media, labs and games</li><li>Build Editing as a Service and the team behind it</li><li>Bring more of his audience into what he builds, as with the hackathon</li><li>Help hackathon winners get a hearing with government bodies</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Credits and thanks collaborators publicly</li><li>Self-aware and able to laugh at himself</li><li>Discloses sponsored content (#ad, #collab)</li><li>Curious and hands-on rather than just opinionated</li><li>Generous with advice, as shown by a peer&#39;s post</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>A heavy work and content schedule may leave limited free time</li><li>His public profile means a partner may get attention they didn&#39;t ask for</li><li>He may turn every outing into a tech discussion (inference)</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Dislike of his work and public visibility (inference)</li><li>Closed-mindedness toward new ideas and technology (inference)</li><li>Low ambition or an aversion to building things (inference)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">A curious, grounded partner who enjoys ideas, humour and a busy builder&#39;s life, and who has ambitions and interests of their own. Someone who can be a sounding board on new tech and won&#39;t mind being part of the occasional experiment.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate. LinkedIn gives good detail on his work, tone and values, but the Instagram posts carry no captions, so hobbies, travel, fitness, friends and relationships are mostly unseen. Personality scores and needs are inferences from professional content. Nothing is stated about age beyond being in his 30s, or about pronouns.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Varun's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/7/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Nikhil Kamath</div><div class="text-xs text-stone-500">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Varun best</h3><a href="/cyrano-agentic-dating/rankings/#thevarunmayya" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nikhilkamathcio/" class="text-sm font-semibold hover:text-rose-600">Nikhil Kamath</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/7/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">80</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="text-sm font-semibold hover:text-rose-600">Vaibhav Sisinty</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 90</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">76</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanaypratap/" class="text-sm font-semibold hover:text-rose-600">Tanay Pratap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 85</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">72</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/ishansharma7390/" class="text-sm font-semibold hover:text-rose-600">Ishan Sharma</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">V<img src="/photos/your.richbff.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/your.richbff/" class="text-sm font-semibold hover:text-rose-600">Vivian Tu</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/drewbinsky/" class="text-sm font-semibold hover:text-rose-600">Drew Binsky</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">A<img src="/photos/dhattarwalaman.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="text-sm font-semibold hover:text-rose-600">Aman Dhattarwal</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nick.digiovanni.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nick.digiovanni/" class="text-sm font-semibold hover:text-rose-600">Nick DiGiovanni</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/masoomminawala/" class="text-sm font-semibold hover:text-rose-600">Masoom Minawala Mehta</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

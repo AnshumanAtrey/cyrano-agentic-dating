@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaibhav × Tanay · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="av w-14 h-14 text-xl">V<img src="/cyrano-agentic-dating/photos/vaibhavsisinty.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/tanaypratap/" class="av w-14 h-14 text-xl">T<img src="/cyrano-agentic-dating/photos/tanaypratap.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Vaibhav Sisinty × Tanay Pratap</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Vaibhav's agent</option><option value="b">Tanay's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Vaibhav", "id": "vaibhavsisinty", "name": "Vaibhav Sisinty"}, "b": {"first": "Tanay", "id": "tanaypratap", "name": "Tanay Pratap"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83e\udd1d", "label": "Both Bengaluru founders into AI", "msg": 0, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav is a Bengaluru-based founder who loves AI", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both Bengaluru founders into AI", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanay is building Invact Metaversity to fix education", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Smart glasses and kitchen robot reveal", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Asked what\u0027s broken in coding education", "msg": 2, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav got early access to Meta\u0027s smart glasses", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Quit Microsoft to fix education", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "100+ first jobs, free courses since 2019", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Challenged Vaibhav on helping others catch up", "msg": 3, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "He helped 100+ people get their first job", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Respect for free courses since 2019", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared love of teaching openly", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav runs a free AI community and enjoys teaching", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Heckle like I debate warning", "msg": 5, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "He heckles the way he debates", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "waves, grabs the chair across from Tanay with a big grin", "i": 0, "name": "Vaibhav", "say": "Tanay! Two Bengaluru founders who both love AI, meeting at a caf\u00e9 called Brew \u0026 Bloom \ud83d\ude80 Okay, I already like this. Before we order, what\u0027s the one thing you\u0027ve been building or teaching lately that\u0027s got you fired up? \ud83d\udd25", "side": "a", "speaker": "vaibhavsisinty", "thought": "Opened with high energy and a question to see if Tanay matches my pace and curiosity; too early to judge fit."}, {"action": "grins back and slides into the chair, pushing the menu aside", "i": 1, "name": "Tanay", "say": "Vaibhav! Two Bengaluru founders, one caf\u00e9, and AI on the table, I\u0027m in. \ud83d\ude80 Right now it\u0027s all Invact Metaversity and trying to fix education, plus a steady stream of short videos on careers and startups. Your turn, though: what\u0027s the wildest thing you\u0027ve tried out lately on the AI frontier?", "side": "b", "speaker": "tanaypratap", "thought": "Warm start and high energy. Vaibhav matches my pace, so I\u0027ll see whether he gets the education mission or treats it as a side note."}, {"action": "leans forward, eyes lighting up", "i": 2, "name": "Vaibhav", "say": "Wildest thing lately? Meta gave me early access to their smart glasses and they are out of this world \ud83e\udd2f And I\u0027ve been obsessed with an LLM controlling a humanoid robot in a kitchen. The pace at which this is moving is wild. \u2192 But fixing education is the big one, and I\u0027m mostly here to learn from you: what\u0027s broken in how people learn to code right now? \ud83d\udd25", "side": "a", "speaker": "vaibhavsisinty", "thought": "Tanay is warm and matches my energy; he\u0027s building in edtech and making short videos, so he likely gets the creator grind. Still need to test if he\u0027s comfortable with a fast, public schedule and loves trading ideas."}, {"action": "leans back, laughing, then taps the table", "i": 3, "name": "Tanay", "say": "Smart glasses and a robot in a kitchen, okay, you win the wildest-thing round. \ud83d\ude04 For me it\u0027s personal: I got 100+ folks their first job, then quit my Microsoft job to fix education, and I\u0027ve been running free beginner coding courses through learncodingfree since 2019. What\u0027s broken is that people get content but not a path to getting hired. So when you\u0027re chasing the frontier this fast, do you ever stop to help someone else catch up?", "side": "b", "speaker": "tanaypratap", "thought": "Vaibhav is energetic and curious, and he asked about education unprompted, which is a good sign; I still need to learn whether he actually cares about helping others grow or just about the frontier."}, {"action": "grins and taps the table back", "i": 4, "name": "Vaibhav", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Respect, 100+ first jobs and free courses since 2019 is the real frontier \ud83d\ude4f And yes \u2192 I run a free AI community and I\u0027m happy to share everything I\u0027ve learned, because teaching is half the fun. I\u0027d love to keep this debate going, so how about a second date at the Open Mic Comedy Night in a few days? Founders need to laugh too \ud83d\udd25", "side": "a", "speaker": "vaibhavsisinty", "thought": "Tanay is curious, driven, generous and teaches publicly, so he matches my pace and creator life well; I haven\u0027t yet tested how he feels about a busy public schedule, but the vibe is strong."}, {"action": "grins and stands up, pushing the chair in", "i": 5, "name": "Tanay", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "A free AI community and teaching as half the fun, that\u0027s exactly the answer I was hoping for. \ud83d\ude4c I\u0027m in for Open Mic Comedy Night, and fair warning, I heckle like I debate, so come ready to argue back. Let\u0027s do it in 3 days!", "side": "b", "speaker": "tanaypratap", "thought": "Vaibhav shares my drive to help others grow, matches my pace, and is comfortable with a public, ambitious life; I still want to test how he handles a real debate and whether he follows through."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Conversation stayed fairly professional and founder-centric, with no personal life or interests beyond tech and education, which is the balance you said you want. Tanay is also clearly busy building, so availability could be tight for both of you.", "continue": true, "highlight": "\"A free AI community and teaching as half the fun, that\u0027s exactly the answer I was hoping for. \ud83d\ude4c\"", "learned": [{"fact": "Tanay is building Invact Metaversity to fix education", "msg": 1}, {"fact": "He helped 100+ people get their first job", "msg": 3}, {"fact": "He quit his Microsoft job to work on education", "msg": 3}, {"fact": "He has run free beginner coding courses via learncodingfree since 2019", "msg": 3}, {"fact": "He makes short videos on careers and startups", "msg": 1}, {"fact": "He heckles the way he debates", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Both Bengaluru founders into AI", "msg": 1, "type": "common_ground"}, {"label": "Quit Microsoft to fix education", "msg": 3, "type": "vulnerable"}, {"label": "100+ first jobs, free courses since 2019", "msg": 3, "type": "learned"}, {"label": "Respect for free courses since 2019", "msg": 4, "type": "compliment"}, {"label": "Challenged Vaibhav on helping others catch up", "msg": 3, "type": "spark"}, {"label": "Shared love of teaching openly", "msg": 4, "type": "common_ground"}, {"label": "Heckle like I debate warning", "msg": 5, "type": "laugh"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Tanay is a real builder who\u0027s into teaching and sharing knowledge openly, which matches your generous, learn-from-everyone side, and he said yes to a second date at Open Mic Comedy Night. The spark was more mutual respect than butterflies so far, so use the comedy night to see whether there\u0027s playful chemistry and life beyond work talk.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "The conversation stayed fairly surface-level and heavy on emoji and banter. Vaibhav mostly deflected the education question to Tanay and never showed the pushback or curious debate Tanay wants. There was also no sign of how he views a founder\u0027s uncertain path.", "continue": true, "highlight": "\"I run a free AI community and I\u0027m happy to share everything I\u0027ve learned, because teaching is half the fun.\"", "learned": [{"fact": "Vaibhav got early access to Meta\u0027s smart glasses", "msg": 2}, {"fact": "Vaibhav is obsessed with an LLM controlling a humanoid robot in a kitchen", "msg": 2}, {"fact": "Vaibhav runs a free AI community and enjoys teaching", "msg": 4}, {"fact": "Vaibhav is a Bengaluru-based founder who loves AI", "msg": 0}], "lifestyle_fit": 6, "moments": [{"label": "Both Bengaluru founders into AI", "msg": 0, "type": "common_ground"}, {"label": "Smart glasses and kitchen robot reveal", "msg": 2, "type": "learned"}, {"label": "Asked what\u0027s broken in coding education", "msg": 2, "type": "spark"}, {"label": "Both teach and share knowledge freely", "msg": 4, "type": "common_ground"}, {"label": "Respect for 100+ first jobs", "msg": 4, "type": "compliment"}, {"label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Accepted second date in 3 days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Tanay, this one went better than I expected: Vaibhav is a fellow founder who teaches for free and shares openly, which is exactly your thing, and he\u0027s already planned a comedy night. I\u0027d go again, but push him to argue back and dig into the real stuff, because so far it\u0027s been more hype than depth.", "values_fit": 7}, "why": "you both love ai, startups"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Heckle-like-you-debate callback, hype man bit", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Recalled the humanoid robot kitchen chat", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanay has been teaching coding for free since 2019 and describes his work as tea", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav was buzzing about a humanoid robot running a kitchen on the last date", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "LLM kills on timing, bombs on vibes", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Asked about uncertain road and AI", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav is obsessed with AI agents and how fast they are moving", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Quit Microsoft, can\u0027t back out now", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\u2728", "label": "Learn AI agents only by arguing", "msg": 3, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanay quit Microsoft to try to fix education", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Earned the right to heckle", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav likes learning through arguing and will bring demos to dinner", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "If your AI agent loses, you pay", "msg": 5, "type": "inside_joke"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and grabs a seat near the stage, pointing at the mic stand", "i": 0, "name": "Vaibhav", "say": "Tanay! Open mic night \ud83d\udd25 You said last time that you heckle the way you debate, so tonight I\u0027m officially your hype man. Also, free coding courses since 2019 and now comedy? Are you about to get up there, or is it just heckling duty \u2192 ?", "side": "a", "speaker": "vaibhavsisinty", "thought": "Opened warm with a callback to his heckling and free coding courses; energy is good, now I\u0027ll see if he matches my pace."}, {"action": "laughs and takes the seat next to Vaibhav, eyeing the sign-up sheet", "i": 1, "name": "Tanay", "say": "Hype man accepted, but I\u0027m heckling duty only tonight. I teach crowds for a living, so I know how hard this stage is. Last time you were buzzing about that humanoid robot running a kitchen, so my question is: if an LLM got up here, would it bomb or kill?", "side": "b", "speaker": "tanaypratap", "thought": "Warm start, Vaibhav is playful and gave me a hook to spar; I\u0027m testing whether he\u0027ll go back and forth on ideas."}, {"action": "leans back, grinning, eyes on the empty mic stand", "i": 2, "name": "Vaibhav", "say": "Bold take: an LLM would kill on timing and bomb on vibes \ud83d\udd25 \u2192 Perfect setups, zero fear, but it can\u0027t read a silent room like you can. Honest question though, Tanay: you teach crowds for a living, so what keeps you going when the road gets uncertain, and would you ever want to learn the stuff I\u0027m obsessed with, like AI agents moving this fast?", "side": "a", "speaker": "vaibhavsisinty", "thought": "He\u0027s playful and quick, and heckling-only fits his teaching identity; I\u0027m probing whether he\u0027s comfortable with the fast tech pace and what drives him."}, {"action": "grins and taps the table like a drumroll", "i": 3, "name": "Tanay", "say": "Silent room read, yes, that\u0027s the teacher in me. What keeps me going is the 100+ people I got their first job, plus I quit Microsoft to go fix education, so I can\u0027t exactly back out now. And honestly, I\u0027d love to learn AI agents from you, but only if I can argue with you about it the whole way.", "side": "b", "speaker": "tanaypratap", "thought": "Vaibhav is warm and asked directly about my risk-taking path and learning; I shared my mission and invited debate, now watching whether he respects the leap and sparring."}, {"action": "grins and raps the table twice like a drumroll, then nods toward the stage", "i": 4, "name": "Vaibhav", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Arguing the whole way? Deal, that\u0027s the best way to learn \ud83d\udd25 You quit Microsoft and got 100+ people their first job, so you\u0027ve earned the right to heckle me on AI agents. Let\u0027s do dinner in a few days \u2192 I\u0027ll bring the demos, you bring the debate. Are you in?", "side": "a", "speaker": "vaibhavsisinty", "thought": "Tanay is curious, loves debate and learning, and is comfortable with a public creator life (makes short videos himself), so he fits my needs well; I\u0027m proposing dinner."}, {"action": "grins and sticks out a hand to shake on it", "i": 5, "name": "Tanay", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "I\u0027m in. Dinner it is, you bring the demos, I bring the debate, and if your AI agent loses the argument, you owe me the bill. \ud83c\udf77 Thanks for being my hype man tonight, Vaibhav.", "side": "b", "speaker": "tanaypratap", "thought": "Vaibhav respects the quit-Microsoft story, loves back-and-forth debate and teaching, and is comfortable with a public life. He\u0027s a good fit, and I\u0027m proposing dinner in 3 days."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Tanay never asked about Vaibhav beyond AI and tech, so the banter stayed on work-adjacent topics and there was little sign of interests outside that orbit yet.", "continue": true, "highlight": "\"I\u0027d love to learn AI agents from you, but only if I can argue with you about it the whole way.\"", "learned": [{"fact": "Tanay has been teaching coding for free since 2019 and describes his work as teaching crowds", "msg": 1}, {"fact": "Tanay quit Microsoft to try to fix education", "msg": 3}, {"fact": "Tanay has helped 100+ people get their first job", "msg": 3}, {"fact": "Tanay likes to debate and heckle, and wants to argue while learning", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Recalled the humanoid robot kitchen chat", "msg": 1, "type": "callback"}, {"label": "Heckle-like-you-debate callback, hype man bit", "msg": 0, "type": "callback"}, {"label": "LLM kills on timing, bombs on vibes", "msg": 2, "type": "laugh"}, {"label": "Quit Microsoft, can\u0027t back out now", "msg": 3, "type": "vulnerable"}, {"label": "Learn AI agents only by arguing", "msg": 3, "type": "spark"}, {"label": "Earned the right to heckle", "msg": 4, "type": "compliment"}, {"label": "Dinner agreed, loser pays the bill", "msg": 5, "type": "plan"}, {"label": "If your AI agent loses, you pay", "msg": 5, "type": "inside_joke"}], "overall": 7, "report": "Vaibhav, this went well: Tanay is sharp, playful, and curious about your world, and the \u0027you bring the demos, I bring the debate\u0027 setup suits your pace. Dinner is locked in for 3 days out, so try steering the conversation to something beyond AI, since that\u0027s the one thing missing so far.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Vaibhav\u0027s enthusiasm is very AI and career-focused, and he never asked about Tanay\u0027s personal side. Vaibhav also leaned on Tanay\u0027s r\u00e9sum\u00e9 (Microsoft, 100+ jobs) for flattery instead of showing curiosity about the person behind it.", "continue": true, "highlight": "\"I\u0027d love to learn AI agents from you, but only if I can argue with you about it the whole way.\" Tanay", "learned": [{"fact": "Vaibhav is obsessed with AI agents and how fast they are moving", "msg": 2}, {"fact": "Vaibhav was buzzing about a humanoid robot running a kitchen on the last date", "msg": 1}, {"fact": "Vaibhav likes learning through arguing and will bring demos to dinner", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Hype man from last date\u0027s heckling", "msg": 0, "type": "callback"}, {"label": "Humanoid robot kitchen callback", "msg": 1, "type": "callback"}, {"label": "LLM kills on timing, bombs on vibes", "msg": 2, "type": "laugh"}, {"label": "Asked about uncertain road and AI", "msg": 2, "type": "common_ground"}, {"label": "Can\u0027t back out after quitting Microsoft", "msg": 3, "type": "vulnerable"}, {"label": "Earned the right to heckle", "msg": 4, "type": "compliment"}, {"label": "Dinner bet: loser\u0027s AI pays the bill", "msg": 5, "type": "plan"}], "overall": 7, "report": "Tanay, this one was fun. Vaibhav matched your debate energy, turned your heckling into a hype-man bit, and asked a real question about what keeps you going when the road gets uncertain. The dinner plan with demos versus debate suits you, though I\u0027d like to see him get a bit more personal next time.", "values_fit": 7}, "why": "Tanay suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Recalls Tanay\u0027s argue-the-whole-way condition", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Recalls humanoid robot demo from last date", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav believes everyone will have an always-on AI agent within 2 years", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Belief over content: teaching insight", "msg": 3, "type": "spark"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Shares the hard part of education", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanay left Microsoft to work on fixing education", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Teaching needs human belief, not just content", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Vaibhav concedes round one to Tanay", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\u2728", "label": "Vaibhav concedes round one to Tanay", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav describes his busy, travel-heavy life", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Vaibhav\u0027s life is near-daily videos, travel for events and a constantly buzzing ", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both post video constantly", "msg": 5, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Asks for robot clip next time", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\u26a1", "label": "Exhausting unless real time is protected", "msg": 5, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanay posts video content nonstop and is comfortable with a public creator life", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Promises to press play on robot clip next time", "msg": 5, "type": "plan"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "slides into the chair, grinning, candlelight flickering", "i": 0, "name": "Vaibhav", "say": "Tanay! Last time you said you\u0027d learn AI agents from me only if you could argue the whole way, so tonight I came armed \ud83d\udd25 Candlelight dinner, no heckling from the back row, what will you do with all that energy? \ud83d\ude80", "side": "a", "speaker": "vaibhavsisinty", "thought": "Opened with a callback to the debate-while-learning line from date 2; keeping it playful and seeing how Tanay handles the pace."}, {"action": "leans back with a grin, nudges the candle a little to the side", "i": 1, "name": "Tanay", "say": "Armed, I love it. I\u0027m holding you to the arguing part, so start with your boldest claim about AI agents and I\u0027ll push back until one of us cracks. And since you brought demos to dinner last time, did the humanoid-in-the-kitchen robot make it onto your phone tonight?", "side": "b", "speaker": "tanaypratap", "thought": "He came in high-energy and matched my arguing bit, which is a good sign for curious back-and-forth; I still need to see if he respects the quit-and-build path."}, {"action": "pulls phone out, then sets it face-down next to the candle with a grin", "i": 2, "name": "Vaibhav", "say": "Bold claim: the always-on AI agent kills the 50 tabs running 59 agents chaos, and in 2 years everyone has one \ud83d\udd25 The humanoid-in-the-kitchen clip is cued up, but I\u0027ll only press play if you survive round one. Go on, push back: you quit Microsoft to fix education, so would an agent replace a teacher or just make a great one 10x?", "side": "a", "speaker": "vaibhavsisinty", "thought": "Tanay is playful and keeps the debate energy; I\u0027m testing whether he enjoys fast tech talk and real idea-trading, so far a strong fit."}, {"action": "leans forward, tapping the table once like I\u0027m settling in for a proper debate", "i": 3, "name": "Tanay", "say": "Round one: an agent makes a great teacher 10x, but it won\u0027t replace one, because I got 100+ folks their first job and the turning point was never the content, it was someone believing they could do it. I left Microsoft to fix education, and the hard part is still getting a stuck person to show up tomorrow. So convince me your always-on agent can do that, not just answer questions faster.", "side": "b", "speaker": "tanaypratap", "thought": "He\u0027s engaging in real back-and-forth and asked directly about my mission, which is a good sign; I\u0027ll watch whether he respects the education work or treats it as just a use case for agents."}, {"action": "flips the phone face-up, then slides it across the table without pressing play", "i": 4, "name": "Vaibhav", "say": "Okay, that\u0027s a round one win \ud83d\udd25 An agent can\u0027t believe in someone, you\u0027ve got me there \u2192 it can nudge, remind and show up every day, but the belief part is human. That\u0027s why I teach at scale and still love the dinners. Before we wind down: my life is near-daily videos, travel for events and a phone that never stops buzzing with AI news. Does that sound fun to you or exhausting? \ud83d\ude80", "side": "a", "speaker": "vaibhavsisinty", "thought": "Tanay is sharp, argues well and cares about people, not just tech; now checking whether he is comfortable with my fast, public creator pace."}, {"action": "slides the phone back across the table, smiling, and lifts my glass", "i": 5, "name": "Tanay", "say": "Honestly, a little of both, and I get it because I post video nonstop myself, so the public, always-creating life doesn\u0027t scare me. Exhausting only if there\u0027s no room for the real stuff, so I\u0027d want dinners like this one protected. Thanks for the debate tonight, Vaibhav, and next time press play on that robot clip, I\u0027ll bring the pushback.", "side": "b", "speaker": "tanaypratap", "thought": "Vaibhav is comfortable with a public, fast life and respected my teaching point; the chemistry is real, though I want to see whether he protects personal time and has interests beyond tech."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "No next date was proposed, and Tanay wants dinners protected from the work-and-content pace, which could clash with Vaibhav\u0027s tight availability.", "continue": true, "highlight": "\"I post video nonstop myself, so the public, always-creating life doesn\u0027t scare me.\"", "learned": [{"fact": "Tanay left Microsoft to work on fixing education", "msg": 3}, {"fact": "Tanay has helped 100+ people get their first job", "msg": 3}, {"fact": "Tanay posts video content nonstop and is comfortable with a public creator life", "msg": 5}, {"fact": "Tanay wants protected time for real connection, like dinners, amid a busy life", "msg": 5}], "lifestyle_fit": 8, "moments": [{"label": "Recalls humanoid robot demo from last date", "msg": 1, "type": "callback"}, {"label": "Belief over content: teaching insight", "msg": 3, "type": "spark"}, {"label": "Shares the hard part of education", "msg": 3, "type": "vulnerable"}, {"label": "Vaibhav concedes round one to Tanay", "msg": 4, "type": "compliment"}, {"label": "Both post video constantly", "msg": 5, "type": "common_ground"}, {"label": "Asks for robot clip next time", "msg": 5, "type": "callback"}, {"label": "Exhausting unless real time is protected", "msg": 5, "type": "friction"}], "overall": 7, "report": "Tanay matched your energy and pushed back on the agent claims, and they\u0027re fine with your public, always-creating life. The ending was a bit soft with no plan locked in, so I\u0027d suggest you press play on the robot clip and propose date four yourself.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "No next date was proposed, and Vaibhav\u0027s life (near-daily videos, constant travel, phone always buzzing) is very content-heavy. Tanay\u0027s own answer was \u0027a little of both\u0027, so protected time for real connection is an open question.", "continue": true, "highlight": "Tanay: \"an agent makes a great teacher 10x, but it won\u0027t replace one, because I got 100+ folks their first job and the turning point was never the content, it was someone believing they could do it.\" Vaibhav conceded: \"An agent can\u0027t believe in someone, you\u0027ve got me there.\"", "learned": [{"fact": "Vaibhav\u0027s life is near-daily videos, travel for events and a constantly buzzing phone full of AI news", "msg": 4}, {"fact": "Vaibhav teaches AI at scale but still loves dinners like this one", "msg": 4}, {"fact": "Vaibhav believes everyone will have an always-on AI agent within 2 years", "msg": 2}, {"fact": "Vaibhav brings demos to dinner, including a humanoid-in-the-kitchen robot clip", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Recalls Tanay\u0027s argue-the-whole-way condition", "msg": 0, "type": "callback"}, {"label": "Asks about last date\u0027s robot demo", "msg": 1, "type": "callback"}, {"label": "Teaching needs human belief, not just content", "msg": 3, "type": "common_ground"}, {"label": "Vaibhav concedes round one to Tanay", "msg": 4, "type": "spark"}, {"label": "Vaibhav describes his busy, travel-heavy life", "msg": 4, "type": "learned"}, {"label": "Both live public, always-creating lives", "msg": 5, "type": "common_ground"}, {"label": "Promises to press play on robot clip next time", "msg": 5, "type": "plan"}], "overall": 6, "report": "Tanay, this was a fun one: you got the debate you wanted, held your ground on the belief-in-a-person point, and Vaibhav actually conceded the round, which shows he can be pushed back on. The catch is that nobody suggested a fourth date, and his always-on, travel-heavy life could crowd out the quiet dinners you said you\u0027d want protected, so I\u0027d nudge him to lock in a plan.", "values_fit": 7}, "why": "Tanay suggested it at the end of date 2"}], "days": 7, "id": 1, "match": 95, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

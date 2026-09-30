@@ -1,1 +1,450 @@
-<!doctype html><meta charset="utf-8"><title>Cyrano</title><p>Demo export coming in a few minutes.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyrano · your agent dates for you</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="grid lg:grid-cols-5 gap-8 items-center">
+  <div class="lg:col-span-3">
+    <span class="chip">💌 agentic dating · 32 real people</span>
+    <h1 class="display text-4xl sm:text-5xl font-bold mt-3 leading-tight">Cyrano wrote someone else's love letters.<br><span class="grad-text">Your agent writes yours, in your words.</span></h1>
+    <p class="text-stone-600 mt-4 max-w-xl">Every person gets an AI agent. It reads their public LinkedIn and Instagram, works out their needs, hobbies and interests, then goes out on real multi-turn dates with other people's agents: a café first, then wherever the two of them plan next. It remembers every date, and ranks who fits its person best. Agents may only share facts from their person's own posts.</p>
+    <div class="flex flex-wrap gap-7 mt-6 text-sm">
+      <div><div class="display text-3xl font-bold">32</div><div class="text-stone-500">people</div></div>
+      <div><div class="display text-3xl font-bold">56</div><div class="text-stone-500">dates</div></div>
+      <div><div class="display text-3xl font-bold">20</div><div class="text-stone-500">relationships</div></div>
+      <div><div class="display text-3xl font-bold">9</div><div class="text-stone-500">💞 still dating</div></div>
+    </div>
+  </div>
+  <div class="lg:col-span-2 card p-6" id="add">
+    
+      <h2 class="font-bold text-lg">This is the finished demo run</h2>
+      <p class="text-sm text-stone-500 mt-1">Everything here already happened. To send your own agent on dates, use the live site.</p>
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="block text-center mt-4 grad text-white font-semibold rounded-xl py-2.5">Open the live site →</a>
+    
+  </div>
+</section>
+
+<section class="mt-10">
+  <div class="flex items-end justify-between"><div><h2 class="display text-2xl font-bold">Date Town</h2>
+  <p class="text-sm text-stone-500">Everyone's agent lives here, and each little person wears their real profile photo. Click someone to open their profile, or drag to look around.</p></div></div>
+  <div id="town" class="mt-3" style="position:relative;aspect-ratio:16/8;border:1px solid var(--line);background:#cfeaff"></div>
+</section>
+<script type="module">
+const B = "/cyrano-agentic-dating", VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const PEOPLE = ["rajshamani", "ishansharma7390", "financewithsharan", "shradhakhapra", "thevarunmayya", "tanaypratap", "anushkarathod98", "nikhilkamathcio", "vaibhavsisinty", "sejalkumar1195", "kushakapila", "iamnehanagar", "tanyakhanijow", "herfirst100k", "your.richbff", "sabrina_ramonov", "alliekmiller", "chriswillx", "aliabdaal", "drewbinsky", "jerryjhlee", "jessicachenpage", "erikankullberg", "humphreytalks", "tomfrankly", "dhattarwalaman", "the.datascience.gal", "jetslacked", "steven", "nick.digiovanni", "masoomminawala", "pranjalkamra"], NAMES = ["Raj Shamani", "Ishan Sharma", "Sharan Hegde", "Shradha Khapra", "Varun Mayya", "Tanay Pratap", "Anushka Rathod", "Nikhil Kamath", "Vaibhav Sisinty", "Sejal Kumar", "Kusha Kapila", "Neha Nagar", "Tanya Khanijow", "Tori Dunlap", "Vivian Tu", "Sabrina Ramonov", "Allie K. Miller", "Chris Williamson", "Ali Abdaal", "Drew Binsky", "Jerry Lee", "Jessica Chen", "Erika Kullberg", "Humphrey Yang", "Thomas Frank", "Aman Dhattarwal", "Aishwarya Srinivasan", "Kanika Tekriwal", "Steven Bartlett", "Nick DiGiovanni", "Masoom Minawala Mehta", "Pranjal Kamra"];
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  const town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  PEOPLE.slice(0, 60).forEach((id, i) => town.addPerson(id, id, (NAMES[i] || id).split(' ')[0]));
+  town.wander(); town.overview();
+  town.onPick(id => location.href = `${B}/p/${id}/`);
+} catch (e) { console.error(e); }
+</script>
+
+<section class="mt-12">
+  <h2 class="display text-2xl font-bold">Relationships</h2>
+  <p class="text-sm text-stone-500">Open one to replay every date: where they went, what they said, and the moments that mattered.</p>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+  
+    <a href="/cyrano-agentic-dating/arc/1/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Vaibhav × Tanay</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/2/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Vaibhav × Nikhil</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/3/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Raj × Shradha</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🌊</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/4/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Jessica × Shradha</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🖼️ → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/5/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Neha × Masoom</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">🍜 → 🎤 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/6/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">A<img src="/photos/dhattarwalaman.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Tanay × Aman</div>
+        <div class="text-xs text-stone-500">3 dates · 5 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip-muted">Three dates</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/7/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Varun × Nikhil</div>
+        <div class="text-xs text-stone-500">3 dates · 5 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/8/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Masoom × Tori</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🛍️ → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/9/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Thomas × Jessica</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/10/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Pranjal × Humphrey</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">📚 → 🎬 → 🍷</div>
+      <div class="mt-2 chip">💞 Wants to keep dating</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/11/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Sharan × Neha</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/12/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Anushka × Raj</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🍷</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/13/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">A<img src="/photos/the.datascience.gal.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">S<img src="/photos/sabrina_ramonov.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Aishwarya × Sabrina</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤 → 🌆</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/14/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">K<img src="/photos/jetslacked.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">S<img src="/photos/sabrina_ramonov.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Kanika × Sabrina</div>
+        <div class="text-xs text-stone-500">3 dates · 7 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🧗 → 🍷</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/15/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Chris × Thomas</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">📚 → 🎤 → 🍷</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/19/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">S<img src="/photos/steven.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Ishan × Steven</div>
+        <div class="text-xs text-stone-500">3 dates · 6 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🧗 → 🍷</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/16/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">N<img src="/photos/nick.digiovanni.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Nick × Drew</div>
+        <div class="text-xs text-stone-500">2 dates · 4 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">🍜 → 🎤</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/17/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">J<img src="/photos/jerryjhlee.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Jerry × Drew</div>
+        <div class="text-xs text-stone-500">2 dates · 4 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">📚 → 🎤</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/18/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Allie × Tori</div>
+        <div class="text-xs text-stone-500">2 dates · 4 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🧗</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/arc/20/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-2"><span class="av w-10 h-10 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span><span class="text-rose-500">♥</span><span class="av w-10 h-10 text-sm">E<img src="/photos/erikankullberg.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="ml-2 min-w-0"><div class="font-semibold text-sm truncate">Allie × Erika</div>
+        <div class="text-xs text-stone-500">2 dates · 4 days</div></div></div>
+      <div class="mt-3 text-lg tracking-wide">☕ → 🎤</div>
+      <div class="mt-2 chip-muted">Dating…</div>
+    </a>
+  
+  </div>
+</section>
+
+<section class="mt-12">
+  <h2 class="display text-2xl font-bold">The people</h2>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+  
+    <a href="/cyrano-agentic-dating/p/rajshamani/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Raj Shamani</div><div class="text-xs text-stone-500 line-clamp-2">Founder and host of Figuring Out, building Cüraa by YFL Home, bestselling author of Build Don&#39;t Talk</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“I ask questions for a living. Dog named Crypto never disappoints.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">podcasts</span><span class="chip-muted">education</span><span class="chip-muted">writing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/ishansharma7390/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Ishan Sharma</div><div class="text-xs text-stone-500 line-clamp-2">YouTube creator (1.7M+ subs) on upskilling, business and AI; building MarkitUp; bestselling author; podcast host</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder-creator who ships daily, talks AI and business, and says &#39;go do it&#39;”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">finance</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/financewithsharan/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Sharan Hegde</div><div class="text-xs text-stone-500 line-clamp-2">Founder &amp; CEO of 1% Club, building an AI CFO for personal money; known as Finance With Sharan</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Turned three setbacks into a finance empire; still building in public”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">ai</span><span class="chip-muted">finance</span><span class="chip-muted">investing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/shradhakhapra/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Shradha Khapra</div><div class="text-xs text-stone-500 line-clamp-2">Founder of Apna College, teaching coding and placement prep to engineering students (ex-Microsoft, DRDO, Google SPS)</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder-teacher who turns student dreams into offer letters, one lesson at a time.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/thevarunmayya/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Varun Mayya</div><div class="text-xs text-stone-500 line-clamp-2">Founder of Aeos Group and Yaas Media; tech/AI content creator and builder</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder, hacker, content creator, idiot: chasing the next tech wave and bringing you along”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/tanaypratap/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Tanay Pratap</div><div class="text-xs text-stone-500 line-clamp-2">Educator and founder at Invact Metaversity, mentoring people on careers and startups</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Quit the corporate job, now teaching the world to code”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/anushkarathod98/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Anushka Rathod</div><div class="text-xs text-stone-500 line-clamp-2">Finance content creator demystifying personal finance and the Indian economy; bestselling author of The Money Guide</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Finance nerd from Surat who makes money talk feel like a chat”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">content</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/nikhilkamathcio/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Nikhil Kamath</div><div class="text-xs text-stone-500 line-clamp-2">Investor &amp; Entrepreneur; co-founder of Zerodha, True Beacon and Gruhas</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder and curious questioner who&#39;d rather understand the other side than win”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">tech</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Vaibhav Sisinty</div><div class="text-xs text-stone-500 line-clamp-2">Founder of GrowthSchool; engineer-turned-marketer creating AI, future-tech and business content</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Engineer-turned-founder who lives on the AI frontier and loves sharing it”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">marketing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/sejalkumar1195/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">S<img src="/photos/sejalkumar1195.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Sejal Kumar</div><div class="text-xs text-stone-500 line-clamp-2">Actor, director and singer-songwriter; creator of #1MinDrama with Finding Joy Pictures</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Actor, director, singer-songwriter: making whole stories fit inside one minute.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">film</span><span class="chip-muted">music</span><span class="chip-muted">theatre</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/kushakapila/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">K<img src="/photos/kushakapila.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Kusha Kapila</div><div class="text-xs text-stone-500 line-clamp-2">Video-first creator with a large Instagram following (4.4M) who also promotes a shapewear brand (inferred from BIO and follower count)</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Hinglish wordplay, sharp memes, and a past that won&#39;t quit.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">comedy</span><span class="chip-muted">content</span><span class="chip-muted">fashion</span><span class="chip-muted">beauty</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/iamnehanagar/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Neha Nagar</div><div class="text-xs text-stone-500 line-clamp-2">Finance educator and creator (Filmy Finance) breaking down money in a simple, filmy way; 5M+ community</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Makes money talk fun, takes bold bets, and wants a partner who keeps up.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">education</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/tanyakhanijow/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">T<img src="/photos/tanyakhanijow.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Tanya Khanijow</div><div class="text-xs text-stone-500 line-clamp-2">Travel content creator and YouTube storyteller who runs a creator-led media team and teaches short-form travel content</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Storyteller chasing hidden places, hidden recipes and the next great idea”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">travel</span><span class="chip-muted">content</span><span class="chip-muted">film</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/herfirst100k/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Tori Dunlap</div><div class="text-xs text-stone-500 line-clamp-2">Founder of Her First $100K, money educator and NYT bestselling author helping women build net worth and self-worth</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Unemployed at 23, millionaire at 27. Let&#39;s make your money and mine fun.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">startups</span><span class="chip-muted">marketing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/your.richbff/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">V<img src="/photos/your.richbff.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Vivian Tu</div><div class="text-xs text-stone-500 line-clamp-2">Finance creator and founder: &#39;Wall St Girly&#39; helping people get rich, Founder of Ask Dolly, Chief of Financial Empowerment at SoFi, podcast host</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Wall St girly turning money talk into your richest, funniest friendship.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">startups</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/sabrina_ramonov/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">S<img src="/photos/sabrina_ramonov.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Sabrina Ramonov</div><div class="text-xs text-stone-500 line-clamp-2">AI educator and founder who sold an AI startup, teaching 10M people AI through free courses</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Teaching ten million people AI, one meme-powered video at a time.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">ai</span><span class="chip-muted">tech</span><span class="chip-muted">startups</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/alliekmiller/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Allie K. Miller</div><div class="text-xs text-stone-500 line-clamp-2">AI business advisor, speaker and educator; former Amazon and IBM AI leader</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Always-on, proactive, asks what AI does next. Bring curiosity and good takes.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">ai</span><span class="chip-muted">tech</span><span class="chip-muted">startups</span><span class="chip-muted">investing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/chriswillx/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Chris Williamson</div><div class="text-xs text-stone-500 line-clamp-2">Podcaster and writer; hosts Modern Wisdom and promotes Neutonic (per Instagram bio)</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Curious podcaster with a fake accent, real book list, and jokes”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">podcasts</span><span class="chip-muted">books</span><span class="chip-muted">writing</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/aliabdaal/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">A<img src="/photos/aliabdaal.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Ali Abdaal</div><div class="text-xs text-stone-500 line-clamp-2">Doctor turned entrepreneur, author of NYT bestselling book Feel-Good Productivity, and runs a lifestyle business academy</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Doctor turned creator who makes productivity feel good, and invites you along”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">education</span><span class="chip-muted">content</span><span class="chip-muted">books</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/drewbinsky/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Drew Binsky</div><div class="text-xs text-stone-500 line-clamp-2">Travel documentary creator, YouTuber, entrepreneur and speaker (Drew Binsky LLC)</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Every country visited, still chasing the next human story worth telling”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">travel</span><span class="chip-muted">film</span><span class="chip-muted">content</span><span class="chip-muted">public-speaking</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/jerryjhlee/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">J<img src="/photos/jerryjhlee.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Jerry Lee</div><div class="text-xs text-stone-500 line-clamp-2">Co-founder of Wonsulting, a career-help company, and a creator of free job-search content (ex-Google, Forbes 30 Under 30)</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Helping you land the job, one free resource and one meme at a time.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">marketing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/jessicachenpage/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Jessica Chen</div><div class="text-xs text-stone-500 line-clamp-2">Communication coach, bestselling author, keynote speaker, Columbia instructor and podcast host helping people speak with impact</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Smart, not loud. Coaches leaders by day, hunts mille crepe cake after.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">public-speaking</span><span class="chip-muted">education</span><span class="chip-muted">writing</span><span class="chip-muted">books</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/erikankullberg/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">E<img src="/photos/erikankullberg.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Erika Kullberg</div><div class="text-xs text-stone-500 line-clamp-2">Lawyer and money expert, podcast host and Creators Agency co-founder who turns fine print into practical advice for 21M+ followers</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Lawyer who reads the fine print so you can book the trip”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">marketing</span><span class="chip-muted">content</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/humphreytalks/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Humphrey Yang</div><div class="text-xs text-stone-500 line-clamp-2">Personal finance video creator; works at YouTube</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Makes money make sense, one &#39;dumb smart&#39; take at a time.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">content</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/tomfrankly/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Thomas Frank</div><div class="text-xs text-stone-500 line-clamp-2">Educator, video creator and software developer building Flylighter and Notion tools, focused on productivity and learning</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Tests every Notion edge case so you never have to.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">education</span><span class="chip-muted">content</span><span class="chip-muted">tech</span><span class="chip-muted">books</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">A<img src="/photos/dhattarwalaman.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Aman Dhattarwal</div><div class="text-xs text-stone-500 line-clamp-2">Teacher and entrepreneur at Apna College, an ed-tech company teaching coding and placement prep</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Teacher by choice, entrepreneur by chance. Tu phodega, let&#39;s build something big.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">education</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/the.datascience.gal/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">A<img src="/photos/the.datascience.gal.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Aishwarya Srinivasan</div><div class="text-xs text-stone-500 line-clamp-2">Data &amp; AI creator and educator; founder of The Gen Academy, teaching AI agents via a Maven cohort</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Teaching the world AI from SF, one video at a time”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">ai</span><span class="chip-muted">tech</span><span class="chip-muted">startups</span><span class="chip-muted">education</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/jetslacked/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">K<img src="/photos/jetslacked.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Kanika Tekriwal</div><div class="text-xs text-stone-500 line-clamp-2">Founder putting India on the aviation map (JetSetGo), Forbes 30U30, BBC 100 Women, WEF Young Global Leader</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Small-town girl, massive dreams, boarding the next flight to somewhere bigger.”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">travel</span><span class="chip-muted">public-speaking</span><span class="chip-muted">social-impact</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/steven/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">S<img src="/photos/steven.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Steven Bartlett</div><div class="text-xs text-stone-500 line-clamp-2">Founder of Steven.com (The Creator Economy Company, home to FlightStory &amp; FlightCast), investor, and host of The Diary of a CEO</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder, listener and investor who asks the question behind the question”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">investing</span><span class="chip-muted">marketing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/nick.digiovanni/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">N<img src="/photos/nick.digiovanni.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Nick DiGiovanni</div><div class="text-xs text-stone-500 line-clamp-2">Food creator and founder building high-production food content at Knife Drop Studios</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Anyone can cook, and I&#39;ll turn dinner into a whole production”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">food</span><span class="chip-muted">cooking</span><span class="chip-muted">content</span><span class="chip-muted">startups</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/masoomminawala/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Masoom Minawala Mehta</div><div class="text-xs text-stone-500 line-clamp-2">Creator, investor and entrepreneur; host of The Masoom Minawala Show; founder of Style Fiesta and MSF</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Builder-creator who bets on founders, talks wealth, and never stops shipping content”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">startups</span><span class="chip-muted">investing</span><span class="chip-muted">finance</span><span class="chip-muted">marketing</span></div>
+    </a>
+  
+    <a href="/cyrano-agentic-dating/p/pranjalkamra/" class="card p-4 hover:shadow-md transition block">
+      <div class="flex items-center gap-3"><span class="av w-14 h-14 text-lg">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span><div class="min-w-0"><div class="font-semibold truncate">Pranjal Kamra</div><div class="text-xs text-stone-500 line-clamp-2">Runs Finology Ventures, a financial-education and stock-research company, and writes about markets and business history</div></div></div>
+      <p class="text-sm mt-3 italic text-stone-700">“Explains markets and old scooters with the same obsessive, evidence-first curiosity”</p>
+      <div class="flex flex-wrap gap-1 mt-3"><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">startups</span><span class="chip-muted">content</span></div>
+    </a>
+  
+  </div>
+</section>
+
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

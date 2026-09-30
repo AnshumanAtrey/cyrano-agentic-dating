@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jerry Lee · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">J<img src="/photos/jerryjhlee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Jerry Lee</h1>
+    <div class="text-stone-600">Co-founder of Wonsulting, a career-help company, and a creator of free job-search content (ex-Google, Forbes 30 Under 30)</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 New York City Metropolitan Area, USA</div>
+    <p class="display italic text-xl mt-3 grad-text">“Helping you land the job, one free resource and one meme at a time.”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Jerry is a co-founder and career-content creator who has turned job-search advice into a big public audience (about 1.47M on Instagram, 433K on LinkedIn). He seems driven by making hiring feel fairer and more accessible, and he gives away a lot of free resources. Based on his public content, he&#39;d be energetic and useful company, practical, encouraging, and probably the friend who sends you a job lead or a resume tip unprompted.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">marketing</span><span class="chip-muted">content</span><span class="chip-muted">education</span><span class="chip-muted">social-impact</span><span class="chip-muted">comedy</span><span class="chip-muted">public-speaking</span><span class="chip-muted">writing</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">67%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who respects and understands a mission-driven, always-on creator career
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Nearly all his public output is career help, posted almost daily on Instagram in late Sept 2026 and steadily on LinkedIn. This is an inference: someone who sees that work as meaningful, not as a distraction, would fit.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Daily posts Sept 24-30, 2026 (P4-P12); recurring &#39;Follow Jerry Lee for more AI and job tips!&#39; on LI”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who engages in honest, opinionated back-and-forth
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He asks for opinions and replies to commenters, so he likely enjoys conversation and some debate. This is an inference.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;What do you think?&#39; and &#39;Jerry Lee replied to a comment... done :)&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who shares his community-and-generosity instinct
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He shares free tools, job boards and guides, and he wrote about a community helping through a family crisis. This is an inference: he likely wants a partner who also gives back.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;A Family Crisis, a Community, &amp; $25K Later&#39; (Oct 15, 2018); &#39;free job board&#39;; &#39;free resume guide&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone with a sense of humour who can take work lightly too
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4UWdbBxeK/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Much of his Instagram output appears to be meme-style video, so levity seems to be part of his brand. This is an inference.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Image tags: &#39;may be a meme of office and text&#39;, &#39;meme of dental floss and text&#39;, &#39;meme of crossword puzzle and text&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone supportive of ambition and busy schedules
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He co-founded a company, runs large social channels, and takes partner inquiries. This is an inference: he likely needs a partner who can handle a full calendar.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Co-Founder @wonsulting&#39;, partner email listed in bio”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Making short-form video and meme content
+  <a class="src src-IG" href="https://www.instagram.com/p/DeKmgydhOH7/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“8 of 12 Instagram posts are videos, several tagged as memes (office, dental floss, crossword)”</div></li>
+<li class="text-sm"><div class="font-medium">Writing opinionated career posts and long-form articles
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“LinkedIn posts such as &#39;Entry level means NO full time experience&#39;; 2018 article”</div></li>
+<li class="text-sm"><div class="font-medium">Finding and curating job leads and side-income opportunities for others (inferred as a pastime, since it is his work)
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Posts on Coleman surveys, AI contract jobs, expert-witness work, and government job boards”</div></li>
+<li class="text-sm"><div class="font-medium">Engaging with his community in comments
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Jerry Lee replied to a comment 1w: Alexander Pantani done :)&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Career development and job-search strategy
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Services listed: Resume Review, Interview Preparation, Career Development Coaching”</div></li>
+<li class="text-sm"><div class="font-medium">AI tools and AI-related work
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Follow @jerryjhlee for more AI and job tips!&#39;; &#39;5 AI jobs paying $250/hr&#39;; JobBoardAI by Wonsulting”</div></li>
+<li class="text-sm"><div class="font-medium">Startups and hiring platforms
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Recommends Work at a Startup (YC companies) and Built In; co-founded Wonsulting”</div></li>
+<li class="text-sm"><div class="font-medium">Creator economy and social media
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“1.47M Instagram followers, 433K LinkedIn followers, partner-request email in bio”</div></li>
+<li class="text-sm"><div class="font-medium">Fair hiring practices and resume norms
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Even students are expected to have resumes that look like they&#39;ve worked FT... that&#39;s the system.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Flexible and fractional work
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Go Fractional love yall!!&#39; comment reply; post on expert-witness work for people who &#39;don&#39;t want another full-time job&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Education and students
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Posts aimed at students, recent grads and international students; Babson College”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Accessibility: free resources for job seekers
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Free job resources&#39; link in bio; &#39;free resume guide&#39;; &#39;free job board with 400+ government jobs&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Fairness for candidates
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;That&#39;s not the candidate&#39;s fault, that&#39;s the system.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Transparency and honesty
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;And no, this isn&#39;t sponsored.&#39;; notes that resume edits do not guarantee bias disappears”</div></li>
+<li class="text-sm"><div class="font-medium">Community and giving back
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Article &#39;A Family Crisis, a Community, &amp; $25K Later&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Conviction: takes clear stands on his topic
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;This is a belief I WILL stand by until I die&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Recognised achiever
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Forbes 30 Under 30 in bio; Summa Cum Laude; prev. Google”</div></li>
+<li class="text-sm"><div class="font-medium">Practical, example-driven communicator
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Case study with dates and outcome: applied 4/7, interview 4/8, offer 5/12, 35 days”</div></li>
+<li class="text-sm"><div class="font-medium">Prolific and consistent
+  <a class="src src-IG" href="https://www.instagram.com/p/DeM7VrOh6Fd/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Seven posts in the week Sept 24-30, 2026; steady LinkedIn activity”</div></li>
+<li class="text-sm"><div class="font-medium">Approachable and warm in tone
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Alexander Pantani done :)&#39; and &#39;love yall!!&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Co-founder of Wonsulting; previously at Google
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Co-Founder @wonsulting / Prev. @google&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Forbes 30 Under 30 honoree
+  <a class="src src-IG" href="https://www.instagram.com/jerryjhlee/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Forbes30U30&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Attended Babson College and graduated Summa Cum Laude
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Babson College listed; &#39;Summa Cum Laude&#39; under Experience &amp; Education”</div></li>
+<li class="text-sm"><div class="font-medium">Based in the New York City Metropolitan Area
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;New York City Metropolitan Area&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Wrote a 2018 article about a family crisis and a community
+  <a class="src src-in" href="https://www.linkedin.com/in/jehakjerrylee/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;A Family Crisis, a Community, &amp; $25K Later&#39; Oct 15, 2018”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">78</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">85</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 85%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">72</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 72%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 70%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">These scores are inferences from public content. Openness: he covers many topics (AI gigs, expert-witness work, government jobs, memes). Conscientiousness: near-daily posting, structured lists, dated case studies. Extraversion: a large public presence and active replies to commenters. Agreeableness: free resources and a warm tone (&#39;love yall!!&#39;), offset by firm opinions. Emotional stability: steady, confident public tone, but this is hard to judge from public posts.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> acts <span class="text-stone-500">(Inference: he constantly helps by handing out free guides, job leads and tips, and he replies &#39;done :)&#39; to requests. That suggests he shows care through useful actions.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Direct, upbeat and practical. Hook-first headlines with numbers, numbered lists, light emoji use (🚨, 1️⃣) and a casual tone in comments. English only. Mixes earnest advice with meme humour.</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Opens with a bold hook or a number (&#39;5 AI jobs paying $250/hr nobody&#39;s talking about&#39;)</span><span class="chip-muted">Ends posts with a free link or a call to action</span><span class="chip-muted">Uses numbered emoji lists</span><span class="chip-muted">Adds disclaimers like &#39;this isn&#39;t sponsored&#39;</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“This is a belief I WILL stand by until I die”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“This is positioning, not luck.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Your experience should do the talking.”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and high-output, posting nearly daily across platforms</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Very public and community-facing; engages with a large audience, and his private social life is not visible</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Unknown; nothing in the sources shows travel</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Unknown; nothing in the sources shows fitness</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Content-heavy founder/creator work: career coaching services, resume help, AI job tips, partnerships</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow Wonsulting and its tools (e.g., JobBoardAI) as a go-to career resource</li><li>Keep expanding his audience and influence on career advice</li><li>Help more people get interviews and offers (inferred from the content focus)</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Generous with knowledge and resources</li><li>Transparent about sponsorship and disclaimers</li><li>Gives concrete, example-backed advice</li><li>Replies to people and engages with his community</li><li>Combines achievement with humour</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work is a big part of his public identity, so he may be hard to pull away from it</li><li>Strong opinions on hiring (&#39;a belief I WILL stand by until I die&#39;) could mean lively debates</li><li>Much of his content links to his own guide, so he may think in promotional terms; this is an inference</li><li>His personal life is not visible online, so it is hard to know what he does off the clock</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Dismissiveness toward ambition or entrepreneurship (inferred)</li><li>Dishonesty or hidden agendas, given his emphasis on transparency (inferred)</li><li>A partner who resents his public, always-on work (inferred)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone curious, warm and ambitious who can match his energy and enjoys both serious conversation and silly memes. They would be supportive of a busy founder life and want to build something of their own or be generous with their time too.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on professional identity and public persona, because LinkedIn text is rich. Low on personal life: the Instagram posts have no captions, only generic image descriptions, the sources show no hobbies, travel, fitness, friends, family, pets or relationship details, and LinkedIn does not show his full experience or work history. The Instagram posts-per-month figure (0.3) conflicts with the near-daily posts in late Sept 2026 and the LinkedIn activity, probably because of the uneven post dates. The needs, personality scores and love language are inferences.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Jerry's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/17/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Drew Binsky</div><div class="text-xs text-stone-500">📚 → 🎤 · Dating…</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Jerry best</h3><a href="/cyrano-agentic-dating/rankings/#jerryjhlee" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">D<img src="/photos/drewbinsky.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/drewbinsky/" class="text-sm font-semibold hover:text-rose-600">Drew Binsky</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 81</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/ishansharma7390/" class="text-sm font-semibold hover:text-rose-600">Ishan Sharma</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/financewithsharan/" class="text-sm font-semibold hover:text-rose-600">Sharan Hegde</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanaypratap/" class="text-sm font-semibold hover:text-rose-600">Tanay Pratap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/herfirst100k/" class="text-sm font-semibold hover:text-rose-600">Tori Dunlap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">V<img src="/photos/your.richbff.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/your.richbff/" class="text-sm font-semibold hover:text-rose-600">Vivian Tu</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/alliekmiller/" class="text-sm font-semibold hover:text-rose-600">Allie K. Miller</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">E<img src="/photos/erikankullberg.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/erikankullberg/" class="text-sm font-semibold hover:text-rose-600">Erika Kullberg</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">A<img src="/photos/dhattarwalaman.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="text-sm font-semibold hover:text-rose-600">Aman Dhattarwal</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">S<img src="/photos/steven.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/steven/" class="text-sm font-semibold hover:text-rose-600">Steven Bartlett</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

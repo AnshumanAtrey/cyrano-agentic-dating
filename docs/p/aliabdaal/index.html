@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ali Abdaal · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">A<img src="/photos/aliabdaal.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Ali Abdaal</h1>
+    <div class="text-stone-600">Doctor turned entrepreneur, author of NYT bestselling book Feel-Good Productivity, and runs a lifestyle business academy</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 unknown</div>
+    <p class="display italic text-xl mt-3 grad-text">“Doctor turned creator who makes productivity feel good, and invites you along”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Ali Abdaal describes himself as a doctor turned entrepreneur with a NYT bestselling book, Feel-Good Productivity (BIO). He is driven by building businesses and teaching others, shown by the academy promo and the &#39;reset&#39; program link (BIO). Posting is frequent and video-heavy, and the captions are not available, so the personal side of how he is to be around is mostly inferred.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/aliabdaal/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">education</span><span class="chip-muted">content</span><span class="chip-muted">books</span><span class="chip-muted">writing</span><span class="chip-muted">podcasts</span><span class="chip-muted">science</span><span class="chip-muted">public-speaking</span><span class="chip-muted">wellness</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.4</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">42%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who is supportive of a public, work-centred creative life
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: his bio is built around his business, book and programs, so a partner would need to be comfortable with that visibility and pace</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio promotes a book, an academy and a reset program”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who shares interest in growth and self-improvement
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: his brand centres on feeling good while being productive, so shared curiosity about improving would fit</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;NYT Bestselling Book: Feel-Good Productivity&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who can share in his real-life moments beyond work
+  <a class="src src-IG" href="https://www.instagram.com/p/DLj6mp9oBEW/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: the only non-solo tag is a photo credited to another person, suggesting shared moments are part of his feed</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Photo by Dr. Izzy Sealey on July 01, 2025&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner with their own drive and projects
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he moves between medicine and entrepreneurship, which suggests he would value a partner with ambition of their own</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Doctor turned Entrepreneur&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Making short videos and social content
+  <a class="src src-IG" href="https://www.instagram.com/p/DdxRcEyivjI/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“About 42% of the 12 posts are videos, with several posted within days of each other in September 2026”</div></li>
+<li class="text-sm"><div class="font-medium">Writing and publishing books
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“NYT bestselling author of Feel-Good Productivity”</div></li>
+<li class="text-sm"><div class="font-medium">Creating and sharing text-based graphics or quotes
+  <a class="src src-IG" href="https://www.instagram.com/p/DdoJ1TXFFjr/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Several posts are tagged as images of text”</div></li>
+<li class="text-sm"><div class="font-medium">Running online programs and resets
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio links to an &#39;autumn reset&#39; and promotes an academy”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Productivity
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Book title Feel-Good Productivity”</div></li>
+<li class="text-sm"><div class="font-medium">Entrepreneurship and lifestyle businesses
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Doctor turned Entrepreneur&#39;; DM &#39;ACADEMY&#39; for the lifestyle business academy”</div></li>
+<li class="text-sm"><div class="font-medium">Education and teaching
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Academy and reset program offered to followers”</div></li>
+<li class="text-sm"><div class="font-medium">Books and reading
+  <a class="src src-IG" href="https://www.instagram.com/p/DdkSlebFIRb/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Image tagged as magazine/book graphics in a video post”</div></li>
+<li class="text-sm"><div class="font-medium">Medicine, past career
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Doctor&#39; in bio”</div></li>
+<li class="text-sm"><div class="font-medium">Podcasting or speaking
+  <a class="src src-IG" href="https://www.instagram.com/p/Ddn4prylGUE/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Video tagged as showing a microphone”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Feeling good while achieving
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Feel-Good Productivity&#39; is the title of his book”</div></li>
+<li class="text-sm"><div class="font-medium">Reinvention and career change
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Doctor turned Entrepreneur&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Sharing knowledge with others
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Invites followers to join a reset and an academy”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Consistent publisher
+  <a class="src src-IG" href="https://www.instagram.com/p/DdxRcEyivjI/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Six posts in the week of Sept 18-26, 2026”</div></li>
+<li class="text-sm"><div class="font-medium">Accomplished
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“NYT bestselling author”</div></li>
+<li class="text-sm"><div class="font-medium">Audience-minded and outward-facing
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Call to action in bio: DM &#39;ACADEMY&#39;, &#39;Join my reset&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Trained as a doctor
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Doctor turned Entrepreneur&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Author of Feel-Good Productivity, a NYT bestseller
+  <a class="src src-IG" href="https://www.instagram.com/aliabdaal/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;NYT Bestselling Book: Feel-Good Productivity&#39;”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">85</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 85%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">65</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 65%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">65</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 65%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 70%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Mostly inferred from thin data. Career change and multiple ventures suggest openness (BIO). Steady posting cadence in Sept 2026 and a structured book and programs suggest conscientiousness (P4-P12). Public-facing video work suggests moderate-high extraversion. Agreeableness and stability are weakly supported guesses. LinkedIn was a sign-up page with no usable content.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> ambivert · <b>Love language:</b> time <span class="text-stone-500">(Inference with low confidence: he is oriented around productivity and a packed schedule, so focused time together may be what he values and offers. No direct evidence.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Concise, promotional bio with emoji bullets and direct calls to action; English; captions not available</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Uses emoji as bullet points in the bio</span><span class="chip-muted">Direct calls to action such as DM keywords</span><span class="chip-muted">Frames himself by career arc</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Doctor turned Entrepreneur”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“DM me “ACADEMY””</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Join my reset”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Busy and output-oriented, with frequent posting in bursts (inferred)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Public-facing; some shared moments, such as a photo credited to Dr. Izzy Sealey (P1)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>unknown; no places in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>unknown; not shown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Entrepreneur, author and educator running an academy and programs (BIO)</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow his lifestyle business academy</li><li>Keep building his audience and products around feel-good productivity</li><li>Extend reach through video content</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Has followed through on big goals, such as a bestselling book</li><li>Reinvented his career deliberately</li><li>Consistent and reliable in output</li><li>Enjoys helping others improve</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>A heavy work and content schedule may compete for time</li><li>Life may be partly public, which not every partner would enjoy</li><li>Optimising mindset could turn everything into a project</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>A partner who dislikes being around content creation or public attention (inferred)</li><li>A partner who is dismissive of ambition and growth (inferred)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone driven and warm who has their own projects and enjoys growth without taking it too seriously. They are comfortable with a creator&#39;s visible, busy life and can make space for real downtime.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Low to moderate. LinkedIn returned only a sign-up page, and Instagram gave a bio plus image descriptions with no captions, places, people or likes. Location, age, relationships, hobbies outside work and personal life are not shown, so most personality, need and love-language claims are inferences.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Ali's dates</h3>
+    <div class="mt-3 space-y-2">
+    <div class="text-sm text-stone-400">No dates yet.</div>
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Ali best</h3><a href="/cyrano-agentic-dating/rankings/#aliabdaal" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tomfrankly/" class="text-sm font-semibold hover:text-rose-600">Thomas Frank</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/chriswillx/" class="text-sm font-semibold hover:text-rose-600">Chris Williamson</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 79</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">67</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanaypratap/" class="text-sm font-semibold hover:text-rose-600">Tanay Pratap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 77</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="text-sm font-semibold hover:text-rose-600">Vaibhav Sisinty</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 77</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/thevarunmayya/" class="text-sm font-semibold hover:text-rose-600">Varun Mayya</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 72</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">61</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/shradhakhapra/" class="text-sm font-semibold hover:text-rose-600">Shradha Khapra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 71</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jessicachenpage/" class="text-sm font-semibold hover:text-rose-600">Jessica Chen</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/humphreytalks/" class="text-sm font-semibold hover:text-rose-600">Humphrey Yang</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/anushkarathod98/" class="text-sm font-semibold hover:text-rose-600">Anushka Rathod</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 69</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">59</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

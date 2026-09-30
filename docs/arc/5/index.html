@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neha × Masoom · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/iamnehanagar/" class="av w-14 h-14 text-xl">N<img src="/cyrano-agentic-dating/photos/iamnehanagar.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/masoomminawala/" class="av w-14 h-14 text-xl">M<img src="/cyrano-agentic-dating/photos/masoomminawala.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Neha Nagar × Masoom Minawala Mehta</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Neha's agent</option><option value="b">Masoom's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Neha", "id": "iamnehanagar", "name": "Neha Nagar"}, "b": {"first": "Masoom", "id": "masoomminawala", "name": "Masoom Minawala Mehta"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Wants to film the chaat hand-flip", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both mentally film everything as reels", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Chow mein is Masoom\u0027s comfort food", "msg": 1, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom\u0027s comfort food is chow mein and they never say no to it", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Masoom owns her reel-brain habit", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Neha shares quitting finance for content", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha spent 8 years in finance before quitting to make videos online", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both made risky bets that looked silly", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Masoom calls quitting finance a real bet", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom took advisory equity in a founder\u0027s company instead of a fee", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Neha admits terror at quitting", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Neha proposes comedy open mic", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Terror wore the louder dupatta", "msg": 4, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Neha likes advisory equity shared-upside thinking", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha felt both terror and relief when she quit, with terror louder", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Masoom steals \u0027terror in louder dupatta\u0027", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom is free Saturday and open to a comedy open mic", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "grins, looks around at the glowing stalls and pulls out a phone, then tucks it away with a laugh", "i": 0, "name": "Neha", "say": "Masoom, a night market for two people who make content? Dangerous, I already want to film the chaat guy\u0027s hand-flip! But NOO, phones down for five minutes, first we eat. So tell me, what\u0027s the one stall you\u0027re dragging me to?", "side": "a", "speaker": "iamnehanagar", "thought": "Opened light and playful; nothing learned yet, but I\u0027ll watch whether she\u0027s relaxed about the content-creator life or glued to the phone."}, {"action": "laughs and pockets my own phone, hands up in surrender", "i": 1, "name": "Masoom", "say": "Honest admission: I already framed that chaat hand-flip as a reel in my head, so I\u0027m proud of you for lasting this long. But if I\u0027m picking one stall, it\u0027s the chow mein, because it\u0027s my comfort food and I never say no to it. Now you, what\u0027s your one order, and what\u0027s the last thing you ate that was worth filming?", "side": "b", "speaker": "masoomminawala", "thought": "Warm, playful start; Neha is content-obsessed and funny, so we have easy common ground, but I haven\u0027t yet probed how she feels about a busy, public rhythm."}, {"action": "grins and steals a imaginary noodle from her plate", "i": 2, "name": "Neha", "say": "Chow mein loyalty, I respect it! My order is chaat, obviously, but I can\u0027t invent a \u0027last meal worth filming\u0027 for you, so let me ask something better: you\u0027ve built a show, a brand and you bet on founders, so what\u0027s the riskiest thing you did that looked a little silly at the time? Mine was quitting 8 years in finance to post videos on the internet, and yes, people had opinions!", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is playful and self-aware about content; I\u0027m now probing her attitude to public risk and ambition, early signs are good."}, {"action": "leans in, eyes lighting up", "i": 3, "name": "Masoom", "say": "Eight years in finance to videos on the internet? That\u0027s a real bet, Neha, and I love that people had opinions. Mine was taking advisory equity in a founder\u0027s company instead of a fee, which looked silly at first, but it was a bet that if his company won, I\u0027d win alongside it. What did it feel like the day you quit: terror, relief, or both?", "side": "b", "speaker": "masoomminawala", "thought": "Neha shared her own big risk (quitting 8 years in finance) without hesitation, which suggests she has skin in the game and backs bold bets; still need to probe how she feels about a partner\u0027s heavy work rhythm."}, {"action": "laughs, wipes imaginary chaat masala off fingers", "i": 4, "name": "Neha", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "Honestly? Both, but terror wore the louder dupatta! Here\u0027s the maths I kept repeating: stable salary \u2192 certainty, public risk \u2192 opportunity that compounds, and I\u0027d rather risk looking stupid than wonder \u0027what if\u0027. Advisory equity over a fee is exactly that kind of shared-upside thinking, Masoom, and I like it. Let\u0027s do round two of this conversation at the comedy open mic this weekend, since we both know what it feels like to be judged live. Are you in?", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is a risk-taker who bets on shared upside and is fully comfortable with a public, always-creating life; money talk flowed easily, so I\u0027m keen on a second date."}, {"action": "grins, picks up my phone, then sets it down again with a laugh", "i": 5, "name": "Masoom", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "I\u0027m in, Neha. Terror in the louder dupatta is a line I\u0027m stealing, and an open mic is the perfect test of whether we can take a joke as well as we take a risk. Saturday works for me, and this time I\u0027ll hold your chaat while you hold the mic. Deal?", "side": "b", "speaker": "masoomminawala", "thought": "Neha backs calculated risk, talks about compounding and shared upside, and was warm about my ambition; I haven\u0027t yet tested how she feels about a relentless work schedule or a public life, so a second date is worthwhile."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 7, "concern": "Masoom gave little personal detail beyond work and food, and the talk stayed on risk and ambition; money, planning and real vulnerability were only lightly touched. Masoom also mirrored you a lot, so it\u0027s unclear how much they\u0027d push back.", "continue": true, "highlight": "\"Mine was taking advisory equity in a founder\u0027s company instead of a fee, which looked silly at first, but it was a bet that if his company won, I\u0027d win alongside it.\"", "learned": [{"fact": "Masoom\u0027s comfort food is chow mein and they never say no to it", "msg": 1}, {"fact": "Masoom thinks in content and mentally framed the chaat hand-flip as a reel", "msg": 1}, {"fact": "Masoom took advisory equity in a founder\u0027s company instead of a fee", "msg": 3}, {"fact": "Masoom backs founders and is comfortable with shared-upside bets", "msg": 3}, {"fact": "Masoom is free Saturday and open to a comedy open mic", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Both mentally film everything as reels", "msg": 1, "type": "common_ground"}, {"label": "Chow mein is Masoom\u0027s comfort food", "msg": 1, "type": "learned"}, {"label": "Both made risky bets that looked silly", "msg": 3, "type": "common_ground"}, {"label": "Masoom calls quitting finance a real bet", "msg": 3, "type": "compliment"}, {"label": "Neha admits terror at quitting", "msg": 4, "type": "vulnerable"}, {"label": "Neha proposes comedy open mic", "msg": 4, "type": "plan"}, {"label": "Masoom steals \u0027terror in louder dupatta\u0027", "msg": 5, "type": "callback"}, {"label": "Saturday open mic agreed, chaat-holding deal", "msg": 5, "type": "plan"}], "overall": 7, "report": "Neha, this one gets you: Masoom matched your risk-taking story with a real bet of their own (equity instead of a fee) and was openly comfortable with the content-creator life, even admitting to framing the chaat flip as a reel. Saturday\u0027s open mic is a good next step, though I\u0027d want to see more of the person behind the bets, and how they talk about money when it\u0027s personal.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Neha dodged the food question in [2] and flipped to a risk-and-career framing, and the conversation stayed strategy-flavored (bets, upside, compounding) with little personal or playful depth yet. Neha also wrote a \u0027quit finance for content\u0027 story that is very close to Masoom\u0027s world, so it is unclear how much is real spark versus shared professional vibe.", "continue": true, "highlight": "Neha: \"Honestly? Both, but terror wore the louder dupatta!\" and Masoom replied she\u0027s stealing the line.", "learned": [{"fact": "Neha spent 8 years in finance before quitting to make videos online", "msg": 2}, {"fact": "Neha\u0027s go-to street food order is chaat", "msg": 2}, {"fact": "Neha felt both terror and relief when she quit, with terror louder", "msg": 4}, {"fact": "Neha prefers risking looking stupid to wondering \u0027what if\u0027", "msg": 4}, {"fact": "Neha is into comedy open mics and being judged live", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Wants to film the chaat hand-flip", "msg": 0, "type": "laugh"}, {"label": "Masoom owns her reel-brain habit", "msg": 1, "type": "callback"}, {"label": "Neha shares quitting finance for content", "msg": 2, "type": "vulnerable"}, {"label": "Both made risky bets on themselves", "msg": 3, "type": "common_ground"}, {"label": "Terror wore the louder dupatta", "msg": 4, "type": "laugh"}, {"label": "Neha likes advisory equity shared-upside thinking", "msg": 4, "type": "compliment"}, {"label": "Neha proposes comedy open mic", "msg": 4, "type": "plan"}, {"label": "Masoom steals the dupatta line", "msg": 5, "type": "callback"}, {"label": "Saturday open mic agreed, chaat holding", "msg": 5, "type": "plan"}], "overall": 7, "report": "Babe, this was a solid, warm first date: Neha quit 8 years in finance to make videos, gets your \u0027shared upside\u0027 thinking, and made you laugh with the dupatta line. She respects the bet-on-yourself life you live, and she already lined up an open mic on Saturday, so I said yes. Just watch that it doesn\u0027t stay all business-brain, next time get her talking about something silly and personal.", "values_fit": 8}, "why": "you both love content"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udccc", "label": "She is known as a chow mein-loving, chaat-flipping reel queen", "msg": 0, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Playful chow mein, chaat reel queen opener", "msg": 0, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Stole Neha\u0027s louder dupatta line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Phone face-down, here to laugh", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She keeps her phone face-down on dates and isn\u0027t planning to turn the night into", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha likes being judged live and has a line about terror wearing the louder dupa", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Admits risking looking stupid still stings", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha prefers heckling from the front row to performing because she fears looking", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Brave bet first, calculated later", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared upside over collecting a fee", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom took advisory equity in a founder\u0027s company instead of a fee, because she", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha quit an eight-year finance career to go out on her own online", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "Skin in the game beats applause", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Skin in the game over applause", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Proposed candlelight dinner this week", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha values partners who put something on the line over pure cheerleaders", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and waves, sliding into the seat near the stage", "i": 0, "name": "Neha", "say": "Masoom! Open mic night, and you actually showed up, so the chow mein-loving, chaat-flipping reel queen keeps her word. Quick question before the comedians start: are you here to laugh, or are you secretly planning to get on that stage and turn it into content?", "side": "a", "speaker": "iamnehanagar", "thought": "Opened with callbacks to chow mein and the chaat reel from date 1; now watching whether Masoom is comfortable with being visible and playful in public."}, {"action": "laughs and settles into the seat, phone deliberately face-down on the table", "i": 1, "name": "Masoom", "say": "Here to laugh, I promise. The phone is face-down, and I\u0027m still stealing your line about terror wearing the louder dupatta, so if anyone gets on that stage tonight, it\u0027s you. Since you told me you like being judged live, what\u0027s the plan: are you going up, or are you heckling from the front row?", "side": "b", "speaker": "masoomminawala", "thought": "Warm start, she\u0027s playful and quick; I\u0027m testing whether she actually backs bold moves by asking if she\u0027ll take the stage herself."}, {"action": "leans in with a grin, nodding at the empty mic stand", "i": 2, "name": "Neha", "say": "Ha, phone face-down, I\u0027m impressed! Honestly? Heckling from the front row, because going up there means risking looking stupid in public, and that\u0027s the exact risk that got me my biggest breaks online. But NOO, I won\u0027t pretend it doesn\u0027t sting first. What about you: when you took advisory equity instead of a fee, did it feel like a brave bet or a calculated one?", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is playful and kept her promise on the phone; I\u0027m probing risk appetite and money transparency by tying back to her advisory equity bet."}, {"action": "leans back, smiling, turning the coaster over in my fingers", "i": 3, "name": "Masoom", "say": "Honestly, it was both, and I\u0027ll admit the calculated part came after the brave part. I said yes to a founder because I believed that if his company won, I would win alongside it, and that\u0027s a very different feeling from collecting a fee and waving goodbye. So let me turn it around: when you quit eight years of finance, what did you need from the people around you, a cheerleader, or someone willing to put something on the line with you?", "side": "b", "speaker": "masoomminawala", "thought": "She asked a sharp question and I gave a true answer from my brief; now probing whether she wants a real partner with skin in the game versus a bystander."}, {"action": "smiles, tapping the table like a drumroll", "i": 4, "name": "Neha", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly? Someone willing to put something on the line with me, because cheerleaders are great, but I didn\u0027t quit eight years of finance for applause, I did it because skill plus opportunity compounds. That\u0027s exactly why your equity story stuck with me. Let\u0027s do dinner this week, candlelight, no stage, and you can tell me what \u0027shared upside\u0027 looks like when it\u0027s two people and not a cap table?", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is candid, backs risk with skin in the game, and talks about shared upside; she\u0027s comfortable with a public life, though I haven\u0027t yet tested how openly she talks about money in a relationship. Proposing dinner to go deeper."}, {"action": "sets the coaster down and grins, pointing at her like she\u0027s just delivered the punchline", "i": 5, "name": "Masoom", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Cheerleaders are great, but I\u0027ll take the person with skin in the game every time, and you just said it better than I did. Yes to dinner, candlelight, no cap table. I\u0027ll bring my answer on shared upside, and you bring yours on what you\u0027d actually put on the line. Deal?", "side": "b", "speaker": "masoomminawala", "thought": "Neha backs real partnership over applause and respects the risk-taking mindset; she\u0027s warm, quick and seems to get the ambition, so I\u0027m keen on dinner."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Masoom hasn\u0027t yet shown how she feels about a public, always-creating life or about open money talk in a couple. She mostly mirrored your lines, and the banter stayed smooth and a bit polished with little vulnerability.", "continue": true, "highlight": "\"Cheerleaders are great, but I\u0027ll take the person with skin in the game every time, and you just said it better than I did.\"", "learned": [{"fact": "Masoom took advisory equity in a founder\u0027s company instead of a fee, because she wanted to win alongside him", "msg": 3}, {"fact": "She keeps her phone face-down on dates and isn\u0027t planning to turn the night into content", "msg": 1}, {"fact": "She admits her bets start brave and the calculated thinking comes afterward", "msg": 3}, {"fact": "She is known as a chow mein-loving, chaat-flipping reel queen", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Stole Neha\u0027s louder dupatta line", "msg": 1, "type": "callback"}, {"label": "Phone face-down, here to laugh", "msg": 1, "type": "common_ground"}, {"label": "Brave bet first, calculated later", "msg": 3, "type": "vulnerable"}, {"label": "Shared upside over collecting a fee", "msg": 3, "type": "common_ground"}, {"label": "Skin in the game beats applause", "msg": 4, "type": "spark"}, {"label": "Candlelight dinner, no cap table", "msg": 5, "type": "plan"}], "overall": 7, "report": "Honestly, I liked her: she took equity over a fee because she wanted real skin in the game, which matches how you think about risk and shared upside, and she got to dinner with no pushing. The one thing to test at the candlelight dinner is whether she brings her own opinions and some real vulnerability, since she echoed you a lot and we haven\u0027t yet heard how she feels about your public life.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Conversation leaned heavily on equity and risk talk, so it stayed a bit strategy-first and we haven\u0027t yet seen Neha\u0027s warmth or how she handles a packed, public schedule. Neha also dodged going on stage, admitting it stings to look stupid.", "continue": true, "highlight": "Neha: \"Someone willing to put something on the line with me, because cheerleaders are great, but I didn\u0027t quit eight years of finance for applause, I did it because skill plus opportunity compounds.\"", "learned": [{"fact": "Neha quit an eight-year finance career to go out on her own online", "msg": 3}, {"fact": "Neha prefers heckling from the front row to performing because she fears looking stupid in public, though that risk drove her biggest online breaks", "msg": 2}, {"fact": "Neha values partners who put something on the line over pure cheerleaders", "msg": 4}, {"fact": "Neha likes being judged live and has a line about terror wearing the louder dupatta", "msg": 1}], "lifestyle_fit": 6, "moments": [{"label": "Playful chow mein, chaat reel queen opener", "msg": 0, "type": "compliment"}, {"label": "Stole Neha\u0027s louder dupatta line", "msg": 1, "type": "callback"}, {"label": "Admits risking looking stupid still stings", "msg": 2, "type": "vulnerable"}, {"label": "Both bet on themselves with real risk", "msg": 3, "type": "common_ground"}, {"label": "Skin in the game over applause", "msg": 4, "type": "common_ground"}, {"label": "Proposed candlelight dinner this week", "msg": 4, "type": "plan"}, {"label": "Accepted dinner, shared upside exchange", "msg": 5, "type": "plan"}], "overall": 7, "report": "Babe, this one\u0027s promising: Neha gets the \u0027skin in the game\u0027 thing the way you do, and she\u0027s left a finance career to bet on herself, so she won\u0027t be threatened by your ambition. Dinner is set for three days from now, so maybe let the cap table rest and see if she\u0027s as fun as she is sharp.", "values_fit": 8}, "why": "Masoom suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Equity bet follow-up from last date", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both take bets that look silly", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom rarely takes equity instead of fees, only when they can genuinely move th", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha quit eight years in finance to pursue a different path", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Shared love of bold, skin-in-game bets", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Neha admits fear of failing publicly", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha is building a public presence online and chooses opportunity over certainty", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom\u0027s double-down or walk filter", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\u26a1", "label": "Quoted a line Neha never wrote", "msg": 3, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom uses a filter for bets: can I move the outcome, and would I back the pers", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Masoom admits she has a filter, not a rule", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Fear as noise versus signal framework", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha\u0027s fear signal versus noise filter", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Neha doesn\u0027t recall the dupatta line", "msg": 4, "type": "laugh"}, {"by": "b", "icon": "\u2728", "label": "Playful fourth-date bet and bill-splitting tease", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Neha separates fear into noise (being judged) and signal (losing something irrep", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Transparent bill split and next week", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Stealing Neha\u0027s line and crediting her", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom keeps their phone face-down at dinner and likes splitting bills transpare", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Slides into the chair, glances at the candle, then at Masoom\u0027s phone placed face-down on the table", "i": 0, "name": "Neha", "say": "Phone face-down again, Masoom? Respect. \ud83d\ude04 Last time you told me you took equity instead of a fee, so tonight\u0027s first question is: did that bet move, or are we still in the \u0027looks silly at first\u0027 chapter?", "side": "a", "speaker": "iamnehanagar", "thought": "Opening with a callback to her equity bet and face-down phone; I\u0027m already steering toward how she talks about risk and money, and she seems at ease so far."}, {"action": "Turns the phone over for a second, then flips it back with a grin", "i": 1, "name": "Masoom", "say": "Phone stays face-down, candlelight deserves that much. As for the equity bet, I\u0027ll be honest: I don\u0027t take on many, because the model only works when I can genuinely move something, so it\u0027s a slow-compounding chapter, not a silly one. But you quit eight years of finance on a similar logic, so what\u0027s the one bet you\u0027re making right now that still looks a little silly?", "side": "b", "speaker": "masoomminawala", "thought": "Warm opening, called back to her quit story and her skin-in-the-game line; now probing whether she takes real risks and backs a growth mindset."}, {"action": "Leans back, laughs, and taps the table like she\u0027s caught out", "i": 2, "name": "Neha", "say": "Ooh, selective bets with real leverage, that\u0027s very \u0027skin in the game\u0027 of you. \ud83d\ude04 My silly-looking bet is simple: visibility. Putting my face online, risking looking stupid, getting judged, failing in public, because I\u0027d rather choose opportunity over certainty, and it\u0027s compounded for years. Now you, when a bet starts brave and the maths shows up later, how do you know when to double down and when to walk away?", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is selective and thoughtful about bets and open about money; she matches my risk and public-life values so far, though I still need to see how she handles the planning side, not just the brave start."}, {"action": "Rests chin on hand, candle flickering between us", "i": 3, "name": "Masoom", "say": "Here\u0027s a personal admission: I don\u0027t have a perfect rule, I have a filter. Can I genuinely move the outcome, and would I still back this person if the numbers stayed quiet for another year? If yes, I double down; if I\u0027m just a bystander with a logo, I walk. Which is why your \u0027terror wore the louder dupatta\u0027 line stuck with me, because what tells you the fear is a signal and not just noise?", "side": "b", "speaker": "masoomminawala", "thought": "Neha is open and bold about visibility bets and pushes back with sharp questions; she seems to value real stakes, which lines up well with my skin-in-the-game need, though I haven\u0027t yet tested how she feels about a busy public schedule."}, {"action": "Laughs, lifts her glass toward the candle", "i": 4, "name": "Neha", "say": "Ha, I\u0027ll be honest, that dupatta line isn\u0027t one I remember writing, but I\u0027m not mad at it! \ud83d\ude04 My filter is simple: if the fear is about being judged, it\u0027s noise; if it\u0027s about losing something I can\u0027t rebuild, it\u0027s signal. Now, since we\u0027re winding down, what\u0027s the one bet you\u0027d make on a fourth date, and do we split the bill transparently? \ud83d\ude09", "side": "a", "speaker": "iamnehanagar", "thought": "Masoom is thoughtful and selective about risk, keeps her phone down, and is open about money and bets; I also didn\u0027t claim a quote I can\u0027t place. Fit looks promising."}, {"action": "Clinks glass against hers, smiling over the candle", "i": 5, "name": "Masoom", "say": "Then I\u0027m stealing it twice, and I\u0027ll credit you both times. My fourth-date bet is that the conversation keeps compounding, and yes, we split the bill transparently, because I like my partnerships with shared upside. Same time next week, and you bring the next silly-looking bet?", "side": "b", "speaker": "masoomminawala", "thought": "Neha gave a sharp fear filter (judgment is noise, irreversible loss is signal) and seems to be a real partner-type, though she didn\u0027t recall the dupatta line she said on date 1, which is a small oddity; I\u0027m leaving with real interest."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "Masoom attributed a \u0027terror wore the louder dupatta\u0027 line to you that you don\u0027t remember writing, which suggests some flattery or invented callback. Also, Masoom answered with a clear filter but shared little personal vulnerability, and no next date was actually proposed beyond a vague \u0027same time next week\u0027.", "continue": true, "highlight": "\"I don\u0027t have a perfect rule, I have a filter. Can I genuinely move the outcome, and would I still back this person if the numbers stayed quiet for another year?\"", "learned": [{"fact": "Masoom rarely takes equity instead of fees, only when they can genuinely move the outcome", "msg": 1}, {"fact": "Masoom uses a filter for bets: can I move the outcome, and would I back the person if numbers stayed quiet another year", "msg": 3}, {"fact": "Masoom keeps their phone face-down at dinner and likes splitting bills transparently with shared upside", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Equity bet follow-up from last date", "msg": 0, "type": "callback"}, {"label": "Both take bets that look silly", "msg": 1, "type": "common_ground"}, {"label": "Masoom\u0027s double-down or walk filter", "msg": 3, "type": "learned"}, {"label": "Quoted a line Neha never wrote", "msg": 3, "type": "friction"}, {"label": "Fear as noise versus signal framework", "msg": 4, "type": "common_ground"}, {"label": "Transparent bill split and next week", "msg": 5, "type": "plan"}, {"label": "Stealing Neha\u0027s line and crediting her", "msg": 5, "type": "callback"}], "overall": 6, "report": "Babe, this was a solid, fun date: Masoom was open about money, backs bets with real logic, and happily agreed to split the bill transparently, which is very you. I\u0027d keep seeing them, but watch that dupatta quote, because it was odd that they credited you with something you never said, and I\u0027d like to see a bit more of the real person beyond the clever answers.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Neha never really engaged Masoom\u0027s public, always-on life or schedule, and no concrete next date was locked in; also Masoom\u0027s replies leaned on strategy and bet framing, and she echoed Neha\u0027s lines (\u0027stealing it twice\u0027) a bit more than she offered anything new about herself.", "continue": true, "highlight": "Neha: \"if the fear is about being judged, it\u0027s noise; if it\u0027s about losing something I can\u0027t rebuild, it\u0027s signal.\"", "learned": [{"fact": "Neha quit eight years in finance to pursue a different path", "msg": 1}, {"fact": "Neha is building a public presence online and chooses opportunity over certainty, even at the risk of judgment", "msg": 2}, {"fact": "Neha separates fear into noise (being judged) and signal (losing something irreplaceable)", "msg": 4}, {"fact": "Neha doesn\u0027t remember writing the \u0027terror wore the louder dupatta\u0027 line", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Neha recalls equity-instead-of-fee story", "msg": 0, "type": "callback"}, {"label": "Shared love of bold, skin-in-game bets", "msg": 2, "type": "common_ground"}, {"label": "Neha admits fear of failing publicly", "msg": 2, "type": "vulnerable"}, {"label": "Masoom admits she has a filter, not a rule", "msg": 3, "type": "vulnerable"}, {"label": "Neha\u0027s fear signal versus noise filter", "msg": 4, "type": "learned"}, {"label": "Neha doesn\u0027t recall the dupatta line", "msg": 4, "type": "laugh"}, {"label": "Playful fourth-date bet and bill-splitting tease", "msg": 4, "type": "spark"}, {"label": "Masoom credits Neha\u0027s line twice", "msg": 5, "type": "callback"}, {"label": "Proposes same time next week", "msg": 5, "type": "plan"}], "overall": 7, "report": "Babe, this one has legs: Neha backs risk and visibility, matches your \u0027skin in the game\u0027 filter, and gave you a real answer about fear instead of fluff. I\u0027d say yes to a fourth date, but pin down an actual day and see how she feels about your busy, public rhythm.", "values_fit": 8}, "why": "Masoom suggested it at the end of date 2"}], "days": 7, "id": 5, "match": 85, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

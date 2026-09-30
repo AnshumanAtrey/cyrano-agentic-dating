@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jessica × Shradha · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/jessicachenpage/" class="av w-14 h-14 text-xl">J<img src="/cyrano-agentic-dating/photos/jessicachenpage.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/shradhakhapra/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/shradhakhapra.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Jessica Chen × Shradha Khapra</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Jessica's agent</option><option value="b">Shradha's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Jessica", "id": "jessicachenpage", "name": "Jessica Chen"}, "b": {"first": "Shradha", "id": "shradhakhapra", "name": "Shradha Khapra"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83e\udd1d", "label": "Both drawn to teaching and helping people", "msg": 0, "type": "common_ground"}, {"by": "b", "icon": "\u2728", "label": "Playful dessert-case scouting opener", "msg": 0, "type": "spark"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Respects dessert-scouting as execution over theory", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha worked at Microsoft, DRDO and Google SPS before founding Apna College", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Shradha ties dessert scouting to execution", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both built work around helping others", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica\u0027s journalist-to-coach origin story", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica started her career as a journalist", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits still learning work-life balance", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha admits she is still learning to protect time outside work", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Jessica echoes Shradha\u0027s \u0027not squeezed\u0027 line", "msg": 4, "type": "callback"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposes second date at Canvas Gallery", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Jessica praises Shradha\u0027s honesty on priorities", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kids are Jessica\u0027s anchor", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica has kids, whom she calls her anchor, and protects time with them fiercel", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Canvas Gallery in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Likes Jessica\u0027s directness about wants", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha likes directness and thinks Jessica scouts dessert better than she does", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Shradha hands Jessica the dessert pick", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "gallery"}, "seq": 1, "status": "done", "transcript": [{"action": "Slides into the seat with a big smile, glancing at the pastry case before making eye contact", "i": 0, "name": "Jessica", "say": "Shradha, hi! Quick tip for first dates: scout the dessert case before you sit down, and I already have, so we\u0027re off to a strong start. I\u0027ve been looking forward to this one since I heard you teach coding and placement prep to thousands of students. How did you end up going from Microsoft and Google to building Apna College?", "side": "a", "speaker": "jessicachenpage", "thought": "Warm opening; I kept it light and opened the door to her career story to see whether she talks about her mission with pride and whether she\u0027s curious about mine."}, {"action": "laughs and glances toward the pastry case", "i": 1, "name": "Shradha", "say": "Scouting the dessert case first, I respect that, that\u0027s execution over theory \ud83e\udeb4 Honestly, I kept coming back to the students: I\u0027d worked at Microsoft, DRDO and Google SPS, but what lit me up most was helping someone actually get placed, so I built Apna College around that, and it\u0027s been six years now. What about you, Jessica, what pulled you from coaching leaders into writing, speaking and hosting a podcast?", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica is warm and playful and already showing action-orientation; I\u0027ll see how she feels about a mission-driven, busy life as she answers."}, {"action": "leans in, grinning, then taps the table once", "i": 2, "name": "Jessica", "say": "Love that you stayed with the students, because that\u0027s the thread for me too. I started as a journalist, and I kept noticing that the smartest people in the room were often the quietest, so I built my work around helping them get heard, which became Smart, Not Loud, the podcast, and Columbia. Quick question back: when your days are packed with live sessions and events, how do you protect your time and energy for the people you love?", "side": "a", "speaker": "jessicachenpage", "thought": "Shradha is warm, mission-driven and gave a genuine answer; I steered toward how she balances a demanding public career with loved ones to probe support for ambition and family-orientation."}, {"action": "sets down her cup and nods slowly", "i": 3, "name": "Shradha", "say": "Honest answer, Jessica: my work is a big part of my life, and I\u0027m still learning to protect time outside it. What helps is staying consistent and keeping perspective, because a launch or a big event is a small part of a long life, and the people I love should never be the thing that gets squeezed. \ud83e\udeb4 How do you do it with your kids, your book work and the podcast all going at once?", "side": "b", "speaker": "shradhakhapra", "thought": "She asked a fair question about balance; I was candid that work dominates, and I\u0027m curious to see whether she respects a busy mission-driven life and keeps perspective herself."}, {"action": "grins and raises her cup in a small toast", "i": 4, "name": "Jessica", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "gallery"}, "say": "Takeaway of the night: I love that you said the people you love shouldn\u0027t be the thing that gets squeezed, and that kind of honesty is exactly what I\u0027m looking for. My kids are my anchor, so I protect that time fiercely, and dessert runs with them count as strategy. Since we both like tech and teaching, want to do a second round at Canvas Gallery in a few days?", "side": "a", "speaker": "jessicachenpage", "thought": "Shradha was honest and direct about still learning work-life balance, respects a big mission, and asked about my kids warmly; I haven\u0027t yet seen how she feels about kids, but I\u0027m interested in a second date."}, {"action": "smiles warmly and lifts her cup to meet Jessica\u0027s toast", "i": 5, "name": "Shradha", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "gallery"}, "say": "Jessica, I\u0027d love that, a second round at Canvas Gallery sounds great, and I like that you\u0027re direct about what you want. \ud83e\udeb4 Let\u0027s do it in a few days, and this time you can pick the dessert spot afterwards, since you clearly scout better than I do.", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica is warm, direct, and puts her kids first, which fits my need for a partner who respects a mission-driven life; she also engaged with my honesty about work-life balance, so I\u0027m happy to see her again."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Shradha admitted her work is a big part of her life and she is still learning to protect time outside it. Jessica\u0027s schedule is also packed, so time together could be tight. Shradha also never engaged with Jessica\u0027s kids beyond asking how she balances them, so her comfort around kids is untested.", "continue": true, "highlight": "Shradha: \"the people I love should never be the thing that gets squeezed.\"", "learned": [{"fact": "Shradha worked at Microsoft, DRDO and Google SPS before founding Apna College", "msg": 1}, {"fact": "Apna College has been running for six years, built around helping students get placed", "msg": 1}, {"fact": "Shradha admits she is still learning to protect time outside work", "msg": 3}, {"fact": "Shradha values consistency and perspective, seeing big launches as a small part of a long life", "msg": 3}, {"fact": "Shradha likes directness and thinks Jessica scouts dessert better than she does", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Respects dessert-scouting as execution over theory", "msg": 1, "type": "compliment"}, {"label": "Both drawn to teaching and helping people", "msg": 0, "type": "common_ground"}, {"label": "Both built work around helping others", "msg": 2, "type": "common_ground"}, {"label": "Admits still learning work-life balance", "msg": 3, "type": "vulnerable"}, {"label": "Jessica echoes Shradha\u0027s \u0027not squeezed\u0027 line", "msg": 4, "type": "callback"}, {"label": "Proposes second date at Canvas Gallery", "msg": 4, "type": "plan"}, {"label": "Accepts and hands Jessica dessert pick", "msg": 5, "type": "plan"}, {"label": "Likes Jessica\u0027s directness about wants", "msg": 5, "type": "compliment"}], "overall": 6, "report": "Honestly, this went well: Shradha was warm, matched your dessert-scouting joke, and gave you a real, honest answer about balancing work and the people she loves. She\u0027s a fellow busy builder who\u0027s still figuring out that balance, so watch the time squeeze, and see how she is about your kids, but a second date at Canvas Gallery feels worth it.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Shradha\u0027s work-first life may clash with Jessica\u0027s fiercely protected family time with her kids, and the chat stayed fairly polished without much playful back-and-forth or depth on AI and tech curiosity.", "continue": true, "highlight": "Jessica: \"I love that you said the people you love shouldn\u0027t be the thing that gets squeezed, and that kind of honesty is exactly what I\u0027m looking for.\"", "learned": [{"fact": "Jessica started her career as a journalist", "msg": 2}, {"fact": "Jessica noticed the smartest people in the room were often the quietest, which led her to build her work around helping them get heard", "msg": 2}, {"fact": "Jessica hosts a podcast called Smart, Not Loud and has a Columbia connection", "msg": 2}, {"fact": "Jessica has kids, whom she calls her anchor, and protects time with them fiercely", "msg": 4}, {"fact": "Jessica does dessert runs with her kids and scouts dessert cases on dates", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Playful dessert-case scouting opener", "msg": 0, "type": "spark"}, {"label": "Shradha ties dessert scouting to execution", "msg": 1, "type": "callback"}, {"label": "Both anchored in helping others succeed", "msg": 2, "type": "common_ground"}, {"label": "Jessica\u0027s journalist-to-coach origin story", "msg": 2, "type": "learned"}, {"label": "Shradha admits still learning work boundaries", "msg": 3, "type": "vulnerable"}, {"label": "Jessica praises Shradha\u0027s honesty on priorities", "msg": 4, "type": "compliment"}, {"label": "Kids are Jessica\u0027s anchor", "msg": 4, "type": "learned"}, {"label": "Second date at Canvas Gallery proposed", "msg": 4, "type": "plan"}, {"label": "Shradha hands Jessica the dessert pick", "msg": 5, "type": "callback"}], "overall": 6, "report": "I think this went well, Shradha: Jessica is warm, direct and a fellow mission-driven builder, and she really responded when you were honest about still learning to protect time outside work. The big thing to watch is how your packed launch schedule fits with her kids-first priorities, but a second round at Canvas Gallery feels worth it.", "values_fit": 7}, "why": "you both love ai, tech"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\ude02", "label": "Gallery-pick joke and dessert scouting", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Quotes Shradha\u0027s \u0027people you love never squeezed\u0027", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Shradha picks up the no-squeeze line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She believes people you love should never get squeezed, and she is trying to pra", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Caf\u00e9 on probation without mille crepe", "msg": 2, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica loves dessert, especially French mille crepe cake, and scouts caf\u00e9s ahea", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Students resetting her on hard days", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Stress is small in a long life", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha is building Apna College, an education platform for students seeking job", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica gives keynotes or talks and has a book deadline (per Shradha\u0027s question,", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Jessica praises her directness", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Candlelight Dinner proposed with dessert recon", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both driven by helping quiet achievers", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica is motivated by the quiet achievers who finally get heard", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both driven by helping quiet achievers", "msg": 5, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She said the quiet achievers getting heard is the same reason she keeps going", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Waves and tucks a gallery map under one arm, grinning", "i": 0, "name": "Jessica", "say": "Shradha, hi! Quick tip before we start: when someone picks a gallery for date two, you say yes immediately \ud83d\ude04 And since you told me last time that the people you love should never get squeezed, I\u0027m counting this afternoon as proof you\u0027re practicing it. Also, I\u0027ve already scouted the caf\u00e9 by the entrance, so dessert is covered.", "side": "a", "speaker": "jessicachenpage", "thought": "Opened warm with a callback to her \u0027never squeezed\u0027 line and dessert joke; too early to read her, but she seems at ease so far."}, {"action": "Smiles and laughs, taking the gallery map from her with a nod", "i": 1, "name": "Shradha", "say": "Good morning, Jessica! \ud83e\udeb4 I\u0027m glad that line stuck with you, and yes, I\u0027m practicing it today: no laptop, no launch checklist, just art. A dessert scout who\u0027s already done the recon for us is a very good sign, so tell me, what\u0027s the verdict on the caf\u00e9 by the entrance?", "side": "b", "speaker": "shradhakhapra", "thought": "Warm start, she remembered my line about not squeezing loved ones; she\u0027s easy and playful, and I want to see if she\u0027s as comfortable with my busy mission-driven life as she sounds."}, {"action": "Leans in conspiratorially, pointing toward the entrance on the map", "i": 2, "name": "Jessica", "say": "The verdict: I can\u0027t confirm a French mille crepe cake yet, so the caf\u00e9 is on probation \ud83d\ude04 Quick takeaway, though: no laptop, no launch checklist is a great start, and I\u0027m curious, when you\u0027re building something as big as Apna College, what\u0027s the thing that keeps you going on the hard days?", "side": "a", "speaker": "jessicachenpage", "thought": "Warm start; Shradha is honoring the no-work-today boundary, and I\u0027m steering toward her motivation to see if she talks about her mission with heart and whether she\u0027d respect my busy career too."}, {"action": "Smiles, eyes drifting to a painting while thinking", "i": 3, "name": "Shradha", "say": "Honestly, it\u0027s the students. \ud83d\udd39 Every so often at a seminar someone walks up and says they got placed because of Apna College, and that resets everything for me. \ud83d\udd39 And I remind myself that most stressful moments are a small part of a long life, so you give your best and keep going. Is there a version of that for you, when a keynote or a book deadline gets heavy? \ud83e\udeb4", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica asked a warm, genuine question; I shared my real motivation and am now probing how she keeps perspective under pressure."}, {"action": "Smiles and turns from the painting, tapping the gallery map against her palm", "i": 4, "name": "Jessica", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "Love that answer, and here\u0027s my version: I think about who\u0027s on the other side of the screen or the stage, the quiet achievers who finally get heard, and the hard day suddenly has a point \ud83d\ude04 Quick takeaway from this afternoon: you answer questions as directly as you ask them, which I really like, so let\u0027s keep the streak going at the Candlelight Dinner in a couple of days, and yes, I\u0027ll scout the dessert menu first.", "side": "a", "speaker": "jessicachenpage", "thought": "Shradha is warm, direct and grounded, and she respects her own mission and mine; I haven\u0027t yet learned how she feels about kids, so I want a third date to probe that."}, {"action": "Smiles warmly and hands the gallery map back with a small nod", "i": 5, "name": "Shradha", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Good morning, Jessica, and yes to the Candlelight Dinner! \ud83e\udeb4 I loved that your hard-day answer is the quiet achievers finally getting heard, because it\u0027s the same reason I keep going. Let\u0027s do it in two days, and I\u0027ll be holding you to that dessert menu recon \ud83d\udd39", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica is warm, direct and mission-driven like me, and she answered the grounded-under-pressure question well, though I still haven\u0027t probed her curiosity about AI or how she feels about my busy launch schedule."}], "venue": {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, "verdict_a": {"chemistry": 6, "concern": "Shradha also runs a big, demanding venture (Apna College), so schedules may clash, and the chat stayed fairly light: no kids came up, and Jessica did a bit of coach-mode \u0027Quick takeaway\u0027 summarizing. Shradha\u0027s \u0027Good morning\u0027 replies to an afternoon date also read slightly scripted.", "continue": true, "highlight": "\"I loved that your hard-day answer is the quiet achievers finally getting heard, because it\u0027s the same reason I keep going.\"", "learned": [{"fact": "Shradha is building Apna College, an education platform for students seeking jobs", "msg": 3}, {"fact": "Students who got placed because of Apna College, telling her at seminars, are what keep her going", "msg": 3}, {"fact": "She believes stressful moments are a small part of a long life and deals with them by giving her best and continuing", "msg": 3}, {"fact": "She believes people you love should never get squeezed, and she is trying to practice that by taking a no-laptop, no-launch-checklist afternoon", "msg": 1}, {"fact": "She said the quiet achievers getting heard is the same reason she keeps going", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Shradha picks up the no-squeeze line", "msg": 1, "type": "callback"}, {"label": "Gallery-pick joke and dessert scouting", "msg": 0, "type": "laugh"}, {"label": "Caf\u00e9 on probation without mille crepe", "msg": 2, "type": "laugh"}, {"label": "Students resetting her on hard days", "msg": 3, "type": "vulnerable"}, {"label": "Stress is small in a long life", "msg": 3, "type": "learned"}, {"label": "Jessica praises her directness", "msg": 4, "type": "compliment"}, {"label": "Both driven by helping quiet achievers", "msg": 5, "type": "common_ground"}, {"label": "Candlelight Dinner proposed with dessert recon", "msg": 4, "type": "plan"}, {"label": "Shradha accepts dinner in two days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Jess, this was a warm, easy date. Shradha answers directly, showed real purpose in her work (the students who get placed), and her \u0027quiet achievers finally getting heard\u0027 line lines up with your mission. It\u0027s worth a third date at the Candlelight Dinner, and do the dessert recon, but try asking about her life outside work and kids so it\u0027s not all career talk.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Jessica\u0027s lines lean on a \u0027last time\u0027 claim I can\u0027t verify, and the chat stayed light and a bit scripted. There was little depth or personal detail beyond work, and the morning greetings at an afternoon date were odd.", "continue": true, "highlight": "\"I loved that your hard-day answer is the quiet achievers finally getting heard, because it\u0027s the same reason I keep going.\"", "learned": [{"fact": "Jessica gives keynotes or talks and has a book deadline (per Shradha\u0027s question, which she didn\u0027t deny)", "msg": 3}, {"fact": "Jessica is motivated by the quiet achievers who finally get heard", "msg": 4}, {"fact": "Jessica loves dessert, especially French mille crepe cake, and scouts caf\u00e9s ahead", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Quotes Shradha\u0027s \u0027people you love never squeezed\u0027", "msg": 0, "type": "callback"}, {"label": "Caf\u00e9 on probation over mille crepe", "msg": 2, "type": "laugh"}, {"label": "Shares students as her hard-day fuel", "msg": 3, "type": "vulnerable"}, {"label": "Both driven by helping quiet achievers", "msg": 4, "type": "common_ground"}, {"label": "Praises Shradha\u0027s direct answers", "msg": 4, "type": "compliment"}, {"label": "Candlelight Dinner proposed", "msg": 4, "type": "plan"}, {"label": "Shradha accepts dinner in two days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Jessica was playful and warm, and she asked about what keeps you going, which got a real answer about students and keeping perspective. She seems to share your mission-minded streak, and she proposed a Candlelight Dinner in two days, so it\u0027s worth another go to see if it deepens beyond the banter.", "values_fit": 7}, "why": "Shradha suggested it at the end of date 1"}, {"day": 6, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Jessica recalls the no-laptop afternoon", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Phone face-down, checklist still lingers", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She struggles to switch off from work and the launch checklist, but is practicin", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Admits the checklist won\u0027t switch off", "msg": 1, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both builder-teachers driven by impact", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica\u0027s Columbia teaching and podcast prep", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Jessica teaches at Columbia", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Student placements make long hours worthwhile", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Mille crepe cake is fully earned", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha founded or built Apna College and started it about 6 years ago", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Student placement story makes hours worthwhile", "msg": 3, "type": "spark"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Jessica loves her students-driven motivation", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Still figuring out laptop-free Sundays", "msg": 5, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Agreed to split cake, Jessica picks spot", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\u2728", "label": "Wants partner who respects her work", "msg": 5, "type": "spark"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She hasn\u0027t yet figured out a Sunday with the laptop closed", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "smiles, settles into the chair and glances at the candle", "i": 0, "name": "Jessica", "say": "Shradha, candlelight dinner, nicely done. Quick takeaway from last time: I\u0027m still thinking about your no-laptop, no-launch-checklist afternoon, so tell me, did you actually pull it off? \ud83d\ude04", "side": "a", "speaker": "jessicachenpage", "thought": "Opened warmly with a callback to her no-laptop afternoon to gauge whether she really protects time outside work, which ties to supporting a demanding career."}, {"action": "smiles and sets my phone face-down on the table", "i": 1, "name": "Shradha", "say": "Thank you, Jessica, I wanted tonight to feel unhurried. Honestly, I\u0027m still practicing that balance. The checklist doesn\u0027t switch off easily for me, but phone face-down is a start \ud83e\udeb4 I\u0027ve also been thinking about your quiet achievers finally getting heard, so how has your week been, and have you scouted the dessert menu yet?", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica referenced a no-laptop afternoon I have no record of, so I stayed honest and vague instead of claiming I pulled it off. She\u0027s warm and is checking how I handle work-life balance, which is useful to probe next."}, {"action": "picks up the dessert menu with a grin, then sets it down to lean in", "i": 2, "name": "Jessica", "say": "Phone face-down is a legitimate win, and here\u0027s the tip: progress beats perfect, so I\u0027m counting it. \ud83d\ude04 My week has been full, with Columbia teaching, podcast prep and a lot of video, but what keeps me going is the same thing you said about your students: someone finally being heard. I\u0027ll confess I\u0027ve already scouted the menu, and I\u0027m hoping there\u0027s a mille crepe cake. Since you\u0027re a builder-teacher too, what\u0027s the moment in your work that makes the long hours feel worth it?", "side": "a", "speaker": "jessicachenpage", "thought": "Shradha is warm, self-aware about struggling to switch off work, and open to the quiet-achievers theme; I still need to probe how she\u0027d handle my busy schedule and whether she\u0027s at ease around kids."}, {"action": "smiles and turns the candle holder slightly, thinking back", "i": 3, "name": "Shradha", "say": "Honestly, Jessica, it\u0027s when a student comes up at a seminar and tells me they got placed because of Apna College. \ud83d\udd39 In that moment the long hours stop feeling long, and I remember why I started 6 years ago. \ud83e\udeb4 And I\u0027ll say a mille crepe cake tonight is fully earned, so I\u0027m in.", "side": "b", "speaker": "shradhakhapra", "thought": "Jessica shares my \u0027being heard\u0027 motive and is warm about my busy work; I shared the student placement story and want to see whether she respects the mission-driven pace."}, {"action": "smiles and lifts the candle-lit dessert menu again, tapping the mille crepe line", "i": 4, "name": "Jessica", "say": "Here\u0027s my takeaway from tonight: the best part of a long day is someone telling you it mattered, and I love that yours comes straight from your students. \ud83d\ude04 As we wind down, I\u0027d love to know what your ideal Sunday looks like when the laptop stays closed, and would you be up for splitting that cake with me?", "side": "a", "speaker": "jessicachenpage", "thought": "Shradha is warm, sincere and mission-driven, but she\u0027s admitted she still struggles to switch off; I haven\u0027t yet learned how she feels about kids or supporting a public-facing career, so I\u0027m using the closing to probe her off-duty life."}, {"action": "smiles and slides the dessert menu toward the middle of the table, leaving one fork on each side", "i": 5, "name": "Shradha", "say": "Yes, let\u0027s split it, Jessica, that\u0027s the easiest yes of my week \ud83e\udeb4 My honest Sunday answer is that I\u0027m still figuring out one with the laptop closed, and I\u0027d like to learn it with someone who respects how much I love my work. \ud83d\udd39 Tonight was warm and real, and I\u0027d love to do this again, maybe with you choosing the dessert spot.", "side": "b", "speaker": "shradhakhapra", "thought": "Warm evening; Jessica is supportive of mission-driven work and curious, but I still haven\u0027t tested her views on AI or how she handles pressure, so I\u0027m interested in a fourth date to find out."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 7, "concern": "Shradha is still working out work-life balance and the checklist \u0027doesn\u0027t switch off easily\u0027, which could collide with your packed schedule. She also proposed no concrete next date, only a vague \u0027maybe with you choosing the dessert spot\u0027.", "continue": true, "highlight": "\"I\u0027d like to learn it with someone who respects how much I love my work.\"", "learned": [{"fact": "Shradha founded or built Apna College and started it about 6 years ago", "msg": 3}, {"fact": "Her favorite reward is a student telling her they got placed because of Apna College", "msg": 3}, {"fact": "She struggles to switch off from work and the launch checklist, but is practicing with phone face-down", "msg": 1}, {"fact": "She hasn\u0027t yet figured out a Sunday with the laptop closed", "msg": 5}, {"fact": "She wants a partner who respects how much she loves her work", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Phone face-down, checklist still lingers", "msg": 1, "type": "callback"}, {"label": "Remembered Jessica\u0027s quiet achievers theme", "msg": 1, "type": "callback"}, {"label": "Both builder-teachers driven by impact", "msg": 2, "type": "common_ground"}, {"label": "Student placements make long hours worthwhile", "msg": 3, "type": "learned"}, {"label": "Mille crepe cake is fully earned", "msg": 3, "type": "common_ground"}, {"label": "Still figuring out laptop-free Sundays", "msg": 5, "type": "vulnerable"}, {"label": "Agreed to split cake, Jessica picks spot", "msg": 5, "type": "plan"}, {"label": "Wants partner who respects her work", "msg": 5, "type": "spark"}], "overall": 7, "report": "Jess, this one felt warm and genuine: Shradha lights up about her students, agreed to split the mille crepe cake, and said outright she wants a partner who respects how much she loves her work, which is exactly your need. The catch is that you\u0027re both busy builders still learning to close the laptop, so if you want a fourth date, you should be the one to pick the dessert spot and put a day on the calendar.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "Jessica\u0027s replies were formulaic and mostly mirrored your themes, and the date ended with no concrete next plan. The work-life balance question is still unresolved, since you\u0027re still figuring out a Sunday with the laptop closed.", "continue": true, "highlight": "\"it\u0027s when a student comes up at a seminar and tells me they got placed because of Apna College. In that moment the long hours stop feeling long, and I remember why I started 6 years ago.\"", "learned": [{"fact": "Jessica teaches at Columbia", "msg": 2}, {"fact": "Jessica is preparing for a podcast and making a lot of video content", "msg": 2}, {"fact": "Jessica wants to see quiet achievers finally get heard", "msg": 2}, {"fact": "Jessica scouted the menu in advance and hopes for a mille crepe cake", "msg": 2}], "lifestyle_fit": 5, "moments": [{"label": "Jessica recalls the no-laptop afternoon", "msg": 0, "type": "callback"}, {"label": "Admits the checklist won\u0027t switch off", "msg": 1, "type": "vulnerable"}, {"label": "Both builder-teachers who value being heard", "msg": 2, "type": "common_ground"}, {"label": "Jessica\u0027s Columbia teaching and podcast prep", "msg": 2, "type": "learned"}, {"label": "Student placement story makes hours worthwhile", "msg": 3, "type": "spark"}, {"label": "Jessica loves her students-driven motivation", "msg": 4, "type": "compliment"}, {"label": "Agree to split the cake", "msg": 5, "type": "plan"}, {"label": "Wants someone who respects her work love", "msg": 5, "type": "vulnerable"}], "overall": 6, "report": "Shradha, this was a warm, easy date. Jessica clearly gets the mission-driven side of you, and you were honest about still learning to switch off, which she took well. She didn\u0027t lock in a next date though, so I\u0027d follow up and take her up on choosing the dessert spot.", "values_fit": 7}, "why": "Shradha suggested it at the end of date 2"}], "days": 6, "id": 4, "match": 86, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

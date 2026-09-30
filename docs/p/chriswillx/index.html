@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chris Williamson · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Chris Williamson</h1>
+    <div class="text-stone-600">Podcaster and writer; hosts Modern Wisdom and promotes Neutonic (per Instagram bio)</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 unknown</div>
+    <p class="display italic text-xl mt-3 grad-text">“Curious podcaster with a fake accent, real book list, and jokes”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Chris Williamson presents himself as a podcaster and writer with a large audience (3.28M Instagram followers) and a self-mocking sense of humour (&#39;fake British accent&#39;). He appears driven by sharing ideas and recommendations, such as the Modern Wisdom podcast and a free list of 100 life-changing books. Going by his public presentation, he would likely be playful, idea-heavy company. All of this rests on a thin source: the bio and uncaptioned post descriptions, with no usable LinkedIn content.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/chris-williamson-71784536/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">podcasts</span><span class="chip-muted">books</span><span class="chip-muted">writing</span><span class="chip-muted">content</span><span class="chip-muted">public-speaking</span><span class="chip-muted">comedy</span><span class="chip-muted">education</span><span class="chip-muted">music</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">67%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Someone who enjoys ideas and conversation
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: his work centres on long-form conversation and learning, so a partner who likes exploring ideas would fit</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Listen @modernwisdom&#39;; &#39;free list of 100 life-changing books&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who can laugh at themselves and not take things too seriously
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he pokes fun at himself in his own bio and posts meme-style videos</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;fake British accent&#39;; posts tagged as memes (P8, P10)”</div></li>
+<li class="text-sm"><div class="font-medium">Someone comfortable with a public, content-driven life
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4rN1xRmy7/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he posts frequently in bursts (5 posts Sept 27-29, 2026) and his work is a public brand</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“3,284,913 followers; posts P4-P12 within 5 days”</div></li>
+<li class="text-sm"><div class="font-medium">A growth-minded partner who likes recommending and sharing things
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4Gf4xRDd5/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he gives away book recommendations and reposts other creators&#39; content</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Free book list link; P7 is a video by Jefferson Fisher”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Podcasting and interviewing
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Podcaster... Listen @modernwisdom&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Writing
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Podcaster, writer&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Reading and curating books (inference)
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;get my free list of 100 life-changing books&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Making and sharing short videos
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd6ts6OxAgV/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Video is 67% of the 12 posts read”</div></li>
+<li class="text-sm"><div class="font-medium">Possibly playing or featuring guitar (weak inference from image tags)
+  <a class="src src-IG" href="https://www.instagram.com/p/DdxCBKlhcrq/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“P12 auto-description: &#39;may be an image of guitar, hat and text&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Personal development and &#39;wisdom&#39;
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Podcast is named Modern Wisdom; book list is &#39;life-changing&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Books and reading
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Free list of 100 life-changing books”</div></li>
+<li class="text-sm"><div class="font-medium">Podcasts and long-form media
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Listen @modernwisdom&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Humour and memes
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd2GaXUOdKe/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“P8, P10 described as memes; &#39;fake British accent&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Drinks and beverage brands (he promotes one)
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Drink @neutonic&#39;; P8 meme featuring alcohol”</div></li>
+<li class="text-sm"><div class="font-medium">Other creators&#39; ideas (he features their videos)
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4Gf4xRDd5/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“P7 video by Jefferson Fisher”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Learning and self-improvement (inference)
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;100 life-changing books&#39;; Modern Wisdom”</div></li>
+<li class="text-sm"><div class="font-medium">Generosity with knowledge
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Offers the book list free”</div></li>
+<li class="text-sm"><div class="font-medium">Not taking himself too seriously
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;fake British accent&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Self-deprecating, playful humour
+  <a class="src src-IG" href="https://www.instagram.com/chriswillx/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;fake British accent&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Prolific, bursty creator
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd6ts6OxAgV/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“9 posts between Sept 26-30, 2026, versus sparse earlier posts”</div></li>
+<li class="text-sm"><div class="font-medium">Collaborative or curatorial; shares others&#39; work
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd4Gf4xRDd5/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“P7 is credited to Jefferson Fisher”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm text-stone-400">Nothing in the sources.</li>
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">80</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 80%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">65</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 65%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">65</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 65%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">60</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 60%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">65</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 65%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Low-confidence estimates. Openness is inferred from the ideas and books focus (BIO). Conscientiousness comes from consistent content output (P4-P12). Extraversion comes from his large public platform and a conversation-based career. The other scores are near-neutral guesses, because there are no captions or personal posts to go on.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> ambivert · <b>Love language:</b> words <span class="text-stone-500">(Inference only: his career is built on conversation, writing and sharing ideas, so verbal connection seems central.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Short, dry, self-aware bio copy; no emoji in the bio; English only; light British-style irony</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Self-mocking one-liners</span><span class="chip-muted">Lists roles plainly (&#39;Podcaster, writer&#39;)</span><span class="chip-muted">Direct calls to action (&#39;Drink&#39;, &#39;Listen&#39;, &#39;get&#39;)</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Podcaster, writer, fake British accent.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“get my free list of 100 life-changing books”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Drink @neutonic”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Bursty: heavy posting in late September 2026, sparse before that (inference)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Public-facing with a large audience; private circle not visible</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>unknown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>unknown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Podcasting, writing, and brand promotion (Modern Wisdom, Neutonic)</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow the Modern Wisdom podcast and audience (inference)</li><li>Spread books and ideas via the free 100-book list</li><li>Promote Neutonic</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Shares knowledge freely</li><li>Doesn&#39;t take himself too seriously</li><li>Curious and idea-driven (inference)</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Public life and constant content creation could take up time and attention</li><li>Sources show nothing about his private life, so compatibility is hard to judge</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Possibly a partner who dislikes being around a public profile or content creation (inference)</li><li>Possibly someone uninterested in ideas or conversation (inference)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone curious and quick to laugh, who enjoys deep conversation and doesn&#39;t mind a public-facing partner. A person who trades book and idea recommendations and keeps things playful would suit him.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Low. LinkedIn returned only a sign-up page with no profile data. Instagram gave a short bio and uncaptioned posts described only by auto-generated image tags. Location, age, relationships, values in practice, and personal facts are not shown. Personality scores are educated guesses. The name comes from the Instagram display name. The guitar hobby is very tentative.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Chris's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/15/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Thomas Frank</div><div class="text-xs text-stone-500">📚 → 🎤 → 🍷 · Dating…</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Chris best</h3><a href="/cyrano-agentic-dating/rankings/#chriswillx" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jessicachenpage/" class="text-sm font-semibold hover:text-rose-600">Jessica Chen</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 84</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">72</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tomfrankly/" class="text-sm font-semibold hover:text-rose-600">Thomas Frank</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 84</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">71</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">A<img src="/photos/aliabdaal.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/aliabdaal/" class="text-sm font-semibold hover:text-rose-600">Ali Abdaal</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 79</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">67</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 74</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">63</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="text-sm font-semibold hover:text-rose-600">Vaibhav Sisinty</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 71</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">61</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">S<img src="/photos/sejalkumar1195.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/sejalkumar1195/" class="text-sm font-semibold hover:text-rose-600">Sejal Kumar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/humphreytalks/" class="text-sm font-semibold hover:text-rose-600">Humphrey Yang</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 69</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">59</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/anushkarathod98/" class="text-sm font-semibold hover:text-rose-600">Anushka Rathod</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 68</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">58</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/pranjalkamra/" class="text-sm font-semibold hover:text-rose-600">Pranjal Kamra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 69</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">58</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/herfirst100k/" class="text-sm font-semibold hover:text-rose-600">Tori Dunlap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 67</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">57</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

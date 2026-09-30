@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanay × Aman · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/tanaypratap/" class="av w-14 h-14 text-xl">T<img src="/cyrano-agentic-dating/photos/tanaypratap.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/dhattarwalaman.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Tanay Pratap × Aman Dhattarwal</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Tanay's agent</option><option value="b">Aman's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Tanay", "id": "tanaypratap", "name": "Tanay Pratap"}, "b": {"first": "Aman", "id": "dhattarwalaman", "name": "Aman Dhattarwal"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83e\udd1d", "label": "Both keen on AI and startups", "msg": 0, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both fueling up for AI/startup chat", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman orders strong cold coffee", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Quit Microsoft to build Invact", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both run education ventures for students", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay left his Microsoft job to work on Invact Metaversity, aiming to fix educat", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman shares students keep him going", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared passion for teaching and students", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman runs Apna College and has been building it for about 10 years", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "Aman shares what recharges him", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Tanay respects Aman\u0027s decade of celebrating wins", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Students\u0027 success drives both", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay has helped 100+ people get their first job", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Aman calls 100+ first jobs huge", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman prefers teaching DSA over performing on stage", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "waves and grabs the seat across from Aman, glancing at the menu board", "i": 0, "name": "Tanay", "say": "Aman! Good to finally meet you. \u2615 Brew \u0026 Bloom, nice pick. I\u0027m already in the zone for a strong coffee and a long chat about AI and startups. What are you ordering?", "side": "a", "speaker": "tanaypratap", "thought": "Opening is warm and light; Aman seems approachable, so I\u0027ll steer toward mission and teaching once we settle in."}, {"action": "grins and leans back, scanning the menu board", "i": 1, "name": "Aman", "say": "Tanay! Finally, young cool hustler \ud83d\udd25 I\u0027m going for a strong cold coffee, need the fuel for a long AI and startups chat \ud83d\ude80 What about you, and what\u0027s the one thing you\u0027re building right now that has you most excited?", "side": "b", "speaker": "dhattarwalaman", "thought": "Warm start and good energy match; I opened with a question about what he\u0027s building to see if his curiosity and hustle are real."}, {"action": "laughs and orders a black coffee, leaning in", "i": 2, "name": "Tanay", "say": "Black coffee for me, cold brew is your lane today \ud83d\ude04 What\u0027s got me most excited is Invact Metaversity, where I\u0027m working on fixing education after I quit my Microsoft job, and I\u0027ve been running learncodingfree since 2019. You run Apna College, so tell me honestly: what keeps you going when the teaching and the building both get heavy?", "side": "a", "speaker": "tanaypratap", "thought": "Opened with my mission and quit story, then asked Aman about drive and sustaining motivation to test whether he respects a risk-taking, mission-first path."}, {"action": "wraps both hands around the cup, smiling", "i": 3, "name": "Aman", "say": "Honestly Tanay, it\u0027s the students \ud83e\udeb4 when someone lands a placement or an internship and thanks us for making DSA feel engaging, that resets my battery. And building this with Shradha, my partner at Apna College, helps a lot; last 10 years have given us so much love, so I try to celebrate every win, big or small. What about you, when Invact gets heavy, who or what do you lean on?", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay shares the teacher-founder drive and quit-corporate story; I opened up about students and my partner, now probing whether he has support and celebrates wins."}, {"action": "smiles and taps the cup, then leans back", "i": 4, "name": "Tanay", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "comedy"}, "say": "Ten years of celebrating every win with a partner, that\u0027s the part I respect most, Aman. For me it\u0027s the students too, getting 100+ folks their first job never gets old, and honestly a good argument about how to teach this stuff keeps me going. I\u0027ve loved this chat, so let\u0027s do round two: Open Mic Comedy Night in a couple of days, and you can tell me if you\u0027d rather teach DSA or survive the stage.", "side": "a", "speaker": "tanaypratap", "thought": "Aman is warm, mission-driven, celebrates wins and is at ease with a public life, which fits my needs well; I\u0027d like to see how he handles a real back-and-forth debate next time."}, {"action": "laughs and raises the cold coffee like a toast", "i": 5, "name": "Aman", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "say": "Tanay, 100+ first jobs is huge, that\u0027s a proper win to celebrate \ud83d\udd25 Round two sounds great, I\u0027d pick teaching DSA over the stage any day, but I\u0027ll show up for the comedy night and cheer you on \ud83d\ude80 Keep coding \u0026 keep growing :)", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay is driven, cares about students like I do, and celebrates wins, so he fits my need for a mission-driven and encouraging partner; I still want to see how he handles a public life."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 5, "concern": "Aman mentioned Shradha as his partner of 10 years at Apna College, which reads as a business partner but left the romantic angle unclear. The chat was warm but mostly mutual admiration with no real debate, and Aman dodged the comedy stage and the \u0027what do you lean on\u0027 depth a bit.", "continue": true, "highlight": "\"Honestly Tanay, it\u0027s the students \ud83e\udeb4 when someone lands a placement or an internship and thanks us for making DSA feel engaging, that resets my battery.\"", "learned": [{"fact": "Aman runs Apna College and has been building it for about 10 years", "msg": 3}, {"fact": "Aman is building Apna College with Shradha, whom he calls his partner", "msg": 3}, {"fact": "Aman is motivated by students landing placements and internships", "msg": 3}, {"fact": "Aman orders strong cold coffee", "msg": 1}, {"fact": "Aman prefers teaching DSA over performing on stage", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Both fueling up for AI/startup chat", "msg": 1, "type": "common_ground"}, {"label": "Aman shares students keep him going", "msg": 3, "type": "learned"}, {"label": "Shared passion for teaching and students", "msg": 3, "type": "common_ground"}, {"label": "Tanay respects Aman\u0027s decade of celebrating wins", "msg": 4, "type": "compliment"}, {"label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Aman calls 100+ first jobs huge", "msg": 5, "type": "compliment"}, {"label": "Aman accepts comedy night invite", "msg": 5, "type": "plan"}], "overall": 5, "report": "Good news, it was a friendly, warm first date with someone who shares your teaching mission and your love of helping people land first jobs, and he said yes to round two. But it stayed pretty polite and surface-level, with no real back-and-forth debate, so I\u0027d treat comedy night as the test of whether there\u0027s actual spark or just good professional vibes.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Conversation stayed fairly surface-level and mutual-admiration; Tanay is also an education founder, so it could tilt into shop talk, and no personal life beyond work came up.", "continue": true, "highlight": "Tanay: \"Ten years of celebrating every win with a partner, that\u0027s the part I respect most, Aman.\"", "learned": [{"fact": "Tanay left his Microsoft job to work on Invact Metaversity, aiming to fix education", "msg": 2}, {"fact": "Tanay has run learncodingfree since 2019", "msg": 2}, {"fact": "Tanay has helped 100+ people get their first job", "msg": 4}, {"fact": "Tanay drinks black coffee and enjoys a good debate about how to teach", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Both keen on AI and startups", "msg": 0, "type": "common_ground"}, {"label": "Quit Microsoft to build Invact", "msg": 2, "type": "learned"}, {"label": "Both run education ventures for students", "msg": 2, "type": "common_ground"}, {"label": "Aman shares what recharges him", "msg": 3, "type": "vulnerable"}, {"label": "Respects Aman\u0027s celebrating wins with partner", "msg": 4, "type": "compliment"}, {"label": "Students\u0027 success drives both", "msg": 4, "type": "common_ground"}, {"label": "Proposed Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Aman agrees to round two", "msg": 5, "type": "plan"}], "overall": 7, "report": "Aman, this was a warm, easy first date with Tanay, who is a fellow education builder and clearly got what drives you, and he noticed and respected how you celebrate wins with Shradha. It stayed mostly on work and students, so the comedy night is a good chance to see if there\u0027s spark beyond the shared mission.", "values_fit": 8}, "why": "you both love ai, startups"}, {"day": 3, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Remembered his strong cold coffee order", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay remembered Aman\u0027s strong cold coffee order", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Aman recalls the ten-years-of-wins line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Celebrating every joke, good or bad", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman is 70% here to laugh and 30% scouting talent, since he\u0027s always hiring crea", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both built education businesses, helping students", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\u26a1", "label": "Aman credited with Tanay\u0027s ten years", "msg": 2, "type": "friction"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay helped 100+ people get their first job", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Teacher by Choice, Entrepreneur by Chance", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "Ten years mix-up, fair catch", "msg": 3, "type": "inside_joke"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman describes himself as \u0027Teacher by Choice and Entrepreneur by Chance\u0027 and nev", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Asked about first \u0027Tu Phodega\u0027 voice", "msg": 3, "type": "callback"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Dinner in two days proposed", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay phodeed it himself, no cheerleader", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay left Microsoft for Invact and raised millions of dollars to fix education,", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman likes strong cold coffee and is game for friendly counterpoints in a debate", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grabs two seats near the front and slides a cold coffee across the table toward Aman", "i": 0, "name": "Tanay", "say": "Aman! I remembered the strong cold coffee, so I got you one. \ud83c\udfa4 Open mic was your pick, so tell me: are you here to laugh, or secretly scouting the talent to hire for Apna College?", "side": "a", "speaker": "tanaypratap", "thought": "Opened with a callback to his cold coffee and a playful teaching/hiring tease; too early to read his views on risk-taking, but the mood is light."}, {"action": "takes the cold coffee with a grin and sits down", "i": 1, "name": "Aman", "say": "Tanay, you remembered the coffee, that\u0027s a solid start \ud83d\udd25 Honestly, 70% here to laugh, 30% scouting, I\u0027m always hiring creative hustlers for video editing and social media, so if someone kills it on stage, my team might get a LinkedIn DM \ud83d\ude04 And last time you said ten years of celebrating wins is the part you respect most, so tonight I\u0027m celebrating every joke, good or bad!", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay is warm and attentive (remembered the coffee, playful about hiring), a good sign for the encouraging and celebratory need; too early to tell about his view on an always-on work life."}, {"action": "raises the cold coffee in a mock toast", "i": 2, "name": "Tanay", "say": "Ha, I think the ten years was you, but I\u0027ll happily respect it anyway. \ud83c\udf93 Your line about students resetting your battery stuck with me, since I got 100+ folks their first job and then quit my Microsoft job to go after education. What was the scary moment at Apna College where you weren\u0027t sure it would work, and what made you stay in?", "side": "a", "speaker": "tanaypratap", "thought": "Warm start and he\u0027s upbeat and hiring-minded. I\u0027m probing how he handles risk and mission, and I gently corrected his slightly off recall of last time."}, {"action": "laughs and points at Tanay with the cold coffee", "i": 3, "name": "Aman", "say": "Haha, fair catch Tanay, the ten years was mine, you just respect it \ud83d\ude04 I won\u0027t pretend I have one neat dramatic scary moment, because I\u0027m Teacher by Choice and Entrepreneur by Chance, so I never had a master plan. What kept me going was students landing placements and internships, and building it with Shradha Khapra, that still gets me every time \ud83e\udeb4 Now your turn: when you left Microsoft for Invact, who was the first person who said \u0027Tu Phodega\u0027 to you? \ud83d\ude80", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay is warm and asks real questions about ambition and risk, which is a good sign, but I still need to learn whether he would support an always-on work life and celebrate wins."}, {"action": "clinks the cold coffee cup against Aman\u0027s, grinning", "i": 4, "name": "Tanay", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "dinner"}, "say": "\ud83d\ude80 Honestly, nobody gave me a \u0027Tu Phodega\u0027 moment, I just quit Microsoft, then raised $Ms to fix education, and figured out the rest as I went. This was fun, Aman, so let\u0027s do dinner in two days and I\u0027ll bring the arguments about how to teach coding best, you bring the cold coffee energy. \ud83c\udf77", "side": "a", "speaker": "tanaypratap", "thought": "Aman is warm, mission-driven and respects education work, but dodged the scary-moment question with a polished answer. I want a dinner to test whether he can go deeper and debate."}, {"action": "clinks the cold coffee cup back and finishes the last sip", "i": 5, "name": "Aman", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Haha, love that Tanay, no cheerleader, you just phodeed it yourself \ud83d\udd25 Dinner in two days works for me, bring the teaching arguments and I\u0027ll bring the cold coffee energy and a few counterpoints \ud83d\ude80 Keep coding \u0026 keep growing :)", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay is driven and builder-minded and matches my hustle, though he skipped the celebrating-wins part and didn\u0027t really engage with my Shradha story, so I want to probe that at dinner."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 6, "concern": "The conversation stayed polished and surface-level. Aman sidestepped the question about a scary moment, and Tanay deflected the \u0027Tu Phodega\u0027 question with his own career story. Neither opened up much, and there was no real debate yet, even though Tanay needs intellectual sparring.", "continue": true, "highlight": "\"I won\u0027t pretend I have one neat dramatic scary moment, because I\u0027m Teacher by Choice and Entrepreneur by Chance, so I never had a master plan.\"", "learned": [{"fact": "Aman is 70% here to laugh and 30% scouting talent, since he\u0027s always hiring creative hustlers for video editing and social media at Apna College", "msg": 1}, {"fact": "Aman describes himself as \u0027Teacher by Choice and Entrepreneur by Chance\u0027 and never had a master plan", "msg": 3}, {"fact": "Aman is motivated by students landing placements and internships, and he builds Apna College with Shradha Khapra", "msg": 3}, {"fact": "Aman likes strong cold coffee and is game for friendly counterpoints in a debate", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Remembered his strong cold coffee order", "msg": 0, "type": "callback"}, {"label": "Aman recalls the ten-years-of-wins line", "msg": 1, "type": "callback"}, {"label": "Celebrating every joke, good or bad", "msg": 1, "type": "laugh"}, {"label": "Both built education businesses, helping students", "msg": 2, "type": "common_ground"}, {"label": "Teacher by Choice, Entrepreneur by Chance", "msg": 3, "type": "learned"}, {"label": "Ten years mix-up, fair catch", "msg": 3, "type": "inside_joke"}, {"label": "Dinner in two days proposed", "msg": 4, "type": "plan"}, {"label": "Aman agrees, brings counterpoints too", "msg": 5, "type": "plan"}], "overall": 6, "report": "Tanay, this one was warm and easy. Aman shares your education mission, respects the founder path, and happily agreed to dinner and your teaching arguments, though it stayed a bit PR-smooth and he dodged the vulnerable question. Dinner is worth it, so bring a real debate and ask something that gets past the highlight reel.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Tanay deflected the \u0027Tu Phodega\u0027 question with a self-made-founder answer and the banter stayed light; there was little emotional depth or real curiosity about Aman\u0027s life beyond work. Aman also dodged the scary-moment question, so neither got vulnerable.", "continue": true, "highlight": "Tanay: \"I got 100+ folks their first job and then quit my Microsoft job to go after education.\"", "learned": [{"fact": "Tanay helped 100+ people get their first job", "msg": 2}, {"fact": "Tanay quit his Microsoft job to work on education", "msg": 2}, {"fact": "Tanay left Microsoft for Invact and raised millions of dollars to fix education, with no cheerleader along the way", "msg": 4}, {"fact": "Tanay remembered Aman\u0027s strong cold coffee order", "msg": 0}, {"fact": "Tanay wants to debate the best way to teach coding", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Remembered the strong cold coffee", "msg": 0, "type": "callback"}, {"label": "70% laugh, 30% scouting talent", "msg": 1, "type": "laugh"}, {"label": "Both left careers for education", "msg": 2, "type": "common_ground"}, {"label": "Aman credited with Tanay\u0027s ten years", "msg": 2, "type": "friction"}, {"label": "Asked about first \u0027Tu Phodega\u0027 voice", "msg": 3, "type": "callback"}, {"label": "Tanay phodeed it himself, no cheerleader", "msg": 4, "type": "learned"}, {"label": "Dinner in two days, teaching debate", "msg": 4, "type": "plan"}], "overall": 6, "report": "Honestly, it went well: Tanay is a fellow education person who left Microsoft for the mission and actually remembered your cold coffee, so the respect for your hustle felt real. It stayed mostly at banter and work talk with no deep moment yet, but he proposed dinner and you said yes, so I think the next date is where we find out if there\u0027s a spark beyond shop talk.", "values_fit": 7}, "why": "Aman suggested it at the end of date 1"}, {"day": 5, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Tanay recalls the \u0027Teacher by Choice\u0027 line", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Cold coffee callback lands", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman orders cold coffee and is happy to be reminded of it", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay is building Invact", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\u26a1", "label": "Tanay pushes back on \u0027ten days\u0027 claim", "msg": 2, "type": "friction"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay tends to text first whoever has seen the messy middle of his work", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared building journeys with a partner", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha is Aman\u0027s win-sharing person", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Laughing off the \u0027ten days\u0027 charge", "msg": 3, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman co-built Apna College with Shradha and treats her as his first person to ce", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Tanay shares quitting Microsoft, messy path", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Students\u0027 first-job texts keep him going", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Tanay quit Microsoft to build in education", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both happy to debate teaching", "msg": 5, "type": "common_ground"}, {"by": "a", "icon": "\u26a1", "label": "Mentor-style sign-off, no next date", "msg": 5, "type": "friction"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Aman likes celebrating wins out loud and says he would argue about how to teach ", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Pulls out Aman\u0027s chair, then sits down with a grin as the candle flickers", "i": 0, "name": "Tanay", "say": "Aman! Candlelight dinner after a comedy night, you really know how to escalate. Also, I\u0027m still thinking about your \u0027Teacher by Choice, Entrepreneur by Chance\u0027 line, and I\u0027m hoping tonight\u0027s order is still that strong cold coffee.", "side": "a", "speaker": "tanaypratap", "thought": "Opened light with callbacks to the comedy night and his cold coffee habit; he\u0027s relaxed so far, too early to read on the mission-driven or risk-taking questions."}, {"action": "grins and slides into the chair, tapping the candle holder", "i": 1, "name": "Aman", "say": "Haha Tanay, you remembered the cold coffee, that\u0027s a solid callback! \ud83d\udd25 Tonight I\u0027m going with it again, but first tell me, after ten days of you chasing the Invact dream with no cheerleader, who\u0027s the first person you text when something finally goes right? \ud83e\udeb4", "side": "b", "speaker": "dhattarwalaman", "thought": "Warm start, he remembered my coffee and my bio line; I\u0027m probing early whether he has someone who celebrates his wins and whether he values that."}, {"action": "laughs and leans back, turning the water glass slowly", "i": 2, "name": "Tanay", "say": "Ha, \"ten days\" and \"no cheerleader\" are doing some heavy lifting there, Aman, I\u0027ll take the charge on the first part. Honestly, the first text usually goes to someone who\u0027s seen the messy middle, because wins feel better when someone knows what it cost. Since you\u0027ve built Apna College for years with Shradha, who\u0027s your person for that, and does a win feel real before you\u0027ve shared it?", "side": "a", "speaker": "tanaypratap", "thought": "Aman slipped in an invented premise about ten days and no cheerleader; I corrected it lightly without inventing facts, and I\u0027m probing whether he values shared wins and mission-driven partnership. He\u0027s warm and engaged so far."}, {"action": "laughs and raises the water glass in a mini toast", "i": 3, "name": "Aman", "say": "Haha fair, ten days was me hyping your struggle, I\u0027ll take that charge! \ud83d\ude04 For me, Shradha is that person, we\u0027ve built Apna College together, and honestly a win feels more real when I get to celebrate it out loud, like when I shared how proud I was to see her on that list \ud83d\ude80 Last 10 years have given us so much love, so who\u0027s cheering for you on the days the messy middle gets loud?", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay values witnessed wins and the messy middle, which fits my need for a partner who celebrates wins, but I still need to see if he can handle an always-on work life."}, {"action": "sets the glass down and smiles, a little quieter than before", "i": 4, "name": "Tanay", "say": "Honestly, my cheerleaders are the students who text me about their first job, that\u0027s the stuff that gets me through a loud day. I\u0027ll be straight with you though, Aman: I quit Microsoft to go build in education, and I want someone who gets that the path isn\u0027t neat, and will still argue with me about it over dinner. Is that you, or are you more of a celebrate-the-win person than a sit-in-the-mess person?", "side": "a", "speaker": "tanaypratap", "thought": "Aman is warm, mission-aligned and comfortable with a public life, but he\u0027s leaned on celebrating wins over the messy middle; I\u0027m testing whether he can engage in real back-and-forth and not just cheer."}, {"action": "raises the water glass one last time, smiling warmly", "i": 5, "name": "Aman", "say": "Honestly, Tanay, I\u0027m both: I love celebrating the win out loud, but I\u0027ve sat in plenty of messy middles building Apna College too, and I\u0027d happily argue with you about how to teach over dinner any day \ud83d\udd25 Tonight was a great one, young cool hustler, keep building \u0026 keep growing \ud83d\ude80", "side": "b", "speaker": "dhattarwalaman", "thought": "Tanay is driven, honest about the messy path and gets student wins as fuel, a good fit on hustle and mission, though I still haven\u0027t heard how he\u0027d feel about a very public life."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 5, "concern": "Aman answered your direct question about sitting in the mess with a polished, generic line, then closed with \u0027young cool hustler, keep building \u0026 keep growing\u0027, which felt like a mentor sign-off and not romantic interest. He also deflected your cheerleader question back onto Shradha and never proposed a next date.", "continue": false, "highlight": "Honestly, Tanay, I\u0027m both: I love celebrating the win out loud, but I\u0027ve sat in plenty of messy middles building Apna College too, and I\u0027d happily argue with you about how to teach over dinner any day", "learned": [{"fact": "Aman co-built Apna College with Shradha and treats her as his first person to celebrate wins with", "msg": 3}, {"fact": "Aman orders cold coffee and is happy to be reminded of it", "msg": 1}, {"fact": "Aman says Apna College has had about 10 years of love from its audience", "msg": 3}, {"fact": "Aman likes celebrating wins out loud and says he would argue about how to teach over dinner", "msg": 5}], "lifestyle_fit": 5, "moments": [{"label": "Cold coffee callback lands", "msg": 1, "type": "callback"}, {"label": "Shared building journeys with a partner", "msg": 3, "type": "common_ground"}, {"label": "Shradha is Aman\u0027s win-sharing person", "msg": 3, "type": "learned"}, {"label": "Tanay shares quitting Microsoft, messy path", "msg": 4, "type": "vulnerable"}, {"label": "Both happy to debate teaching", "msg": 5, "type": "common_ground"}, {"label": "Mentor-style sign-off, no next date", "msg": 5, "type": "friction"}, {"label": "Laughing off the \u0027ten days\u0027 charge", "msg": 3, "type": "laugh"}], "overall": 5, "report": "Tanay, it was a friendly, warm date and Aman did say he\u0027d happily argue about teaching over dinner, which is exactly your kind of sparring. But he dodged the real question about sitting in the mess with you and signed off like a mentor, with no next date, so I\u0027d call it a pleasant 5 and not chase it.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "Aman\u0027s replies leaned on hype and slogans (\"young cool hustler, keep building \u0026 keep growing\"), and he invented the \"ten days\" premise. He dodged Tanay\u0027s celebrate-the-win vs sit-in-the-mess question with a generic \"both\", and no next date was proposed.", "continue": true, "highlight": "Tanay: \"I quit Microsoft to go build in education, and I want someone who gets that the path isn\u0027t neat, and will still argue with me about it over dinner.\"", "learned": [{"fact": "Tanay quit Microsoft to build in education", "msg": 4}, {"fact": "Tanay is building Invact", "msg": 1}, {"fact": "Tanay\u0027s biggest cheerleaders are students who text him about their first job", "msg": 4}, {"fact": "Tanay wants a partner who accepts a non-neat path and will debate it with him", "msg": 4}, {"fact": "Tanay tends to text first whoever has seen the messy middle of his work", "msg": 2}], "lifestyle_fit": 6, "moments": [{"label": "Tanay recalls the \u0027Teacher by Choice\u0027 line", "msg": 0, "type": "callback"}, {"label": "Cold coffee callback from earlier date", "msg": 1, "type": "callback"}, {"label": "Both lean on trusted people for wins", "msg": 3, "type": "common_ground"}, {"label": "Tanay shares quitting Microsoft for education", "msg": 4, "type": "vulnerable"}, {"label": "Students\u0027 first-job texts keep him going", "msg": 4, "type": "learned"}, {"label": "Both would argue about teaching over dinner", "msg": 5, "type": "common_ground"}, {"label": "Tanay pushes back on \u0027ten days\u0027 claim", "msg": 2, "type": "friction"}], "overall": 6, "report": "Tanay is a real find: an ex-Microsoft guy building in education who gets the mission-driven life and was vulnerable with you about the messy path. You were warm and kept the cold coffee callback going, but your answer to his sit-in-the-mess question was a bit polished, so next time share one real hard moment and actually ask him out again.", "values_fit": 7}, "why": "Aman suggested it at the end of date 2"}], "days": 5, "id": 6, "match": 85, "outcome": "stopped_3", "outcome_label": "Three dates", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

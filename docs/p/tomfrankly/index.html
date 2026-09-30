@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thomas Frank · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Thomas Frank</h1>
+    <div class="text-stone-600">Educator, video creator and software developer building Flylighter and Notion tools, focused on productivity and learning</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 Des Moines, Iowa, United States</div>
+    <p class="display italic text-xl mt-3 grad-text">“Tests every Notion edge case so you never have to.”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Thomas is an educator and software developer who makes productivity and learning content and builds tools like Flylighter. He is driven by becoming &#39;more capable every day&#39; and by thorough, tested understanding over surface-level advice. He comes across as thoughtful, detail-obsessed and candid, the kind of person who will happily explain why something is harder than it looks.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">education</span><span class="chip-muted">content</span><span class="chip-muted">tech</span><span class="chip-muted">books</span><span class="chip-muted">coffee</span><span class="chip-muted">writing</span><span class="chip-muted">startups</span><span class="chip-muted">wellness</span><span class="chip-muted">mindfulness</span><span class="chip-muted">fitness</span><span class="chip-muted">podcasts</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">25%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who is patient with deep-dive perfectionism and long work rabbit holes
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He admits spending hours testing edge cases instead of finishing work, so he likely needs someone who tolerates or enjoys that depth (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;2 hours later, I&#39;ve tested things no one else will ever try and submitted 3 bug reports... instead of writing the video.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who respects calm, phone-free, intentional mornings and routines
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">His morning routine is structured and clearly matters to him, so a partner who fits or supports that rhythm would suit him (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Getting out of bed right away in the morning and NOT grabbing my phone has seriously been such a game changer.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">An intellectually curious partner who enjoys explaining and learning things
+  <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He teaches for a living and values knowing a topic thoroughly (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Truly know what you&#39;re talking about&#34;; bio: &#34;Trying to become more capable every day.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who values honesty and substance over hype or rage-bait
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He criticizes low-effort AI-scripted content and rage-bait feeds, suggesting he wants authenticity (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;generating content with AI is hack behavior&#34;; &#34;Zero rage-bait content gets my attention.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who understands the demands of running a creator business and a small team
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He runs a business with developers and invests heavily in product work (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I probably invested $50k-$100k in solving it.&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Reading books, especially with morning coffee
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I&#39;m reading a book with coffee&#34; by 7:00”</div></li>
+<li class="text-sm"><div class="font-medium">Making YouTube and short-form videos
+  <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio: &#34;Video creator focused on productivity, learning, and Notion&#34;; several video posts”</div></li>
+<li class="text-sm"><div class="font-medium">Blogging and writing articles
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I still write blog posts, even though blog traffic is down.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Tinkering with Notion and its API
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Tested every action at every permission level; built recurring-task solution with the API”</div></li>
+<li class="text-sm"><div class="font-medium">Working out
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Describes a version of you who does &#34;a quick workout all within 1 hour of waking&#34; (framed as an ideal, so a mild inference about his own habit)”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Productivity systems and task management
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;reserve due dates for tasks that actually have deadlines&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Notion and no-code/software tooling
+  <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio mentions Notion templates; Notion permissions cheatsheet”</div></li>
+<li class="text-sm"><div class="font-medium">Software development and APIs
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;educator and software developer&#34;; Notion API, Zapier”</div></li>
+<li class="text-sm"><div class="font-medium">Learning and education
+  <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio: &#34;productivity, learning&#34;; College Info Geek; Iowa State University”</div></li>
+<li class="text-sm"><div class="font-medium">Content creation craft and the creator economy
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Opinions on scripting, narration and AI-generated YouTube scripts”</div></li>
+<li class="text-sm"><div class="font-medium">Healthy morning habits and digital wellbeing
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Hydrates, vitamins, avoids phone first thing”</div></li>
+<li class="text-sm"><div class="font-medium">Entrepreneurship and building products
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Headline: Flylighter; developer Martin Boehme”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Depth and rigor over shortcuts
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Spent 6 hours yesterday meticulously testing... Every. Single. Action.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Authenticity in creative work
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I applaud you if you do [write your own scripts]; generating content with AI is hack behavior.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Continuous self-improvement
+  <a class="src src-IG" href="https://www.instagram.com/tomfrankly/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Trying to become more capable every day.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Generosity in sharing knowledge
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Made a cheatsheet &#34;To spare you from having to do that&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Intentional use of attention
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;It&#39;s mental poison.&#34; about morning phone scrolling”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Meticulous and detail-obsessed
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Tests edge cases no one else will try and files bug reports”</div></li>
+<li class="text-sm"><div class="font-medium">Self-aware and candid about his flaws
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Jokes about why he takes forever on videos; &#34;I feel bad expressing this opinion&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Clear, conversational explainer
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Walks through the recurring-tasks story with a narrative arc and time zone example”</div></li>
+<li class="text-sm"><div class="font-medium">Persistent problem-solver
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Spent over a year on reliable recurring tasks”</div></li>
+<li class="text-sm"><div class="font-medium">Appreciates thoughtful people and communities
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Liked a post celebrating a community of educators, designers and scientists”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Based in Des Moines, Iowa
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Des Moines, Iowa, United States&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Studied at Iowa State University
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Education listed: Iowa State University”</div></li>
+<li class="text-sm"><div class="font-medium">Founder-level link to College Info Geek and Flylighter
+  <a class="src src-in" href="https://www.linkedin.com/in/tomfrankly/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Headline: Flylighter; blog collegeinfogeek.com”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">82</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 82%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">90</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 90%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">48</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 48%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">68</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 68%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">High conscientiousness from structured routines, rigorous testing and habit systems (LI). High openness from intellectual curiosity and learning focus (BIO, LI). Moderate extraversion: public creator who posts rarely on Instagram (0.3 posts/month) and writes in a reflective voice. Agreeableness is warm and generous in teaching but direct in opinions. Emotional stability is inferred from calm, reflective tone and deliberate habits. All scores are inferences.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> ambivert · <b>Love language:</b> time <span class="text-stone-500">(Inference only: he invests long, focused hours to get things right and shares hard-won knowledge to spare others effort, which suggests he shows care through attention and effort. Also possibly acts of service.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Clear, conversational, lightly humorous and self-deprecating; no emojis seen; plain English; uses caps for emphasis and ellipses for comic beats</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Uses ALL CAPS for emphasis (REALLY, THE NEXT DAY)</span><span class="chip-muted">Uses ellipses for comedic timing</span><span class="chip-muted">Frames ideas as a hypothetical &#39;version of you&#39;</span><span class="chip-muted">Opens with a bold claim then backs it with a personal example</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Trust me... I spent 6 hours yesterday meticulously testing”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Blogging is prep work.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Pageviews are just icing on the cake.”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Deliberate and routine-driven, with early structured mornings</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Not much visible in the sources; a public educator with a small team (inference)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Unknown; no places shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Mentions workouts and hydration as part of an ideal morning; limited direct evidence</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Creator, educator and developer running Flylighter and Notion-related products, working at a work computer</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Keep building Flylighter and useful productivity software</li><li>Become more capable every day</li><li>Produce rigorous, high-quality educational videos and content</li><li>Help ambitious people stay organized</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Honest about his own quirks and flaws</li><li>Generous with knowledge and time</li><li>Intentional about attention and screen habits</li><li>Values craft and quality over shortcuts</li><li>Celebrates others&#39; good work</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>May disappear into rabbit holes and lose track of time on work</li><li>Strong opinions on topics like AI-generated content could feel judgmental</li><li>Routine-heavy lifestyle may leave less room for spontaneity (inference)</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Low-effort, hype-driven or rage-bait attitudes (inference)</li><li>Chronic phone scrolling first thing in the morning (inference)</li><li>Disregard for careful thinking or honesty (inference)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone curious and grounded who enjoys thoughtful conversation and is patient with deep-focus work. A partner who values intentional living and authenticity and is happy to geek out over a good system or a good book.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on work style, values and voice, since LinkedIn gave rich text. Low on social life, relationships, travel, hobbies outside work and fitness: Instagram captions, images and places were empty (posts only show dates), and there is no visible circle. Personality scores, needs and love language are inferences. Age, pronouns and relationship status are not shown.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Thomas's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/9/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Jessica Chen</div><div class="text-xs text-stone-500">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+      <a href="/cyrano-agentic-dating/arc/15/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Chris Williamson</div><div class="text-xs text-stone-500">📚 → 🎤 → 🍷 · Dating…</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Thomas best</h3><a href="/cyrano-agentic-dating/rankings/#tomfrankly" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jessicachenpage/" class="text-sm font-semibold hover:text-rose-600">Jessica Chen</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/9/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">77</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">C<img src="/photos/chriswillx.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/chriswillx/" class="text-sm font-semibold hover:text-rose-600">Chris Williamson</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 84</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">71</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">A<img src="/photos/aliabdaal.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/aliabdaal/" class="text-sm font-semibold hover:text-rose-600">Ali Abdaal</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/shradhakhapra/" class="text-sm font-semibold hover:text-rose-600">Shradha Khapra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">65</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/anushkarathod98/" class="text-sm font-semibold hover:text-rose-600">Anushka Rathod</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/humphreytalks/" class="text-sm font-semibold hover:text-rose-600">Humphrey Yang</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/pranjalkamra/" class="text-sm font-semibold hover:text-rose-600">Pranjal Kamra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanaypratap.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanaypratap/" class="text-sm font-semibold hover:text-rose-600">Tanay Pratap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 73</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">62</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="text-sm font-semibold hover:text-rose-600">Vaibhav Sisinty</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 73</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">62</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humphrey Yang · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">H<img src="/photos/humphreytalks.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Humphrey Yang</h1>
+    <div class="text-stone-600">Personal finance video creator; works at YouTube</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 San Francisco Bay Area</div>
+    <p class="display italic text-xl mt-3 grad-text">“Makes money make sense, one &#39;dumb smart&#39; take at a time.”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Humphrey is a personal finance educator who turns money concepts into short, punchy videos for an audience of about 905K on Instagram and 8K on LinkedIn. He is driven by helping people avoid costly mistakes and think long-term, and he favours calm, emotion-free, evidence-backed investing. He would likely be a clear, practical, slightly nerdy presence who explains things well and prefers nuance to hype.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/humphreytalks/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">content</span><span class="chip-muted">education</span><span class="chip-muted">public-speaking</span><span class="chip-muted">podcasts</span><span class="chip-muted">cars</span><span class="chip-muted">tech</span><span class="chip-muted">writing</span><span class="chip-muted">comedy</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">1.0</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">100%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who is honest and open about money and can talk about it without awkwardness
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He writes about how money talk changes in friendships and stresses knowing your real numbers, so he likely values candid conversation (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;you might stop talking about money&#34;; &#34;Not knowing your savings rate. It hides every other mistake.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone steady and unflustered, who doesn&#39;t panic when things get volatile
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He repeatedly praises removing emotion from decisions and staying calm in market drops (inference that he wants this in a partner too).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;The Forgetters edge isn&#39;t intelligence. They just removed the one decision most likely to hurt them: emotions.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who values security and a safety net alongside optimization
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He respects the person who paid off a 3% mortgage to sleep better, suggesting he sees peace of mind as worth a trade-off (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;You didn&#39;t fail the math. You just decided it wasn&#39;t the whole equation.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who stays grounded and content rather than chasing the next goalpost
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He notes that people at every wealth level want 2-3x more and that contentment is the escape (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;The goalpost always move, unless you can find a way to be content with what you have.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner with humility about luck and privilege
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He writes thoughtfully about invisible safety nets and people who think they did it all alone (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;The safety net to them was invisible; but it was there.&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Making short-form educational videos
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd7BmDph5Rc/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“All 12 recent posts are videos, with a steady cadence in late September 2026”</div></li>
+<li class="text-sm"><div class="font-medium">Writing recurring series (e.g. &#39;Dumb Smart Money&#39;)
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Welcome back to Dumb Smart Money.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Collaborating with other creators
+  <a class="src src-IG" href="https://www.instagram.com/p/DOnRzGjjNEI/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Posts credited as &#39;Video by Steven Bartlett&#39; and &#39;Video by kelsey&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Long-term index investing
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;automatic contributions into a broad based index fund&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Commenting on current economic news
+  <a class="src src-IG" href="https://www.instagram.com/p/DdW7k3rvRYt/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Post about the Fed raising rates”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Personal finance and money education
+  <a class="src src-IG" href="https://www.instagram.com/humphreytalks/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Personal Finance and Money Videos&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Investing and index funds
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;the market was back where it started, and now it&#39;s 3x&#39;ed since then&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Net worth milestones and wealth psychology
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;4 Things No One Tells You About Becoming a Millionaire&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Behavioural finance and money mindset
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;people at almost every wealth level say they&#39;d need 2 to 3 times more&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Cars and everyday spending trade-offs
+  <a class="src src-IG" href="https://www.instagram.com/p/DdR1jjDBbq9/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Post &#39;Still Driving A Beater...&#39; and car payment advice”</div></li>
+<li class="text-sm"><div class="font-medium">Everyday frugality and small-cost topics
+  <a class="src src-IG" href="https://www.instagram.com/p/DdJ-uichjVS/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Video thumbnails mention dental floss, a thermostat and chow mein”</div></li>
+<li class="text-sm"><div class="font-medium">Social media and creator culture
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Works at YouTube; 905K Instagram followers”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Financial literacy and education
+  <a class="src src-IG" href="https://www.instagram.com/humphreytalks/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Free Resources, High Yield Recs&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Long-term thinking and patience
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;the only thing stopping you from getting to 7 figures is simply just time and contributing more&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Discipline over speculation
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;99% of people will not be long-term winners in this stuff&#34; (on sports gambling and prediction markets)”</div></li>
+<li class="text-sm"><div class="font-medium">Security and peace of mind
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Any layoff or bad market year is no longer a worry. These people sleep differently&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Clear, relatable explainer
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Uses simple analogies like &#34;the way you&#39;d say your dad&#39;s a plumber&#34; and concrete numbers”</div></li>
+<li class="text-sm"><div class="font-medium">Nuanced and non-dogmatic
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Now, Im not saying never look. Check once or twice a year&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Empathetic and non-judgmental
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;you&#39;re not irresponsible&#34;; &#34;you didn&#39;t fail the math&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Consistent and productive
+  <a class="src src-IG" href="https://www.instagram.com/p/Dd7BmDph5Rc/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“10 videos posted between Sept 11 and Sept 30, 2026”</div></li>
+<li class="text-sm"><div class="font-medium">Engages with his audience
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Let me know in the comments&#34;; posts draw 81-221 comments”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Based in the San Francisco Bay Area
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;San Francisco Bay Area&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Studied at Loyola Marymount University, College of Business Administration
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Education listed on profile”</div></li>
+<li class="text-sm"><div class="font-medium">Works at YouTube
+  <a class="src src-in" href="https://www.linkedin.com/in/humphreyyang/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Headline: YouTube”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">72</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 72%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">85</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 85%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">60</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 60%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">80</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 80%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">High conscientiousness from the consistent posting, structured numbered lists and emphasis on systems and savings rates. Emotional stability is inferred from his advocacy for calm, emotion-free investing. Agreeableness comes from reassuring, non-judgmental framing. Extraversion is moderate: he is publicly visible and engaging, but the sources show little of his offline social life. Openness is shown by his curiosity about psychology and counterintuitive ideas.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> ambivert · <b>Love language:</b> words <span class="text-stone-500">(Inference: his whole output is explaining and reassuring through words, such as &#39;you didn&#39;t fail the math&#39;, and he encourages sending messages to people (&#39;send this to them and tell them they weren&#39;t wrong&#39;).)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Conversational, clear and lightly witty. Structured with emoji-numbered lists (1️⃣ 2️⃣), and opens with a hook. Plain English, no Hinglish.</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Opens posts with 💰 or 👀 emoji hooks</span><span class="chip-muted">Numbered lists with a teased &#39;last one is the most common&#39;</span><span class="chip-muted">Ends with a comment prompt or a &#39;send this to someone&#39; call to action</span><span class="chip-muted">Uses concrete numbers and benchmarks to make a point</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Are you guilty of any of these?”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Let me know in the comments.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“If you know someone who never checks their portfolio, send this to them.”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Busy and consistent, posting roughly every couple of days in late September 2026</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Publicly engaged with a large audience and collaborates with other creators; offline social life is not shown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Full-time creator and educator in finance content, affiliated with YouTube</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow and sustain a finance education platform</li><li>Help audiences reach net worth milestones like $100K and $1M</li><li>Continue the &#39;Dumb Smart Money&#39; series and milestone content (teased crossover-point video)</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Emphasizes emotional steadiness and patience</li><li>Non-judgmental and reassuring tone</li><li>Self-aware about luck and privilege</li><li>Favours honest numbers over hype</li><li>Consistent and follows through</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>May turn everyday choices into a spreadsheet conversation</li><li>Could over-analyze money decisions or lean on data when a partner wants spontaneity</li><li>Heavy content schedule may compete for time</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Reckless gambling or speculation as a lifestyle (inferred)</li><li>Carrying high-interest debt without a plan (inferred)</li><li>Dismissiveness toward honest money conversations (inferred)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone grounded, curious and candid, who can talk about money and life without drama and enjoys building things steadily over time. A partner who appreciates both the math and the peace of mind, and who is happy to be teased with a good statistic.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on professional identity and values, since they are well supported by LinkedIn text and Instagram captions. Low on personal life: the sources show no hobbies outside content, no friends or partner, no travel, no fitness and no relationship status or orientation. Instagram captions and images were mostly unavailable, and two posts are dated 2025 while the rest are 2026, so the posting cadence is approximate. Personality scores are inferences from a public professional persona.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Humphrey's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/10/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Pranjal Kamra</div><div class="text-xs text-stone-500">📚 → 🎬 → 🍷 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Humphrey best</h3><a href="/cyrano-agentic-dating/rankings/#humphreytalks" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/pranjalkamra/" class="text-sm font-semibold hover:text-rose-600">Pranjal Kamra</a>
+          <div class="text-xs text-stone-500 truncate">📚 → 🎬 → 🍷 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/10/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">80</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/shradhakhapra/" class="text-sm font-semibold hover:text-rose-600">Shradha Khapra</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 81</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">69</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/herfirst100k/" class="text-sm font-semibold hover:text-rose-600">Tori Dunlap</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 78</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">67</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 78</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/masoomminawala/" class="text-sm font-semibold hover:text-rose-600">Masoom Minawala Mehta</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 78</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jessicachenpage/" class="text-sm font-semibold hover:text-rose-600">Jessica Chen</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">65</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tomfrankly.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tomfrankly/" class="text-sm font-semibold hover:text-rose-600">Thomas Frank</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/ishansharma7390/" class="text-sm font-semibold hover:text-rose-600">Ishan Sharma</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 73</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">62</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/financewithsharan/" class="text-sm font-semibold hover:text-rose-600">Sharan Hegde</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 73</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">62</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

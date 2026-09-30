@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steven Bartlett · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">S<img src="/photos/steven.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Steven Bartlett</h1>
+    <div class="text-stone-600">Founder of Steven.com (The Creator Economy Company, home to FlightStory &amp; FlightCast), investor, and host of The Diary of a CEO</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 United Kingdom · 33 (stated in LinkedIn About)</div>
+    <p class="display italic text-xl mt-3 grad-text">“Builder, listener and investor who asks the question behind the question”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Steven is a British entrepreneur who started Social Chain at 21, took it public by 27, and now runs a creator media company, invests in 100+ businesses and hosts a huge podcast. He appears driven by curiosity about what shapes people, especially under pressure, and by building new media and businesses. In conversation he seems attentive and reflective, and he notices small shifts in the person across from him.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/steven/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">investing</span><span class="chip-muted">marketing</span><span class="chip-muted">content</span><span class="chip-muted">podcasts</span><span class="chip-muted">public-speaking</span><span class="chip-muted">books</span><span class="chip-muted">writing</span><span class="chip-muted">comedy</span><span class="chip-muted">wellness</span><span class="chip-muted">travel</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="font-bold">📏 What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">33%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner with their own ambitions who is at ease with a public, busy life
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: his work spans a company, a fund, a podcast, events and speaking, so someone who has their own purpose and is comfortable with a demanding schedule would fit.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder of Steven.com; investor in 100+ companies; host of The Diary of a CEO; speaking and events enquiries listed”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who will tell him honestly when he&#39;s wrong
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he highlights Adam Neumann&#39;s practice of surrounding himself with people willing to say no, and he cares about who stays when things change.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Why he now surrounds himself with people willing to tell him no.&#39; &#39;The friends who disappeared when everything changed.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Depth and real conversation
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he is drawn to &#39;depth, philosophy and perspective&#39; and to understanding where people come from.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;There&#39;s a depth, philosophy and perspective to him that is incredibly rare.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who notices and cares about what he is thinking
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he values it when a guest reads his expression and asks what he&#39;s thinking, noting few have done so.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;He would notice tiny changes in my expression, stop mid-answer and ask what I was thinking.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Space for unplugging and steadiness
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: he highlights Neumann&#39;s weekly 24-hour tech disconnect and the question of what you believe when things crash, which suggests he values grounding practices.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Why he disconnects from technology for 24 hours every week.&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Hosting and recording podcast conversations
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;After nearly 700 conversations on this podcast&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Investing in early-stage and health-focused companies
+  <a class="src src-IG" href="https://www.instagram.com/steven/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Investor in 100+ companies incl. SpaceX, Huel, ZOE, Whoop, MrBeast”</div></li>
+<li class="text-sm"><div class="font-medium">Writing and sharing business lessons
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Articles such as &#39;My 10 tips on starting a business before you&#39;re 25&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Public speaking
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;5 small tips on how to give a powerful public speech&#39;; commercial &amp; speaking contact listed”</div></li>
+<li class="text-sm"><div class="font-medium">Sharing video clips and conversation highlights on Instagram
+  <a class="src src-IG" href="https://www.instagram.com/p/DdpAshdsya7/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Video posts from The Diary Of A CEO and his own account”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Startups and company building
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Co-founded Social Chain, thirdweb, FlightCast; founder of Steven.com”</div></li>
+<li class="text-sm"><div class="font-medium">Podcasts and creator media
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Steven.com - the creator media company&#39;; FlightStory creates and scales podcast IP”</div></li>
+<li class="text-sm"><div class="font-medium">Investing
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Fund: FlightFund; &#39;backed companies including SpaceX, Huel, ZOE, Whoop&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Health, happiness and performance
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;focusing on businesses that improve human health, happiness, and performance&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Web3 and developer tools
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Co-founder of thirdweb, &#39;a developer platform powering over 100,000 teams&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Social media marketing and content
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Articles on Snapchat growth and common social media mistakes”</div></li>
+<li class="text-sm"><div class="font-medium">Books and publishing
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Author; book link; FlightStory commercialises via &#39;book publishing&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Comedy and the stories behind it
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Druski episode on where the funny came from”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Curiosity about people&#39;s inner lives
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;I wanted to understand where that came from and what the last few years had actually done to him.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Honesty and resilience under pressure
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;The more interesting question is what you believe when everything is crashing.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Balance over burnout
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Article: &#39;You don&#39;t need to burnout to build a billion dollar business&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Focus and saying no
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Article: &#39;Stop Saying Yes.&#39; on learning to say no”</div></li>
+<li class="text-sm"><div class="font-medium">Open-mindedness and nuance
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;You can have your own view on Adam and WeWork. That tension is partly why I found this conversation so interesting.&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Ambitious and fast-moving
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Launched Social Chain at 21; public by 27”</div></li>
+<li class="text-sm"><div class="font-medium">Empathetic, attentive interviewer
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Notices how guests&#39; backgrounds shape them; &#39;made me understand his comedy differently&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Strong storyteller
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Episode write-ups open with hooks like &#39;13,000 employees became 3 in the space of one week.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Commercially sharp
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Monetises via brand partnerships, events, e-commerce, newsletters, new products”</div></li>
+<li class="text-sm"><div class="font-medium">Generous with lessons
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Years of tip-based articles for founders and speakers”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Age 33
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Steven Bartlett is a 33-year-old British entrepreneur&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">British; based in the United Kingdom
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;United Kingdom&#39; on profile; &#39;British entrepreneur&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Youngest-ever investor on BBC&#39;s Dragons&#39; Den
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;He is the youngest-ever investor on BBC&#39;s Dragons&#39; Den.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Author of a book
+  <a class="src src-in" href="https://www.linkedin.com/in/stevenbartlett-123/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Book link: bit.ly/happysexymillionaire”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">90</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 90%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">88</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 88%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">78</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 70%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">75</span></div>
+      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Openness: wide-ranging guests, new media and web3 ventures. Conscientiousness: multiple companies, near-700 episodes, regular publishing. Extraversion: public-facing speaker and host, though his writing is reflective. Agreeableness: nuanced, non-judgmental framing of controversial guests. Emotional stability is an inference from steady public output; the sources say little directly. Instagram captions were not available, so scores lean on LinkedIn.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> time <span class="text-stone-500">(Inference: he values presence and attention, praising a guest who noticed his expression and asked what he was thinking, and he builds his work around long, deep conversations.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🗣️ Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Polished, story-led and earnest; hook-first long-form. Minimal humour in the text available; occasional emoji (❤️👊🏾) at sign-offs; English only.</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Opens with a striking fact or number</span><span class="chip-muted">Frames episodes around the question he wanted answered</span><span class="chip-muted">Uses colon-led bullet lists of topics</span><span class="chip-muted">Ends with &#39;Out now on all platforms&#39; plus emoji</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“13,000 employees became 3 in the space of one week.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“I wanted to know what all of it taught him.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Out now on all platforms”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and multi-threaded: several companies, a fund and a podcast at once, with a 24-hour tech-disconnect idea he admires (inference on his own pace).</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Publicly social and networked; 500+ connections and constant conversations with high-profile guests.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Likely frequent (inference): he wrote of a delayed flight from Spain to New York, and his companies have offices in London, Manchester, Berlin, New York and Los Angeles.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in sources; he invests in health and performance brands, but no personal fitness habits are stated.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Central to his identity; founder, investor, author and host, with a team handling speaking, press, bookings and events.</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Scale Steven.com and FlightStory into a leading creator media company</li><li>Grow FlightCast as a video-first podcast hosting platform</li><li>Keep The Diary of a CEO as the world&#39;s most downloaded and watched podcast</li><li>Keep backing companies that improve health, happiness and performance through FlightFund</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Curious and asks real questions</li><li>Reflective about failure and what friends stay when times change</li><li>Takes responsibility and values honest feedback</li><li>Open to complex views without rushing to judgment</li><li>Hard-working and purposeful</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>A heavy work schedule and public profile could leave limited downtime</li><li>Possibly intense about business and ideas</li><li>Being well known may mean attention and privacy trade-offs</li></ul></section>
+  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Flattery or yes-people behaviour (inferred from valuing people who say no)</li><li>Shallow, surface-level conversation (inferred)</li><li>Being drawn to him for status rather than who he is (inferred)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone secure and curious with their own drive, who can hold deep conversations and give honest pushback. A partner who is warm, observant and comfortable beside a busy, public life.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate. LinkedIn gives a solid view of career, writing and values. Instagram shows little: no captions, no likes data, no places or people, only dates and media types. Nothing is shown about relationship status, hobbies outside work, fitness, family, hometown or daily life, so partner needs and lifestyle are mostly inferences. Some Instagram post dates are inconsistent (e.g. P4 dated after today), so they were not relied on.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="font-bold">📅 Steven's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/19/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+        <span class="av w-10 h-10 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Ishan Sharma</div><div class="text-xs text-stone-500">☕ → 🧗 → 🍷 · Dating…</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Steven best</h3><a href="/cyrano-agentic-dating/rankings/#steven" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">I<img src="/photos/ishansharma7390.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/ishansharma7390/" class="text-sm font-semibold hover:text-rose-600">Ishan Sharma</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nikhilkamathcio/" class="text-sm font-semibold hover:text-rose-600">Nikhil Kamath</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 80</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 78</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/anushkarathod98/" class="text-sm font-semibold hover:text-rose-600">Anushka Rathod</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 77</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/financewithsharan/" class="text-sm font-semibold hover:text-rose-600">Sharan Hegde</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jerryjhlee.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jerryjhlee/" class="text-sm font-semibold hover:text-rose-600">Jerry Lee</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nick.digiovanni.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nick.digiovanni/" class="text-sm font-semibold hover:text-rose-600">Nick DiGiovanni</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 76</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/masoomminawala/" class="text-sm font-semibold hover:text-rose-600">Masoom Minawala Mehta</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/thevarunmayya/" class="text-sm font-semibold hover:text-rose-600">Varun Mayya</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 70</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">60</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>
