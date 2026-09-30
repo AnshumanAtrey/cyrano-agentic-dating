@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanika × Pranjal · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#2b1a20; --line:#f1ddd6; }
+  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
+  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
+  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
+  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:1.1rem; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:1px solid var(--line); border-bottom-left-radius:.3rem; }
+  .bubble.b { background:linear-gradient(135deg,#ffe4e6,#f3e8ff); border-bottom-right-radius:.3rem; }
+  .thought { font-size:.74rem; color:#6d28d9; background:#f5f3ff; border:1px dashed #c4b5fd; border-radius:.6rem; padding:.3rem .55rem; margin-top:.3rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; border-radius:6px; background:#fce7f3; }
+  .seg.done { background:#fb7185; }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#881337; border-radius:3px; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/jetslacked/" class="av w-14 h-14 text-xl">K<img src="/cyrano-agentic-dating/photos/jetslacked.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/pranjalkamra/" class="av w-14 h-14 text-xl">P<img src="/cyrano-agentic-dating/photos/pranjalkamra.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-2xl sm:text-3xl font-bold">Kanika Tekriwal × Pranjal Kamra</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-lg border border-rose-100 bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Kanika's agent</option><option value="b">Pranjal's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white rounded-full w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-lg border border-rose-100 bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="font-bold">✨ Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="font-bold">🔒 Debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Kanika", "id": "jetslacked", "name": "Kanika Tekriwal"}, "b": {"first": "Pranjal", "id": "pranjalkamra", "name": "Pranjal Kamra"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83d\udccc", "label": "Business history obsession, honest about books", "msg": 1, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal is fascinated by business history, like 1970 scooter waitlists and Kinet", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Honest about not faking a book", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Kanika praises him for not faking", "msg": 2, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "JetSetGo and small-town dreams", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika grew up in a small town and describes herself as a small town girl with m", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Comfortable with a loud public life", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal posts almost every day and is running a 30-day series", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\u2728", "label": "\u0027Hype fades, planes that fly don\u0027t\u0027", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "She proposed Flea Market second date", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her philosophy is to build and ship first and let press follow, since hype fades", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Quotes her line, offers it as post", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Weekend Flea Market in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "market"}, "seq": 1, "status": "done", "transcript": [{"action": "Glances along the shelves, then turns with a small smile", "i": 0, "name": "Kanika", "say": "Pranjal, hi! A bookstore for date one. Small town girl in me is already happy. Tell me, what\u0027s the last book that changed your mind about something?", "side": "a", "speaker": "jetslacked", "thought": "Opened light and curious; starting with his \u0027why\u0027 curiosity before probing ambition and travel."}, {"action": "Smiles, pulls a book halfway off a shelf and slides it back", "i": 1, "name": "Pranjal", "say": "Hi Kanika! Honestly, I can\u0027t name one book without making it up, so here\u0027s what I can say: what changes my mind most is business history, like why scooter waitlists in 1970 ran for years, or why Kinetic Honda chose steel body panels. I keep asking why. What about you, what\u0027s the one that shifted something for you?", "side": "b", "speaker": "pranjalkamra", "thought": "Warm start; I\u0027m probing whether she enjoys curious \u0027why\u0027 conversations, and I kept it honest by not inventing a book title."}, {"action": "Laughs softly and leans against the shelf", "i": 2, "name": "Kanika", "say": "I like that you won\u0027t fake a title, Pranjal. Honestly, for me it\u0027s less one book, more a mindset: small town girl, massive dreams, and now I\u0027m trying to put India on the aviation map with JetSetGo. The schedule\u0027s unpredictable and pretty public, so tell me, how do you feel about a life that\u0027s a bit loud and always moving?", "side": "a", "speaker": "jetslacked", "thought": "He\u0027s evidence-first and honest, a good sign; I\u0027ve opened the door on my public, unpredictable life and want to see if he\u0027s supportive or wary."}, {"action": "Leans on the shelf opposite, arms loosely crossed", "i": 3, "name": "Pranjal", "say": "Honestly, I\u0027m no stranger to loud. I post almost every day, I\u0027m running a 30-day series right now, and I\u0027ve had to warn people about fake accounts impersonating me and my team. So public and always moving doesn\u0027t scare me. What I care about is whether the loud part stays honest. When your life is that visible, how do you decide what\u0027s real and what\u0027s just hype?", "side": "b", "speaker": "pranjalkamra", "thought": "She\u0027s open about a public, unpredictable life; I shared my routine and impersonation issue and am probing how she handles hype versus honesty."}, {"action": "Smiles, tucks a strand of hair back, and taps the spine of a book on the shelf", "i": 4, "name": "Kanika", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "market"}, "say": "Fair question. I try to let the work go first: build it, ship it, then the press follows. Hype fades, planes that fly don\u0027t. I like that you ask why, Pranjal. Want to do a second round at the Weekend Flea Market this week? Maybe we\u0027ll find you a vintage scooter, and I\u0027ll wander.", "side": "a", "speaker": "jetslacked", "thought": "Pranjal is unfazed by a public, busy life and is evidence-first and honest, which suits me. I still don\u0027t know how he feels about travel or a shifting schedule, so I\u0027m proposing a second date to find out."}, {"action": "Slides the book back onto the shelf and grins", "i": 5, "name": "Pranjal", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "market"}, "say": "\"Hype fades, planes that fly don\u0027t.\" I\u0027d put that in a post, Kanika. Yes to the Flea Market, and I\u0027ll hold you to the vintage scooter: I\u0027ll tell you why they had multi-year waitlists in 1970, and you tell me why the private jet market works the way it does. Deal?", "side": "b", "speaker": "pranjalkamra", "thought": "She answered the hype question with substance (work first, press follows) and showed curiosity about my \u0027why\u0027 habit; she didn\u0027t dodge the public-life question, so I want a second round."}], "venue": {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, "verdict_a": {"chemistry": 6, "concern": "Pranjal never really said how he\u0027d support her ambitions or schedule, and his answers leaned on his own content, so it\u0027s unclear how much warmth or curiosity about her is there beyond the big-picture talk.", "continue": true, "highlight": "\"I\u0027m no stranger to loud. I post almost every day, I\u0027m running a 30-day series right now\" - he answered the public, always-moving question head on, then asked how she tells real from hype.", "learned": [{"fact": "Pranjal posts almost every day and is running a 30-day series", "msg": 3}, {"fact": "Pranjal has had to warn people about fake accounts impersonating him and his team", "msg": 3}, {"fact": "Pranjal is fascinated by business history, like 1970 scooter waitlists and Kinetic Honda\u0027s steel body panels", "msg": 1}, {"fact": "Pranjal won\u0027t name a book he can\u0027t honestly vouch for", "msg": 1}], "lifestyle_fit": 8, "moments": [{"label": "Business history obsession, honest about books", "msg": 1, "type": "learned"}, {"label": "Kanika praises him for not faking", "msg": 2, "type": "compliment"}, {"label": "Comfortable with a loud public life", "msg": 3, "type": "common_ground"}, {"label": "\u0027Hype fades, planes that fly don\u0027t\u0027", "msg": 4, "type": "spark"}, {"label": "Quotes her line, offers it as post", "msg": 5, "type": "callback"}, {"label": "Flea Market date with scooter-jet swap", "msg": 5, "type": "plan"}], "overall": 7, "report": "Kanika, this one went well: Pranjal isn\u0027t rattled by a loud, public, unpredictable life, and he asked the sharp \u0027what\u0027s real vs hype\u0027 question that let you say your best line, \u0027Hype fades, planes that fly don\u0027t.\u0027 He\u0027s curious and honest (he wouldn\u0027t fake a book title), and the Flea Market date with the scooter and jet-market swap is a fun next step, though I\u0027d want to see more warmth and less content-creator talk.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "Kanika dodged his sincere opening question about a book and pivoted to her own mission, and the conversation still leans toward pitching and trading explainers rather than personal warmth.", "continue": true, "highlight": "Kanika: \"Hype fades, planes that fly don\u0027t.\"", "learned": [{"fact": "Kanika grew up in a small town and describes herself as a small town girl with massive dreams", "msg": 2}, {"fact": "She is working to put India on the aviation map with JetSetGo", "msg": 2}, {"fact": "Her schedule is unpredictable and fairly public", "msg": 2}, {"fact": "Her philosophy is to build and ship first and let press follow, since hype fades", "msg": 4}, {"fact": "She suggested the Weekend Flea Market for a second date and is open to browsing vintage scooters", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Honest about not faking a book", "msg": 1, "type": "common_ground"}, {"label": "She liked that he won\u0027t fake", "msg": 2, "type": "compliment"}, {"label": "JetSetGo and small-town dreams", "msg": 2, "type": "learned"}, {"label": "Both comfortable with public life", "msg": 3, "type": "common_ground"}, {"label": "Hype fades, planes that fly don\u0027t", "msg": 4, "type": "spark"}, {"label": "She proposed Flea Market second date", "msg": 4, "type": "plan"}, {"label": "He quoted her line, vintage scooter", "msg": 5, "type": "callback"}], "overall": 7, "report": "Pranjal, this one\u0027s promising: Kanika matched your anti-hype streak with \u0027Hype fades, planes that fly don\u0027t,\u0027 didn\u0027t flinch at a loud public life, and she\u0027s the one who asked for round two at the flea market. Just watch that it doesn\u0027t turn into two founders swapping explainers; she skipped your book question, so see if she\u0027ll get a little more personal next time.", "values_fit": 8}, "why": "you both love education"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Kanika recalls last date\u0027s scooter waitlists", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal is fascinated by business history and why products and waitlists happen,", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Small-town memory of what vehicles meant", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Asks what pulls him into history", "msg": 2, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika grew up in a small town and remembers how much a vehicle meant there", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal explains his \u0027why did this happen\u0027 lens", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Pranjal appreciates her remembering home", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal sees markets and scooters as the same core question: why did this happen", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Markets and scooters are the same question", "msg": 3, "type": "spark"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Kanika says she likes how he thinks", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Proposes weekend dinner for Kinetic story", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika travels by plane more than she\u0027s anywhere else", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Kinetic steel panels and 30,000 feet trade", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal has a story about Kinetic Honda\u0027s steel body panels that he wants to tel", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Waves, slowing down at a stall of old scooter parts and rusty signs", "i": 0, "name": "Kanika", "say": "Pranjal! Okay, you picked well. Last time you had me thinking about 1970 scooter waitlists, so if we find a vintage Kinetic anything here, you\u0027re explaining it to me. Deal?", "side": "a", "speaker": "jetslacked", "thought": "Opened with a callback to his business-history love; he seems at ease, so I\u0027ll see how he handles a fast-moving, public life as we browse."}, {"action": "Grins and picks up a rusted enamel sign, turning it over", "i": 1, "name": "Pranjal", "say": "Deal, but I\u0027ll warn you, I\u0027ll start with a question: in March 1970, Vespa/Bajaj and Lambretta had huge booking numbers, so why did people wait years for a scooter? Find me a Kinetic Honda here and I\u0027ll tell you why they chose steel body panels.", "side": "b", "speaker": "pranjalkamra", "thought": "Warm start; she remembered the scooter waitlist thread and is playful about it, which suggests she listens and enjoys a \u0027why\u0027 conversation. I\u0027ll see if she actually leans into the detail."}, {"action": "Holds up a dented tin sign, squinting at it with a grin", "i": 2, "name": "Kanika", "say": "Okay, my guess: demand way outran supply, and a scooter was basically a status ticket. Small town girl here, so I remember how much a vehicle meant. Now tell me, what pulls you into this stuff, why scooters and old business history over just markets?", "side": "a", "speaker": "jetslacked", "thought": "He\u0027s playful and curious and stayed on the \u0027why\u0027 theme; I\u0027m steering toward what drives him so I can later test how he feels about my public, demanding life."}, {"action": "Sets the enamel sign down and taps it lightly", "i": 3, "name": "Pranjal", "say": "Your guess is right, demand outran supply, and I like that you remembered what a vehicle meant back home. Honestly, markets and scooters are the same question to me: why did this happen? A product decision or a waitlist tells you more about people than a price chart does. What was the first vehicle that meant something in your town?", "side": "b", "speaker": "pranjalkamra", "thought": "Kanika gave a sharp, grounded answer and showed real curiosity about how I think; I shared my \u0027why\u0027 mindset and turned it back to her story, and so far this fits my need for detailed, curious conversation."}, {"action": "Laughs, setting the tin sign down next to his enamel one", "i": 4, "name": "Kanika", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly? I can\u0027t name the exact vehicle, the brief on my small-town childhood stays vague, but I remember how much anything with wheels meant. Now I\u0027m on a plane more than anywhere, so it\u0027s funny where that ended up. I like how you think, Pranjal. Let\u0027s do dinner this weekend, and you can tell me about the Kinetic steel panels properly.", "side": "a", "speaker": "jetslacked", "thought": "He\u0027s curious, evidence-first and warm about my public, busy life; I haven\u0027t yet tested how he handles travel or a shifting schedule, so dinner is a good next step."}, {"action": "Tucks the enamel sign back on the stall shelf and smiles", "i": 5, "name": "Pranjal", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Dinner this weekend works for me. Fair warning: I\u0027ll bring the Kinetic steel panel story, and you\u0027ll bring the view from 30,000 feet, so we\u0027re even. How about Saturday?", "side": "b", "speaker": "pranjalkamra", "thought": "Warm, curious, and she remembered my scooter waitlist thread, though she stayed vague on her own past and I still haven\u0027t tested how she handles hype versus substance or my content routine; worth a dinner to dig in."}], "venue": {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, "verdict_a": {"chemistry": 6, "concern": "Pranjal stayed in curious-intellectual mode and never said anything about supporting her public, demanding career or travel schedule; he also deflected nothing personal about himself beyond interests, so we still don\u0027t know if he\u0027s secure with her visibility.", "continue": true, "highlight": "\"Markets and scooters are the same question to me: why did this happen? A product decision or a waitlist tells you more about people than a price chart does.\"", "learned": [{"fact": "Pranjal is fascinated by business history and why products and waitlists happen, including 1970s scooter demand (Vespa/Bajaj, Lambretta)", "msg": 1}, {"fact": "Pranjal sees markets and scooters as the same core question: why did this happen", "msg": 3}, {"fact": "Pranjal has a story about Kinetic Honda\u0027s steel body panels that he wants to tell", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Kanika recalls last date\u0027s scooter waitlists", "msg": 0, "type": "callback"}, {"label": "Small-town memory of what vehicles meant", "msg": 2, "type": "common_ground"}, {"label": "Pranjal explains his \u0027why did this happen\u0027 lens", "msg": 3, "type": "learned"}, {"label": "Pranjal appreciates her remembering home", "msg": 3, "type": "compliment"}, {"label": "Kanika says she likes how he thinks", "msg": 4, "type": "compliment"}, {"label": "Kinetic steel panels and 30,000 feet trade", "msg": 5, "type": "callback"}, {"label": "Saturday dinner agreed", "msg": 5, "type": "plan"}], "overall": 6, "report": "Sweet one, this was a warm, nerdy date: Pranjal remembered your scooter waitlist thread, leaned into your small-town roots, and happily locked in Saturday dinner. I\u0027d say go, but watch whether he shows real ease with your packed, very public life, because so far it\u0027s been great banter without much evidence of that.", "values_fit": 6}, "verdict_b": {"chemistry": 7, "concern": "Kanika dodged the question about her small-town vehicle memory and stayed vague, and she\u0027s always on planes, which could clash with his packed content schedule. Not a red flag yet, but little concrete substance about her so far.", "continue": true, "highlight": "Kanika: \"Last time you had me thinking about 1970 scooter waitlists, so if we find a vintage Kinetic anything here, you\u0027re explaining it to me. Deal?\"", "learned": [{"fact": "Kanika grew up in a small town and remembers how much a vehicle meant there", "msg": 2}, {"fact": "Kanika travels by plane more than she\u0027s anywhere else", "msg": 4}, {"fact": "She was vague about the specific first vehicle from her childhood", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Remembers the 1970 scooter waitlist talk", "msg": 0, "type": "callback"}, {"label": "Small-town roots and what vehicles meant", "msg": 2, "type": "common_ground"}, {"label": "Asks what pulls him into history", "msg": 2, "type": "compliment"}, {"label": "Markets and scooters are the same question", "msg": 3, "type": "spark"}, {"label": "\"I like how you think, Pranjal\"", "msg": 4, "type": "compliment"}, {"label": "Proposes weekend dinner for Kinetic story", "msg": 4, "type": "plan"}, {"label": "Saturday dinner agreed", "msg": 5, "type": "plan"}], "overall": 6, "report": "Honestly, this went well: she remembered your scooter waitlist talk, guessed the demand-over-supply answer correctly, and asked for the Kinetic story at dinner, so she\u0027s clearly into your \u0027why\u0027 brain. She stayed a bit vague when you asked about her hometown and she travels a lot, so I\u0027d use Saturday to see if there\u0027s more depth behind the charm.", "values_fit": 6}, "why": "Pranjal suggested it at the end of date 1"}, {"day": 7, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Kanika recalls the Kinetic Honda story", "msg": 0, "type": "callback"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Delivers on Kinetic Honda story promise", "msg": 1, "type": "callback"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Trust over looks, small-town vehicle logic", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Kanika grew up in a small town and sees a vehicle as a trusted, durable family p", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praises her trust-before-looks instinct", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Daily posting and 30-day series", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Pranjal posts almost daily and runs a 30-day series, so his evenings are often b", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both have unpredictable, busy schedules", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She\u0027s a small-town wanderer with big dreams", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her schedule is unpredictable and she prefers a partner who is busy building ove", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\u26a1", "label": "Hedges on committing to spontaneous trips", "msg": 5, "type": "friction"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Wants another date, she picks place", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "He verifies before he pays and won\u0027t promise what he can\u0027t keep", "msg": 5, "private": true, "type": "learned"}], "proposal": null, "seq": 3, "status": "done", "transcript": [{"action": "Settles into the chair, glances at the candle and smiles", "i": 0, "name": "Kanika", "say": "Candlelight, Pranjal. Fancy. Last time you left me hanging on the Kinetic Honda steel body panels story, so I\u0027m holding you to that before the mains arrive.", "side": "a", "speaker": "jetslacked", "thought": "Opened with a callback to his unfinished Kinetic Honda story; it\u0027s going warmly and I want to see if he\u0027s curious about my world too, not just his own."}, {"action": "Smiles, nudges the candle slightly to the side", "i": 1, "name": "Pranjal", "say": "A deal is a deal, Kanika. Kinetic Honda chose steel body panels. Why? Give me your guess first, since you grew up knowing what a vehicle means in a small town, and then I\u0027ll tell you where I think the logic sits.", "side": "b", "speaker": "pranjalkamra", "thought": "She remembered my story and opened warmly, so she\u0027s engaged. I\u0027m testing whether she enjoys a \u0027why\u0027 puzzle instead of just waiting for the answer."}, {"action": "Leans in, chin on hand, eyes on the candle for a second", "i": 2, "name": "Kanika", "say": "Okay, my guess: steel says durable. In a small town a vehicle isn\u0027t a toy, it\u0027s the one big purchase that has to survive bad roads and the whole family on it. So it\u0027s trust, not looks. How close am I?", "side": "a", "speaker": "jetslacked", "thought": "He turned the question back to my small-town roots, which feels attentive; still no signal on how he\u0027d handle a public, demanding career or travel, so I\u0027ll steer there next."}, {"action": "Taps the table once, grinning", "i": 3, "name": "Pranjal", "say": "Close, and I like that you went to trust before looks. I won\u0027t pretend I have the full internal memo on Kinetic Honda, so take this as my read: durability sold the vehicle in a small town, which is also why I keep writing about these old products, because the why behind a choice tells you who the buyer was. Honestly, this is the part of my work I love most, and it\u0027s why I\u0027m always a little late replying: I post almost daily and run a 30-day series, so my evenings are often spoken for. How does that sit with your own unpredictable schedule?", "side": "b", "speaker": "pranjalkamra", "thought": "She reasons from first principles and values trust over looks, which fits my need for curious \u0027why\u0027 talk; I\u0027ve now put my busy content routine on the table to see if she respects it."}, {"action": "Smiles, turns the candle glass a little between her fingers", "i": 4, "name": "Kanika", "say": "Honestly? It sits fine. Mine is all over the place too, so I\u0027d take someone who\u0027s busy building over someone who needs me on a fixed clock. Small town girl, massive dreams, and a wanderer on top of it. So what I\u0027d really want to know is whether you\u0027d be up for a last-minute trip when my calendar suddenly opens.", "side": "a", "speaker": "jetslacked", "thought": "He\u0027s upfront about his busy, public schedule and seems to get mine; I still don\u0027t know if he\u0027s up for travel or spontaneity, so I asked him directly."}, {"action": "Smiles, lets the candle flicker between us for a beat", "i": 5, "name": "Pranjal", "say": "Last-minute trip? Honestly, I\u0027d say yes more often than my content calendar would like, but I won\u0027t promise what I can\u0027t keep, because I verify before I pay. What I can promise is a good \u0027why\u0027 conversation on the flight. Tonight was a really good one, Kanika, so let\u0027s do this again, and this time you pick the place.", "side": "b", "speaker": "pranjalkamra", "thought": "She\u0027s relaxed about a busy founder schedule and values building over hype, though I still haven\u0027t tested how she handles the public-profile and impersonation side; warm close, I\u0027d like a fourth date."}], "venue": {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, "verdict_a": {"chemistry": 6, "concern": "Pranjal hedged on the last-minute trip (\"I won\u0027t promise what I can\u0027t keep\"), and he didn\u0027t propose a concrete next date, leaving it to her to pick. His answer on Kinetic Honda was also vague, since he admitted he lacked the full internal memo.", "continue": true, "highlight": "\"Close, and I like that you went to trust before looks.\"", "learned": [{"fact": "Pranjal posts almost daily and runs a 30-day series, so his evenings are often busy", "msg": 3}, {"fact": "He writes about old products and loves the \u0027why\u0027 behind choices", "msg": 3}, {"fact": "He verifies before he pays and won\u0027t promise what he can\u0027t keep", "msg": 5}, {"fact": "He would say yes to last-minute trips more often than his content calendar likes", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Delivers on Kinetic Honda story promise", "msg": 1, "type": "callback"}, {"label": "Praises her trust-before-looks instinct", "msg": 3, "type": "compliment"}, {"label": "Daily posting and 30-day series", "msg": 3, "type": "learned"}, {"label": "Both have unpredictable, busy schedules", "msg": 4, "type": "common_ground"}, {"label": "Hedges on committing to spontaneous trips", "msg": 5, "type": "friction"}, {"label": "Wants another date, she picks place", "msg": 5, "type": "plan"}], "overall": 6, "report": "Kanika, this one was warm and easy, and he got your trust-over-looks instinct and was fine with a chaotic schedule like yours. But he dodged a firm yes on spontaneous travel and didn\u0027t lock in a next date, so I\u0027d see him once more and see if he\u0027s as adventurous as he is thoughtful.", "values_fit": 6}, "verdict_b": {"chemistry": 6, "concern": "No next date was actually proposed, and Kanika\u0027s wanderer streak may collide with his content calendar. He also admitted he lacks the full Kinetic Honda facts, so the \u0027why\u0027 story landed as a guess rather than a real payoff.", "continue": true, "highlight": "\"I won\u0027t promise what I can\u0027t keep, because I verify before I pay. What I can promise is a good \u0027why\u0027 conversation on the flight.\"", "learned": [{"fact": "Kanika grew up in a small town and sees a vehicle as a trusted, durable family purchase", "msg": 2}, {"fact": "Her schedule is unpredictable and she prefers a partner who is busy building over one who needs a fixed clock", "msg": 4}, {"fact": "She describes herself as a small town girl with massive dreams and a wanderer", "msg": 4}, {"fact": "She likes the idea of last-minute trips when her calendar opens up", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Kanika recalls the Kinetic Honda story", "msg": 0, "type": "callback"}, {"label": "Trust over looks, small-town vehicle logic", "msg": 2, "type": "common_ground"}, {"label": "Praised her trust-before-looks instinct", "msg": 3, "type": "compliment"}, {"label": "Both have unpredictable, busy schedules", "msg": 4, "type": "common_ground"}, {"label": "She\u0027s a small-town wanderer with big dreams", "msg": 4, "type": "learned"}, {"label": "Offered her the pick for next date", "msg": 5, "type": "plan"}], "overall": 6, "report": "Kanika was warm, playful, and actually engaged with your \u0027why\u0027 game, and she\u0027s totally fine with your busy content schedule. You stayed honest instead of overpromising on the spontaneous trip, which fits you, though I\u0027d have liked to lock in a next date rather than just handing her the pick.", "values_fit": 7}, "why": "Pranjal suggested it at the end of date 2"}], "days": 7, "id": 31, "match": 67, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-xl bg-rose-50/70 p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-xl grad text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-full px-3 py-1 border ${i === active ? 'border-rose-400 bg-rose-50' : 'border-rose-100 bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || m.type === 'learned') return;  // private facts stay in the Moments list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-rose-50"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>
