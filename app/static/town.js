@@ -14,12 +14,12 @@ const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&
 // what the two of them do at each kind of place
 const MODES = {cafe: 'sit', dinner: 'sit', comedy: 'sit', cinema: 'watch', club: 'dance', concert: 'dance', runclub: 'jog',
   park: 'stroll', promenade: 'stroll', market: 'stroll', cricket: 'cheer', climb: 'cheer'};
-const WALLS = {1: ['#ffe8cc', '#e76f51'], 2: ['#ecdcff', '#8b5cf6'], 3: ['#26324a', '#f2b33d']};
+const WALLS = {1: ['#c8a26b', '#5b3a1f'], 2: ['#e3d6a8', '#5b3a1f'], 3: ['#9a9a96', '#4a2f1b']};  // oak, birch, stone brick; dark-oak roofs
 const MOODS = {1: {bg: '#cfeaff', hemi: 1.9, sun: 2.4, sunColor: '#fff4e0', glow: 0},
                2: {bg: '#ffd9b0', hemi: 1.6, sun: 1.9, sunColor: '#ffbf80', glow: .35},
                3: {bg: '#2b2754', hemi: .75, sun: .55, sunColor: '#a3b6ff', glow: 1.6}};
-const SHIRTS = ['#f87171', '#fb923c', '#facc15', '#4ade80', '#38bdf8', '#818cf8', '#e879f9', '#f472b6', '#2dd4bf'];
-const PANTS = ['#1e3a8a', '#374151', '#7c2d12', '#1f2937', '#4c1d95'];
+const SHIRTS = ['#3aa0a8', '#6b5b95', '#a8483e', '#4f7a3a', '#b8913f', '#56708f', '#8a6a52'];
+const PANTS = ['#2f3d7a', '#3b3b3b', '#5a4632'];
 
 const CSS = `
 .town{position:relative;overflow:hidden;border-radius:1.25rem;touch-action:none}
@@ -27,18 +27,19 @@ const CSS = `
 .town-labels{position:absolute;inset:0;pointer-events:none}
 .l3{width:0;height:0;position:relative}
 .l3>*{position:absolute;bottom:0;left:50%;transform:translateX(-50%);white-space:nowrap}
-.l3 .tag{font:700 11px Inter,sans-serif;color:#fff;background:rgba(43,26,32,.72);padding:1px 7px;border-radius:6px}
-.l3 .say{white-space:normal;width:max-content;max-width:190px;font:500 11.5px/1.33 Inter,sans-serif;color:#2b1a20;background:#fff;padding:6px 9px;border-radius:12px;box-shadow:0 3px 12px rgba(0,0,0,.2);display:none}
+.l3 .tag{font:400 11px Silkscreen,monospace;color:#fff;background:rgba(0,0,0,.45);padding:1px 6px}
+.l3 .say{white-space:normal;width:max-content;max-width:190px;font:500 11.5px/1.33 Inter,sans-serif;color:#1f1a17;background:#fff;padding:6px 9px;border:2px solid #1f1a17;border-radius:3px;box-shadow:0 3px 0 rgba(0,0,0,.25);display:none}
 .l3 .say.on{display:block;animation:pop3 .25s ease both}
-.l3 .say:after{content:'';position:absolute;left:50%;bottom:-6px;margin-left:-6px;border:6px solid transparent;border-top-color:#fff;border-bottom:0}
+.l3 .say:after{content:'';position:absolute;left:50%;bottom:-8px;margin-left:-6px;border:6px solid transparent;border-top-color:#1f1a17;border-bottom:0}
 .l3 .emo{font-size:24px;animation:float3 2s ease-out forwards}
 .l3 .emo b{font:700 12px Inter,sans-serif;background:#fff;color:#2b1a20;border-radius:6px;padding:1px 6px;margin-left:3px;vertical-align:middle}
-.l3 .day{font:800 10px Inter,sans-serif;color:#fff;background:#e11d48;padding:1px 7px;border-radius:99px;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.l3 .day{font:400 10px Silkscreen,monospace;color:#fff;background:#d9304f;padding:1px 6px;box-shadow:0 2px 0 #9b1b33}
 @keyframes pop3{from{transform:translateX(-50%) scale(.6);opacity:0}to{transform:translateX(-50%) scale(1);opacity:1}}
 @keyframes float3{0%{transform:translate(-50%,0) scale(.5);opacity:0}15%{opacity:1;transform:translate(-50%,-8px) scale(1.15)}100%{transform:translate(-50%,-70px) scale(1);opacity:0}}`;
 
 export async function createTown(el, {venues, base = ''}) {
   if (!document.getElementById('town-css')) document.head.insertAdjacentHTML('beforeend', `<style id="town-css">${CSS}</style>`);
+  await document.fonts?.load('700 34px Silkscreen').catch(() => {});
   el.classList.add('town');
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(MOODS[1].bg);
@@ -119,14 +120,14 @@ export async function createTown(el, {venues, base = ''}) {
     m4.compose(new THREE.Vector3(x, .45, z), new THREE.Quaternion(), new THREE.Vector3(1, s, 1)); trunk.setMatrixAt(i, m4);
     m4.compose(new THREE.Vector3(x, .9 * s + .5, z), new THREE.Quaternion(), new THREE.Vector3(s, s, s)); leaf.setMatrixAt(i, m4);
     m4.compose(new THREE.Vector3(x, .9 * s + 1.2 * s, z), new THREE.Quaternion(), new THREE.Vector3(s, s, s)); leafTop.setMatrixAt(i, m4);
-    col.set(['#3fa34d', '#4bb35a', '#2f8f45', '#f9a8d4'][r() < .12 ? 3 : Math.floor(r() * 3)]); leaf.setColorAt(i, col); leafTop.setColorAt(i, col);
+    col.set(['#3f8f3a', '#4a9c40', '#367f33'][Math.floor(r() * 3)]); leaf.setColorAt(i, col); leafTop.setColorAt(i, col);
   });
   for (const m of [trunk, leaf, leafTop]) { m.castShadow = m.receiveShadow = true; scene.add(m); }
   const flowers = pick(80);
   const flower = new THREE.InstancedMesh(new THREE.BoxGeometry(.2, .2, .2), lambert('#ffffff'), flowers.length);
   flowers.forEach(([x, z], i) => {
     m4.makeTranslation(x + (r() - .5) * .6, .1, z + (r() - .5) * .6); flower.setMatrixAt(i, m4);
-    col.set(['#f43f5e', '#facc15', '#ffffff', '#a78bfa', '#fb923c'][Math.floor(r() * 5)]); flower.setColorAt(i, col);
+    col.set(['#d23b2f', '#f2d23c', '#f4f1e8'][Math.floor(r() * 3)]); flower.setColorAt(i, col);
   });
   scene.add(flower);
 
@@ -135,9 +136,9 @@ export async function createTown(el, {venues, base = ''}) {
   const floorMats = [];
   const signFor = v => {
     const c = document.createElement('canvas'); c.width = 512; c.height = 150; const x = c.getContext('2d');
-    x.fillStyle = 'rgba(255,255,255,.96)'; x.beginPath(); x.roundRect(6, 6, 500, 138, 40); x.fill();
+    x.fillStyle = '#8b6a3e'; x.fillRect(0, 0, 512, 150); x.fillStyle = '#d7b377'; x.fillRect(8, 8, 496, 134);
     x.textBaseline = 'middle'; x.font = '82px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif'; x.fillText(v.emoji, 26, 80);
-    x.fillStyle = '#3b2a30'; x.font = 'bold 40px Inter, Helvetica, sans-serif';
+    x.fillStyle = '#2b1d0e'; x.font = '700 34px Silkscreen, monospace';
     x.fillText(v.name.length > 18 ? v.name.slice(0, 17) + '…' : v.name, 128, 78);
     const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
     const s = new THREE.Sprite(new THREE.SpriteMaterial({map: t, transparent: true})); s.scale.set(3.7, 1.08, 1); return s;
@@ -304,7 +305,7 @@ export async function createTown(el, {venues, base = ''}) {
       const steps = [];
       for (let i = 1; i < pts.length; i++) { const n = Math.floor(pts[i - 1].distanceTo(pts[i]) / .75); for (let j = 1; j < n; j++) steps.push(pts[i - 1].clone().lerp(pts[i], j / n)); }
       if (!steps.length) return;
-      trail = new THREE.InstancedMesh(new THREE.BoxGeometry(.3, .04, .3), new THREE.MeshLambertMaterial({color: '#fb7185', emissive: '#e11d48', emissiveIntensity: .35}), steps.length);
+      trail = new THREE.InstancedMesh(new THREE.BoxGeometry(.3, .04, .3), new THREE.MeshLambertMaterial({color: '#d9304f', emissive: '#d9304f', emissiveIntensity: .25}), steps.length);
       steps.forEach((s, i) => { m4.makeTranslation(s.x, .03, s.z); trail.setMatrixAt(i, m4); });
       scene.add(trail);
     },

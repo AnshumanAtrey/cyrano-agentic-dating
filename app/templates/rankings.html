@@ -11,7 +11,7 @@ const R = {{ ranks|tojson }}, P = {{ people|tojson }}, B = {{ B|tojson }};
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const av = (id, name, cls) => `<span class="av ${cls}">${esc((name || id)[0])}<img src="${B}/photos/${id}.jpg" onerror="this.remove()"></span>`;
 const ids = Object.keys(R);
-document.getElementById('who').innerHTML = ids.map(id => `<button data-id="${id}" title="${esc(P[id].name)}" class="rounded-full p-0.5 border-2 border-transparent">${av(id, P[id].name, 'w-10 h-10 text-sm')}</button>`).join('');
+document.getElementById('who').innerHTML = ids.map(id => `<button data-id="${id}" title="${esc(P[id].name)}" class="rounded-full p-0.5 border-2 border-transparent rounded-md">${av(id, P[id].name, 'w-10 h-10 text-sm')}</button>`).join('');
 function show(id) {
   if (!R[id]) id = ids[0]; if (!id) return;
   document.querySelectorAll('#who button').forEach(b => b.style.borderColor = b.dataset.id === id ? '#e11d48' : 'transparent');

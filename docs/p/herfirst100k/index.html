@@ -5,35 +5,35 @@
 <title>Tori Dunlap · Cyrano</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#2b1a20; --line:#f1ddd6; }
-  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
-  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
-  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
-  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
-  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
-  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
-  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
-  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
   .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 </style>
 
 </head>
 <body class="min-h-screen">
-<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
-    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
     <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
       <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
       <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
       <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
     </nav>
     <div class="ml-auto">
-      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
       
     </div>
   </div>
@@ -56,32 +56,32 @@
 </section>
 
 <section class="card p-5 mt-5">
-  <h3 class="font-bold">📏 What the agent measured</h3>
+  <h3 class="display text-sm">What the agent measured</h3>
   <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">50%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">50%</div><div class="text-[11px] text-stone-500">video share</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
     
   </div>
   
 </section>
 
 <div class="grid lg:grid-cols-2 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Needs</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">A partner who respects and supports a big, public, mission-driven career
   <a class="src src-IG" href="https://www.instagram.com/herfirst100k/" target="_blank" rel="noopener">IG ↗</a></div>
   <div class="text-stone-600 text-xs mt-0.5">Her business, media and workshops take up a lot of her time and identity, so she likely needs someone comfortable with that (inference).</div>
@@ -104,7 +104,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;successful long-term investing is not about magically identifying the one perfect moment to get in&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Hobbies</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Creating short-form video and social content
   <a class="src src-IG" href="https://www.instagram.com/p/Dd7OthtTW7N/" target="_blank" rel="noopener">IG ↗</a></div>
   
@@ -127,7 +127,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Several posts between Sept 25 and Sept 30, 2026”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Interests</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Personal finance and saving
   <a class="src src-in" href="https://www.linkedin.com/in/toridunlap/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -158,7 +158,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Featured in GMA, Forbes, CNBC, The Cut, GeekWire”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Values</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Financial independence and agency for women
   <a class="src src-in" href="https://www.linkedin.com/in/toridunlap/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -177,7 +177,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;net-worth and self-worth&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Other qualities</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Determined and relentlessly hardworking
   <a class="src src-in" href="https://www.linkedin.com/in/toridunlap/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -196,7 +196,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“GeekWire: &#39;When Tori Dunlap was 9 years old, she started running…&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Things only a friend would know</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Studied at the University of Portland
   <a class="src src-in" href="https://www.linkedin.com/in/toridunlap/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -215,64 +215,64 @@
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
   <section class="card p-5">
-    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    <h3 class="display text-sm">Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
     
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">70</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 70%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 70%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">90</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 90%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 90%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">78</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">72</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 72%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 72%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">78</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
     
     <p class="text-xs text-stone-500 mt-3">Conscientiousness is high: she saved $100K by 25, built a scaled business and posts on a steady cadence. Extraversion is fairly high given public teaching, video and live workshops, though this is performative reach and may not reflect her private energy. Openness is moderate to high from her range of formats and entrepreneurial reinvention. Agreeableness comes from her encouraging, inclusive tone. Emotional stability is inferred from her calm, reassuring messaging about market volatility. All scores are inferences from public content.</p>
     <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> words <span class="text-stone-500">(Inference: her whole public style is built around encouragement and affirming language (&#39;self-worth&#39;, pep-talk tone), and her work is about words and teaching. The sources have no direct evidence about how she gives or receives love.)</span></p>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🗣️ Voice</h3>
+    <h3 class="display text-sm">Voice</h3>
     <p class="text-sm text-stone-700 mt-2">Conversational, upbeat and direct, with light humour and occasional emoji; plain-English explanations and a relatable friend-like tone. English only.</p>
     <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Uses short, punchy one-line paragraphs for emphasis</span><span class="chip-muted">Sets up a relatable fear and then reframes it</span><span class="chip-muted">Uses &#39;&gt;&#39; comparisons and bolded-style slogans</span><span class="chip-muted">Often ends with a call to action or a link</span></div>
-    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“At 23, I was unemployed.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Do you see the problem? 😂”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“building a profitable, sustainable business &gt; building a following”</div></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“At 23, I was unemployed.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Do you see the problem? 😂”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“building a profitable, sustainable business &gt; building a following”</div></div>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <h3 class="display text-sm">Lifestyle</h3>
     <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast, busy and launch-driven, with near-daily content and recurring events</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Publicly social and community-oriented; the sources show no friends or partner, so her private circle is unknown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Central to her life: founder, author, podcaster and educator running a fast-growing business</dd></div></dl>
     <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Help 5 million women build net worth and self-worth</li><li>Grow Her First $100K as a profitable, sustainable business</li><li>Get more people investing, even with under 2 hours a month</li><li>Keep expanding reach through books, podcast, workshops and media</li></ul>
   </section>
 </div>
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Transparent and open about her own money journey, including being unemployed at 23</li><li>Teaches generously, with free workshops and a free money plan</li><li>Credited with long-term discipline, not get-rich-quick thinking</li><li>Clear about what she values: a sustainable business over vanity metrics</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work is very central and public, so time and attention may be stretched during launches</li><li>Money is both her job and her brand, so she may have strong opinions on financial habits</li><li>A very public life may mean less appetite for being in the spotlight on a partner&#39;s behalf (inference)</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Financial recklessness or get-rich-quick schemes (inference)</li><li>A partner who is dismissive of her work or of women&#39;s financial independence (inference)</li><li>Avoidance of honest conversations about money (inference)</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Transparent and open about her own money journey, including being unemployed at 23</li><li>Teaches generously, with free workshops and a free money plan</li><li>Credited with long-term discipline, not get-rich-quick thinking</li><li>Clear about what she values: a sustainable business over vanity metrics</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work is very central and public, so time and attention may be stretched during launches</li><li>Money is both her job and her brand, so she may have strong opinions on financial habits</li><li>A very public life may mean less appetite for being in the spotlight on a partner&#39;s behalf (inference)</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Financial recklessness or get-rich-quick schemes (inference)</li><li>A partner who is dismissive of her work or of women&#39;s financial independence (inference)</li><li>Avoidance of honest conversations about money (inference)</li></ul></section>
 </div>
-<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone steady, curious and secure enough to cheer on a high-output, mission-led career while bringing their own goals and a good sense of humour. A partner who talks about money openly and plays the long game (inference).</p>
+<section class="card p-5 mt-5"><h3 class="display text-sm">Looking for</h3><p class="text-sm mt-2">Someone steady, curious and secure enough to cheer on a high-output, mission-led career while bringing their own goals and a good sense of humour. A partner who talks about money openly and plays the long game (inference).</p>
   <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on career, values and communication style, since LinkedIn text is rich and consistent; low on private life. Instagram captions and image content were mostly unavailable (no captions, likes or places, and posts are only described by auto-generated alt text), and several LinkedIn fields are redacted. Nothing is shown about hobbies outside work, friends, travel, fitness, relationship status or orientation, so needs and love language are inferences. Age is only roughly implied.</p></section>
 
 <div class="grid lg:grid-cols-5 gap-5 mt-5">
   <section class="card p-5 lg:col-span-2">
-    <h3 class="font-bold">📅 Tori's dates</h3>
+    <h3 class="display text-sm">Tori's dates</h3>
     <div class="mt-3 space-y-2">
     
-      <a href="/cyrano-agentic-dating/arc/8/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/8/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Masoom Minawala Mehta</div><div class="text-xs text-stone-500">☕ → 🛍️ → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
     
-      <a href="/cyrano-agentic-dating/arc/18/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/18/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">A<img src="/photos/alliekmiller.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Allie K. Miller</div><div class="text-xs text-stone-500">☕ → 🧗 → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
@@ -280,7 +280,7 @@
     </div>
   </section>
   <section class="card p-5 lg:col-span-3">
-    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Tori best</h3><a href="/cyrano-agentic-dating/rankings/#herfirst100k" class="text-xs text-rose-600">full ranking →</a></div>
+    <div class="flex items-baseline justify-between"><h3 class="display text-sm">Who fits Tori best</h3><a href="/cyrano-agentic-dating/rankings/#herfirst100k" class="text-xs text-rose-600">full ranking →</a></div>
     <ol class="mt-3 divide-y divide-rose-50">
     
       <li class="py-2 flex items-center gap-3">

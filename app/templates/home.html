@@ -3,8 +3,8 @@
 {% block body %}
 <section class="grid lg:grid-cols-5 gap-8 items-center">
   <div class="lg:col-span-3">
-    <span class="chip">💌 agentic dating · {{ people|length }} real people</span>
-    <h1 class="display text-4xl sm:text-5xl font-bold mt-3 leading-tight">Cyrano wrote someone else's love letters.<br><span class="grad-text">Your agent writes yours, in your words.</span></h1>
+    <span class="chip-muted">agentic dating · {{ people|length }} real people</span>
+    <h1 class="display text-2xl sm:text-3xl mt-3 leading-snug">Cyrano wrote someone else's love letters.<br><span class="grad-text">Your agent writes yours, in your words.</span></h1>
     <p class="text-stone-600 mt-4 max-w-xl">Every person gets an AI agent. It reads their public LinkedIn and Instagram, works out their needs, hobbies and interests, then goes out on real multi-turn dates with other people's agents: a café first, then wherever the two of them plan next. It remembers every date, and ranks who fits its person best. Agents may only share facts from their person's own posts.</p>
     <div class="flex flex-wrap gap-7 mt-6 text-sm">
       <div><div class="display text-3xl font-bold">{{ people|length }}</div><div class="text-stone-500">people</div></div>
@@ -22,9 +22,9 @@
       <h2 class="font-bold text-lg">Send your agent on dates</h2>
       <p class="text-sm text-stone-500 mt-1">Paste your two official links. Public Instagram only.</p>
       <form id="addform" class="space-y-3 mt-4">
-        <input name="linkedin" required placeholder="https://www.linkedin.com/in/you/" class="w-full rounded-xl border border-rose-100 px-3 py-2.5 text-sm">
-        <input name="instagram" required placeholder="https://www.instagram.com/you/" class="w-full rounded-xl border border-rose-100 px-3 py-2.5 text-sm">
-        <button class="w-full grad text-white font-semibold rounded-xl py-2.5">Create my agent →</button>
+        <input name="linkedin" required placeholder="https://www.linkedin.com/in/you/" class="w-full rounded-md border-2 border-[#e5ded6] px-3 py-2.5 text-sm">
+        <input name="instagram" required placeholder="https://www.instagram.com/you/" class="w-full rounded-md border-2 border-[#e5ded6] px-3 py-2.5 text-sm">
+        <button class="w-full grad text-white font-semibold py-2.5">Create my agent →</button>
         <div id="adderr" class="hidden text-sm text-rose-600"></div>
       </form>
       <p class="text-xs text-stone-400 mt-3">About 3 minutes: read → analyze → match → 3 live dates → rankings.</p>

@@ -11,11 +11,11 @@
  ('4','Match','No LLM: shared interest tags and values, social energy, same city, and the partner traits that predict satisfaction give a two-way score. The best mutual pairs get first dates.'),
  ('5','Date','Each message is its own LLM call with only that agent’s private brief. The last messages can propose the next date; if both agents want it, they go. Each agent remembers the earlier dates.'),
  ('6','Rank','After every date each agent privately rates it and tags the moments. Rankings weigh how far a pair got and both ratings, and fall back to the match score for pairs who haven’t dated.')] %}
- <div class="card p-4"><div class="w-8 h-8 rounded-xl grad text-white grid place-items-center font-bold">{{ n }}</div><div class="font-bold mt-2">{{ t }}</div><p class="text-stone-600 mt-1 text-[13px]">{{ d }}</p></div>
+ <div class="card p-4"><div class="w-8 h-8 grad text-white grid place-items-center font-bold">{{ n }}</div><div class="font-bold mt-2">{{ t }}</div><p class="text-stone-600 mt-1 text-[13px]">{{ d }}</p></div>
 {% endfor %}
 </div>
 <div class="grid lg:grid-cols-2 gap-5 mt-8">
-  <section class="card p-6"><h2 class="font-bold text-lg">Why the agents actually date</h2>
+  <section class="card p-6"><h2 class="display text-base">Why the agents actually date</h2>
     <p class="text-sm text-stone-700 mt-2">Speed-dating research shows that matching on traits before a date can predict who is attractive to people in general, but almost none of the chemistry between two <i>specific</i> people (Joel, Eastwick &amp; Finkel, 2017, <i>Psychological Science</i>). So the math only makes the shortlist, and the agents go on dates to test the part that can't be predicted.</p>
     <ul class="list-disc pl-5 mt-3 text-sm text-stone-700 space-y-1.5">
       <li><b>Private briefs.</b> Each agent knows its own person in depth, but only the other person's public card. Everything else has to come out on the date.</li>
@@ -23,7 +23,7 @@
       <li><b>A real arc.</b> Dates escalate the way real dating does (café → shared activity → evening) and get more personal over time, like Aron et al.'s (1997) 36 questions.</li>
       <li><b>Memory.</b> From the second date on, each agent carries its own notes from earlier dates and opens with a callback.</li>
     </ul></section>
-  <section class="card p-6"><h2 class="font-bold text-lg">Keeping it honest</h2>
+  <section class="card p-6"><h2 class="display text-base">Keeping it honest</h2>
     <ul class="list-disc pl-5 mt-2 text-sm text-stone-700 space-y-1.5">
       <li><b>No invented facts.</b> Agents may only share stories that are in their person's sources, and every profile claim links to its post.</li>
       <li><b>Against flattery.</b> LLMs tend to agree with each other (Sharma et al., 2023), so debriefs come with base rates ("most dates are 4–6") and must quote the moment behind each score.</li>
@@ -32,6 +32,6 @@
       <li><b>Sensitive traits are off limits.</b> No religion, politics, health, sexuality, ethnicity or caste. Relationship status and orientation are never assumed.</li>
     </ul></section>
 </div>
-<section class="card p-6 mt-5"><h2 class="font-bold text-lg">Tech stack · cost $0</h2>
+<section class="card p-6 mt-5"><h2 class="display text-base">Tech stack · cost $0</h2>
   <p class="text-sm text-stone-700 mt-2"><b>Scraping:</b> local Python, no login, no paid API. Instagram: the mobile web_profile_info endpoint, falling back to a real logged-out Chromium (Playwright) that reads the profile JSON embedded in the page plus the 12-post grid. LinkedIn: the public profile page (JSON-LD Person, posts, page text), with Jina Reader as a fallback fetcher. <b>Agents:</b> a failover chain of zero-cost LLMs: Claude via Claude Code in headless mode, Cerebras (gpt-oss-120b, Qwen) and Groq free tiers, each throttled to its free limit. <b>Web:</b> FastAPI, Jinja, Tailwind, SQLite, Server-Sent Events for the live dates, and a vanilla-JS replay player. The demo is exported to static HTML for GitHub Pages.</p></section>
 {% endblock %}

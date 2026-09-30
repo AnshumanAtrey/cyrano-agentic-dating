@@ -5,35 +5,35 @@
 <title>Nikhil Kamath · Cyrano</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#2b1a20; --line:#f1ddd6; }
-  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
-  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
-  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
-  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
-  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
-  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
-  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
-  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
   .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 </style>
 
 </head>
 <body class="min-h-screen">
-<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
-    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
     <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
       <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
       <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
       <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
     </nav>
     <div class="ml-auto">
-      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
       
     </div>
   </div>
@@ -56,32 +56,32 @@
 </section>
 
 <section class="card p-5 mt-5">
-  <h3 class="font-bold">📏 What the agent measured</h3>
+  <h3 class="display text-sm">What the agent measured</h3>
   <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">7.8</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">7.8</div><div class="text-[11px] text-stone-500">posts / month</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">42%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">42%</div><div class="text-[11px] text-stone-500">video share</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
     
   </div>
   
 </section>
 
 <div class="grid lg:grid-cols-2 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Needs</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">A curious, intellectually open partner who enjoys big-idea conversations and disagreement without hostility
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   <div class="text-stone-600 text-xs mt-0.5">He champions understanding why the other side believes what it believes and launched a format built on it (inference about partner fit)</div>
@@ -104,7 +104,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Here&#39;s hoping that 16 years later (2042), we are all still in the same room ❤️&#34;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Hobbies</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Hosting long-form interview and discussion episodes
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -127,7 +127,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“42% of posts are video; &#34;COMING SOON&#34; teaser”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Interests</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Global macro, currency and trade
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -158,7 +158,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Quotes F. Scott Fitzgerald on holding opposed ideas”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Values</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Intellectual open-mindedness
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -177,7 +177,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Asks what to start in India; argues for exporting India”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Other qualities</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Warm, teasing humour with people he&#39;s close to
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -196,7 +196,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Zerodha since 2010, True Beacon since 2019, Gruhas since 2021”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Things only a friend would know</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Based in Bengaluru, Karnataka, India
   <a class="src src-in" href="https://www.linkedin.com/in/nikhilkamathcio/" target="_blank" rel="noopener">in ↗</a></div>
   
@@ -219,64 +219,64 @@
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
   <section class="card p-5">
-    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    <h3 class="display text-sm">Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
     
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">93</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 93%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 93%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">78</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">75</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 75%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">74</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 74%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 74%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">78</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
     
     <p class="text-xs text-stone-500 mt-3">Very high openness from the range of topics (macro, batteries, culture, AI) and the WTF: Discourse format. Conscientiousness from 16 years at Zerodha and steady output of about 8 posts per month. Extraversion from public hosting, travel and asking for introductions. Agreeableness from warm, appreciative tone toward colleagues and fairness to opposing views. Emotional stability inferred from relaxed, self-deprecating humour. All inferences from limited public posts.</p>
     <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> time <span class="text-stone-500">(Inference: he values people staying in the same room for years and celebrates shared moments, which suggests quality time and affectionate words.)</span></p>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🗣️ Voice</h3>
+    <h3 class="display text-sm">Voice</h3>
     <p class="text-sm text-stone-700 mt-2">Conversational, reflective and concise; light humour, sparing emoji (a heart, a smiley); English only, no Hinglish visible</p>
     <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Closes posts with an open question</span><span class="chip-muted">Uses ellipses and trailing &#39;..&#39; for a casual feel</span><span class="chip-muted">Opens with a striking statistic or quote</span><span class="chip-muted">Teases friends affectionately</span></div>
-    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Some days you build.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Interesting insight”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Please refer ..”</div></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Some days you build.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Interesting insight”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Please refer ..”</div></div>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <h3 class="display text-sm">Lifestyle</h3>
     <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast, content- and deal-heavy, with frequent launches and episodes</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Highly social in a professional way: founders, CEOs, long-time colleagues</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Frequent; San Francisco and Dalian appear in recent posts</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Unclear; possible racquet sport video (inference)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Multiple ventures plus a media/podcast presence; work is central to his identity</dd></div></dl>
     <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Keep building and backing companies in India</li><li>Grow his discussion and interview platform (WTF)</li><li>Help India build in areas like batteries, data infrastructure and cultural exports</li><li>Keep Zerodha&#39;s core team together through 2042</li></ul>
   </section>
 </div>
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Curious and open to opposing views</li><li>Loyal to long-term colleagues</li><li>Humble about others&#39; work</li><li>Playful, warm humour</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work and travel could leave little room for routine</li><li>Attention often goes to big ideas and public projects, so a partner may need their own independent life</li><li>Highly public persona may mean less privacy</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Closed-mindedness or contempt for opposing views (inferred)</li><li>Disinterest in ideas, building or learning (inferred)</li><li>Disloyalty or short-term thinking (inferred)</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Curious and open to opposing views</li><li>Loyal to long-term colleagues</li><li>Humble about others&#39; work</li><li>Playful, warm humour</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work and travel could leave little room for routine</li><li>Attention often goes to big ideas and public projects, so a partner may need their own independent life</li><li>Highly public persona may mean less privacy</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Closed-mindedness or contempt for opposing views (inferred)</li><li>Disinterest in ideas, building or learning (inferred)</li><li>Disloyalty or short-term thinking (inferred)</li></ul></section>
 </div>
-<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">Someone curious, secure and independently driven, who enjoys debating ideas and can laugh with him. A partner who is happy to travel, cheers for other people&#39;s work and values staying power.</p>
+<section class="card p-5 mt-5"><h3 class="display text-sm">Looking for</h3><p class="text-sm mt-2">Someone curious, secure and independently driven, who enjoys debating ideas and can laugh with him. A partner who is happy to travel, cheers for other people&#39;s work and values staying power.</p>
   <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on professional identity and intellectual interests, which are well documented in LinkedIn. Low on hobbies, family, relationships, fitness and personal life: the Instagram posts carry almost no captions or likes, and image descriptions are vague, so the tennis and book readings are weak inferences. Relationship status and orientation are not shown and are not assumed.</p></section>
 
 <div class="grid lg:grid-cols-5 gap-5 mt-5">
   <section class="card p-5 lg:col-span-2">
-    <h3 class="font-bold">📅 Nikhil's dates</h3>
+    <h3 class="display text-sm">Nikhil's dates</h3>
     <div class="mt-3 space-y-2">
     
-      <a href="/cyrano-agentic-dating/arc/2/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/2/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Vaibhav Sisinty</div><div class="text-xs text-stone-500">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
     
-      <a href="/cyrano-agentic-dating/arc/7/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/7/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Varun Mayya</div><div class="text-xs text-stone-500">☕ → 🎤 → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
@@ -284,7 +284,7 @@
     </div>
   </section>
   <section class="card p-5 lg:col-span-3">
-    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Nikhil best</h3><a href="/cyrano-agentic-dating/rankings/#nikhilkamathcio" class="text-xs text-rose-600">full ranking →</a></div>
+    <div class="flex items-baseline justify-between"><h3 class="display text-sm">Who fits Nikhil best</h3><a href="/cyrano-agentic-dating/rankings/#nikhilkamathcio" class="text-xs text-rose-600">full ranking →</a></div>
     <ol class="mt-3 divide-y divide-rose-50">
     
       <li class="py-2 flex items-center gap-3">

@@ -5,35 +5,35 @@
 <title>Kanika Tekriwal · Cyrano</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#2b1a20; --line:#f1ddd6; }
-  body { font-family: Inter, system-ui, sans-serif; background:#fff8f4; color:var(--ink); }
-  .display { font-family: Fraunces, Georgia, serif; letter-spacing:-.01em; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:1.25rem; box-shadow:0 1px 3px rgba(90,20,40,.05); }
-  .grad { background:linear-gradient(135deg,#e11d48,#a21caf 55%,#7c3aed); }
-  .grad-text { background:linear-gradient(135deg,#e11d48,#7c3aed); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#fdecef; color:#9f1239; }
-  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .6rem; border-radius:999px; background:#f5f5f4; color:#57534e; }
-  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:.35rem; text-decoration:none; white-space:nowrap; vertical-align:middle; }
-  .src-IG { background:#fce7f3; color:#be185d; } .src-in { background:#dbeafe; color:#1d4ed8; }
-  .av { position:relative; display:inline-grid; place-items:center; border-radius:999px; overflow:hidden; background:#f9e1e6; color:#9f1239; font-weight:700; flex:none; }
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
   .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
   .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
 </style>
 
 </head>
 <body class="min-h-screen">
-<header class="border-b border-rose-100 bg-white/75 backdrop-blur sticky top-0 z-30">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
   <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
-    <a href="/cyrano-agentic-dating/" class="display text-xl font-bold whitespace-nowrap"><span class="grad-text">Cyrano</span> 💌</a>
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
     <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
       <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
       <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
       <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
     </nav>
     <div class="ml-auto">
-      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold rounded-full px-4 py-1.5">Try it live →</a>
+      <a href="https://careful-pointer-pro-immunology.trycloudflare.com" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
       
     </div>
   </div>
@@ -56,32 +56,32 @@
 </section>
 
 <section class="card p-5 mt-5">
-  <h3 class="font-bold">📏 What the agent measured</h3>
+  <h3 class="display text-sm">What the agent measured</h3>
   <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
   <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">2.7</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">2.7</div><div class="text-[11px] text-stone-500">posts / month</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">8%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">8%</div><div class="text-[11px] text-stone-500">video share</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
     
-    <div class="rounded-xl bg-rose-50/60 py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
     
   </div>
   
 </section>
 
 <div class="grid lg:grid-cols-2 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">💗 Needs</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Needs</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">A partner who is secure and supportive of a very public, demanding career
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   <div class="text-stone-600 text-xs mt-0.5">Inference: frequent media features and a mission-driven company imply a busy, visible life that needs a steady partner</div>
@@ -100,14 +100,14 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“posts_per_month 2.7; features across Jul-Sep 2026”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🎯 Hobbies</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Hobbies</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Travel and wandering
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   
   <div class="text-stone-500 text-xs mt-0.5 italic">“Self-described &#39;Wanderer&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">✨ Interests</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Interests</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Aviation and private jets
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   
@@ -134,7 +134,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Young Global Leader @ WEF&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🧭 Values</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Values</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Ambition
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   
@@ -153,7 +153,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“Forbes 30U30, BBC 100 most inspiring women listed in bio”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">🌟 Other qualities</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Other qualities</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Accomplished and credentialed
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   
@@ -168,7 +168,7 @@
   <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Putting India on the aviation map&#39;”</div></li>
 
 </ul></section>
-  <section class="card p-5"><h3 class="font-bold">📌 Things only a friend would know</h3><ul class="mt-3 space-y-3">
+  <section class="card p-5"><h3 class="display text-sm">Things only a friend would know</h3><ul class="mt-3 space-y-3">
 <li class="text-sm"><div class="font-medium">Describes herself as a small-town girl (specific hometown not stated)
   <a class="src src-IG" href="https://www.instagram.com/jetslacked/" target="_blank" rel="noopener">IG ↗</a></div>
   
@@ -183,64 +183,64 @@
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
   <section class="card p-5">
-    <h3 class="font-bold">🧠 Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    <h3 class="display text-sm">Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
     
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">75</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 75%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 75%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">78</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 78%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">68</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 68%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 68%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">60</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 60%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 60%"></div></div></div>
     
     
     <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">68</span></div>
-      <div class="h-2 rounded-full bg-rose-50 mt-1"><div class="h-2 rounded-full grad" style="width: 68%"></div></div></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 68%"></div></div></div>
     
     <p class="text-xs text-stone-500 mt-3">Mostly inference from a thin evidence base: the bio and press-heavy feed. Openness from &#39;Wanderer&#39; and &#39;Massive Dreams&#39;; conscientiousness from sustained business achievements; extraversion from regular public features. LinkedIn data was a sign-up page, so there is no data from it. Agreeableness and stability are close to neutral guesses.</p>
     <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> time <span class="text-stone-500">(Inference only: a wanderer with a demanding career may value quality time and shared experiences, but the sources give no direct evidence.)</span></p>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🗣️ Voice</h3>
+    <h3 class="display text-sm">Voice</h3>
     <p class="text-sm text-stone-700 mt-2">Concise, aspirational, credential-forward bio; no captions available, so emoji and language mix are unknown beyond one evil-eye emoji</p>
     <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Short fragment sentences</span><span class="chip-muted">Stacks achievements in a list</span><span class="chip-muted">Contrasts humble origins with big goals</span></div>
-    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Small town girl. Massive Dreams.”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Wanderer”</div><div class="text-sm italic border-l-2 border-rose-300 pl-3">“Putting India on the aviation map.”</div></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Small town girl. Massive Dreams.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Wanderer”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Putting India on the aviation map.”</div></div>
   </section>
   <section class="card p-5">
-    <h3 class="font-bold">🏃 Lifestyle</h3>
+    <h3 class="display text-sm">Lifestyle</h3>
     <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and high-profile (inference)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Public-facing, frequently featured in media</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Self-described wanderer working in aviation</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Founder in aviation, JetSetGo (BIO link), with regular press coverage</dd></div></dl>
     <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Put India on the aviation map</li><li>Keep growing her business and global profile</li></ul>
   </section>
 </div>
 
 <div class="grid lg:grid-cols-3 gap-5 mt-5">
-  <section class="card p-5"><h3 class="font-bold">✅ Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Self-made, mission-driven story</li><li>Keeps humble origins in her self-description</li><li>Curious about the world (wanderer)</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">⚠️ Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Her schedule is likely packed and public</li><li>The feed is heavily professional, so her personal side is hard to read</li><li>Comfort with spotlight may not suit someone who is very private</li></ul></section>
-  <section class="card p-5"><h3 class="font-bold">🚫 Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Inference: a partner who resents her career ambitions or visibility</li><li>Inference: someone unwilling to travel or adapt to a shifting schedule</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Self-made, mission-driven story</li><li>Keeps humble origins in her self-description</li><li>Curious about the world (wanderer)</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Her schedule is likely packed and public</li><li>The feed is heavily professional, so her personal side is hard to read</li><li>Comfort with spotlight may not suit someone who is very private</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Inference: a partner who resents her career ambitions or visibility</li><li>Inference: someone unwilling to travel or adapt to a shifting schedule</li></ul></section>
 </div>
-<section class="card p-5 mt-5"><h3 class="font-bold">💞 Looking for</h3><p class="text-sm mt-2">A confident, secure partner who cheers on big dreams and enjoys exploring the world. Someone who can balance her public, ambitious life with warmth and curiosity.</p>
+<section class="card p-5 mt-5"><h3 class="display text-sm">Looking for</h3><p class="text-sm mt-2">A confident, secure partner who cheers on big dreams and enjoys exploring the world. Someone who can balance her public, ambitious life with warmth and curiosity.</p>
   <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Low to moderate. LinkedIn returned only a sign-up page, and Instagram gave a bio plus image descriptions without captions, likes, places or people. Her professional identity is clear, but personality, needs, hobbies and relationship preferences are inferences. Hometown, age, pronouns, and personal life are not shown.</p></section>
 
 <div class="grid lg:grid-cols-5 gap-5 mt-5">
   <section class="card p-5 lg:col-span-2">
-    <h3 class="font-bold">📅 Kanika's dates</h3>
+    <h3 class="display text-sm">Kanika's dates</h3>
     <div class="mt-3 space-y-2">
     
-      <a href="/cyrano-agentic-dating/arc/14/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/14/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">S<img src="/photos/sabrina_ramonov.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Sabrina Ramonov</div><div class="text-xs text-stone-500">☕ → 🧗 → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
     
-      <a href="/cyrano-agentic-dating/arc/31/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-rose-50">
+      <a href="/cyrano-agentic-dating/arc/31/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
         <span class="av w-10 h-10 text-sm">P<img src="/photos/pranjalkamra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
         <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Pranjal Kamra</div><div class="text-xs text-stone-500">📚 → 🛍️ → 🍷 · 💞 Wants to keep dating</div></div>
         <span class="text-xs text-rose-600">▶ replay</span></a>
@@ -248,7 +248,7 @@
     </div>
   </section>
   <section class="card p-5 lg:col-span-3">
-    <div class="flex items-baseline justify-between"><h3 class="font-bold">🏆 Who fits Kanika best</h3><a href="/cyrano-agentic-dating/rankings/#jetslacked" class="text-xs text-rose-600">full ranking →</a></div>
+    <div class="flex items-baseline justify-between"><h3 class="display text-sm">Who fits Kanika best</h3><a href="/cyrano-agentic-dating/rankings/#jetslacked" class="text-xs text-rose-600">full ranking →</a></div>
     <ol class="mt-3 divide-y divide-rose-50">
     
       <li class="py-2 flex items-center gap-3">
