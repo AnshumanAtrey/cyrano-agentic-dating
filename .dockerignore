@@ -1,0 +1,9 @@
+.venv
+data
+docs
+screenshots
+given
+.git
+.env
+people.txt
+__pycache__

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sharan × Ankita · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/financewithsharan/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/financewithsharan.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/ankitagaba/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/ankitagaba.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Sharan Hegde × Ankita Gaba</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Sharan's agent</option><option value="b">Ankita's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Sharan", "id": "financewithsharan", "name": "Sharan Hegde"}, "b": {"first": "Ankita", "id": "ankitagaba", "name": "Ankita Gaba"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83d\ude02", "label": "Coffee upsell joke about sales", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Has a habit of auditing upsells because he can\u0027t switch off his money brain", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admits being broke from growth", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both live in startup land", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "1% Club, AI CFO, 5 lakh signups", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Calls her cold coffee order data", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Building 1% Club, an AI CFO for personal money aimed at middle-class Indians", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shares long\u2011game entrepreneurial mindset", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She co\u2011founded Raja Rani aur Hathi and runs Better Nutrition, with 16+ years exp", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Invites to comedy night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udef6", "label": "70% enjoy, 30% survive payroll honesty", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\u2728", "label": "Asks who her honest person is", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Describes his founder life as 70% enjoy, 30% survive, with stress peaking around", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 2 days", "msg": 5, "type": "plan"}, {"by": "b", "icon": "\ud83d\udc90", "label": "She likes \u0027someone honest\u0027 over agreeable", "msg": 5, "type": "compliment"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Pulls out a chair, glances at the menu board, then smiles", "i": 0, "name": "Sharan", "say": "Ankita, hi. Fun fact: a caf\u00e9 with \u0027Brew\u0027 and \u0027Bloom\u0027 in the name is basically two upsells in one, and I\u0027m already curious how many people here came for one coffee and left with three items. Occupational hazard, I can\u0027t switch the money brain off. What are you ordering?", "side": "a", "speaker": "financewithsharan", "thought": "Opened light and on-brand with the consumer behaviour angle; waiting to see if Ankita plays along with the money-nerd tangent or finds it a bit much."}, {"action": "laughs and picks up the menu", "i": 1, "name": "Ankita", "say": "Ha, Sharan, I respect that you\u0027re already auditing the upsell. I\u0027m a cold coffee person, and I\u0027ll probably add something sweet, so your theory stands. Since we both live in startup land, what are you building right now that\u0027s taking most of your head space?", "side": "b", "speaker": "ankitagaba", "thought": "Warm and witty start, money-brain humour is fun; now seeing if he talks about building with energy and whether he mentions his team or collaborators."}, {"action": "grins and leans back", "i": 2, "name": "Sharan", "say": "Cold coffee plus something sweet, so that\u0027s a confirmed upsell, and I\u0027m calling it data. Right now it\u0027s 1% Club, an AI CFO for personal money, for middle-class Indians who have real money decisions but no one to ask, and 5 lakh people have signed up so far. The funny part is I\u0027m broke because of how well it\u0027s doing, because AI compute isn\u0027t cheap and I still have to go raise money to keep up. What about you, is Better Nutrition what\u0027s eating your head space, or is Raja Rani aur Hathi sneaking in too?", "side": "a", "speaker": "financewithsharan", "thought": "Opened with real numbers and self-deprecating humour; now I\u0027m watching how she responds to the build-in-public, work-heavy life and whether she shares my curiosity about money."}, {"action": "sips her cold coffee and smiles", "i": 3, "name": "Ankita", "say": "Both, honestly, it\u0027s a full plate. Better Nutrition is my main focus, and I cofounded Raja Rani aur Hathi too, so my head space is pretty crowded. I\u0027ve been at this 16+ years and I still like the long game, so I\u0027m curious: when you\u0027re broke because it\u0027s working, do you enjoy that stretch or just survive it?", "side": "b", "speaker": "ankitagaba", "thought": "He\u0027s open and funny about the founder grind; I\u0027ve shared my busy load and am probing whether he respects long-haul building rather than just tolerating it."}, {"action": "laughs and stirs his coffee", "i": 4, "name": "Sharan", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "comedy"}, "say": "Honest answer: 70% enjoy, 30% survive, and the 30% shows up around payroll week. Setbacks have taught me to treat it as feedback, but it only works if someone honest is around to tell me when I\u0027m spiralling versus actually onto something. You\u0027ve done 16 years of this, so I\u0027m curious: who\u0027s that person for you? And I\u0027ve really liked this, so how about Open Mic Comedy Night in a couple of days, where we find out if founders are actually funny?", "side": "a", "speaker": "financewithsharan", "thought": "Ankita is warm, ambitious and gets the building life; she seems a steady sounding board, though I haven\u0027t yet tested her on public visibility or money psychology. Worth a second date."}, {"action": "smiles and sets down her glass", "i": 5, "name": "Ankita", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "comedy"}, "say": "Honestly, I lean on a small circle of people I\u0027ve worked with for years, and I\u0027m not shy about asking for help, I\u0027ll even post \u0027Need Help!\u0027 publicly. I liked that you said \u0027someone honest\u0027 and not \u0027someone who agrees with me\u0027. Comedy night sounds fun, I\u0027m in, let\u0027s see if founders are actually funny.", "side": "b", "speaker": "ankitagaba", "thought": "Sharan is honest about the struggle, enjoys the long game and values candour; I still need to see how he treats collaboration and people, but it\u0027s a good first date."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 8, "concern": "Potential clash in schedules could limit quality time together.", "continue": true, "highlight": "Ankita: \"I\u2019m not shy about asking for help, I\u2019ll even post \u2018Need Help!\u2019 publicly.\"", "learned": [{"fact": "She co\u2011founded Raja Rani aur Hathi and runs Better Nutrition, with 16+ years experience", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Coffee upsell joke about sales", "msg": 0, "type": "laugh"}, {"label": "Admits being broke from growth", "msg": 2, "type": "vulnerable"}, {"label": "Shares long\u2011game entrepreneurial mindset", "msg": 3, "type": "common_ground"}, {"label": "Invites to comedy night", "msg": 4, "type": "plan"}, {"label": "Accepts comedy night invitation", "msg": 5, "type": "plan"}], "overall": 8, "report": "Sounds like you\u2019ve met a fellow founder who gets your hustle and humor\u2014definitely worth a second round. The vibe feels genuine and the shared honesty is a strong foundation.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Sharan leans hard on money and startup talk (upsell audits, \u0027money brain\u0027, fundraising stress). He asked good questions but the date stayed on work, so we haven\u0027t seen whether he has a life outside building or can protect time together.", "continue": true, "highlight": "Sharan: \"Honest answer: 70% enjoy, 30% survive, and the 30% shows up around payroll week.\" He also wants someone honest around to tell him when he\u0027s spiralling, and you picked up on that.", "learned": [{"fact": "Building 1% Club, an AI CFO for personal money aimed at middle-class Indians", "msg": 2}, {"fact": "1% Club has 5 lakh signups and he needs to raise money to cover AI compute costs", "msg": 2}, {"fact": "Describes his founder life as 70% enjoy, 30% survive, with stress peaking around payroll week", "msg": 4}, {"fact": "Treats setbacks as feedback and values an honest person who can tell him if he\u0027s spiralling", "msg": 4}, {"fact": "Has a habit of auditing upsells because he can\u0027t switch off his money brain", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Brew and Bloom upsell audit joke", "msg": 0, "type": "laugh"}, {"label": "Both live in startup land", "msg": 2, "type": "common_ground"}, {"label": "1% Club, AI CFO, 5 lakh signups", "msg": 2, "type": "learned"}, {"label": "Calls her cold coffee order data", "msg": 2, "type": "callback"}, {"label": "70% enjoy, 30% survive payroll honesty", "msg": 4, "type": "vulnerable"}, {"label": "Asks who her honest person is", "msg": 4, "type": "spark"}, {"label": "She likes \u0027someone honest\u0027 over agreeable", "msg": 5, "type": "compliment"}, {"label": "Proposes Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "She accepts comedy night", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ankita, he\u0027s a fun one: playful, honest about the messy startup stretch, and he actually listened when you talked about the long game and asking for help. It was mostly work talk, so comedy night is a good chance to see if there\u0027s a person beyond the founder, and I think it\u0027s worth going.", "values_fit": 7}, "why": "you both love startups"}, {"day": 3, "moments": [{"by": "b", "icon": "\ud83d\udd01", "label": "Callback to her \u0027Need Help!\u0027 post", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "His app is burning money on compute costs despite doing well, and he jokes about", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Public \u0027Need Help!\u0027 habit and compute costs", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Tagging people to watch him bomb", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She asks for help publicly and says it has gotten her more answers than being sh", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ankita has spent about 16 years scaling brands", "msg": 2, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Builds in public, 2.9M audience", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Sharan builds an app in public and has an audience of about 2.9 million", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Refused to invent a neat story", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both lean on trusted people in setbacks", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "When a project goes wrong she swears at the spreadsheet for about a day, then as", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Stealing her spreadsheet system", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\u2728", "label": "Liked tonight more than planned", "msg": 4, "type": "spark"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He has a few people who tell him when he\u0027s spiralling, and they are usually righ", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praised him for listening tonight", "msg": 5, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Grins and waves, grabbing two seats near the back", "i": 0, "name": "Sharan", "say": "Ankita, last time you said you\u0027d post \u0027Need Help!\u0027 publicly without blinking, so I figured an open mic where strangers roast each other live was the natural sequel. I\u0027ll warn you, my best material is how I\u0027m broke because my app is doing so well, so if I get on stage, please heckle gently.", "side": "a", "speaker": "financewithsharan", "thought": "Opened warm with a callback to her \u0027Need Help!\u0027 line; she suggested the venue so she seems playful and comfortable with public risk, which is a good early sign."}, {"action": "Laughs and slides into the seat, pulling out my phone to silence it", "i": 1, "name": "Ankita", "say": "Ha, guilty, asking for help publicly has gotten me more answers than being shy ever did. And \"broke because the app is doing so well\" is solid material, Sharan, especially with the compute costs you mentioned last time. I\u0027ll heckle gently, but if you bomb, I\u0027m tagging people to come watch.", "side": "b", "speaker": "ankitagaba", "thought": "He remembered my \u0027Need Help!\u0027 line and is playful, which is a good sign; he\u0027s still in the fundraising and compute-cost grind, so I\u0027ll see how he handles my busy schedule too."}, {"action": "Laughs, leans in a bit, lowering my voice over the sound check", "i": 2, "name": "Sharan", "say": "Tagging people to watch me bomb is fair, I build in public, so my failures already have an audience of 2.9 million. Here\u0027s what I actually want to ask though: when you were scaling brands for 16 years, what was the setback that stung most, and what did it teach you? I treated every failure as feedback, but I\u0027m curious if you\u0027re the same or if you just quietly swear at a spreadsheet first.", "side": "a", "speaker": "financewithsharan", "thought": "Steering toward her attitude to setbacks and failure, testing whether she\u0027s a steady, honest sounding board; she\u0027s been warm and open so far, no red flags."}, {"action": "Laughs, then turns a little more serious as the sound check screeches", "i": 3, "name": "Ankita", "say": "Honestly, I can\u0027t give you a neat story with numbers because I\u0027d be making it up, but the pattern is real: I swear at the spreadsheet for about a day, then I ask for help out loud, because the people I trust usually spot what I missed. What stings most is when quality slips and I can\u0027t fix it fast, since I care a lot about good work ethics. What about you, who\u0027s the honest person who tells you when you\u0027re spiralling?", "side": "b", "speaker": "ankitagaba", "thought": "He asked a real question and is curious about my side; I shared my help-asking habit and quality values, and I\u0027m probing whether he has real support and integrity around him."}, {"action": "Grins as the host taps the mic, then turns back to her", "i": 4, "name": "Sharan", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "One day of swearing at the spreadsheet, then asking out loud: that\u0027s a better system than most companies I know, and I\u0027m stealing it. To answer you, I\u0027ve got a few people who\u0027ll tell me when I\u0027m spiralling, and honestly the worst part is they\u0027re usually right. I\u0027ve liked tonight more than I planned to, so come to a candlelight dinner with me later this week and tell me what you\u0027d heckle about my life when nobody\u0027s on stage?", "side": "a", "speaker": "financewithsharan", "thought": "Ankita is honest about setbacks, asks for help openly, and respects ambition; she hasn\u0027t shown any discomfort with public building life, though I still haven\u0027t tested the money-psychology side, so a second, calmer date makes sense."}, {"action": "Smiles and gathers my bag as the host taps the mic again", "i": 5, "name": "Ankita", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "Yes to the candlelight dinner, Sharan. Short, blunt praise: you listened tonight, and not everyday someone steals my spreadsheet system and admits it. Let\u0027s do it in two days, and I\u0027ll bring my heckles for your life off-stage, but you have to bring the honest answer about what your people tell you when you spiral.", "side": "b", "speaker": "ankitagaba", "thought": "He listened, backs honest feedback, and respects building in public and long-haul work. Still watching how he handles my busy schedule, but I want a third date."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 7, "concern": "Mild: Ankita dodged the setback question with a pattern rather than a story, and Sharan\u0027s answer about who calls him out stayed vague, which she has now asked him to be honest about. Also the compliment and dinner plan came quickly, so depth is still unproven.", "continue": true, "highlight": "\"Honestly, I can\u0027t give you a neat story with numbers because I\u0027d be making it up, but the pattern is real: I swear at the spreadsheet for about a day, then I ask for help out loud.\"", "learned": [{"fact": "Ankita has spent about 16 years scaling brands", "msg": 2}, {"fact": "She asks for help publicly and says it has gotten her more answers than being shy", "msg": 1}, {"fact": "When a project goes wrong she swears at the spreadsheet for about a day, then asks people she trusts for help", "msg": 3}, {"fact": "She cares a lot about good work ethics and is most stung when quality slips and she can\u0027t fix it fast", "msg": 3}], "lifestyle_fit": 7, "moments": [{"label": "Public \u0027Need Help!\u0027 habit and compute costs", "msg": 1, "type": "callback"}, {"label": "Tagging people to watch him bomb", "msg": 1, "type": "laugh"}, {"label": "Refused to invent a neat story", "msg": 3, "type": "vulnerable"}, {"label": "Both lean on trusted people in setbacks", "msg": 3, "type": "common_ground"}, {"label": "Stealing her spreadsheet system", "msg": 4, "type": "compliment"}, {"label": "Praised him for listening tonight", "msg": 5, "type": "compliment"}, {"label": "Candlelight dinner set for two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Sharan, this one\u0027s a good sign: Ankita was honest enough to refuse to invent a neat story with numbers, which is exactly the substance-over-show you like, and she matched your humour and competitiveness without flinching. She said yes to the candlelight dinner and wants a real answer about who tells you when you\u0027re spiralling, so come ready to be a bit less polished than your content.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Sharan\u0027s answers stayed light: he dodged naming who calls him out when he spirals, and his build-in-public, always-on startup life (2.9M audience, broke from compute costs) could compete for time with her own packed schedule.", "continue": true, "highlight": "\"One day of swearing at the spreadsheet, then asking out loud: that\u0027s a better system than most companies I know, and I\u0027m stealing it.\"", "learned": [{"fact": "Sharan builds an app in public and has an audience of about 2.9 million", "msg": 2}, {"fact": "His app is burning money on compute costs despite doing well, and he jokes about being broke", "msg": 0}, {"fact": "He treats failures as feedback", "msg": 2}, {"fact": "He has a few people who tell him when he\u0027s spiralling, and they are usually right", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Callback to her \u0027Need Help!\u0027 post", "msg": 0, "type": "callback"}, {"label": "Heckle gently, tag people to watch", "msg": 1, "type": "laugh"}, {"label": "Builds in public, 2.9M audience", "msg": 2, "type": "learned"}, {"label": "Admits spreadsheet swearing, honest about quality stings", "msg": 3, "type": "vulnerable"}, {"label": "Steals her spreadsheet system", "msg": 4, "type": "compliment"}, {"label": "Liked tonight more than planned", "msg": 4, "type": "spark"}, {"label": "Candlelight dinner in two days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Honestly, this one felt good: Sharan listened, played along with your help-out-loud style, and asked about your setbacks instead of just performing. He\u0027s a fellow builder who gets the hustle, though keep an eye on whether he gives you a real answer at dinner about who tells him when he\u0027s spiralling.", "values_fit": 7}, "why": "Ankita suggested it at the end of date 1"}], "days": 3, "id": 33, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

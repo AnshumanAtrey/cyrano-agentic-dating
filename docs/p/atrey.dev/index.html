@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshuman Atrey · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">A<img src="/photos/atrey.dev.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Anshuman Atrey</h1>
+    <div class="text-stone-600">Cybersecurity founder (Walrus Securitas) and software engineer building security, AI and automation products</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 India</div>
+    <p class="display italic text-xl mt-3 grad-text">“Ethical hacker, anime philosopher, dreaming of farmland and building chains nobody tested.”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Anshuman is a prolific builder who moves between offensive security, agentic AI, quant research and B2B SaaS, and ships publicly while sharing the wins. He is driven by curiosity, proving himself through hackathons, bounties and contests, and by a playful refusal to fit the polished LinkedIn mold. He comes across as someone intense and fun to be around: witty, nerdy, self-aware, and quick to turn an idea into a working thing.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/atrey.dev/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">tech</span><span class="chip-muted">ai</span><span class="chip-muted">finance</span><span class="chip-muted">investing</span><span class="chip-muted">anime</span><span class="chip-muted">science</span><span class="chip-muted">education</span><span class="chip-muted">gaming</span><span class="chip-muted">outdoors</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="display text-sm">What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">3</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0.4</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">33%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who accepts and enjoys an unconventional, non-corporate self-presentation
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He openly rejects &#39;professional headshot&#39; norms and says people who know his references &#39;know me&#39;, so he likely wants someone who gets the real him.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;who cares what I put up on my profile pic on LinkedIn&#34;; &#34;People who know these names, they know me.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who shares or at least appreciates his anime and philosophical references
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He names Shikamaru Nara, Osamu Dazai and Thorfinn as life teachers and treats them as a shorthand for who he is (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I learnt my life lessons from - Shikamaru Nara - Osamu Dazai - Thorfinn&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who can tolerate and support long build sprints and competitions
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He describes intense stretches of shipping and hackathon and contest work, so he likely needs understanding of deep-focus time (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;what was i doing from last 15 days? making 10+ APIs&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who values teamwork and loyalty, a &#39;mafia&#39; of collaborators
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He repeatedly builds with named teammates and gives them credit, suggesting he values partners in crime (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;team QuantMafias 🤝 Sayuj Pillai&#34;; &#34;Team AI Mafias: Vijay kota, Me and Sahil Shah&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">A calm, grounded counterpart to a high-output mind, tied to his farmland dream
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">He imagines a quieter future harvesting crops, which hints at wanting a slower life eventually (inference).</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;10 years from now, I will be on my farmland, harvesting my crops&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Building open-source-style OSINT and scraping APIs
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Put 10+ tools like Holehe, Nmap Cloud and Gitleaks Cloud on Apify as bulk-callable REST APIs”</div></li>
+<li class="text-sm"><div class="font-medium">Hackathons and team competitions
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“MetaPyTorch OpenEnv Hackathon Round 2 Grand Finale in BLR; shipped PharmaRL”</div></li>
+<li class="text-sm"><div class="font-medium">Quant and algo trading research
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reached stage 2 of the WorldQuant international quant championship and became a research consultant”</div></li>
+<li class="text-sm"><div class="font-medium">Bug bounty hunting and ethical hacking
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;hacked my own college... i reported all of it &amp; got a bounty for it&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Anime and manga culture
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Cites Shikamaru Nara, Osamu Dazai and Thorfinn as life teachers”</div></li>
+<li class="text-sm"><div class="font-medium">Writing about coding and tech
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Article &#34;8 Practical Ways to Earn Money by Coding&#34;, May 2, 2022”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Cybersecurity and penetration testing
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder of Walrus Securitas; Security Analyst and VAPT Intern background”</div></li>
+<li class="text-sm"><div class="font-medium">Agentic AI
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Agentic AI Dev - VC Firm&#34;; &#34;Founder, Automated Cyber Sec Product&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Quantitative finance
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;i got good at building the machine that does&#34; (picking stocks); WorldQuant consultant”</div></li>
+<li class="text-sm"><div class="font-medium">AI for drug discovery and chemistry
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Shipped PharmaRL with Llama-3.2-3B trained via GRPO on chemistry oracles”</div></li>
+<li class="text-sm"><div class="font-medium">Startups and SaaS
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Software Engineer - B2B2B SaaS; Contracted CTO; Unitpay intro offered”</div></li>
+<li class="text-sm"><div class="font-medium">Philosophy
+  <a class="src src-IG" href="https://www.instagram.com/atrey.dev/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio: &#34;Philosophical Paradoxical Polymath&#34;; Dazai quote on trying”</div></li>
+<li class="text-sm"><div class="font-medium">Sanskrit and Indian culture
+  <a class="src src-IG" href="https://www.instagram.com/atrey.dev/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio line in Sanskrit: सफलतासंस्कृत्या शापितः”</div></li>
+<li class="text-sm"><div class="font-medium">Farming as a future life
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;I will be on my farmland, harvesting my crops&#34;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Authenticity over polish
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Mocks &#39;add your real professional headshot&#39; and uses a penguin emoji identity”</div></li>
+<li class="text-sm"><div class="font-medium">Responsible disclosure
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;i reported everything. they patched it.&#34; and thanked faculty for support”</div></li>
+<li class="text-sm"><div class="font-medium">Credit and gratitude to collaborators
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;huge thanks to college faculty&#34;; names teammates in every project”</div></li>
+<li class="text-sm"><div class="font-medium">Trying despite uncertainty
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;Not everything is meant to be, But Everything Is Worth A TRY&#34; ~ Osamu Dazai”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Technically fearless and resourceful
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reverse-engineered undocumented endpoints and chained four small security gaps”</div></li>
+<li class="text-sm"><div class="font-medium">Honest about progress
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;am i there yet? no. i&#39;m early, the pipeline is young.&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Playful, self-aware humour
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;ahh I guess as this is LinkedIn, I should &#39;Share My So Called Achievements&#39;&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Fast, multi-domain learner
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#34;6 months ago i had never written a single trading strategy&#34;”</div></li>
+<li class="text-sm"><div class="font-medium">Entrepreneurial across ventures
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder in cyber, FMCG brand, and a scaled agency; web dev for an agency at 20”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Studied or affiliated with ITM Group of Institutions
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Listed on LinkedIn profile alongside Walrus Securitas”</div></li>
+<li class="text-sm"><div class="font-medium">Based in or connected to India
+  <a class="src src-in" href="https://www.linkedin.com/in/anshumanatrey/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“LinkedIn shows India; built a UPI ID OSINT tool tagged with 🇮🇳”</div></li>
+<li class="text-sm"><div class="font-medium">Uses a penguin emoji as a signature
+  <a class="src src-IG" href="https://www.instagram.com/atrey.dev/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Bio 🐧 and name &#34;Anshuman Atrey 🐧&#34;”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="display text-sm">Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">93</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 93%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">76</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 76%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">58</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 58%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">62</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 62%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 70%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Openness is very high given polymath bio, cross-domain projects and philosophical references. Conscientiousness is solid from shipped projects, though the output is bursty. Extraversion is moderate: 7K LinkedIn followers and very public sharing, but only 140 Instagram followers and three posts. Agreeableness is decent from credit-sharing and ethical disclosure, tempered by a defiant streak. Stability is inferred as fairly high from his relaxed, joking tone about setbacks.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> ambivert · <b>Love language:</b> time <span class="text-stone-500">(Inference: he gives heavy focus to collaborators and builds custom tools for friends (&#39;a custom API for my friend running a FMCG brand&#39;), suggesting acts of service and shared time, with time as the best guess.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="display text-sm">Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Lowercase, casual, punchy; heavy emoji (🥂🚀✨💀👀); arrows and bullet lists; English with self-deprecating and cheeky humour</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Uses arrows (→) and short bullet lists to explain</span><span class="chip-muted">Ends with a hook like &#39;next one drops next week 👀&#39;</span><span class="chip-muted">Puts 🥂 after wins</span><span class="chip-muted">Drops anime and philosophical references</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“i tested them together.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“am i there yet? no. i&#39;m early, the pipeline is young.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“i find the bug your scanner can&#39;t see”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="display text-sm">Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and bursty: multiple projects and competitions in a few months</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Collaborative in teams, publicly vocal online, but sparse personal Instagram (about 0.4 posts a month)</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Attended a hackathon finale in Bangalore; otherwise not shown</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Not shown in the sources</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Founder and builder across security, AI, SaaS and quant; consulting and contracting</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Grow Walrus Securitas into a black-hat-minded security firm</li><li>Advance in quant research and earn beyond the $3,500/month consultant cap (inference from &#39;am i there yet? no&#39;)</li><li>Keep applying automation and AI to new domains, &#39;the next one drops next week&#39;</li><li>Eventually retire to farmland</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Reports vulnerabilities responsibly and gets thanked</li><li>Credits teammates and mentors publicly</li><li>Honest about not being &#39;there yet&#39;</li><li>Has a sense of humour about himself and his profile</li><li>Curious and keeps learning new fields</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Bursty, all-consuming project sprints could crowd out availability</li><li>Sparse personal social presence makes his off-work life hard to read</li><li>A strong contrarian streak against conventions may clash with more traditional expectations</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Partner who demands a conventional, polished public image (inference)</li><li>Someone dismissive of his unconventional path or references (inference)</li><li>Lack of curiosity or interest in building things (inference)</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="display text-sm">Looking for</h3><p class="text-sm mt-2">Someone curious and playful who enjoys ideas, doesn&#39;t need him to fit a corporate mold, and is happy to let him geek out on projects. Ideally a warm, grounded teammate who can share the anime, philosophy and eventual quiet farmland life.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Moderate on professional persona, which is richly documented on LinkedIn. Low on personal life: Instagram has only three captionless posts, with no places, circle or hobbies visible, and no relationship, age or location detail beyond India. Anime, farming and philosophy notes come from a single post and bio, so treat them as light signals; &#39;gaming&#39; and &#39;outdoors&#39; tags are weak inferences.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="display text-sm">Anshuman's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/35/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Shradha Khapra</div><div class="text-xs text-stone-500">☕ → 🧗 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+      <a href="/cyrano-agentic-dating/arc/36/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Anushka Rathod</div><div class="text-xs text-stone-500">☕ → 🎤 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+      <a href="/cyrano-agentic-dating/arc/37/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Masoom Minawala Mehta</div><div class="text-xs text-stone-500">☕ → 🧗 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="display text-sm">Who fits Anshuman best</h3><a href="/cyrano-agentic-dating/rankings/#atrey.dev" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">A<img src="/photos/anushkarathod98.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/anushkarathod98/" class="text-sm font-semibold hover:text-rose-600">Anushka Rathod</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🎤 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/36/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">70</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">S<img src="/photos/shradhakhapra.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/shradhakhapra/" class="text-sm font-semibold hover:text-rose-600">Shradha Khapra</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🧗 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/35/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">68</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">M<img src="/photos/masoomminawala.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/masoomminawala/" class="text-sm font-semibold hover:text-rose-600">Masoom Minawala Mehta</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🧗 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/37/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">67</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 67</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">57</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">J<img src="/photos/jessicachenpage.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/jessicachenpage/" class="text-sm font-semibold hover:text-rose-600">Jessica Chen</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 65</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">55</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">V<img src="/photos/your.richbff.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/your.richbff/" class="text-sm font-semibold hover:text-rose-600">Vivian Tu</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 62</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">53</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">E<img src="/photos/erikankullberg.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/erikankullberg/" class="text-sm font-semibold hover:text-rose-600">Erika Kullberg</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 62</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">53</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">S<img src="/photos/sabrina_ramonov.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/sabrina_ramonov/" class="text-sm font-semibold hover:text-rose-600">Sabrina Ramonov</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 62</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">52</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">A<img src="/photos/the.datascience.gal.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/the.datascience.gal/" class="text-sm font-semibold hover:text-rose-600">Aishwarya Srinivasan</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 61</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">52</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanyakhanijow.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanyakhanijow/" class="text-sm font-semibold hover:text-rose-600">Tanya Khanijow</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 52</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">44</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

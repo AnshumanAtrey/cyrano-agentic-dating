@@ -53,9 +53,36 @@ IG_MOBILE_UA = ("Instagram 219.0.0.12.117 Android (31/12; 420dpi; 1080x2400; sam
 _ig_lock = threading.Lock()
 
 
+def _ig_apify(user: str) -> dict:
+    """On a cloud host Instagram blocks the server's IP, so Apify's Instagram actor (residential proxies) reads it."""
+    r = requests.post("https://api.apify.com/v2/acts/apify~instagram-profile-scraper/run-sync-get-dataset-items",
+                      params={"token": os.environ["APIFY_TOKEN"], "timeout": 120}, json={"usernames": [user]}, timeout=180)
+    items = r.json() if r.status_code < 400 else []
+    it = next((i for i in items if isinstance(i, dict) and (i.get("username") or "").lower() == user), None)
+    if not it:
+        raise ScrapeError(f"Instagram @{user} not found")
+    posts = [{"caption": p.get("caption") or "", "ts": p.get("timestamp"), "type": p.get("type"), "likes": p.get("likesCount"),
+              "comments": p.get("commentsCount"), "url": p.get("url"), "alt": p.get("alt"), "location": p.get("locationName"),
+              "hashtags": p.get("hashtags") or [], "mentions": p.get("mentions") or [], "owner": p.get("ownerUsername"),
+              "tagged": [t.get("username") for t in p.get("taggedUsers") or [] if isinstance(t, dict) and t.get("username")]}
+             for p in it.get("latestPosts") or []]
+    return {"username": user, "full_name": it.get("fullName"), "bio": it.get("biography"), "followers": it.get("followersCount"),
+            "following": it.get("followsCount"), "posts_count": it.get("postsCount"), "private": bool(it.get("private")),
+            "verified": it.get("verified"), "category": it.get("businessCategoryName"), "external_url": it.get("externalUrl"),
+            "pic": it.get("profilePicUrlHD") or it.get("profilePicUrl"), "pronouns": None,
+            "url": f"https://www.instagram.com/{user}/", "posts": posts[:12]}
+
+
 def scrape_instagram_one(user: str) -> dict:
     """Mobile web_profile_info first (profile + 12 posts with captions); if Instagram throttles it,
-    a real logged-out browser reads the profile JSON embedded in the page plus the 12-post grid."""
+    a real logged-out browser reads the profile JSON embedded in the page plus the 12-post grid.
+    With APIFY_TOKEN set (cloud deploys), Apify's Instagram actor goes first."""
+    if os.environ.get("APIFY_TOKEN"):
+        try:
+            return _ig_apify(user)
+        except (ScrapeError, requests.RequestException, ValueError) as e:
+            if "not found" in str(e):
+                raise
     try:
         return _ig_mobile(user)
     except ScrapeError as e:
@@ -293,18 +320,22 @@ def scrape(pairs: list[tuple[str, str]], log=print) -> tuple[dict, dict]:
         except ScrapeError as e:
             errors[ig] = str(e)
     igs = {}
-    try:  # probe the fast endpoint once; if it's throttled, send everyone through the browser
-        first = norm[0][1] if norm else None
-        if first:
-            igs[first] = _ig_mobile(first)
-            for _, u in norm[1:]:
-                try:
-                    igs[u] = _ig_mobile(u)
-                except ScrapeError as e:
-                    igs[u] = e
-    except ScrapeError:
-        log("Instagram's mobile API is throttled here; reading profiles in a real logged-out browser")
-        igs = scrape_instagram_browser([u for _, u in norm])
+    if os.environ.get("APIFY_TOKEN"):  # cloud: Apify first, per person
+        for _, u in norm:
+            igs[u] = _safe(scrape_instagram_one, u)
+    else:
+        try:  # probe the fast endpoint once; if it's throttled, send everyone through the browser
+            first = norm[0][1] if norm else None
+            if first:
+                igs[first] = _ig_mobile(first)
+                for _, u in norm[1:]:
+                    try:
+                        igs[u] = _ig_mobile(u)
+                    except ScrapeError as e:
+                        igs[u] = e
+        except ScrapeError:
+            log("Instagram's mobile API is throttled here; reading profiles in a real logged-out browser")
+            igs = scrape_instagram_browser([u for _, u in norm])
     retry = [u for u, v in igs.items() if isinstance(v, ScrapeError) and "not found" not in str(v)]
     if retry and len(retry) < len(norm):
         igs.update(scrape_instagram_browser(retry))

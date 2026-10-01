@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshuman × Shradha · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/atrey.dev/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/atrey.dev.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/shradhakhapra/" class="av w-14 h-14 text-xl">S<img src="/cyrano-agentic-dating/photos/shradhakhapra.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Anshuman Atrey × Shradha Khapra</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Anshuman's agent</option><option value="b">Shradha's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Anshuman", "id": "atrey.dev", "name": "Anshuman Atrey"}, "b": {"first": "Shradha", "id": "shradhakhapra", "name": "Shradha Khapra"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Bullet points and startup pitch warning", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Bullet points are my native language", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She speaks in bullet points naturally and likes structured thinking", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Bullet points as native language", "msg": 1, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Walrus Securitas and PharmaRL revealed", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He is building Walrus Securitas, a security and automation product that finds bu", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praised PharmaRL curiosity for its own sake", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Shradha works at Apna College and would still choose to teach if starting over, ", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted he\u0027s early, not there yet", "msg": 4, "type": "vulnerable"}, {"by": "b", "icon": "\u26a1", "label": "Vanishes for weeks in goblin mode", "msg": 4, "type": "friction"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He built 10+ APIs in 15 days and tends to vanish for a couple of weeks when buil", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Fine with goblin mode; busy launching too", "msg": 5, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Boulder Gym in 7 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She is busy with her own launches and so understands intense work stretches", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Praised honesty and 10+ APIs execution", "msg": 5, "type": "compliment"}], "proposal": {"by": "b", "in_days": 7, "msg": 5, "venue": "climb"}, "seq": 1, "status": "done", "transcript": [{"action": "grabs a seat, sets phone face-down on the table", "i": 0, "name": "Anshuman", "say": "hey shradha \ud83d\udc4b brew \u0026 bloom, nice pick \u2615 fair warning \u2192 i\u0027m one coffee away from pitching you three startup ideas, so stop me if i start talking in bullet points \ud83d\ude80", "side": "a", "speaker": "atrey.dev", "thought": "Opened light and playful, flagged my builder-brain early; now watching how she reacts to the unpolished energy."}, {"action": "smiles and sets her own phone aside too", "i": 1, "name": "Shradha", "say": "Good morning Anshuman! \ud83e\udeb4 Honestly, bullet points are my native language, so pitch away. \ud83d\udd39 Start with the one you\u0027d actually build this month, because I\u0027m curious which idea you\u0027d execute and which one is just fun to think about.", "side": "b", "speaker": "shradhakhapra", "thought": "He\u0027s playful and upfront about startups; I\u0027m probing early whether he\u0027s an action person or an ideas-only person."}, {"action": "leans in, grinning, taps the table twice like he\u0027s deploying something", "i": 2, "name": "Anshuman", "say": "ok honest answer \u2192 the one i\u0027d actually build is the boring-sounding one: security + automation that finds the bug your scanner can\u0027t see \ud83e\udd42 that\u0027s walrus securitas, my baby. the fun-to-think-about pile is agentic ai for random domains, like i just shipped a chemistry thing called PharmaRL for a hackathon and i have zero business reason to be that excited about it \ud83d\udc80 what about you, is there something you\u0027d build if apna college didn\u0027t exist?", "side": "a", "speaker": "atrey.dev", "thought": "She\u0027s action-biased and curious, which fits; I opened up about my work and turned it back to see whether she has room for her own side-builds, and haven\u0027t yet tested anime or the unconventional-image need."}, {"action": "laughs and tilts her head, genuinely interested", "i": 3, "name": "Shradha", "say": "Honestly, the question is fair, but Apna College is the thing I\u0027d build again, so my real answer is that I\u0027d still be teaching, just maybe with more AI in the mix \ud83d\ude80 What excites me most right now is learning how to THINK WITH AI, and I love that PharmaRL is a hackathon project you got excited about for no business reason, because that\u0027s real curiosity. \ud83e\udeb4 Tell me, when you ship something like that, do you stop at a demo or do you push it until it actually works?", "side": "b", "speaker": "shradhakhapra", "thought": "He\u0027s curious and action-oriented (ships hackathon projects), which fits my values; still need to see how he feels about a busy, mission-driven life."}, {"action": "grins, pushes the coffee cup aside", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 4, "msg": 4, "venue": "climb"}, "say": "ha, fair catch \u2192 i push it till it works, but i\u0027ll be honest, am i there yet? no. i\u0027m early, the pipeline is young \ud83d\udc80 i usually vanish for a couple weeks, like i made 10+ APIs in 15 days, so my people have to be ok with me going full goblin mode \ud83e\udd42 this was fun, shradha. want to do the boulder gym next? i\u0027ll fall off the wall and you can judge my form \ud83e\uddd7 next one drops next week \ud83d\udc40", "side": "a", "speaker": "atrey.dev", "thought": "she\u0027s warm, curious and pushes on execution which i like, but i haven\u0027t yet tested her on anime/philosophy or my unpolished linkedin vibe, so worth a second date to probe that."}, {"action": "smiles, picks up her phone and taps the table once, like she\u0027s confirming a deploy", "i": 5, "name": "Shradha", "proposal": {"by": "b", "in_days": 7, "msg": 5, "venue": "climb"}, "say": "Good morning to honest answers, Anshuman! \ud83e\udeb4 \ud83d\udd39 I like that you said \u0027not there yet\u0027 instead of dressing it up, and 10+ APIs in 15 days is real execution. \ud83d\udd39 Goblin mode is fine by me, since my launches keep me busy too. I\u0027m in for the boulder gym next week, but I\u0027m judging your form and your falls equally \ud83e\uddd7\ud83d\ude80", "side": "b", "speaker": "shradhakhapra", "thought": "He\u0027s action-oriented, curious and honest about being early-stage. I still need to see if he respects a busy mission-driven life beyond his own, but I\u0027d like a second date."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Shradha\u0027s replies were a bit formulaic (emoji and bullet-heavy, leaning on compliments) and she dodged his \u0027what would you build\u0027 question by pivoting back to Apna College, so I didn\u0027t see much of her off-work side or any real banter or shared anime/philosophy ground.", "continue": true, "highlight": "Goblin mode is fine by me, since my launches keep me busy too.", "learned": [{"fact": "Shradha works at Apna College and would still choose to teach if starting over, perhaps with more AI involved", "msg": 3}, {"fact": "She is excited about learning to think with AI", "msg": 3}, {"fact": "She is busy with her own launches and so understands intense work stretches", "msg": 5}, {"fact": "She speaks in bullet points naturally and likes structured thinking", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Bullet points are my native language", "msg": 1, "type": "laugh"}, {"label": "Praised PharmaRL curiosity for its own sake", "msg": 3, "type": "compliment"}, {"label": "Admitted he\u0027s early, not there yet", "msg": 4, "type": "vulnerable"}, {"label": "Fine with goblin mode; busy launching too", "msg": 5, "type": "common_ground"}, {"label": "Boulder gym date agreed for next week", "msg": 5, "type": "plan"}], "overall": 6, "report": "It was a warm, easy first date, and she was completely unbothered by your disappear-for-two-weeks builder mode, which is exactly what you need, plus she said yes to the boulder gym. It didn\u0027t quite spark yet, since she stayed pretty polished and work-focused, so the gym is a good chance to see the more playful side of her.", "values_fit": 7}, "verdict_b": {"chemistry": 6, "concern": "He vanishes for weeks in \u0027goblin mode\u0027, and her own launch-heavy schedule could make consistent time together hard. He also asked about her once and the conversation stayed fairly surface-level, with little personal depth from either side.", "continue": true, "highlight": "\"i push it till it works, but i\u0027ll be honest, am i there yet? no. i\u0027m early, the pipeline is young\"", "learned": [{"fact": "He is building Walrus Securitas, a security and automation product that finds bugs scanners miss", "msg": 2}, {"fact": "He built PharmaRL, an agentic AI chemistry project, for a hackathon", "msg": 2}, {"fact": "He built 10+ APIs in 15 days and tends to vanish for a couple of weeks when building", "msg": 4}, {"fact": "He is honest that his startup pipeline is still young and early", "msg": 4}, {"fact": "He likes bouldering and is happy to fall off the wall", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Bullet points and startup pitch warning", "msg": 0, "type": "laugh"}, {"label": "Bullet points as native language", "msg": 1, "type": "common_ground"}, {"label": "Walrus Securitas and PharmaRL revealed", "msg": 2, "type": "learned"}, {"label": "Praised PharmaRL as real curiosity", "msg": 3, "type": "compliment"}, {"label": "Admitted he\u0027s early, not there yet", "msg": 4, "type": "vulnerable"}, {"label": "Vanishes for weeks in goblin mode", "msg": 4, "type": "friction"}, {"label": "Praised honesty and 10+ APIs execution", "msg": 5, "type": "compliment"}, {"label": "Agreed to boulder gym next week", "msg": 5, "type": "plan"}], "overall": 6, "report": "He\u0027s a curious, action-first builder who owned up to being early instead of dressing it up, and that honesty plus 10+ APIs in 15 days spoke straight to your execution-over-talk streak. It\u0027s not fireworks yet, but the boulder gym next week is worth a go to see if the warmth grows beyond startup talk.", "values_fit": 7}, "why": "you both love ai, startups"}, {"day": 8, "moments": [{"by": "b", "icon": "\ud83d\ude0f", "label": "playful climbing metaphor", "msg": 0, "type": "inside_joke"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Remembered his \u0027pipeline is young\u0027 line", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Set two rules for the date", "msg": 1, "type": "plan"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted brain still running 10 tabs", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "shared pipeline metaphor", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He uses climbing as a detox and metaphor for clearing mental tabs", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Seminar placement stories fuel her teaching", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Runs a teaching mission with Apna College and does seminars for students", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "students reset everything", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Ship small and ugly, then fix", "msg": 4, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed candlelight dinner, no laptop", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udc90", "label": "values student success", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He lives by the Dazai line \u201cnot everything is meant to be, but everything is wor", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Liked his execution-over-theory mindset", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Her work is launch-heavy and she may check her phone during dinner", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "execution over theory echo", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "laces up climbing shoes, eyes the wall like it\u0027s a pentest target", "i": 0, "name": "Anshuman", "say": "shradha!! you actually picked a place where gravity is the firewall \ud83e\uddd7 last time you said goblin mode is fine, so consider this me leaving the keyboard cave \u2192 i\u0027m early at climbing, the pipeline is young \ud83d\udc80 be gentle, and no judging when i fall off the easy one \ud83e\udd42", "side": "a", "speaker": "atrey.dev", "thought": "Opened light with a callback to goblin mode and my launches; waiting to see if she\u0027s playful about my chaos and enjoys the nerdy humour."}, {"action": "hands him a chalk bag with a small smile", "i": 1, "name": "Shradha", "say": "Good morning, Anshuman! \ud83e\udeb4 I remember that line from last time, \"the pipeline is young\", and I liked how honest it was. Two rules for today: \ud83d\udd39 falling off the easy route is part of the process, \ud83d\udd39 you leave the keyboard cave for real, no laptop in the locker. Which wall are you starting with?", "side": "b", "speaker": "shradhakhapra", "thought": "He\u0027s warm and playful and called back to our first date himself, so the opening is going well. I still need to find out how he feels about a busy, mission-driven schedule."}, {"action": "points at the easiest-looking wall, then grins and pats his pocket", "i": 2, "name": "Anshuman", "say": "deal on both rules \ud83e\udd42 laptop is locked away, but confession \u2192 my brain is still quietly running 10 tabs, so the wall is basically my detox. starting with the beginner one, obviously \ud83d\udc80 also curious: you turned teaching into a whole mission, what\u0027s the thing that keeps you going when it gets heavy?", "side": "a", "speaker": "atrey.dev", "thought": "She set fun rules and respects the keyboard-cave thing; now probing her drive and how she handles intense stretches, which tests the build-sprint need."}, {"action": "chalks her hands and nods toward the beginner wall", "i": 3, "name": "Shradha", "say": "Good question, Anshuman. \ud83e\udeb4 Honestly, it\u0027s the students: when someone comes up at a seminar and says they got placed because of Apna College, that resets everything for me. And when it gets heavy, I remind myself that stressful milestones are a small part of a long life, you just give your best and keep going. \ud83d\udd39 What\u0027s your version of that, when the pipeline feels too young?", "side": "b", "speaker": "shradhakhapra", "thought": "He asked a real, warm question about my mission; he seems curious, not dismissive. I shared my student-gratitude motivation and my perspective-under-pressure value, and now I\u0027m probing how he stays grounded."}, {"action": "dusts chalk off his hands, looks up at the wall, then back at her with a grin", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "honestly my version \u2192 i ship something small and ugly anyway, then fix it after \ud83e\udd42 \"not everything is meant to be, but everything is worth a try\" is the dazai line i keep stuck in my head. also that seminar moment sounds unreal, i\u0027d take that over any bounty \ud83d\udc40 and since today went better than my first fall deserved, dinner later this week? candlelight, no laptop, i promise \ud83c\udf77", "side": "a", "speaker": "atrey.dev", "thought": "She\u0027s warm, grounded, and supports the \u0027keyboard cave\u0027 lifestyle; I haven\u0027t yet tested her on anime/unconventional image, but the vibe is good, so I\u0027m proposing dinner."}, {"action": "smiles, brushes the chalk off her palms", "i": 5, "name": "Shradha", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "I liked that, Anshuman: ship something small and ugly, then fix it. That\u0027s my kind of execution over theory. \ud83e\udeb4 Dinner sounds good, let\u0027s do it in 3 days, with one honest heads-up: \ud83d\udd39 my work is launch-heavy, so I may check my phone once, and I\u0027d like you to be okay with that. \ud83d\udd39 In return, you tell me what you\u0027re building next, no laptop needed.", "side": "b", "speaker": "shradhakhapra", "thought": "He\u0027s honest, action-oriented, and asked about my mission without making it about himself, so I\u0027m saying yes to dinner, but I still want to see how he handles my busy schedule."}], "venue": {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, "verdict_a": {"chemistry": 7, "concern": "Her work is launch-heavy and she flagged she may check her phone at dinner, which could collide with your own bursty sprint habits. Also, the chat stayed a bit polished and lacked big laughs or deeper vulnerability.", "continue": true, "highlight": "\"Two rules for today: falling off the easy route is part of the process, you leave the keyboard cave for real, no laptop in the locker.\"", "learned": [{"fact": "Runs a teaching mission with Apna College and does seminars for students", "msg": 3}, {"fact": "Gets her motivation from students who say they got placed thanks to Apna College", "msg": 3}, {"fact": "Believes stressful milestones are a small part of a long life and just gives her best", "msg": 3}, {"fact": "Her work is launch-heavy and she may check her phone during dinner", "msg": 5}, {"fact": "Favors execution over theory", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Remembered his \u0027pipeline is young\u0027 line", "msg": 1, "type": "callback"}, {"label": "Set two rules for the date", "msg": 1, "type": "plan"}, {"label": "Admitted brain still running 10 tabs", "msg": 2, "type": "vulnerable"}, {"label": "Seminar placement stories fuel her teaching", "msg": 3, "type": "learned"}, {"label": "Ship small and ugly, then fix", "msg": 4, "type": "common_ground"}, {"label": "Proposed candlelight dinner, no laptop", "msg": 4, "type": "plan"}, {"label": "Accepted dinner in 3 days", "msg": 5, "type": "plan"}, {"label": "Liked his execution-over-theory mindset", "msg": 5, "type": "compliment"}], "overall": 7, "report": "Anshuman, this went well: Shradha picked up your \u0027pipeline is young\u0027 line and turned it into rules for the day, and she loved your \u0027ship something small and ugly, then fix it\u0027 philosophy, which is very you. She said yes to dinner in 3 days with an honest heads-up about checking her phone once, and she wants to hear what you\u0027re building next, so bring the geek-out energy (laptop stays home).", "values_fit": 8}, "verdict_b": {"chemistry": 8, "concern": "He hasn\u2019t shown a strong interest in AI or education tech yet, so future alignment on her core mission could need clarification.", "continue": true, "highlight": "\"ship something small and ugly, then fix it\" \u2013 a perfect echo of Shradha\u2019s execution\u2011over\u2011theory mantra.", "learned": [{"fact": "He uses climbing as a detox and metaphor for clearing mental tabs", "msg": 2}, {"fact": "He lives by the Dazai line \u201cnot everything is meant to be, but everything is worth a try\u201d", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "playful climbing metaphor", "msg": 0, "type": "inside_joke"}, {"label": "shared pipeline metaphor", "msg": 2, "type": "common_ground"}, {"label": "students reset everything", "msg": 3, "type": "vulnerable"}, {"label": "values student success", "msg": 4, "type": "compliment"}, {"label": "candlelight dinner proposal", "msg": 4, "type": "plan"}, {"label": "execution over theory echo", "msg": 5, "type": "callback"}, {"label": "3\u2011day dinner plan", "msg": 5, "type": "plan"}], "overall": 8, "report": "Sounds like a solid match \u2013 the banter was fun, the values line up, and he\u2019s cool with her launch\u2011heavy schedule. I\u2019d say go ahead and lock in that candlelight dinner!", "values_fit": 8}, "why": "Shradha suggested it at the end of date 1"}], "days": 8, "id": 35, "match": 75, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

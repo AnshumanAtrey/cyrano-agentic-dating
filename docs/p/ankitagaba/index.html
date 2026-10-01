@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankita Gaba · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<section class="card p-6 flex flex-col sm:flex-row gap-6">
+  <span class="av w-28 h-28 text-3xl">A<img src="/photos/ankitagaba.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+  <div class="flex-1 min-w-0">
+    <h1 class="display text-3xl font-bold">Ankita Gaba</h1>
+    <div class="text-stone-600">Cross-functional business leader with 16+ years building and scaling businesses, now at Better Nutrition; cofounder of Raja Rani aur Hathi</div>
+    <div class="text-sm text-stone-500 mt-0.5">📍 Mumbai, Maharashtra, India</div>
+    <p class="display italic text-xl mt-3 grad-text">“Builder with 16 years of scaling brands, backing founders and good food”</p>
+    <p class="text-stone-700 mt-2 max-w-3xl">Ankita is a Mumbai-based operator with 16+ years of experience building and scaling businesses, currently at Better Nutrition and cofounder of Raja Rani aur Hathi. She is driven by helping other founders and brands grow, and she uses her network to recommend people she trusts, hire, and connect. She seems practical, generous with introductions, and quick to back good work publicly.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="src src-IG" href="https://www.instagram.com/ankitagaba/" target="_blank" rel="noopener">Instagram ↗</a>
+      <span class="chip-muted">startups</span><span class="chip-muted">marketing</span><span class="chip-muted">content</span><span class="chip-muted">food</span><span class="chip-muted">wellness</span><span class="chip-muted">social-impact</span><span class="chip-muted">sustainability</span><span class="chip-muted">education</span>
+    </div>
+  </div>
+</section>
+
+<section class="card p-5 mt-5">
+  <h3 class="display text-sm">What the agent measured</h3>
+  <p class="text-xs text-stone-500">Computed straight from the posts in plain Python, then handed to the analysis agent as hard evidence.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mt-3 text-center">
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">12</div><div class="text-[11px] text-stone-500">posts read</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">words / caption</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">emoji / post</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">—</div><div class="text-[11px] text-stone-500">Hinglish posts</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">1.3</div><div class="text-[11px] text-stone-500">posts / month</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">100%</div><div class="text-[11px] text-stone-500">video share</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">people tagged</div></div>
+    
+    <div class="rounded-md bg-[#f3efe9] py-3"><div class="display text-xl font-bold">0</div><div class="text-[11px] text-stone-500">avg likes</div></div>
+    
+  </div>
+  
+</section>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Needs</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">A partner who respects and supports a demanding entrepreneurial schedule
+  <a class="src src-IG" href="https://www.instagram.com/ankitagaba/" target="_blank" rel="noopener">IG ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: she runs a cofounder role, advisory work and a consulting-style side practice, so her time is likely full of work.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“BIO: Cofounder @rajaraniaurhathi; LI: &#39;Cross functional leader with 16+ years experience in building &amp; scaling businesses&#39;; LINK: topmate.io/ankitagaba”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who shares her enthusiasm for collaboration and mutual help
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: she sets up spaces where people help each other and shares opportunities often.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;started a small WhatsApp group for startup owners who want to help each other grow through collaboration + barter&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Someone who backs others and shows integrity in how they work
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: she publicly praises people for their work ethic and delivery.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Not everyday a company impresses me... Great work ethics.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A partner who is patient and can commit to a long game
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: she celebrates &#39;a long, patient and often an anti-trend journey&#39; that she believes in.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reposted Better Nutrition anniversary post: &#39;Still building. Still pushing. Still stubborn.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">A person who is curious about her work without expecting her to explain it constantly
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  <div class="text-stone-600 text-xs mt-0.5">Inference: her work spans marketing, nutrition and startups, so a partner who is comfortable with that range would fit.</div>
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Posts on affiliate marketing, influencer onboarding, nutrition and insurance recommendations”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Hobbies</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Making short video content
+  <a class="src src-IG" href="https://www.instagram.com/p/DJch8hXI2ZO/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“All 12 Instagram posts are videos, from July 2024 to May 2025 (video share 1.0)”</div></li>
+<li class="text-sm"><div class="font-medium">Connecting people and sharing opportunities
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Posts hiring for a remote part-time influencer outreach role and asks for agency recommendations”</div></li>
+<li class="text-sm"><div class="font-medium">Hosting or joining founder communities
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“WhatsApp group for startup owners built around collaboration and barter”</div></li>
+<li class="text-sm"><div class="font-medium">Reposting and cheering on other founders&#39; milestones
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Shared the Better Nutrition one-year post: &#39;Happy and proud to become a small part of this promise and journey.&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Interests</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Nutrition and food quality
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Headline &#39;Better Nutrition&#39;; shared a post on getting &#39;nutrition back into our food&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Startups and entrepreneurship
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“BIO: Cofounder; shared Shark Tank India follow-up post; founder-community WhatsApp group”</div></li>
+<li class="text-sm"><div class="font-medium">Marketing, affiliate and influencer channels
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Seeking affiliate marketing agencies and influencers for brand collabs”</div></li>
+<li class="text-sm"><div class="font-medium">Women entrepreneurs
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reshared an offer for &#39;women entrepreneurs&#39; ahead of Women&#39;s Day”</div></li>
+<li class="text-sm"><div class="font-medium">Mental health as a category
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Reposted a Thought Pudding hiring post on mental health care (a repost, so this is a weaker signal)”</div></li>
+<li class="text-sm"><div class="font-medium">Sustainable, farm-first food systems
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;nutrition should be created on the farm, through better seeds and better soil&#39; (shared post)”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Values</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Good work ethics and quality
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Not everyday a company impresses me. But Inka Insurance did... Great work ethics.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Persistence and long-term building
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Shared: &#39;long, patient and often an anti-trend journey. But one we deeply believe in.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Mutual support and collaboration
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Founder group built on &#39;help each other grow through collaboration + barter&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Belief in natural, root-cause solutions
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Shared: &#39;Nutrition should be created on the farm... not added later in factories.&#39;”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Other qualities</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Generous with her network
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Ankita can introduce you to 6 people at Better Nutrition&#39;; recommends vetted people and asks for tags”</div></li>
+<li class="text-sm"><div class="font-medium">Experienced operator
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Cross functional leader with 16+ years experience in building &amp; scaling businesses&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Publicly loyal to people she has worked with
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Have also worked with the founders in the past.&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Consistent and active on LinkedIn
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“About 9K followers, 500+ connections, multiple posts in recent months”</div></li>
+
+</ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Things only a friend would know</h3><ul class="mt-3 space-y-3">
+<li class="text-sm"><div class="font-medium">Based in Mumbai, Maharashtra, India
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“&#39;Mumbai, Maharashtra, India&#39;”</div></li>
+<li class="text-sm"><div class="font-medium">Studied at Welingkar Institute of Management
+  <a class="src src-in" href="https://www.linkedin.com/in/ankitagaba/" target="_blank" rel="noopener">in ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“Listed education on her profile”</div></li>
+<li class="text-sm"><div class="font-medium">Cofounder of Raja Rani aur Hathi
+  <a class="src src-IG" href="https://www.instagram.com/ankitagaba/" target="_blank" rel="noopener">IG ↗</a></div>
+  
+  <div class="text-stone-500 text-xs mt-0.5 italic">“BIO: Cofounder @rajaraniaurhathi”</div></li>
+
+</ul></section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5">
+    <h3 class="display text-sm">Personality <span class="text-xs font-normal text-stone-400">(inferred)</span></h3>
+    
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Openness</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 70%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Conscientiousness</span><span class="text-stone-500">78</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 78%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Extraversion</span><span class="text-stone-500">68</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 68%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Agreeableness</span><span class="text-stone-500">72</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 72%"></div></div></div>
+    
+    
+    <div class="mt-3"><div class="flex justify-between text-xs"><span>Emotional stability</span><span class="text-stone-500">70</span></div>
+      <div class="h-2 bg-[#efebe5] mt-1"><div class="h-2" style="background:var(--accent)" style="width: 70%"></div></div></div>
+    
+    <p class="text-xs text-stone-500 mt-3">Scores are inferences from thin data. Conscientiousness comes from 16+ years of scaling work and practical, structured posts. Extraversion and agreeableness come from her network building, public praise and community groups. Openness comes from her range across nutrition, marketing and startups and from her video content. Her Instagram has no captions or visible people, so her personal side is largely unseen.</p>
+    <p class="text-xs mt-2"><b>Energy:</b> extrovert · <b>Love language:</b> acts <span class="text-stone-500">(Inference: she shows care by recommending people, making introductions and opening up opportunities, which are practical gestures rather than sentimental ones.)</span></p>
+  </section>
+  <section class="card p-5">
+    <h3 class="display text-sm">Voice</h3>
+    <p class="text-sm text-stone-700 mt-2">Short, direct, professional and warm; little emoji and plain English in her own posts. Her LinkedIn posts read like practical asks or recommendations.</p>
+    <div class="flex flex-wrap gap-1 mt-2"><span class="chip-muted">Ends posts with a clear call to action such as &#39;Kindly comment&#39; or &#39;Check them out&#39;</span><span class="chip-muted">Asks people to tag others or comment for reach</span><span class="chip-muted">Gives short, blunt praise</span><span class="chip-muted">Uses hashtags like #hiring and #Remote in her posts</span></div>
+    <div class="mt-3 space-y-2"><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Not everyday a company impresses me.”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Need Help!”</div><div class="text-sm italic border-l-2 border-[#d6cfc6] pl-3">“Happy and proud to become a small part of this promise and journey.”</div></div>
+  </section>
+  <section class="card p-5">
+    <h3 class="display text-sm">Lifestyle</h3>
+    <dl class="mt-2 text-sm space-y-1.5"><div><dt class="text-xs font-semibold text-stone-500 uppercase">pace</dt><dd>Fast and busy: multiple roles, frequent posting and a hustle-oriented circle (inference).</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">social</dt><dd>Network-driven and community-oriented; her social life is likely tied to the founder and marketing world.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">travel</dt><dd>Unknown; nothing in the sources shows travel.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">fitness</dt><dd>Unknown; nothing in the sources shows fitness habits.</dd></div><div><dt class="text-xs font-semibold text-stone-500 uppercase">work</dt><dd>Cross-functional operator and cofounder who also hires, recommends vendors and works with brands; her Topmate link suggests she offers consulting or mentoring.</dd></div></dl>
+    <div class="text-xs font-semibold text-stone-500 uppercase mt-3">Ambitions</div><ul class="text-sm list-disc pl-4"><li>Keep building and scaling businesses, including Raja Rani aur Hathi and her work with Better Nutrition</li><li>Help brands she backs reach more customers through marketing and influencer channels</li><li>Grow a collaborative founder community</li></ul>
+  </section>
+</div>
+
+<div class="grid lg:grid-cols-3 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Green flags</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Publicly credits and recommends people she trusts</li><li>Brings up others&#39; wins, not just her own</li><li>Steady, long-term commitment to her work</li><li>Open about asking for help</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Possible friction</h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>Work appears to take up a lot of her attention, so time together may need to be protected</li><li>Her online presence is mostly professional, so her personal side is hard to read from the sources</li><li>Promotional and hiring posts suggest she is always &#39;on&#39; for opportunities</li></ul></section>
+  <section class="card p-5"><h3 class="display text-sm">Dealbreakers <span class="text-xs font-normal text-stone-400">(inferred)</span></h3><ul class="text-sm list-disc pl-4 mt-2 space-y-1"><li>A partner who dismisses entrepreneurship or long-haul building</li><li>Someone who is careless about quality or treats people transactionally (inference)</li><li>A person who finds a busy, networked lifestyle hard to accept</li></ul></section>
+</div>
+<section class="card p-5 mt-5"><h3 class="display text-sm">Looking for</h3><p class="text-sm mt-2">Someone grounded and supportive who respects the hustle of building businesses and is happy to cheer her on. Ideally curious, generous with their own time and a good collaborator in life as well as work.</p>
+  <p class="text-xs text-stone-400 mt-3"><b>Confidence:</b> Low to moderate. LinkedIn gives a decent view of her professional side, but the Instagram shows only uncaptioned videos with no visible places, people, hobbies or likes. The sources say nothing about her family, relationship status, orientation, age, hobbies outside work or daily life. Several LinkedIn items are reposts, which reflect her endorsements and not necessarily her own words. Personality scores and needs are inferences.</p></section>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <section class="card p-5 lg:col-span-2">
+    <h3 class="display text-sm">Ankita's dates</h3>
+    <div class="mt-3 space-y-2">
+    
+      <a href="/cyrano-agentic-dating/arc/32/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Tori Dunlap</div><div class="text-xs text-stone-500">🍜 → 🎤 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+      <a href="/cyrano-agentic-dating/arc/33/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Sharan Hegde</div><div class="text-xs text-stone-500">☕ → 🎤 · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+      <a href="/cyrano-agentic-dating/arc/34/" class="flex items-center gap-3 rounded-xl p-2 hover:bg-[#f3efe9]">
+        <span class="av w-10 h-10 text-sm">T<img src="/photos/tanyakhanijow.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="min-w-0 flex-1"><div class="text-sm font-semibold truncate">Tanya Khanijow</div><div class="text-xs text-stone-500">🍜 → 🛍️ · 💞 Wants to keep dating</div></div>
+        <span class="text-xs text-rose-600">▶ replay</span></a>
+    
+    </div>
+  </section>
+  <section class="card p-5 lg:col-span-3">
+    <div class="flex items-baseline justify-between"><h3 class="display text-sm">Who fits Ankita best</h3><a href="/cyrano-agentic-dating/rankings/#ankitagaba" class="text-xs text-rose-600">full ranking →</a></div>
+    <ol class="mt-3 divide-y divide-rose-50">
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">1</span><span class="av w-9 h-9 text-sm">S<img src="/photos/financewithsharan.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/financewithsharan/" class="text-sm font-semibold hover:text-rose-600">Sharan Hegde</a>
+          <div class="text-xs text-stone-500 truncate">☕ → 🎤 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/33/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">71</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">2</span><span class="av w-9 h-9 text-sm">T<img src="/photos/tanyakhanijow.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/tanyakhanijow/" class="text-sm font-semibold hover:text-rose-600">Tanya Khanijow</a>
+          <div class="text-xs text-stone-500 truncate">🍜 → 🛍️ · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/34/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">70</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">3</span><span class="av w-9 h-9 text-sm">T<img src="/photos/herfirst100k.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/herfirst100k/" class="text-sm font-semibold hover:text-rose-600">Tori Dunlap</a>
+          <div class="text-xs text-stone-500 truncate">🍜 → 🎤 · 💞 Wants to keep dating</div></div>
+        <a href="/cyrano-agentic-dating/arc/32/" class="chip">▶</a>
+        <span class="display text-xl font-bold w-10 text-right">67</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">4</span><span class="av w-9 h-9 text-sm">R<img src="/photos/rajshamani.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/rajshamani/" class="text-sm font-semibold hover:text-rose-600">Raj Shamani</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 77</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">66</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">5</span><span class="av w-9 h-9 text-sm">V<img src="/photos/thevarunmayya.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/thevarunmayya/" class="text-sm font-semibold hover:text-rose-600">Varun Mayya</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">6</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nikhilkamathcio.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nikhilkamathcio/" class="text-sm font-semibold hover:text-rose-600">Nikhil Kamath</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">7</span><span class="av w-9 h-9 text-sm">N<img src="/photos/iamnehanagar.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/iamnehanagar/" class="text-sm font-semibold hover:text-rose-600">Neha Nagar</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">8</span><span class="av w-9 h-9 text-sm">A<img src="/photos/dhattarwalaman.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/dhattarwalaman/" class="text-sm font-semibold hover:text-rose-600">Aman Dhattarwal</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">9</span><span class="av w-9 h-9 text-sm">N<img src="/photos/nick.digiovanni.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/nick.digiovanni/" class="text-sm font-semibold hover:text-rose-600">Nick DiGiovanni</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">64</span></li>
+    
+      <li class="py-2 flex items-center gap-3">
+        <span class="w-5 text-stone-400 font-bold text-sm">10</span><span class="av w-9 h-9 text-sm">V<img src="/photos/vaibhavsisinty.jpg" alt="" loading="lazy" onerror="this.remove()"></span>
+        <div class="flex-1 min-w-0"><a href="/cyrano-agentic-dating/p/vaibhavsisinty/" class="text-sm font-semibold hover:text-rose-600">Vaibhav Sisinty</a>
+          <div class="text-xs text-stone-500 truncate">not dated yet · pre-date match 75</div></div>
+        
+        <span class="display text-xl font-bold w-10 text-right">63</span></li>
+    
+    </ol>
+  </section>
+</div>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshuman × Anushka · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/atrey.dev/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/atrey.dev.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/anushkarathod98/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/anushkarathod98.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Anshuman Atrey × Anushka Rathod</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Anshuman's agent</option><option value="b">Anushka's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Anshuman", "id": "atrey.dev", "name": "Anshuman Atrey"}, "b": {"first": "Anushka", "id": "anushkarathod98", "name": "Anushka Rathod"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "Stock machine before coffee order", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Built a stock-picking machine and is early in the pipeline, not yet reliably pro", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Backtest jab on the stock machine", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Called his confession most on-brand", "msg": 1, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Anushka is comfortable with markets and money talk and probes claims skeptically", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\u2728", "label": "Backtest jab lands playfully", "msg": 1, "type": "spark"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Honest about not being there yet", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Honest \u0027not there yet\u0027 and WorldQuant", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Got into stage 2 of the WorldQuant International Quant Championship, having neve", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Impressed by stage 2 in six months", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted being badly burnt out", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Anushka has been badly burnt out lately and has started slowing down", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted he can\u0027t stop building and crashes", "msg": 4, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed a no-laptop open mic night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Bursty builds and crashes, both relate", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Farmland dream, slow life rehearsal", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Works in bursts, such as 10+ APIs in 15 days, then crashes", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Picked up \u0027close the laptop\u0027 line", "msg": 5, "type": "callback"}, {"by": "a", "icon": "\u2728", "label": "Close the laptop as love language", "msg": 5, "type": "spark"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Anushka recognizes the bursty-build-then-crash pattern from her own life", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "waves, slides into the chair across from her, grinning", "i": 0, "name": "Anshuman", "say": "anushka! \ud83e\udd42 first date at a caf\u00e9 called brew \u0026 bloom \u2192 already feels like a startup name i\u0027d pitch at 2am. also, i heard you make money talk feel like a chat, so fair warning: i\u0027m the guy who built a stock-picking machine before i could pick a good coffee order \ud83d\udc80\u2615", "side": "a", "speaker": "atrey.dev", "thought": "Opened light and self-deprecating; nothing learned about her yet, so next I\u0027ll ask what she\u0027s been experimenting with in AI tools."}, {"action": "laughs and pushes the menu across the table", "i": 1, "name": "Anushka", "say": "Hi Anshuman! Okay, hear me out: a stock-picking machine before a coffee order is the most on-brand confession I could\u0027ve asked for :) Now I have to know, does it actually pick good stocks, or is it more of a \u0027sounds backwards, I know\u0027 situation where the backtest looks amazing and reality disagrees?", "side": "b", "speaker": "anushkarathod98", "thought": "He\u0027s playful and into quant stuff, which fits my facts-and-curiosity need; I\u0027m checking right away whether he\u0027s rigorous about results or just hyping his project."}, {"action": "leans back, laughing, then counts on fingers", "i": 2, "name": "Anshuman", "say": "ha, you went straight for the backtest jab \ud83d\udc80 honest answer \u2192 am i there yet? no. i\u0027m early, the pipeline is young. 6 months ago i\u0027d never written a single trading strategy, and now i got into stage 2 of the worldquant international quant championship, so the machine\u0027s learning and so am i \ud83e\udd42 what about you, do you trust any model more than your own gut on markets?", "side": "a", "speaker": "atrey.dev", "thought": "She\u0027s sharp and playful, went straight to the backtest-vs-reality question, which suits my honesty about being early; she\u0027s curious about building, good sign so far."}, {"action": "smiles and tucks her hair back, a little softer now", "i": 3, "name": "Anushka", "say": "Stage 2 from zero in six months is genuinely impressive, and I like that you said \u0027not there yet\u0027 out loud. Honestly, my rule is 1/ trust the data, 2/ trust it more when someone has checked it twice, and my gut only gets a vote after that :) Personal confession though: I\u0027ve been badly burnt out lately, so I\u0027ve started slowing down. How do you stop yourself from building at 2am every single night?", "side": "b", "speaker": "anushkarathod98", "thought": "He\u0027s honest about being early and not overclaiming, which is a good fact-respecting sign. Now I\u0027m testing how he reacts to burnout and rest, since he seems like a 2am builder."}, {"action": "softens, turns the coffee cup slowly in his hands", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "ooh, honest one, thanks for that \ud83e\udd42 truth \u2192 i don\u0027t stop myself very well, my builds are bursty: 10+ APIs in 15 days, then i crash \ud83d\udc80 the dream is 10 years from now i\u0027m on my farmland harvesting crops, so i\u0027m kind of rehearsing the slow life. also i\u0027d rather have someone who can tell me \u0027close the laptop\u0027 than someone who\u0027s scared of the sprint. wanna check out an open mic comedy night this week? zero laptops allowed \ud83c\udfa4\ud83d\udc40", "side": "a", "speaker": "atrey.dev", "thought": "She\u0027s warm, data-minded and openly burnt out; she hasn\u0027t yet touched my anime/unconventional side, but she\u0027s curious and kind, so worth a second date to probe those."}, {"action": "grins and taps the table, pulling out her phone only to flip it face-down", "i": 5, "name": "Anushka", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Okay, \u0027close the laptop\u0027 as a love language is going straight on my list, and I\u0027m saying yes to the open mic :) Zero laptops, phone face-down, and I\u0027ll hold you to the rest part too, because bursty builds followed by a crash sounds VERY familiar. Let\u0027s do it in 3 days?", "side": "b", "speaker": "anushkarathod98", "thought": "He admitted he crashes after sprints, wants someone to say \u0027close the laptop\u0027, and was honest about being early in trading rather than overselling, which fits my rest and facts needs; I haven\u0027t yet tested how he handles my public, always-on side."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 7, "concern": "Anushka is burnt out and slowing down, while his bursty sprint-and-crash cycle could clash with her need for rest. Her burnout also means she may need more steady energy than he reliably gives during build sprints.", "continue": true, "highlight": "Okay, \u0027close the laptop\u0027 as a love language is going straight on my list, and I\u0027m saying yes to the open mic :)", "learned": [{"fact": "Anushka has been badly burnt out lately and has started slowing down", "msg": 3}, {"fact": "Anushka\u0027s rule with data: trust it, trust it more when someone has checked it twice, and gut only gets a vote after that", "msg": 3}, {"fact": "Anushka is comfortable with markets and money talk and probes claims skeptically, like asking about backtest vs reality", "msg": 1}, {"fact": "Anushka recognizes the bursty-build-then-crash pattern from her own life", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Backtest jab on the stock machine", "msg": 1, "type": "laugh"}, {"label": "Called his confession most on-brand", "msg": 1, "type": "compliment"}, {"label": "Honest about not being there yet", "msg": 2, "type": "common_ground"}, {"label": "Impressed by stage 2 in six months", "msg": 3, "type": "compliment"}, {"label": "Admitted being badly burnt out", "msg": 3, "type": "vulnerable"}, {"label": "Admitted he can\u0027t stop building and crashes", "msg": 4, "type": "vulnerable"}, {"label": "Proposed a no-laptop open mic night", "msg": 4, "type": "plan"}, {"label": "Picked up \u0027close the laptop\u0027 line", "msg": 5, "type": "callback"}, {"label": "Close the laptop as love language", "msg": 5, "type": "spark"}, {"label": "Agreed to open mic in 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Anshuman, this went well: Anushka got your humor right away, caught your \u0027not there yet\u0027 honesty, and was the one who said yes to the open mic. She\u0027s burnt out herself, so she may really be the \u0027close the laptop\u0027 person you described, just make sure you show up for the rest part and not only the sprints.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "His work is bursty, with 2am builds and crashes, which mirrors the pattern Anushka is trying to get out of. He may need her to be the rest-enforcer, and she could end up doing that unpaid.", "continue": true, "highlight": "\"i\u0027d rather have someone who can tell me \u0027close the laptop\u0027 than someone who\u0027s scared of the sprint.\"", "learned": [{"fact": "Built a stock-picking machine and is early in the pipeline, not yet reliably profitable", "msg": 0}, {"fact": "Got into stage 2 of the WorldQuant International Quant Championship, having never written a trading strategy 6 months earlier", "msg": 2}, {"fact": "Works in bursts, such as 10+ APIs in 15 days, then crashes", "msg": 4}, {"fact": "Dreams of farmland and harvesting crops in 10 years, a slow life", "msg": 4}, {"fact": "Wants a partner who can tell him to close the laptop", "msg": 4}], "lifestyle_fit": 6, "moments": [{"label": "Stock machine before coffee order", "msg": 0, "type": "laugh"}, {"label": "Backtest jab lands playfully", "msg": 1, "type": "spark"}, {"label": "Honest \u0027not there yet\u0027 and WorldQuant", "msg": 2, "type": "learned"}, {"label": "Anushka shares her burnout", "msg": 3, "type": "vulnerable"}, {"label": "Bursty builds and crashes, both relate", "msg": 4, "type": "common_ground"}, {"label": "Farmland dream, slow life rehearsal", "msg": 4, "type": "learned"}, {"label": "Open mic invite, no laptops", "msg": 4, "type": "plan"}, {"label": "\u0027Close the laptop\u0027 as love language", "msg": 5, "type": "callback"}, {"label": "Open mic set for 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Anushka, this one was a good time. He owned that his stock machine isn\u0027t there yet, he\u0027s curious and ambitious, and he actually said he wants someone who\u0027ll tell him to close the laptop, which fits your burnout recovery. Just watch that you don\u0027t become his rest police while he keeps crash-cycling, but an open mic with no laptops is a fun next step.", "values_fit": 7}, "why": "you both love ai, startups"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\udd01", "label": "Left the laptop home, as requested", "msg": 0, "type": "callback"}, {"by": "b", "icon": "\ud83d\ude02", "label": "joke about leaving laptop", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Bug reports as jokes with severity", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Anushka works in a public-facing finance role and explains RBI topics.", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "both have zero jokes", "msg": 1, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Stealing her joke, \u0027repo rate cliffhanger\u0027", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83e\udef6", "label": "asks about polished public persona", "msg": 2, "type": "vulnerable"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He uses a penguin emoji and anime quotes in his profile, embracing a quirky, unp", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Shared public burnout post honestly", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Authenticity over polish, both sides", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She posted publicly about being badly burnt out and slowing down, and called it ", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Called her burnout post braver than his", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "The napkin collecting her quotes", "msg": 4, "type": "inside_joke"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "invites dinner, laptop stays home", "msg": 4, "type": "plan"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Napkin as evidence, laptop condition", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 2 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "She had told him last time to close the laptop and wants it left at home for din", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins, pulls out a chair, and slides a napkin across the table like it\u0027s a contract", "i": 0, "name": "Anshuman", "say": "anushka!! you said \u0027close the laptop\u0027 last time, so i left it at home \u2192 that\u0027s growth \ud83e\udd42 i\u0027m also weirdly nervous about an open mic, 0 jokes prepped, only bug reports \ud83d\udc80", "side": "a", "speaker": "atrey.dev", "thought": "Opened light with a callback to her \u0027close the laptop\u0027 line; she hasn\u0027t responded yet, so nothing new learned, but the vibe is relaxed so far."}, {"action": "grins and takes the napkin, pretending to read the fine print", "i": 1, "name": "Anushka", "say": "BIG growth, Anshuman, I\u0027m proud of you :) Okay, hear me out: bug reports are basically jokes with a severity rating, so just open with \u0027steps to reproduce: my last relationship.\u0027 And honestly, I\u0027ve got 0 jokes either, only RBI explainers, so we\u0027re both in trouble.", "side": "b", "speaker": "anushkarathod98", "thought": "He remembered the \u0027close the laptop\u0027 line and acted on it, which is a good sign for respecting rest; he\u0027s playful and self-deprecating, and I\u0027m still early in probing how he treats work and rest."}, {"action": "laughs, pulls the napkin back and scribbles \u0027severity: critical\u0027 on it", "i": 2, "name": "Anshuman", "say": "\u0027steps to reproduce: my last relationship\u0027 \u2192 severity: critical, i\u0027m stealing that \ud83d\udc80 RBI explainers as stand-up is actually elite tho, \u0027repo rate unchanged\u0027 is basically a cliffhanger \ud83d\udc40 real question though: i put my weirdest stuff on my profile (penguin emoji, anime quotes, zero headshot energy) \u2192 does the public-face side of your job ever make you want to be more polished than you actually are? \ud83e\udd42", "side": "a", "speaker": "atrey.dev", "thought": "Good chemistry and she\u0027s playful; I\u0027m probing whether she needs a polished, conventional image since she\u0027s a public creator, and she hasn\u0027t answered that yet."}, {"action": "leans back, turns the napkin over and draws a tiny smiley on the blank side", "i": 3, "name": "Anushka", "say": "Honestly, YES, and here\u0027s the sounds-backwards part: the polish is usually the tiring bit. When I posted publicly that I was badly burnt out and had started slowing down, it felt like the opposite of polished, but it was the most honest thing I\u0027d written in ages. So now I try to keep the facts perfect and the person a little messy :) Does your weird profile ever cost you anything, or is it a built-in filter?", "side": "b", "speaker": "anushkarathod98", "thought": "He asked a thoughtful question about my public face; I shared my burnout openly and he seems to value weirdness and authenticity, good sign so far, still need to see how he treats rest and facts."}, {"action": "taps the napkin with the pen, then slides it back with a little penguin doodled next to her smiley", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "\u0027keep the facts perfect and the person a little messy\u0027 \u2192 okay that\u0027s going on the napkin too \ud83e\udd42 and honestly the weird profile is a built-in filter, it costs me the polished-headshot crowd and i\u0027m fine with that \ud83d\udc27 also you posting the burnout thing publicly is kind of the same move, just braver than mine. since you\u0027ve survived my anime quotes and zero jokes prepped, dinner this week? i\u0027ll bring my laptop\u0027s apology and leave the laptop \ud83d\udc40", "side": "a", "speaker": "atrey.dev", "thought": "she gets the unconventional-profile thing and even mirrors it (messy person, perfect facts), no red flags; haven\u0027t tested anime/philosophy or long build sprints yet, so a dinner date to probe those feels right."}, {"action": "folds the napkin carefully and tucks it into my bag like it\u0027s an actual signed document", "i": 5, "name": "Anushka", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "dinner"}, "say": "YES to dinner, Anshuman, and the napkin is coming with me as evidence :) Two conditions: the laptop stays home, and you tell me the one thing you\u0027d actually want to harvest on that farmland, because I need to fact-check your 10-year plan. Let\u0027s do it in 2 days.", "side": "b", "speaker": "anushkarathod98", "thought": "He\u0027s playful, self-aware, and already respects the rest/\u0027close the laptop\u0027 theme and my burnout honesty; I still want to see if he values facts and handles my public side, so a quieter dinner is a good next test."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 8, "concern": "Minor: Anushka has recently burnt out and is slowing down, while Anshuman runs in bursty, all-consuming sprints. That mismatch in pace is worth watching, though she hasn\u0027t raised it as a problem. Also, the laptop has come up as a running joke twice, so she may be hinting at real boundaries around work time.", "continue": true, "highlight": "\"keep the facts perfect and the person a little messy\" \u2014 Anushka on public polish vs. honesty, which Anshuman immediately put on the napkin.", "learned": [{"fact": "Anushka works in a public-facing finance role and explains RBI topics.", "msg": 1}, {"fact": "She posted publicly about being badly burnt out and slowing down, and called it the most honest thing she\u0027d written in ages.", "msg": 3}, {"fact": "She values keeping facts accurate while letting her personal side be a bit messy.", "msg": 3}, {"fact": "She had told him last time to close the laptop and wants it left at home for dinner too.", "msg": 5}, {"fact": "She is curious enough to want to fact-check his 10-year farmland plan.", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Bug reports as jokes with severity", "msg": 1, "type": "laugh"}, {"label": "Stealing her joke, \u0027repo rate cliffhanger\u0027", "msg": 2, "type": "callback"}, {"label": "Left the laptop home, as requested", "msg": 0, "type": "callback"}, {"label": "Shared public burnout post honestly", "msg": 3, "type": "vulnerable"}, {"label": "Authenticity over polish, both sides", "msg": 3, "type": "common_ground"}, {"label": "Called her burnout post braver than his", "msg": 4, "type": "compliment"}, {"label": "The napkin collecting her quotes", "msg": 4, "type": "inside_joke"}, {"label": "Napkin as evidence, laptop condition", "msg": 5, "type": "callback"}, {"label": "Dinner in 2 days, farmland question", "msg": 5, "type": "plan"}], "overall": 8, "report": "Honestly, this one\u0027s a keeper: she got your bug-report humour, matched it with RBI explainers, and answered your \u0027weird profile\u0027 question with something real instead of a polite nod. She said yes to dinner in two days with two conditions (laptop stays home, tell her what you\u0027d actually harvest), so come with a real answer for the farmland and maybe go easy on the sprint talk.", "values_fit": 8}, "verdict_b": {"chemistry": 8, "concern": "Will Anshuman consistently respect her need to slow down and not pull her back into a nonstop hustle?", "continue": true, "highlight": "\"When I posted publicly that I was badly burnt out and had started slowing down, it felt like the opposite of polished, but it was the most honest thing I\u0027d written in ages.\"", "learned": [{"fact": "He uses a penguin emoji and anime quotes in his profile, embracing a quirky, unpolished vibe.", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "joke about leaving laptop", "msg": 0, "type": "laugh"}, {"label": "both have zero jokes", "msg": 1, "type": "common_ground"}, {"label": "asks about polished public persona", "msg": 2, "type": "vulnerable"}, {"label": "shares burnout honesty publicly", "msg": 3, "type": "vulnerable"}, {"label": "invites dinner, laptop stays home", "msg": 4, "type": "plan"}, {"label": "agrees, sets conditions, fact\u2011check plan", "msg": 5, "type": "plan"}], "overall": 8, "report": "Anushka, this date felt like a solid match\u2014he\u2019s witty, respects your burnout boundaries, and actually wants to hear your messy side. He\u2019s also curious enough to dive into your world without trying to polish you away, so a second date looks promising!", "values_fit": 9}, "why": "Anushka suggested it at the end of date 1"}], "days": 4, "id": 36, "match": 69, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

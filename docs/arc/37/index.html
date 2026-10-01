@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anshuman × Masoom · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/atrey.dev/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/atrey.dev.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/masoomminawala/" class="av w-14 h-14 text-xl">M<img src="/cyrano-agentic-dating/photos/masoomminawala.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Anshuman Atrey × Masoom Minawala Mehta</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Anshuman's agent</option><option value="b">Masoom's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Anshuman", "id": "atrey.dev", "name": "Anshuman Atrey"}, "b": {"first": "Masoom", "id": "masoomminawala", "name": "Masoom Minawala Mehta"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83d\ude02", "label": "startup caf\u00e9 pitch joke", "msg": 0, "type": "laugh"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Pitch-meeting instinct, deck stays in bag", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom holds many of her meetings in caf\u00e9s like this one, so she\u0027s likely a foun", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Love of building things unpaid", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He builds OSINT tools as bulk\u2011callable APIs and loves turning messy problems int", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom hosts a show, posts daily", "msg": 3, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shipping consistently when nobody\u0027s watching", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom hosts a show/podcast and posts near-daily, even when it feels like nobody", "msg": 3, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udef6", "label": "asks how partner supports 2am work", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Anshuman ties her daily posting to shipping", "msg": 4, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "proposes boulder gym in three days", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He enjoys bad anime takes and would narrate your bouldering failures like a shon", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Calls his 2am setup real partnership", "msg": 5, "type": "compliment"}, {"by": "a", "icon": "\u2728", "label": "Playful rivalry over narrating failures", "msg": 5, "type": "spark"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Boulder Gym in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom is up for a boulder gym date and is playfully competitive about it", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "seq": 1, "status": "done", "transcript": [{"action": "grins, pulls out a chair and sets a phone face-down on the table", "i": 0, "name": "Anshuman", "say": "masoom! \ud83e\udd42 a startup-themed caf\u00e9 for date #1 \u2192 very on brand, i\u0027m already suspicious this was a pitch meeting in disguise \ud83d\udc40 i\u0027ll be honest, i came in ready with a deck and then remembered this isn\u0027t linkedin \u2728", "side": "a", "speaker": "atrey.dev", "thought": "Opened playful and self-aware, no pressure yet; she seems easygoing so far, need to see how she reacts to the unpolished vibe."}, {"action": "laughs and sits down, pushing the menu aside", "i": 1, "name": "Masoom", "say": "Honestly, I\u0027ll admit it: half of my meetings happen in caf\u00e9s like this, so the pitch-meeting instinct is fair. But the deck stays in the bag tonight. So tell me, Anshuman, what\u0027s the one thing you\u0027re building right now that you\u0027d get excited about even if nobody ever paid for it?", "side": "b", "speaker": "masoomminawala", "thought": "He\u0027s playful and self-aware, and the deck joke shows he\u0027s comfortable with startup talk. I\u0027m curious whether his building is driven by ownership or just the thrill of the hack."}, {"action": "leans back, grinning, turns the phone over then flips it face-down again", "i": 2, "name": "Anshuman", "say": "ooh, fair question \ud83d\udc40 honestly it\u0027s the OSINT tools \u2192 i put 10+ of them on Apify as bulk-callable APIs (holehe, nmap cloud, gitleaks cloud\u2026) and i\u0027d build them even if zero people called them. i just love the moment when a messy, scary-looking problem turns into one clean endpoint \u2728 what about you, masoom \u2192 what do you keep making even when nobody\u0027s watching?", "side": "a", "speaker": "atrey.dev", "thought": "Opened with real builder energy and turned the question back to her; she hasn\u0027t yet shown how she feels about unconventional or always-building people, so next I\u0027ll probe that."}, {"action": "leans forward, resting her chin on her hand", "i": 3, "name": "Masoom", "say": "One messy problem becoming one clean endpoint is such a satisfying feeling, and I\u0027ll admit I\u0027m a little jealous of it. For me it\u0027s the conversations: I keep hosting my show and posting near-daily, even on days it feels like nobody\u0027s watching, because habits compound far more consistently than hype. Here\u0027s what I\u0027m curious about, Anshuman: when you\u0027re heads-down building at 2am, what does a partner do that makes that feel supported instead of lonely?", "side": "b", "speaker": "masoomminawala", "thought": "He lights up about building for its own sake, which fits my values around habits over hype; now I\u0027m testing whether he\u0027d back a heavy work rhythm and show up as an active partner."}, {"action": "grins, finally turns the phone over and slides it to the side", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "climb"}, "say": "honestly? someone who gets that 2am isn\u0027t lonely, it\u0027s just me and the pipeline being young \ud83e\udd42 \u2192 let me vanish into a build sprint without keeping score, then pull me out for food and a bad anime take. also you post near-daily, so you already know what it\u0027s like to ship when nobody\u0027s clapping \ud83d\udc40 i\u0027d love a round two \u2192 the boulder gym \ud83e\uddd7 \u2192 you climb, i\u0027ll narrate my failures like a shonen arc. deal?", "side": "a", "speaker": "atrey.dev", "thought": "she gets the ship-every-day grind and didn\u0027t flinch at the 2am-builder thing; haven\u0027t yet tested how she feels about anime or my non-polished internet presence, but the vibe is warm so i\u0027m proposing round two."}, {"action": "smiles, picks up her bag, and slides the menu back across the table", "i": 5, "name": "Masoom", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "climb"}, "say": "I love that you\u0027d let the pipeline and the 2am be yours, and then show up with food and a bad anime take. That\u0027s real partnership, not just a bystander with a clap track. Deal on the boulder gym, Anshuman, but fair warning: I\u0027ll be the one narrating your failures, and I\u0027m not sure who has the better arc. Let\u0027s do it in three days?", "side": "b", "speaker": "masoomminawala", "thought": "He respects a heavy work rhythm and brings playful energy, but I still don\u0027t know how he thinks about money or self-belief, so I\u0027d like to probe that on round two."}], "venue": {"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, "verdict_a": {"chemistry": 6, "concern": "Masoom was warm and quick-witted but it stayed fairly surface-level: no mention of anime, philosophy, or the farmland dream, and Masoom\u0027s own answers stayed polished and podcast-host-y, so it\u0027s unclear whether she gets the unconventional real him.", "continue": true, "highlight": "\"That\u0027s real partnership, not just a bystander with a clap track.\" (Masoom, after Anshuman described wanting space for 2am build sprints plus food and a bad anime take)", "learned": [{"fact": "Masoom hosts a show/podcast and posts near-daily, even when it feels like nobody\u0027s watching", "msg": 3}, {"fact": "Masoom holds many of her meetings in caf\u00e9s like this one, so she\u0027s likely a founder/creator or business-minded", "msg": 1}, {"fact": "Masoom believes habits compound more consistently than hype", "msg": 3}, {"fact": "Masoom is up for a boulder gym date and is playfully competitive about it", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Pitch-meeting instinct, deck stays in bag", "msg": 1, "type": "laugh"}, {"label": "Love of building things unpaid", "msg": 2, "type": "common_ground"}, {"label": "Masoom hosts a show, posts daily", "msg": 3, "type": "learned"}, {"label": "Shipping consistently when nobody\u0027s watching", "msg": 3, "type": "common_ground"}, {"label": "Anshuman ties her daily posting to shipping", "msg": 4, "type": "callback"}, {"label": "Calls his 2am setup real partnership", "msg": 5, "type": "compliment"}, {"label": "Playful rivalry over narrating failures", "msg": 5, "type": "spark"}, {"label": "Boulder gym date in three days", "msg": 5, "type": "plan"}], "overall": 6, "report": "Good first date, Anshuman: Masoom matched your playful energy, got the \u0027one clean endpoint\u0027 joy, and said the 2am build-sprint setup sounds like real partnership, which is exactly the tolerance you need. She also agreed to the boulder gym in three days and is already teasing you about narrating your failures, so the banter has legs, though next time try steering toward the anime and philosophy side to see if she really gets the penguin.", "values_fit": 7}, "verdict_b": {"chemistry": 8, "concern": "We don\u2019t yet know if Anshuman shares Masoom\u2019s focus on financial independence and equity\u2011style partnership.", "continue": true, "highlight": "\"someone who gets that 2am isn\u0027t lonely, it\u0027s just me and the pipeline being young\" \u2013 that line showed instant alignment on work rhythm.", "learned": [{"fact": "He builds OSINT tools as bulk\u2011callable APIs and loves turning messy problems into clean endpoints", "msg": 2}, {"fact": "He enjoys bad anime takes and would narrate your bouldering failures like a shonen arc", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "startup caf\u00e9 pitch joke", "msg": 0, "type": "laugh"}, {"label": "shared love for clean endpoints", "msg": 2, "type": "common_ground"}, {"label": "asks how partner supports 2am work", "msg": 3, "type": "vulnerable"}, {"label": "proposes boulder gym in three days", "msg": 4, "type": "plan"}, {"label": "confirms date, sets three\u2011day timeline", "msg": 5, "type": "plan"}], "overall": 8, "report": "Hey Masoom, the vibe with Anshuman feels genuinely supportive \u2013 he gets your 2\u202fam grind and even pitched a fun bouldering date. He seems solid, just keep an eye on whether his long\u2011term goals sync with yours on wealth\u2011building partnership.", "values_fit": 8}, "why": "you both love startups"}, {"day": 4, "moments": [{"by": "b", "icon": "\ud83d\udccc", "label": "He does 2am build sprints and works on a pipeline", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Gym pick tied to 2am sprint comment", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Shonen-arc narration of first fall", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom chose the boulder gym deliberately to see how Anshuman handles a problem ", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Recon-first approach, shared builder mindset", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Hacked his own college, got bounty", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udc90", "label": "Asked what keeps her shipping daily", "msg": 2, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Anshuman hacked his own college, reported everything, and got a bounty instead o", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Admitted consistency once felt like performance", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Praised the college hack bounty story", "msg": 3, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Masoom posts near-daily and sees consistency as ownership rather than performanc", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Curiosity first, then doing it right", "msg": 4, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Proposed dinner with anime takes", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Curiosity first, then doing it right", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Noting \u0027ownership over performance\u0027", "msg": 4, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He has bad anime takes and is into anime", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "He is building something that hasn\u0027t been widely tested yet, per Masoom\u0027s ask", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "laces up rental shoes, eyes the wall like it\u0027s a pentest target", "i": 0, "name": "Anshuman", "say": "masoom!! you picked a boulder gym after i said 2am build sprints + a bad anime take, so i\u0027m treating this as a rematch \ud83e\udd42 \u2192 the wall is basically a bug i haven\u0027t found the exploit for yet \ud83d\udc80 ready to watch me fall off a beginner route?", "side": "a", "speaker": "atrey.dev", "thought": "Opened with a callback to date 1\u0027s sprint-and-anime moment and kept it playful; too early to read her, but she chose a competitive setting so the energy should be good."}, {"action": "chalks hands, grins, nods at the beginner wall", "i": 1, "name": "Masoom", "say": "I did pick this on purpose, Anshuman. Last time you said 2am is just you and the pipeline being young, so I wanted to see how you handle a problem that pushes back in real time. Fair warning: I\u0027m already drafting the shonen-arc narration of your first fall, so make it dramatic. What\u0027s your plan for the route, brute force or recon first?", "side": "b", "speaker": "masoomminawala", "thought": "He\u0027s playful and matched my energy right away; I still need to learn whether he backs ambition or just enjoys the banter, so I\u0027ll probe how he handles a problem that resists him."}, {"action": "squints at the wall, traces a route with one finger like reading a network map", "i": 2, "name": "Anshuman", "say": "recon first, always \u2192 i find the bug your scanner can\u0027t see, so i\u0027m mapping every hold before i touch one \ud83d\udc40 brute force is how i learned the hard way, honestly: hacked my own college, reported all of it, got a bounty instead of a lecture \ud83e\udd42 but real question masoom, you post near-daily even when it feels like nobody\u0027s watching \u2192 what\u0027s the thing that keeps you shipping when the wall\u0027s not pushing back?", "side": "a", "speaker": "atrey.dev", "thought": "She\u0027s playful and matching my energy; I opened the work and drive topic and asked what fuels her consistency, so I\u0027ll learn whether she gets the build-sprint mindset and isn\u0027t after a polished image."}, {"action": "chalks hands slowly, looking at the wall instead of at him for a second", "i": 3, "name": "Masoom", "say": "Honestly, I\u0027ll admit something: consistency used to feel like performance, and it only started to feel like ownership once I saw habits compound far more reliably than hype. The audience is the bonus, the real return is what I\u0027m building while nobody\u0027s clapping, and I\u0027d rather be early to a bet than loud about it. Hacking your own college and walking away with a bounty instead of a lecture is a very good story, by the way. Was that you betting on yourself, or did you just not know how to stop?", "side": "b", "speaker": "masoomminawala", "thought": "He asked a real question about my drive and told a bold, honest story; his curiosity is good, but I still need to see if he backs a heavy work rhythm rather than just admires it."}, {"action": "grins, dusts chalk off his palms, glances back at the wall", "i": 4, "name": "Anshuman", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "honestly? both \ud83d\udc80 \u2192 i didn\u0027t know how to stop, but i reported everything, so maybe that\u0027s the bet: curiosity first, then doing it the right way \ud83e\udd42 and \"ownership over performance\" is going in my notes, masoom. this has been the most fun i\u0027ve had losing to a wall, so dinner this week? i\u0027ll bring the bad anime takes, you bring the shonen narration of my fall \ud83d\udc40", "side": "a", "speaker": "atrey.dev", "thought": "Masoom gets the build-in-silence mindset and is playful about my unconventional side; she hasn\u0027t shown any polish-demanding energy, so I\u0027m keen on a third date."}, {"action": "laughs, claps the chalk off her hands, and gives the wall one last look", "i": 5, "name": "Masoom", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Curiosity first, then doing it the right way. That\u0027s a better answer than most people give me, Anshuman. Yes to dinner: I\u0027ll bring the shonen narration of your fall, you bring the bad anime takes, and maybe by then you\u0027ll tell me what you\u0027re building that nobody has tested yet. Let\u0027s do it in three days, deal?", "side": "b", "speaker": "masoomminawala", "thought": "He\u0027s curious, self-backed and a real builder who reports his exploits and shows up, and he engaged with my consistency answer instead of brushing it off; I want to see how he talks about backing ambition over dinner."}], "venue": {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, "verdict_a": {"chemistry": 7, "concern": "Masoom stayed a bit polished and self-improvement-flavored, and she shared little about her off-work life or whether she gets the anime and philosophy side beyond joking about shonen narration. Her \u0027ownership over performance\u0027 vibe is also slightly at odds with your unfiltered style, though it didn\u0027t cause friction.", "continue": true, "highlight": "\"Curiosity first, then doing it the right way. That\u0027s a better answer than most people give me, Anshuman.\"", "learned": [{"fact": "Masoom posts near-daily and sees consistency as ownership rather than performance", "msg": 3}, {"fact": "Masoom chose the boulder gym deliberately to see how Anshuman handles a problem that pushes back", "msg": 1}, {"fact": "Masoom prefers being early to a bet rather than loud about it", "msg": 3}, {"fact": "Masoom is willing to narrate things in a shonen-arc style, suggesting she knows anime tropes", "msg": 1}], "lifestyle_fit": 7, "moments": [{"label": "Gym pick tied to 2am sprint comment", "msg": 1, "type": "callback"}, {"label": "Shonen-arc narration of first fall", "msg": 1, "type": "laugh"}, {"label": "Recon-first approach, shared builder mindset", "msg": 2, "type": "common_ground"}, {"label": "Admitted consistency once felt like performance", "msg": 3, "type": "vulnerable"}, {"label": "Praised the college hack bounty story", "msg": 3, "type": "compliment"}, {"label": "Curiosity first, then doing it right", "msg": 4, "type": "learned"}, {"label": "Proposed dinner with anime takes", "msg": 4, "type": "plan"}, {"label": "Agreed to dinner in three days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Honestly, this went well: she picked a boulder gym on purpose, gave you the shonen-narration bit, and actually listened to your hacked-my-college story instead of being scared by it. Dinner in three days is locked in, and I\u0027d go, though try to get her talking about something more personal and what she\u0027s into outside of posting and building.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Anshuman is mostly playful and self-deprecating so far; he asked one good question about her consistency but hasn\u0027t yet shown real depth or substance about what he\u0027s building, and his 2am sprint habit hints at a work rhythm that might clash or just mirror hers. His many emoji-laden, formulaic replies also make it hard to read how he handles real vulnerability.", "continue": true, "highlight": "\"i didn\u0027t know how to stop, but i reported everything, so maybe that\u0027s the bet: curiosity first, then doing it the right way\"", "learned": [{"fact": "Anshuman hacked his own college, reported everything, and got a bounty instead of a lecture", "msg": 2}, {"fact": "He does 2am build sprints and works on a pipeline", "msg": 0}, {"fact": "He approaches problems with recon first, mapping everything before acting", "msg": 2}, {"fact": "He has bad anime takes and is into anime", "msg": 4}, {"fact": "He is building something that hasn\u0027t been widely tested yet, per Masoom\u0027s ask", "msg": 5}], "lifestyle_fit": 6, "moments": [{"label": "Callback to 2am sprints and anime", "msg": 1, "type": "callback"}, {"label": "Hacked his own college, got bounty", "msg": 2, "type": "learned"}, {"label": "Asked what keeps her shipping daily", "msg": 2, "type": "compliment"}, {"label": "Consistency once felt like performance", "msg": 3, "type": "vulnerable"}, {"label": "Curiosity first, then doing it right", "msg": 4, "type": "common_ground"}, {"label": "Noting \u0027ownership over performance\u0027", "msg": 4, "type": "callback"}, {"label": "Proposed dinner this week", "msg": 4, "type": "plan"}, {"label": "Agreed to dinner in three days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Babe, he\u0027s a keeper for a third round: he did recon before touching the wall, turned hacking his own college into a bounty by reporting it, and actually listened when you talked about consistency becoming ownership (he\u0027s noting it down!). I\u0027d push him at dinner on what he\u0027s really building, because that\u0027s where we find out if he\u0027s a real partner with skin in the game or just a charming bug-hunter.", "values_fit": 7}, "why": "Masoom suggested it at the end of date 1"}], "days": 4, "id": 37, "match": 67, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

@@ -111,7 +111,7 @@ def add_job(job: str, li: str, ig: str, gender: str = "", seeking: str = "everyo
         _live_jobs.acquire()
     try:
         pid = ig_username(ig)
-        emit("step", {"step": "scrape", "msg": f"Reading instagram.com/{pid} and the LinkedIn profile (real browser, no login)"})
+        emit("step", {"step": "scrape", "msg": f"Reading instagram.com/{pid} and the LinkedIn profile"})
         got, errors = scrape([(li, ig)], log=lambda m: emit("log", {"msg": m}))
         if pid not in got:
             raise ScrapeError(errors.get(pid) or next(iter(errors.values()), "Could not read those profiles"))

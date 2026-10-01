@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankita × Tanya · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/ankitagaba/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/ankitagaba.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/tanyakhanijow/" class="av w-14 h-14 text-xl">T<img src="/cyrano-agentic-dating/photos/tanyakhanijow.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Ankita Gaba × Tanya Khanijow</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Ankita's agent</option><option value="b">Tanya's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Ankita", "id": "ankitagaba", "name": "Ankita Gaba"}, "b": {"first": "Tanya", "id": "tanyakhanijow", "name": "Tanya Khanijow"}, "dates": [{"day": 1, "moments": [{"by": "a", "icon": "\ud83e\udd1d", "label": "shared love for regional recipes", "msg": 0, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\ude02", "label": "funny POV about food queues", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Ankita\u2019s schedule is fully packed", "msg": 2, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Adopts Tanya\u0027s long-queue rule", "msg": 2, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ankita is building Better Nutrition and a cofounder venture called Raja Rani aur", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "tanya admits needing a mentor", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanya leads a creator team and mentors her hires", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "appreciate your team\u2011backing attitude", "msg": 4, "type": "compliment"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "second date at weekend flea market", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both have full, unpredictable schedules", "msg": 4, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She has a full schedule and wants a partner who accepts that, with protected tim", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude0f", "label": "bring your best bargaining face", "msg": 5, "type": "inside_joke"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanya loves hunting hidden\u2011gem food finds", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Weekend Flea Market in 2 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "market"}, "seq": 1, "status": "done", "transcript": [{"action": "waves and glances around at the stalls with a smile", "i": 0, "name": "Ankita", "say": "Hi Tanya! Night market, good call. I\u0027m already eyeing three stalls, so tell me what you\u0027d order first, since I hear you hunt regional recipes when you travel.", "side": "a", "speaker": "ankitagaba", "thought": "Opened warm and light, using her recipe-hunting hobby to get her talking; too early to read anything on fit."}, {"action": "grins and rubs hands together, scanning the stalls", "i": 1, "name": "Tanya", "say": "Ha, you did your homework! POV: you\u0027ve just arrived and I\u0027m already hunting for whatever the stall owner says is \u0027the one thing you can\u0027t skip\u0027 \ud83d\ude04 I\u0027d start there, then work my way through whatever has the longest local queue. Which three have you got your eye on, and what do you do when your travel plans and your food plans clash?", "side": "b", "speaker": "tanyakhanijow", "thought": "Warm opening; she knows about my recipe hunting. I\u0027m probing early for how she handles spontaneity and travel-driven schedules, and I\u0027ll see whether she\u0027s into the content side too."}, {"action": "laughs and points toward a busy stall with a long line", "i": 2, "name": "Ankita", "say": "Honestly, I\u0027d follow your queue rule, since a long line usually means someone\u0027s doing the work right. I can\u0027t say I travel much, my days are mostly building things with Better Nutrition and my cofounder venture Raja Rani aur Hathi. So tell me, when you\u0027re running a creator team and chasing hidden places, how do you fit in the people who keep it all going?", "side": "a", "speaker": "ankitagaba", "thought": "Tanya is playful and food-led; I\u0027ve opened up about my work and am probing how she treats her team and whether she respects a busy building life."}, {"action": "steps into the queue and turns to Ankita with a warm grin", "i": 3, "name": "Tanya", "say": "Honestly, the team is the reason any of it works. I\u0027m no longer a confused girl with no one to look up to, and I wish I\u0027d had someone back then, so now I try to be that person for the people I hire and teach. I\u0027m also curious about your side: when you\u0027re deep in building Better Nutrition and Raja Rani aur Hathi, does someone cheer you on, and would you be okay with a partner whose schedule is as unpredictable as yours?", "side": "b", "speaker": "tanyakhanijow", "thought": "Ankita says she doesn\u0027t travel much and is busy building, so travel comfort is still unclear, but she seems warm and relates to hustle; I\u0027m probing her flexibility and support for a demanding schedule."}, {"action": "smiles and shuffles forward in the queue", "i": 4, "name": "Ankita", "proposal": {"by": "a", "in_days": 2, "msg": 4, "venue": "market"}, "say": "Honestly, I like that you try to be that person for your team, that\u0027s the kind of backing I respect. My schedule is full, so I\u0027d need someone who\u0027s fine with that, and an unpredictable one on your side doesn\u0027t scare me, we\u0027d just have to protect our time. I\u0027d like a second date, so how about the Weekend Flea Market in a couple of days? Kindly bring your appetite and your best hidden-gem finds.", "side": "a", "speaker": "ankitagaba", "thought": "Tanya is warm, backs her team and seems open to a busy schedule; I\u0027m interested in a second date, though I still don\u0027t know how she feels about collaboration or long-haul building."}, {"action": "grins and bumps Ankita\u0027s shoulder lightly as the queue inches forward", "i": 5, "name": "Tanya", "proposal": {"by": "b", "in_days": 2, "msg": 5, "venue": "market"}, "say": "Yes, a second date! POV: the flea market in two days, me with my appetite and a hidden-gem list I\u0027ve been saving up \ud83d\ude04 And I love that a full, unpredictable schedule doesn\u0027t scare you, protecting our time sounds like exactly the right plan. Bring your best bargaining face!", "side": "b", "speaker": "tanyakhanijow", "thought": "Ankita is warm, respects a busy, always-creating schedule and isn\u0027t put off by unpredictability, though she travels little herself, so I\u0027d want to see how she feels about my travel and creative experiments on the next date."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 7, "concern": "Both of you have unpredictable, packed schedules, so consistently protecting quality time could be challenging.", "continue": true, "highlight": "\"I like that you try to be that person for your team, that\u0027s the kind of backing I respect.\"", "learned": [{"fact": "Tanya leads a creator team and mentors her hires", "msg": 3}, {"fact": "Tanya loves hunting hidden\u2011gem food finds", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "shared love for regional recipes", "msg": 0, "type": "common_ground"}, {"label": "funny POV about food queues", "msg": 1, "type": "laugh"}, {"label": "Ankita\u2019s schedule is fully packed", "msg": 2, "type": "learned"}, {"label": "tanya admits needing a mentor", "msg": 3, "type": "vulnerable"}, {"label": "appreciate your team\u2011backing attitude", "msg": 4, "type": "compliment"}, {"label": "second date at weekend flea market", "msg": 4, "type": "plan"}, {"label": "bring your best bargaining face", "msg": 5, "type": "inside_joke"}], "overall": 7, "report": "Sounds like a solid match\u2014Tanya\u2019s mentorship vibe clicks with Ankita\u2019s need for supportive partnership, and they\u2019re already planning a fun second date. Just keep an eye on carving out dedicated moments amid the hustle.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "Ankita said she doesn\u0027t travel much, so the shared adventure side is unproven, and the banter stayed fairly polite and formulaic without a real laugh or deeper personal moment.", "continue": true, "highlight": "\"My schedule is full, so I\u0027d need someone who\u0027s fine with that, and an unpredictable one on your side doesn\u0027t scare me, we\u0027d just have to protect our time.\"", "learned": [{"fact": "Ankita is building Better Nutrition and a cofounder venture called Raja Rani aur Hathi", "msg": 2}, {"fact": "She doesn\u0027t travel much; her days are mostly spent building her ventures", "msg": 2}, {"fact": "She has a full schedule and wants a partner who accepts that, with protected time together", "msg": 4}, {"fact": "She respects people who mentor and back their teams", "msg": 4}], "lifestyle_fit": 7, "moments": [{"label": "Both excited about night market food", "msg": 0, "type": "common_ground"}, {"label": "Adopts Tanya\u0027s long-queue rule", "msg": 2, "type": "callback"}, {"label": "Ankita\u0027s Better Nutrition and Raja Rani aur Hathi", "msg": 2, "type": "learned"}, {"label": "Tanya shares wishing she\u0027d had a mentor", "msg": 3, "type": "vulnerable"}, {"label": "Respects Tanya backing her team", "msg": 4, "type": "compliment"}, {"label": "Both have full, unpredictable schedules", "msg": 4, "type": "common_ground"}, {"label": "Ankita proposes Weekend Flea Market", "msg": 4, "type": "plan"}, {"label": "Tanya accepts second date eagerly", "msg": 5, "type": "plan"}], "overall": 6, "report": "Ankita is a fellow builder who openly said your unpredictable schedule doesn\u0027t scare her, which is exactly the respect for your always-creating life you need, and she asked for the second date herself. The spark is still gentle and she isn\u0027t much of a traveller, so the flea market is a good chance to see if the fun and curiosity are really there.", "values_fit": 7}, "why": "you both love content, food"}, {"day": 3, "moments": [{"by": "b", "icon": "\ud83e\udd1d", "label": "Team support and hidden gems", "msg": 0, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Holds Ankita to her schedule comment", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanya hunts food and recipes by skipping obvious spots and going where the crowd", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Spontaneous 20\u2011minute wander", "msg": 1, "type": "plan"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both comfortable with unpredictable, busy days", "msg": 2, "type": "common_ground"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Tanya shares confused-girl beginnings", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Shared love of building and backing teams", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanya is hiring right now and wants a tight-knit creator team", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Ankita admires how Tanya backs her team", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Proposes dinner to hear story", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ankita runs a small founder group where members help each other grow.", "msg": 4, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tanya is happy to protect a calendar slot for dates since both have full schedul", "msg": 5, "private": true, "type": "learned"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "Smiles, glancing over the stalls as I walk up to Tanya", "i": 0, "name": "Ankita", "say": "Tanya, hi! Last time you had me thinking about how you back your team, and I\u0027m still smiling about it. A flea market was a great pick, so what\u0027s the plan: do we go hunting for hidden gems like you do with food?", "side": "a", "speaker": "ankitagaba", "thought": "Opened warmly with a callback to her mentoring her team; she picked a good spot and I\u0027m curious how she explores."}, {"action": "grins and links arm toward the first row of stalls", "i": 1, "name": "Tanya", "say": "Ankita, hi! And yes, POV: we\u0027re hunting hidden gems, same rules as my recipe trips, we skip the obvious stalls and go where the crowd thins out. Also, last time you said an unpredictable schedule doesn\u0027t scare you, so I\u0027m holding you to it: if I spot something weird and wander off for twenty minutes, are you coming with me or waiting with chai?", "side": "b", "speaker": "tanyakhanijow", "thought": "Warm start; Ankita is friendly and remembers our talk about teams. I\u0027m testing early whether she\u0027s okay with spontaneity and my wandering, unpredictable style."}, {"action": "laughs and tugs her toward a quieter row of stalls", "i": 2, "name": "Ankita", "say": "Coming with you, no question. My days are already a mix of Better Nutrition, Raja Rani aur Hathi and whatever fire comes up, so a twenty-minute wander is nothing. I\u0027ll probably end up chatting with the stall owner and asking how they found their supplier, though. Is that how your creator team works too, someone always off chasing the next story while the rest hold the fort?", "side": "a", "speaker": "ankitagaba", "thought": "Tanya is game for an unpredictable schedule and leans into wandering; I\u0027m probing whether she backs a team and values collaboration, too early to call but promising."}, {"action": "laughs and steers around a pile of old brass lamps", "i": 3, "name": "Tanya", "say": "Ha, that\u0027s exactly how it works, and honestly the team part is what I\u0027m proudest of: I\u0027m hiring right now, and I want a tight-knit crew where someone\u0027s always off chasing the story and the rest of us actually have fun doing it. It comes from my own journey too, I started as a confused girl with no one to look up to, so now I teach short-form travel content and tell people you don\u0027t need the perfect setup, just start somewhere. What about you, who was your someone when you started building?", "side": "b", "speaker": "tanyakhanijow", "thought": "Ankita is easygoing about unpredictable schedules and seems to value team-building; I shared my mentor story and am probing whether she backs creative starts."}, {"action": "smiles and slows down beside a stall of old postcards", "i": 4, "name": "Ankita", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly, I don\u0027t have one big name. It was a mix of people I worked with and founders I trusted, and now I try to be that for others through intros and a small founder group where we help each other grow. I like how you\u0027re doing that for your team, Tanya. Since we\u0027re winding down, I\u0027d love a proper dinner next, somewhere you can tell me the story behind your first travel video.", "side": "a", "speaker": "ankitagaba", "thought": "Tanya backs her team, mentors, and is open about her journey, which fits my values. She hasn\u0027t yet shown how she handles a busy schedule, but the vibe is warm, so I\u0027m proposing dinner."}, {"action": "grins and tucks a postcard she bought into her bag", "i": 5, "name": "Tanya", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "POV: you just asked for the story behind my first travel video, so yes, dinner is on, and I\u0027ll tell you the whole messy, no-perfect-setup version. Let\u0027s lock it in for three days from now, and since we both run full calendars, we protect that slot, deal? \ud83d\ude04", "side": "b", "speaker": "tanyakhanijow", "thought": "Ankita is warm, backs people and doesn\u0027t flinch at a busy schedule, though she doesn\u0027t travel much and I still haven\u0027t tested how she feels about creative experiments, so dinner is worth it to find out."}], "venue": {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, "verdict_a": {"chemistry": 7, "concern": "Tanya steered toward her own story and hiring a bit; she asked about Ankita\u0027s \u0027someone\u0027 but Ankita\u0027s answer was fairly generic, and the date had little personal or playful back-and-forth beyond work and content themes.", "continue": true, "highlight": "Tanya: \"I want a tight-knit crew where someone\u0027s always off chasing the story and the rest of us actually have fun doing it.\"", "learned": [{"fact": "Tanya is hiring right now and wants a tight-knit creator team", "msg": 3}, {"fact": "Tanya started as a \u0027confused girl with no one to look up to\u0027", "msg": 3}, {"fact": "Tanya teaches short-form travel content and preaches starting without a perfect setup", "msg": 3}, {"fact": "Tanya hunts food and recipes by skipping obvious spots and going where the crowd thins", "msg": 1}, {"fact": "Tanya is happy to protect a calendar slot for dates since both have full schedules", "msg": 5}], "lifestyle_fit": 8, "moments": [{"label": "Holds Ankita to her schedule comment", "msg": 1, "type": "callback"}, {"label": "Both comfortable with unpredictable, busy days", "msg": 2, "type": "common_ground"}, {"label": "Tanya shares confused-girl beginnings", "msg": 3, "type": "vulnerable"}, {"label": "Shared love of building and backing teams", "msg": 3, "type": "common_ground"}, {"label": "Ankita admires how Tanya backs her team", "msg": 4, "type": "compliment"}, {"label": "Candlelight dinner locked in, slot protected", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ankita, this was a warm, easy date: Tanya backs her team, respects a full calendar (she even proposed protecting the dinner slot), and is happy to wander off hunting gems, which fits your hustle and collaborator streak. It stayed a bit work-and-story focused, so at dinner I\u0027d nudge it toward the personal side, but I\u0027d say yes to round three.", "values_fit": 8}, "verdict_b": {"chemistry": 7, "concern": "Both have jam\u2011packed calendars \u2013 making sure the candlelight dinner stays protected could be tricky.", "continue": true, "highlight": "\u201cI started as a confused girl with no one to look up to, so now I teach short\u2011form travel content and tell people you don\u0027t need the perfect setup, just start somewhere.\u201d", "learned": [{"fact": "Ankita runs a small founder group where members help each other grow.", "msg": 4}], "lifestyle_fit": 8, "moments": [{"label": "Team support and hidden gems", "msg": 0, "type": "common_ground"}, {"label": "Spontaneous 20\u2011minute wander", "msg": 1, "type": "plan"}, {"label": "Busy schedule, love chatting with vendors", "msg": 2, "type": "common_ground"}, {"label": "Confused girl turned mentor", "msg": 3, "type": "vulnerable"}, {"label": "Proposes dinner to hear story", "msg": 4, "type": "plan"}, {"label": "Locks in candlelight dinner", "msg": 5, "type": "plan"}], "overall": 8, "report": "Sounds like you\u2019ve found a fellow creator\u2011mind who gets your hustle and loves the spontaneous\u2011explorer vibe. Lock that dinner in and enjoy swapping story\u2011making origins!", "values_fit": 9}, "why": "Tanya suggested it at the end of date 1"}], "days": 3, "id": 34, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

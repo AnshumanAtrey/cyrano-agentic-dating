@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ankita × Tori · Cyrano</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f1a17; --line:#e5ded6; --accent:#d9304f; }
+  body { font-family: Inter, system-ui, sans-serif; background:#f7f4ef; color:var(--ink); }
+  .display { font-family: Silkscreen, monospace; letter-spacing:0; font-weight:700; }
+  .card { background:#fff; border:2px solid var(--line); border-radius:6px; box-shadow:0 3px 0 var(--line); }
+  .grad { background:var(--accent); box-shadow:0 3px 0 #9b1b33; border-radius:6px !important; }
+  .grad-text { color:var(--accent); }
+  .chip { display:inline-flex; align-items:center; gap:.25rem; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#fbe9ec; color:#9b1b33; }
+  .chip-muted { display:inline-flex; font-size:.72rem; font-weight:600; padding:.15rem .55rem; border-radius:4px; background:#efebe5; color:#57534e; }
+  .src { font-size:.62rem; font-weight:700; padding:.05rem .4rem; border-radius:3px; text-decoration:none; white-space:nowrap; vertical-align:middle; }
+  .src-IG { background:#efebe5; color:#9b1b33; } .src-in { background:#efebe5; color:#1d4ed8; }
+  .av { position:relative; display:inline-grid; place-items:center; border-radius:6px; overflow:hidden; background:#e5ded6; color:#57534e; font-weight:700; flex:none; }
+  .av img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .fade-in { animation:fade .45s ease both; } @keyframes fade { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+</style>
+
+<script type="importmap">{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<style>
+  #town { position:relative; aspect-ratio: 16/11; border:1px solid var(--line); background:#cfeaff; }
+  .bubble { border-radius:6px; padding:.55rem .85rem; font-size:.92rem; line-height:1.42; display:inline-block; text-align:left; }
+  .bubble.a { background:#fff; border:2px solid var(--line); }
+  .bubble.b { background:#f3efe9; border:2px solid var(--line); }
+  .thought { font-size:.74rem; color:#78716c; font-style:italic; border-left:2px solid #d6cfc6; padding:.1rem .5rem; margin-top:.35rem; display:inline-block; text-align:left; }
+  .typing span { display:inline-block; width:6px; height:6px; margin:0 1.5px; border-radius:99px; background:#d6d3d1; animation:blink 1s infinite; }
+  .typing span:nth-child(2) { animation-delay:.2s } .typing span:nth-child(3) { animation-delay:.4s }
+  @keyframes blink { 50% { opacity:.2 } }
+  .scrub { position:relative; height:36px; cursor:pointer; }
+  .seg { position:absolute; top:14px; height:9px; background:#e5ded6; }
+  .seg.done { background:var(--accent); }
+  .mk { position:absolute; top:-3px; transform:translateX(-50%); font-size:14px; line-height:1; cursor:pointer; filter:drop-shadow(0 1px 1px rgba(0,0,0,.25)); z-index:2; }
+  .mk:hover { transform:translateX(-50%) scale(1.4); }
+  .head { position:absolute; top:8px; width:4px; height:21px; background:#1f1a17; transform:translateX(-50%); transition:left .25s; z-index:1; }
+</style>
+
+</head>
+<body class="min-h-screen">
+<header class="border-b-2 border-[#e5ded6] bg-[#f7f4ef]/90 backdrop-blur sticky top-0 z-30">
+  <div class="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+    <a href="/cyrano-agentic-dating/" class="display text-lg whitespace-nowrap"><span class="grad-text">♥</span> Cyrano</a>
+    <nav class="hidden sm:flex gap-4 text-sm font-medium text-stone-600">
+      <a href="/cyrano-agentic-dating/" class="hover:text-rose-600">People</a>
+      <a href="/cyrano-agentic-dating/rankings/" class="hover:text-rose-600">Rankings</a>
+      <a href="/cyrano-agentic-dating/how/" class="hover:text-rose-600">How it works</a>
+    </nav>
+    <div class="ml-auto">
+      <a href="https://cyrano-production-620f.up.railway.app" class="grad text-white text-sm font-semibold px-4 py-1.5">Try it live →</a>
+      
+    </div>
+  </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center gap-4">
+  <a href="/cyrano-agentic-dating/p/ankitagaba/" class="av w-14 h-14 text-xl">A<img src="/cyrano-agentic-dating/photos/ankitagaba.jpg" onerror="this.remove()"></a>
+  <div class="text-2xl text-rose-500">♥</div>
+  <a href="/cyrano-agentic-dating/p/herfirst100k/" class="av w-14 h-14 text-xl">T<img src="/cyrano-agentic-dating/photos/herfirst100k.jpg" onerror="this.remove()"></a>
+  <div class="min-w-0">
+    <h1 class="display text-lg sm:text-2xl">Ankita Gaba × Tori Dunlap</h1>
+    <div class="text-sm text-stone-500 flex flex-wrap items-center gap-2"><span id="summary"></span><span class="chip" id="outcome"></span></div>
+  </div>
+  <label class="ml-auto flex items-center gap-2 text-sm"><span class="text-stone-500">Watch as</span>
+    <select id="persp" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1">
+      <option value="both">👀 Both agents</option><option value="a">Ankita's agent</option><option value="b">Tori's agent</option>
+    </select></label>
+</div>
+
+<div class="grid lg:grid-cols-5 gap-5 mt-5">
+  <div class="lg:col-span-3">
+    <div id="town"><div id="town-msg" class="absolute inset-0 grid place-items-center text-sm text-stone-500">Loading Date Town…</div></div>
+    <p class="text-[11px] text-stone-400 mt-1">Drag to look around. Every little person wears their real profile photo.</p>
+    <div id="strip" class="flex flex-wrap items-center gap-2 mt-3 text-sm"></div>
+  </div>
+  <div class="lg:col-span-2 card p-4 flex flex-col" style="height:560px">
+    <div id="title"></div>
+    <div id="stage" class="flex-1 overflow-y-auto space-y-3 pr-1 mt-3"></div>
+  </div>
+</div>
+
+<div class="card p-4 mt-5">
+  <div class="flex items-center gap-3">
+    <button id="play" class="grad text-white w-11 h-11 grid place-items-center text-lg flex-none" title="Play (space)">▶</button>
+    <select id="speed" class="rounded-md border-2 border-[#e5ded6] bg-white px-2 py-1 text-sm"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+    <div class="flex-1 scrub" id="scrub"></div>
+    <div id="clock" class="text-xs text-stone-500 w-24 text-right flex-none"></div>
+  </div>
+</div>
+
+<div class="grid lg:grid-cols-2 gap-5 mt-5">
+  <section class="card p-5"><h3 class="display text-sm">Moments</h3><p class="text-xs text-stone-500">Tagged by the agents in their private debriefs. Click one to jump there.</p><div id="moments" class="mt-3 space-y-1 text-sm"></div></section>
+  <section class="card p-5"><h3 class="display text-sm">Private debriefs</h3><p class="text-xs text-stone-500">What each agent privately reported back to its own person after each date.</p><div id="debriefs" class="mt-3 space-y-4 text-sm"></div></section>
+</div>
+
+<script type="module">
+let D = {"a": {"first": "Ankita", "id": "ankitagaba", "name": "Ankita Gaba"}, "b": {"first": "Tori", "id": "herfirst100k", "name": "Tori Dunlap"}, "dates": [{"day": 1, "moments": [{"by": "b", "icon": "\ud83e\udd1d", "label": "Both live in content, food-filming question", "msg": 0, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Cold noodles, the creator tax", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tori films her food before eating it and calls cold noodles the \u0027creator tax\u0027", "msg": 1, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Ten-second filming deal at smoky stall", "msg": 2, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She\u0027s a slow-meal person who doesn\u0027t like rushing food after long building days", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Unemployed at 23, mission is personal", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Profitable over followers, both long-game", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tori was unemployed at 23, which is why her money-confidence mission for women i", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udc90", "label": "Ankita praises Tori\u0027s honest answer", "msg": 4, "type": "compliment"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Founder WhatsApp barter group", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "Invite to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ankita runs Raja Rani aur Hathi and Better Nutrition, which aims to bring nutrit", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Loves the founder help WhatsApp group", "msg": 5, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tori prefers community-style help over stiff networking events", "msg": 5, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Stopwatch deal echoed as heckling, snacks", "msg": 5, "type": "callback"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "seq": 1, "status": "done", "transcript": [{"action": "Waves, looking around at the food stalls with a grin", "i": 0, "name": "Ankita", "say": "Hi Tori, so good to finally meet you! Not everyday a night market impresses me, but this smell is doing it. Since we both live in content, I have to ask: do you film your food first, or eat it first?", "side": "a", "speaker": "ankitagaba", "thought": "Opening light and playful; using the shared content angle to see how Tori balances work and fun."}, {"action": "grins and pulls out my phone, then dramatically puts it back in my pocket", "i": 1, "name": "Tori", "say": "Hi Ankita, so good to meet you too! \ud83d\ude02 Film first, always. Eating cold noodles for the sake of a good shot is the real creator tax.\n\nBut I\u0027m trying to be good tonight, so you tell me: what\u0027s the one stall we\u0027re filming AND eating?", "side": "b", "speaker": "herfirst100k", "thought": "Warm start, she\u0027s playful and into content; I haven\u0027t learned about her ambition or money attitudes yet, but she seems easy to talk to."}, {"action": "laughs and points toward a smoky stall at the end of the row", "i": 2, "name": "Ankita", "say": "Ha, cold noodles for the shot, I respect the sacrifice. That smoky stall at the end, we film it for ten seconds and then we eat, deal? Honestly, my work is all long days of building, so when I get a real meal I don\u0027t want to rush it. What keeps you going through the long hours of building Her First $100K?", "side": "a", "speaker": "ankitagaba", "thought": "Light start; Tori is playful and self-aware about creator life, and I\u0027ve opened the door to probe how she thinks about the long-haul work and its schedule."}, {"action": "grins and holds out a hand to shake on it", "i": 3, "name": "Tori", "say": "Deal, ten seconds max, stopwatch on. \ud83d\ude02 What keeps me going is that at 23 I was unemployed, so helping women feel less intimidated by money isn\u0027t just a brand for me, it\u0027s personal. Building something profitable and sustainable \u003e building a following, and the mission is what gets me through the long days. What about you, what\u0027s the thing that keeps you building with Raja Rani aur Hathi and Better Nutrition?", "side": "b", "speaker": "herfirst100k", "thought": "She\u0027s warm and values savoring things and long build days, which fits the ambition need; I shared my mission story and want to see if she respects a big, mission-driven career."}, {"action": "takes the stopwatch challenge seriously, then grins", "i": 4, "name": "Ankita", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "comedy"}, "say": "That\u0027s a real answer, Tori, and I like that you pick profitable over followers. For me it\u0027s the long game: Better Nutrition is about getting nutrition back into food, and I love helping other founders grow, so I keep a small WhatsApp group where startup owners help each other through collaboration and barter. I\u0027d love another date, so come to Open Mic Comedy Night with me in a few days? Kindly say yes, I\u0027ll bring the snacks.", "side": "a", "speaker": "ankitagaba", "thought": "Tori is mission-driven, open about her story and seems to respect long-haul building; still need to see how she handles collaboration and a busy, networked schedule."}, {"action": "stops the stopwatch with a flourish and grins", "i": 5, "name": "Tori", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "comedy"}, "say": "Yes, I\u0027m in! \ud83d\ude02 A WhatsApp group where founders help each other out \u003e a stiff networking event, and that\u0027s exactly my kind of generous. Open Mic Comedy Night in a few days, you bring the snacks, I\u0027ll bring the heckling (kindly, of course).", "side": "b", "speaker": "herfirst100k", "thought": "Ankita is driven, supportive of other founders and respects the hustle; still haven\u0027t talked openly about money, so I\u0027ll probe that on date two."}], "venue": {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, "verdict_a": {"chemistry": 6, "concern": "Only one real exchange about work and values so far, and it was mostly founder talk. Not much about Tori\u0027s personal side or how she handles protecting time outside of building, so it\u0027s unclear whether the fit holds up beyond the hustle.", "continue": true, "highlight": "\"What keeps me going is that at 23 I was unemployed, so helping women feel less intimidated by money isn\u0027t just a brand for me, it\u0027s personal. Building something profitable and sustainable \u003e building a following.\"", "learned": [{"fact": "Tori films her food before eating it and calls cold noodles the \u0027creator tax\u0027", "msg": 1}, {"fact": "Tori was unemployed at 23, which is why her money-confidence mission for women is personal", "msg": 3}, {"fact": "Tori builds Her First $100K and prioritizes profitable, sustainable growth over follower count", "msg": 3}, {"fact": "Tori prefers community-style help over stiff networking events", "msg": 5}], "lifestyle_fit": 7, "moments": [{"label": "Cold noodles, the creator tax", "msg": 1, "type": "laugh"}, {"label": "Ten-second filming deal at smoky stall", "msg": 2, "type": "plan"}, {"label": "Unemployed at 23, mission is personal", "msg": 3, "type": "vulnerable"}, {"label": "Profitable over followers, both long-game", "msg": 3, "type": "common_ground"}, {"label": "Ankita praises Tori\u0027s honest answer", "msg": 4, "type": "compliment"}, {"label": "Loves the founder help WhatsApp group", "msg": 5, "type": "common_ground"}, {"label": "Open Mic Comedy Night in 3 days", "msg": 5, "type": "plan"}], "overall": 7, "report": "Ankita, this was a warm, easy first date. Tori picked profitable over followers, opened up about being unemployed at 23, and lit up at your founder WhatsApp group, so she clearly gets the long game and the mutual-help streak you care about. Comedy night is locked in for 3 days, and I\u0027d go, though try steering the next one toward life outside work to see how she unwinds.", "values_fit": 8}, "verdict_b": {"chemistry": 6, "concern": "The conversation stayed light and fairly short. Money and her ambitions barely came up beyond the mission, and Ankita\u0027s partner-style support for a public career wasn\u0027t really tested yet.", "continue": true, "highlight": "Ankita: \"That smoky stall at the end, we film it for ten seconds and then we eat, deal?\" followed by Tori\u0027s \"Deal, ten seconds max, stopwatch on.\"", "learned": [{"fact": "Ankita runs Raja Rani aur Hathi and Better Nutrition, which aims to bring nutrition back into food", "msg": 4}, {"fact": "She keeps a small WhatsApp group where startup founders help each other through collaboration and barter", "msg": 4}, {"fact": "She\u0027s a slow-meal person who doesn\u0027t like rushing food after long building days", "msg": 2}], "lifestyle_fit": 7, "moments": [{"label": "Both live in content, food-filming question", "msg": 0, "type": "common_ground"}, {"label": "Cold noodles as the creator tax", "msg": 1, "type": "laugh"}, {"label": "Film ten seconds, then eat deal", "msg": 2, "type": "plan"}, {"label": "Tori shares being unemployed at 23", "msg": 3, "type": "vulnerable"}, {"label": "Ankita likes profitable over followers", "msg": 4, "type": "compliment"}, {"label": "Founder WhatsApp barter group", "msg": 4, "type": "learned"}, {"label": "Invite to Open Mic Comedy Night", "msg": 4, "type": "plan"}, {"label": "Stopwatch deal echoed as heckling, snacks", "msg": 5, "type": "callback"}], "overall": 6, "report": "Ankita was a fun, easy first date: she matched your creator humour, respected the \u0027profitable over followers\u0027 line, and her founder WhatsApp group shows the generous, ambitious streak you like. Nothing deep yet on money or the long game, but she asked for a second date, so comedy night is on in 3 days and she\u0027s bringing snacks.", "values_fit": 7}, "why": "you both love content"}, {"day": 4, "moments": [{"by": "a", "icon": "\ud83d\ude0f", "label": "Cold noodles as the comedy bar", "msg": 0, "type": "inside_joke"}, {"by": "b", "icon": "\ud83d\ude02", "label": "Creator tax and cold noodles joke", "msg": 0, "type": "laugh"}, {"by": "b", "icon": "\ud83d\udccc", "label": "She noticed and teased the creator habit of filming the room", "msg": 0, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\ude02", "label": "Phone face-down, comedy free pass", "msg": 1, "type": "laugh"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Tipping extra if anyone beats noodles", "msg": 1, "type": "callback"}, {"by": "a", "icon": "\ud83d\udccc", "label": "Tori keeps a ten-second rule for phone use, with comedy as a free pass", "msg": 1, "private": true, "type": "learned"}, {"by": "b", "icon": "\ud83e\udd1d", "label": "Both building businesses, long-game mindset", "msg": 2, "type": "common_ground"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Ankita is running two businesses at once, Better Nutrition and Raja Rani aur Hat", "msg": 2, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83e\udef6", "label": "Tori admits three jobs, still working on balance", "msg": 3, "type": "vulnerable"}, {"by": "a", "icon": "\ud83e\udd1d", "label": "Both value the long game over burnout", "msg": 3, "type": "common_ground"}, {"by": "a", "icon": "\ud83d\udccc", "label": "At 23 Tori was unemployed, then for three years she held three full-time jobs at", "msg": 3, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udcc5", "label": "Ankita proposes a proper dinner", "msg": 4, "type": "plan"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Founder group as her support system", "msg": 4, "type": "learned"}, {"by": "b", "icon": "\ud83d\udd01", "label": "Phone face-down request again", "msg": 4, "type": "callback"}, {"by": "b", "icon": "\ud83d\udccc", "label": "Her cheerleaders are her founder group and people she\u0027s worked with before", "msg": 4, "private": true, "type": "learned"}, {"by": "a", "icon": "\ud83d\udd01", "label": "Face-down phone promised again for dinner", "msg": 5, "type": "callback"}, {"by": "b", "icon": "\ud83d\udcc5", "label": "asks for Candlelight Dinner in 3 days", "msg": 5, "type": "plan"}], "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "seq": 2, "status": "done", "transcript": [{"action": "grins and points at the small stage with a mic stand", "i": 0, "name": "Ankita", "say": "Tori, you made it! Okay, I have to start with the creator tax: did you film the room before sitting down, or are you saving it for when the first comedian bombs? Also, good pick for date two. I\u0027m curious to see whether anyone here can be funnier than cold noodles.", "side": "a", "speaker": "ankitagaba", "thought": "Opened light with a callback to her filming habit and the noodle joke from date 1; she seems at ease so far, too early to probe needs."}, {"action": "grins, holds up phone then deliberately flips it face-down on the table", "i": 1, "name": "Tori", "say": "Phone is face-down, I\u0027m a woman of my word, ten-second rule still applies to the smoky stall, but comedy is a free pass. \ud83d\ude02 And cold noodles set a low bar, so honestly, if anyone tonight beats them, we tip extra. How was your week, are you still building two businesses at once, or did you take a breath?", "side": "b", "speaker": "herfirst100k", "thought": "Warm start, she\u0027s playful and calls out the creator habit; I\u0027ll probe how she balances her ambition and whether she\u0027d be cool with my public, always-on work."}, {"action": "clinks water glass against hers, smiling", "i": 2, "name": "Ankita", "say": "Phone face-down, I respect it, and yes, tipping extra is now official policy. Honestly, no breath yet: my week was Better Nutrition and Raja Rani aur Hathi side by side, and I\u0027m okay with it because I believe in the long game, but I\u0027d love to know how you protect your own time when the work is also your mission.", "side": "a", "speaker": "ankitagaba", "thought": "Warm and funny start; Tori remembered my two businesses, and I\u0027ve opened the door to see if she respects a demanding schedule."}, {"action": "laughs and leans back, turning her water glass slowly", "i": 3, "name": "Tori", "say": "Okay, honest answer? I\u0027m still working on it. \ud83d\ude02 At 23 I was unemployed, then for three years I had three full-time jobs, so my default setting is \"more\" and I have to be deliberate about protecting time. Building a profitable, sustainable business \u003e burning out for a following. Your long-game line is music to my ears, though: when you\u0027re building two things at once, who cheers for you on the days it\u0027s a lot?", "side": "b", "speaker": "herfirst100k", "thought": "Ankita believes in the long game and is juggling two businesses; she turned the question back to me nicely, so I\u0027m probing whether she has real support and whether she\u0027d respect my public, mission-driven career."}, {"action": "smiles and taps the table twice", "i": 4, "name": "Ankita", "proposal": {"by": "a", "in_days": 3, "msg": 4, "venue": "dinner"}, "say": "Honestly, my cheerleaders are mostly my founder group and the people I\u0027ve worked with before, we back each other\u0027s wins, which I love. Three full-time jobs at once is a lot, Tori, so I\u0027m glad you\u0027re being deliberate now. I\u0027ve had a really good time tonight, so let\u0027s do a proper dinner later this week, and kindly bring the phone face-down again.", "side": "a", "speaker": "ankitagaba", "thought": "Tori respects long-game building and sustainable work, and seems open about her own limits, so she\u0027s a good fit; still unsure how she handles a networked, always-on schedule day to day."}, {"action": "slides phone across the table, still face-down, and grins", "i": 5, "name": "Tori", "proposal": {"by": "b", "in_days": 3, "msg": 5, "venue": "dinner"}, "say": "Deal, phone stays face-down, and a proper dinner sounds perfect. \ud83c\udf77 I\u0027d love to hear more about how you and your founder group back each other, that\u0027s my kind of community. Also, we still never settled who pays, so let\u0027s talk money like grown-ups over dinner. \ud83d\ude02", "side": "b", "speaker": "herfirst100k", "thought": "Ankita is warm, supportive and clearly gets the hustle of building; I still haven\u0027t heard how open she is about money, so dinner is the place to probe that."}], "venue": {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, "verdict_a": {"chemistry": 6, "concern": "Tori asked twice about who backs you and how your founder group works, but Ankita\u0027s answers were brief and Tori volunteered the money-talk topic. Tori also admits her default is \"more\" on work, so protecting time together could be a challenge for two busy builders.", "continue": true, "highlight": "Tori: \"Building a profitable, sustainable business \u003e burning out for a following. Your long-game line is music to my ears.\"", "learned": [{"fact": "At 23 Tori was unemployed, then for three years she held three full-time jobs at once", "msg": 3}, {"fact": "Tori has to be deliberate about protecting her time because her default setting is \u0027more\u0027", "msg": 3}, {"fact": "Tori keeps a ten-second rule for phone use, with comedy as a free pass", "msg": 1}, {"fact": "Tori values building a profitable, sustainable business over burning out for a following", "msg": 3}], "lifestyle_fit": 6, "moments": [{"label": "Phone face-down, comedy free pass", "msg": 1, "type": "laugh"}, {"label": "Cold noodles as the comedy bar", "msg": 0, "type": "inside_joke"}, {"label": "Tipping extra if anyone beats noodles", "msg": 1, "type": "callback"}, {"label": "Tori admits three jobs, still working on balance", "msg": 3, "type": "vulnerable"}, {"label": "Both value the long game over burnout", "msg": 3, "type": "common_ground"}, {"label": "Ankita proposes a proper dinner", "msg": 4, "type": "plan"}, {"label": "Face-down phone promised again for dinner", "msg": 5, "type": "callback"}, {"label": "Tori accepts dinner, wants to split money talk", "msg": 5, "type": "plan"}], "overall": 6, "report": "Ankita, this was a warm, easy date. Tori respects the long game, gets the hustle, and was openly honest about her own overwork, which is exactly the kind of grounded support you want. It\u0027s not fireworks yet, but a dinner in 3 days feels worth it, and I\u0027d steer it toward her actual life beyond work.", "values_fit": 7}, "verdict_b": {"chemistry": 7, "concern": "Money talk stayed at the joke level (who pays) and never got into real habits or views. Ankita\u0027s answers were warm but fairly general, so I don\u0027t yet know how she handles money or how she\u0027d feel about Tori\u0027s very public career.", "continue": true, "highlight": "Ankita: \"no breath yet: my week was Better Nutrition and Raja Rani aur Hathi side by side, and I\u0027m okay with it because I believe in the long game\" \u2013 ambition plus long-term thinking, exactly what Tori values.", "learned": [{"fact": "Ankita is running two businesses at once, Better Nutrition and Raja Rani aur Hathi", "msg": 2}, {"fact": "She believes in the long game and hasn\u0027t taken a breather yet", "msg": 2}, {"fact": "Her cheerleaders are her founder group and people she\u0027s worked with before", "msg": 4}, {"fact": "She noticed and teased the creator habit of filming the room", "msg": 0}], "lifestyle_fit": 7, "moments": [{"label": "Creator tax and cold noodles joke", "msg": 0, "type": "laugh"}, {"label": "Tipping extra if anyone beats noodles", "msg": 1, "type": "callback"}, {"label": "Both building businesses, long-game mindset", "msg": 2, "type": "common_ground"}, {"label": "Tori admits work-life balance is ongoing", "msg": 3, "type": "vulnerable"}, {"label": "Founder group as her support system", "msg": 4, "type": "learned"}, {"label": "Phone face-down request again", "msg": 4, "type": "callback"}, {"label": "Candlelight dinner and money talk", "msg": 5, "type": "plan"}], "overall": 7, "report": "I had a really good time for you: Ankita is a fellow builder juggling two businesses, she gets the long-game mindset, and the phone-face-down banter and cold-noodles joke kept it light and funny. She said yes to a proper dinner, and I teased the \u0027let\u0027s talk money like grown-ups\u0027 conversation, so that\u0027s the thing to dig into next, plus how she\u0027d feel about your public side.", "values_fit": 7}, "why": "Tori suggested it at the end of date 1"}], "days": 4, "id": 32, "match": 80, "outcome": "match", "outcome_label": "\ud83d\udc9e Wants to keep dating", "status": "done"};
+const B = "/cyrano-agentic-dating", STATIC = true, VENUES = [{"emoji": "\u2615", "id": "cafe", "name": "Brew \u0026 Bloom Caf\u00e9", "tier": 1, "x": 16, "y": 30}, {"emoji": "\ud83c\udf33", "id": "park", "name": "Lakeside Park Walk", "tier": 1, "x": 33, "y": 72}, {"emoji": "\ud83d\udcda", "id": "books", "name": "Dog-Ear Bookstore", "tier": 1, "x": 8, "y": 58}, {"emoji": "\ud83c\udfae", "id": "arcade", "name": "Pixel Arcade", "tier": 1, "x": 47, "y": 20}, {"emoji": "\ud83c\udf5c", "id": "streetfood", "name": "Night Market Street Food", "tier": 1, "x": 60, "y": 78}, {"emoji": "\ud83c\udfc3", "id": "runclub", "name": "Sunrise Run Club", "tier": 1, "x": 82, "y": 64}, {"emoji": "\ud83c\udfac", "id": "cinema", "name": "Reel House Cinema", "tier": 2, "x": 28, "y": 46}, {"emoji": "\ud83d\uddbc\ufe0f", "id": "gallery", "name": "Canvas Gallery", "tier": 2, "x": 53, "y": 48}, {"emoji": "\ud83d\udecd\ufe0f", "id": "market", "name": "Weekend Flea Market", "tier": 2, "x": 71, "y": 34}, {"emoji": "\ud83e\uddd7", "id": "climb", "name": "Boulder Gym", "tier": 2, "x": 90, "y": 18}, {"emoji": "\ud83c\udfa4", "id": "comedy", "name": "Open Mic Comedy Night", "tier": 2, "x": 42, "y": 88}, {"emoji": "\ud83c\udfcf", "id": "cricket", "name": "Stadium Match Night", "tier": 2, "x": 12, "y": 84}, {"emoji": "\ud83c\udf77", "id": "dinner", "name": "Candlelight Dinner", "tier": 3, "x": 62, "y": 10}, {"emoji": "\ud83c\udf06", "id": "rooftop", "name": "Skyline Rooftop Bar", "tier": 3, "x": 76, "y": 86}, {"emoji": "\ud83d\udc83", "id": "club", "name": "Neon Club", "tier": 3, "x": 92, "y": 44}, {"emoji": "\ud83c\udfb5", "id": "concert", "name": "Open-Air Concert", "tier": 3, "x": 24, "y": 12}, {"emoji": "\ud83c\udf0a", "id": "promenade", "name": "Beach Promenade at Night", "tier": 3, "x": 4, "y": 20}];
+const VM = Object.fromEntries(VENUES.map(v => [v.id, v]));
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const nm = side => side === 'a' ? D.a.first : D.b.first;
+let frames = [], cur = 0, timer = null, persp = 'both';
+const sees = side => persp === 'both' || persp === side;
+const speed = () => +$('#speed').value;
+
+// ---- Date Town (3D). The player still works if WebGL or the CDN is unavailable.
+let town = null;
+try {
+  const { createTown } = await import(`${B}/static/town.js`);
+  town = await createTown(document.getElementById('town'), {venues: VENUES, base: B});
+  town.addPerson('a', D.a.id, D.a.first); town.addPerson('b', D.b.id, D.b.first);
+  document.getElementById('town-msg')?.remove();
+} catch (e) { console.error(e); const m = document.getElementById('town-msg'); if (m) m.textContent = '3D town unavailable in this browser — the replay still works.'; }
+
+function build() {
+  frames = [];
+  D.dates.forEach((d, di) => {
+    if (di > 0) frames.push({k: 'gap', di, days: d.day - D.dates[di - 1].day});
+    frames.push({k: 'title', di});
+    d.transcript.forEach((m, mi) => frames.push({k: 'msg', di, mi}));
+    if (d.verdict_a) frames.push({k: 'debrief', di});
+  });
+  if (D.status === 'done' && D.dates.length) frames.push({k: 'end', di: D.dates.length - 1});
+  $('#summary').textContent = `${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} day${D.days > 1 ? 's' : ''} · pre-date match ${D.match}`;
+  $('#outcome').textContent = D.status === 'done' ? D.outcome_label : 'dating right now…';
+  buildScrub(); renderMoments(); renderDebriefs();
+}
+
+function msgHTML(d, m, typing) {
+  const right = m.side === 'b';
+  const moms = (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).map(x => `<span title="${esc(x.label)}">${x.icon}</span>`).join(' ');
+  const body = typing ? '<span class="typing"><span></span><span></span><span></span></span>'
+    : `${m.action ? `<i class="text-xs text-stone-500">*${esc(m.action)}*</i><br>` : ''}${esc(m.say)}`;
+  const prop = m.proposal && !typing ? `<div><span class="chip mt-1">📅 ${esc(VM[m.proposal.venue].emoji + ' ' + VM[m.proposal.venue].name)} in ${m.proposal.in_days} day${m.proposal.in_days > 1 ? 's' : ''}?</span></div>` : '';
+  const th = m.thought && !typing && sees(m.side) ? `<div><span class="thought">🔒 to ${esc(nm(m.side))}: ${esc(m.thought)}</span></div>` : '';
+  return `<div class="flex ${right ? 'justify-end' : ''} fade-in"><div class="max-w-[88%] ${right ? 'text-right' : ''}">
+    <div class="text-[11px] text-stone-500 mb-0.5">${esc(m.name)}'s agent ${moms}</div><div class="bubble ${m.side}">${body}</div>${prop}${th}</div></div>`;
+}
+
+function verdictHTML(d) {
+  return ['a', 'b'].filter(sees).map(s => {
+    const v = d['verdict_' + s]; if (!v) return '';
+    return `<div class="rounded-md bg-[#f3efe9] p-3 fade-in"><div class="font-semibold">${esc(nm(s))}'s agent: ${v.overall}/10 · ${v.continue ? '✅ wants another date' : '✋ not feeling it'}</div>
+      <div class="text-xs text-stone-500">chemistry ${v.chemistry} · values ${v.values_fit} · lifestyle ${v.lifestyle_fit}</div>
+      <div class="mt-1 text-stone-700">${esc(v.report)}</div>${v.highlight ? `<div class="text-xs italic text-stone-500 mt-1">Best moment: “${esc(v.highlight)}”</div>` : ''}
+      ${v.concern && v.concern.toLowerCase() !== 'none' ? `<div class="text-xs text-amber-700 mt-1">Worry: ${esc(v.concern)}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function render(i, animate) {
+  if (!frames.length) { $('#stage').innerHTML = '<div class="text-stone-400 text-sm">The first date is about to start…</div>'; return; }
+  cur = Math.max(0, Math.min(i, frames.length - 1));
+  const f = frames[cur], d = D.dates[f.di];
+  $('#title').innerHTML = `<div class="rounded-md bg-[#1f1a17] text-white px-4 py-3"><div class="text-[11px] uppercase tracking-wider opacity-80">Date ${d.seq} · Day ${d.day}</div>
+    <div class="font-bold text-lg">${d.venue.emoji} ${esc(d.venue.name)}</div><div class="text-xs opacity-90">${esc(d.why || '')}</div></div>`;
+  let html = '';
+  if (f.k === 'gap') {
+    html = `<div class="text-center py-20 fade-in"><div class="text-5xl">⏳</div><div class="display text-2xl font-bold mt-3">${f.days} day${f.days > 1 ? 's' : ''} later…</div>
+      <div class="text-sm text-stone-500 mt-1">heading to ${d.venue.emoji} ${esc(d.venue.name)}</div></div>`;
+  } else {
+    const upto = f.k === 'msg' ? f.mi : (f.k === 'title' ? -1 : d.transcript.length - 1);
+    d.transcript.slice(0, upto + 1).forEach((m, j) => { html += msgHTML(d, m, animate && f.k === 'msg' && j === upto); });
+    if (f.k === 'title') html = `<div class="text-center text-sm text-stone-400 py-10 fade-in">${esc(d.transcript[0]?.name || '')} and ${esc(d.transcript[1]?.name || '')} arrive…</div>`;
+    if (f.k === 'debrief' || f.k === 'end') html += `<div class="pt-2 space-y-2">${verdictHTML(d)}</div>`;
+    if (f.k === 'end') html += `<div class="text-center py-6 fade-in"><div class="display text-3xl font-bold grad-text">${esc(D.outcome_label)}</div>
+      <div class="text-sm text-stone-500 mt-1">${D.dates.length} date${D.dates.length > 1 ? 's' : ''} over ${D.days} days</div></div>`;
+  }
+  const st = $('#stage'); st.innerHTML = html; st.scrollTop = st.scrollHeight;
+  if (animate && f.k === 'msg') setTimeout(() => {
+    if (frames[cur] !== f) return;
+    st.lastElementChild.outerHTML = msgHTML(d, d.transcript[f.mi], false); st.scrollTop = st.scrollHeight;
+  }, 700 / speed());
+  // the town: route + day badges, time of day, walk to tonight's venue, speech bubbles and moments
+  if (town) {
+    town.setVisited(D.dates.slice(0, f.di + 1).map(x => ({id: x.venue.id, day: x.day})));
+    town.setMood(f.k === 'gap' ? Math.min(3, (d.venue.tier || 1)) : (d.venue.tier || 1));
+    const secs = animate && (f.k === 'gap' || f.k === 'title') ? Math.max(1, dur(f) / 1000 / speed() * .85) : 0;
+    if (f.k === 'end' && D.outcome !== 'match') town.part(); else town.goTo(d.venue.id, secs);
+    town.clearSay();
+    if (f.k === 'msg') {
+      const m = d.transcript[f.mi]; town.say(m.side, m.say);
+      if (animate) (d.moments || []).filter(x => x.msg === m.i && (!x.private || sees(x.by))).forEach((x, j) => setTimeout(() => town.emote(x.by === 'b' ? 'b' : 'a', x.icon), 350 + j * 250));
+    }
+    if (f.k === 'debrief' && animate) ['a', 'b'].forEach(s => { const v = d['verdict_' + s]; if (v && sees(s)) town.emote(s, v.continue ? '✅' : '✋', `${v.overall}/10`); });
+    if (f.k === 'end' && animate && D.outcome === 'match') town.burst(['💕', '💖', '✨', '💞'], 18);
+  }
+  renderStrip(f.di); renderHead();
+}
+
+function renderStrip(active) {
+  $('#strip').innerHTML = D.dates.map((d, i) => {
+    const sc = d.verdict_a && d.verdict_b ? ` <span class="text-xs text-stone-500">${d.verdict_a.overall}·${d.verdict_b.overall}</span>` : '';
+    return (i ? `<span class="text-stone-400 text-xs">+${d.day - D.dates[i - 1].day}d →</span>` : '') +
+      `<button data-di="${i}" class="rounded-md px-3 py-1 border-2 ${i === active ? 'border-[#1f1a17] bg-white' : 'border-[#e5ded6] bg-white'}">Day ${d.day} ${d.venue.emoji}${sc}</button>`;
+  }).join('') + `<span class="${D.status === 'done' && D.outcome === 'match' ? 'chip' : 'chip-muted'} ml-1">${esc(D.status === 'done' ? D.outcome_label : 'live…')}</span>`;
+  $('#strip').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(frames.findIndex(f => f.k === 'title' && f.di === +b.dataset.di), false); });
+}
+
+const KEY = new Set(['spark', 'laugh', 'callback', 'plan', 'birthday', 'ily']);
+const frameOf = (di, mi) => frames.findIndex(f => f.k === 'msg' && f.di === di && f.mi === mi);
+function buildScrub() {
+  const n = frames.length || 1; let h = '';
+  D.dates.forEach((d, di) => {
+    const idx = frames.map((f, i) => (f.di === di && f.k !== 'gap') ? i : -1).filter(i => i >= 0);
+    if (idx.length) h += `<div class="seg" data-di="${di}" style="left:${idx[0] / n * 100}%;width:${(idx[idx.length - 1] - idx[0] + 1) / n * 100}%"></div>`;
+    (d.moments || []).forEach((m, k) => {
+      if ((m.private && !sees(m.by)) || !KEY.has(m.type)) return;  // only the big moments on the bar; all of them stay in the list
+      const i = frameOf(di, m.msg); if (i < 0) return;
+      h += `<span class="mk" data-i="${i}" style="left:${(i + .5) / n * 100}%;top:${-3 - (k % 2) * 10}px" title="${esc(m.label)}">${m.icon}</span>`;
+    });
+  });
+  $('#scrub').innerHTML = h + '<div class="head" id="head"></div>';
+}
+$('#scrub').onclick = e => {
+  stop();
+  const mk = e.target.closest('.mk'); if (mk) return render(+mk.dataset.i, false);
+  const r = $('#scrub').getBoundingClientRect(); render(Math.floor((e.clientX - r.left) / r.width * frames.length), false);
+};
+function renderHead() {
+  const n = frames.length || 1, f = frames[cur]; if (!f) return;
+  $('#head').style.left = ((cur + .5) / n * 100) + '%';
+  document.querySelectorAll('.seg').forEach(s => s.classList.toggle('done', +s.dataset.di <= f.di));
+  $('#clock').textContent = f.k === 'end' ? 'the end' : `Date ${D.dates[f.di].seq} · Day ${D.dates[f.di].day}`;
+}
+
+function renderMoments() {
+  const rows = [];
+  D.dates.forEach((d, di) => (d.moments || []).forEach(m => {
+    if (m.private && !sees(m.by)) return;
+    rows.push(`<button data-i="${frameOf(di, m.msg)}" class="w-full text-left flex gap-2 items-start rounded-lg px-2 py-1.5 hover:bg-[#f3efe9]"><span class="text-base">${m.icon}</span>
+      <span><span class="text-stone-800">${esc(m.label)}</span><br><span class="text-[11px] text-stone-400">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}${m.private ? ` · noticed by ${esc(nm(m.by))}'s agent` : ''}</span></span></button>`);
+  }));
+  $('#moments').innerHTML = rows.join('') || '<div class="text-stone-400">No moments tagged yet.</div>';
+  $('#moments').querySelectorAll('button').forEach(b => b.onclick = () => { stop(); render(+b.dataset.i, false); window.scrollTo({top: 0, behavior: 'smooth'}); });
+}
+function renderDebriefs() {
+  $('#debriefs').innerHTML = D.dates.filter(d => d.verdict_a).map(d =>
+    `<div><div class="text-[11px] font-bold text-stone-500 uppercase tracking-wide mb-1">Date ${d.seq} · Day ${d.day} · ${d.venue.emoji} ${esc(d.venue.name)}</div><div class="space-y-2">${verdictHTML(d)}</div></div>`).join('')
+    || '<div class="text-stone-400">After each date, the agents report back here.</div>';
+}
+
+function dur(f) {
+  if (f.k === 'msg') { const m = D.dates[f.di].transcript[f.mi]; return 1200 + Math.min(5500, 30 * ((m.say || '').length + (sees(m.side) ? (m.thought || '').length * .6 : 0))); }
+  return {title: 2400, gap: 2000, debrief: 4200, end: 5000}[f.k];
+}
+function step() {
+  if (cur >= frames.length - 1) return stop();
+  render(cur + 1, true);
+  timer = setTimeout(step, dur(frames[cur]) / speed());
+}
+function play() { if (cur >= frames.length - 1) render(0, false); $('#play').textContent = '⏸'; clearTimeout(timer); timer = setTimeout(step, 500 / speed()); }
+function stop() { clearTimeout(timer); timer = null; $('#play').textContent = '▶'; }
+$('#play').onclick = () => timer ? stop() : play();
+$('#persp').onchange = e => { persp = e.target.value; buildScrub(); renderMoments(); renderDebriefs(); render(cur, false); };
+document.addEventListener('keydown', e => {
+  if (e.target.tagName === 'SELECT' || e.target.tagName === 'INPUT') return;
+  if (e.code === 'Space') { e.preventDefault(); timer ? stop() : play(); }
+  if (e.code === 'ArrowRight') { stop(); render(cur + 1, false); }
+  if (e.code === 'ArrowLeft') { stop(); render(cur - 1, false); }
+});
+
+build(); render(0, false);
+if (location.hash === '#play') play();
+// a date that is still happening: keep pulling new messages in
+if (!STATIC && D.status !== 'done') {
+  const poll = setInterval(async () => {
+    try {
+      const r = await fetch(`${B}/api/arc/${D.id}`); if (!r.ok) return;
+      const atEnd = cur >= frames.length - 1; D = await r.json(); build();
+      if (atEnd && !timer) render(frames.length - 1, false); else renderHead();
+      if (D.status === 'done') clearInterval(poll);
+    } catch (e) {}
+  }, 3000);
+}
+</script>
+</main>
+<footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-stone-400">Dates are simulations between AI agents, built only from each person's public LinkedIn and public Instagram. No one listed is affiliated with or endorses this demo.</footer>
+</body>
+</html>

@@ -5,7 +5,7 @@
 *Cyrano de Bergerac wrote someone else's love letters. These agents write yours, using only your own words.*
 
 - **Demo** (the finished run: 34 real people, 37 relationships, 105 dates, nothing to type): https://anshumanatrey.github.io/cyrano-agentic-dating/
-- **Live**: https://careful-pointer-pro-immunology.trycloudflare.com. Paste any LinkedIn + public Instagram, say who you're interested in, then watch the agent scrape, analyze, match and go on live dates, with every message streaming in.
+- **Live**: https://cyrano-production-620f.up.railway.app. Paste any LinkedIn + public Instagram, say who you're interested in, then watch the agent scrape, analyze, match and go on live dates, with every message streaming in.
 
 ## Screenshots
 
@@ -71,7 +71,7 @@ Instagram (public) ─┘
 Guardrails: only the two sources, no outside knowledge even about famous people, no invented facts, no inferring religion, politics, health, sexuality, ethnicity or caste, and relationship status and orientation are never assumed. Private Instagram accounts are rejected.
 
 ## Tech stack
-- **Scraping (local, no login, no paid API, $0):** *Instagram:* first Instagram's mobile `web_profile_info` endpoint (profile + 12 latest posts with captions, tags, locations). When it throttles, a real logged-out Chromium (Playwright) loads the public profile and reads the profile JSON embedded in the page plus the 12-post grid (dates and Instagram's own image descriptions). Private accounts are rejected. *LinkedIn:* the public profile page: JSON-LD `Person` (job titles, companies, education, about, languages, awards), their posts and activity, and the page text. If LinkedIn answers 999, the same public page is fetched through Jina Reader.
+- **Scraping (local, no login, no paid API, $0):** *Instagram:* first Instagram's mobile `web_profile_info` endpoint (profile + 12 latest posts with captions, tags, locations). When it throttles, a real logged-out Chromium (Playwright) loads the public profile and reads the profile JSON embedded in the page plus the 12-post grid (dates and Instagram's own image descriptions). Private accounts are rejected. *LinkedIn:* the public profile page: JSON-LD `Person` (job titles, companies, education, about, languages, awards), their posts and activity, and the page text. If LinkedIn answers 999, the same public page is fetched through Jina Reader. *In the cloud deploy* (Railway, Docker), Instagram blocks datacenter IPs, so Instagram is read through Apify's `instagram-profile-scraper` (residential proxies). The other methods stay as fallbacks.
 - **Agents:** `app/llm.py`, a failover chain of zero-cost LLM lanes: Claude through Claude Code in headless mode (`claude -p`), then the Cerebras (`gpt-oss-120b`, Qwen) and Groq free tiers. Each lane is throttled to its free-tier limits and cools down on a 429.
 - **Web:** FastAPI, Jinja2, Tailwind and SQLite. Live dates stream over Server-Sent Events, and the replay player is vanilla JS. `scripts/export.py` renders the finished run to static HTML for GitHub Pages.
 
@@ -82,7 +82,8 @@ cp .env.example .env        # optional CEREBRAS_API_KEY / GROQ_API_KEY; Claude C
 .venv/bin/python -m playwright install chromium
 # people.txt: one "linkedin_url instagram_url" per line
 .venv/bin/python scripts/batch.py all 3      # scrape → analyze → 3 first dates each → arcs
-.venv/bin/uvicorn app.main:app --port 8000   # the site; share it with: cloudflared tunnel --url http://localhost:8000
+.venv/bin/uvicorn app.main:app --port 8000   # the site locally
+railway up                                   # or deploy the Dockerfile to Railway (seed/ = the finished demo run)
 .venv/bin/python scripts/export.py /<repo> <live-url>   # static demo → docs/
 ```
 
