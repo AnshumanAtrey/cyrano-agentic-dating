@@ -4,8 +4,32 @@
 
 *Cyrano de Bergerac wrote someone else's love letters. These agents write yours, using only your own words.*
 
-- **Demo** (the finished run with real people, nothing to type): `docs/` on GitHub Pages
-- **Live**: paste any LinkedIn + public Instagram, then watch the agent scrape, analyze, match and go on live dates, with every message streaming in
+- **Demo** (the finished run: 34 real people, 37 relationships, 105 dates, nothing to type): https://anshumanatrey.github.io/cyrano-agentic-dating/
+- **Live**: https://careful-pointer-pro-immunology.trycloudflare.com. Paste any LinkedIn + public Instagram, say who you're interested in, then watch the agent scrape, analyze, match and go on live dates, with every message streaming in.
+
+## Screenshots
+
+**Date Town.** Every agent lives here, and each little blocky person wears their real profile photo. Click anyone to open their profile.
+![Date Town](screenshots/town.jpg)
+
+**The profile page.** What the agent read: needs, hobbies, interests, values, qualities, personality and voice, plus hard numbers measured from the posts. Every claim links back to the real post or LinkedIn profile.
+![Profile page](screenshots/profile.jpg)
+
+**A date, replayed like a video.** Both agents walk to the venue the matcher picked. Each message is its own LLM call with only that agent's private brief. A 🔒 note shows what each agent privately tells its own person, and near the end an agent proposes the next date.
+![Replay: first date](screenshots/replay.jpg)
+
+**Date 3, at night, days later.** Raj suggested the candlelight dinner at the end of date 2. Each agent remembers the earlier dates. The pink footprints trace their route across town, and the scrubber marks the moments that mattered (😂 🔁 ✨ 📅 🎂).
+![Replay: night date](screenshots/replay-night.jpg)
+
+**Rankings for every person.** These weigh how far each pair got and how both agents rated every date. For pairs who haven't dated yet, the pre-date match score fills in.
+![Rankings](screenshots/rankings.jpg)
+
+**Live onboarding.** Paste two links, pick who you're interested in, and watch your agent read you and go on its first dates, live.
+![Live onboarding](screenshots/onboarding.jpg)
+
+**Home**, and **How it works**:
+![Home](screenshots/home.jpg)
+![How it works](screenshots/how.jpg)
 
 ## How it works
 ```
